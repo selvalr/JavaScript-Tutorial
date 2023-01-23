@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js String</title>
+  </head>
+  <body>
+    <h1>String</h1>
+
+    <script>
+      let space = ' ';           // an empty space string
+      let firstName = 'Asabeneh';
+      let lastName = 'Yetayeh';
+      let country = 'Finland';
+      let city = 'Helsinki';
+      let language = 'JavaScript';
+      let job = 'teacher';
+      let quote = "The saying,'Seeing is Believing' is not correct in 2020.";
+      let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`;
+    </script>
+
+    <!-- JavaScript strings are for storing and manipulating text.-->
+    <script>
+      //1.By string literal
+
+      // String written inside quotes
+      var str = 'This is string literal';
+      document.write(str);
+
+      //2.By string object (using new keyword)
+
+      var stringname = new String('hello javascript string');
+      document.write(stringname);
+    </script>
+
+    <hr />
+
+    <h1>JavaScript Strings concatenation</h1>
+    <script>
+      //String Concatenation
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+      console.log(answer1+" "+answer2+" "+answer3); 
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Strings Escape Character</h2>
+
+    <p>The escape sequence \" inserts a double quote in a string.</p>
+
+    <script>
+      //Escape Sequences in Strings
+     
+      /*
+
+         \n: new line
+         \t: Tab, means 8 spaces
+         \\: Back slash
+         \': Single quote (')
+         \": Double quote (")
+
+      */
+      
+      console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?'); // line break
+      console.log('Days\tTopics\tExercises');
+      console.log('Day 1\t3\t5');
+      console.log('Day 2\t3\t5');
+      console.log('Day 3\t3\t5');
+      console.log('Day 4\t3\t5');
+      console.log('This is a backslash  symbol (\\)'); // To write a backslash
+      console.log('In every programming language it starts with \"Hello, World!\"');
+      console.log("In every programming language it starts with \'Hello, World!\'");
+      console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020');
+    </script>
+
+    <hr />
+
+    <p>'string'==new String('string')</p>
+    <script>
+      //compare literal and object
+      let x = 'John'; // x is a string
+      let y = new String('John'); // y is an object
+      document.write(x == y);
+    </script>
+    
+    <h2>two object compare ans false</h2>
+
+    <script>
+      let x1 = new String('John'); // x is a string
+      let y1 = new String('John'); // y is an object
+      document.write(x1 === y1); //false
+      document.write(x1 == y1);
+    </script>
+
+   
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>implicit</title>
+  </head>
+  <body>
+    <script>
+      //Implicit binding covers most of the use-cases for dealing with the this keyword.
+
+      let blog = {
+        name: "Tapas",
+        address: "freecodecamp",
+        message: function () {
+          console.log(`${this.name} blogs on ${this.address}`);
+        },
+      };
+
+      blog.message();
+    </script>
+  </body>
+</html>

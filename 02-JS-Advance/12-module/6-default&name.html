@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //default export
+      // file module.js
+      var x = 4;
+      export default x;
+
+      // test.js
+      // while importing x in test.js
+      import y from "./module";
+      // note that y is used import x instead of
+      // import x, because x was default export
+      console.log(y);
+      // output will be 4
+    </script>
+
+    <script>
+      //default name
+      export function greeting() {
+        console.log("Hello, World!");
+      }
+
+      // more than one export
+      export const bestMovieSeries = "The Lord of the Rings Trilogy";
+
+      // importing in another file
+      import { greeting, bestMovieSeries } from "./greeting";
+
+      greeting(); // Output: 'Hello, World!'
+
+      console.log(bestMovieSeries); // Output: 'The Lord of the Rings Trilogy'
+
+      function greeting() {
+        console.log("Hello, World!");
+      }
+
+      const bestMovieSeries = "The Lord of the Rings Trilogy";
+
+      export { greeting, bestMovieSeries };
+    </script>
+  </body>
+</html>

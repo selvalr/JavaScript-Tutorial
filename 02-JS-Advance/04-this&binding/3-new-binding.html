@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new cinding</title>
+  </head>
+  <body>
+    <script>
+      //A new keyword is used to create an object from the constructor function.
+      let Cartoon = function (name, character) {
+        this.name = name;
+        this.character = character;
+        this.log = function () {
+          console.log(this.name + " is a " + this.character);
+        };
+      };
+
+      //You can create objects using the new keyword  like this:
+      let tom = new Cartoon("Tom", "Cat");
+      let jerry = new Cartoon("Jerry", "Mouse");
+    </script>
+  </body>
+</html>

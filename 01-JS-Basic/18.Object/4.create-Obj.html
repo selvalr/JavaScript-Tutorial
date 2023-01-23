@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create Object</h1>
+    <script>
+      function Employee(name, designation, salary) {
+        this.name = name;
+        this.designation = designation;
+        this.salary = salary;
+      }
+
+      var employee1 = new Employee('selva', 'we', 120000);
+      console.log(employee1);
+      var employee2 = new Employee('karth', 'pol', 200000);
+      console.log(employee2);
+
+      console.log(employee1 instanceof Employee);
+      console.log(employee1 instanceof Object);
+
+      //project:
+      function Sayhi(course, years) {
+        this.course = course;
+        this.years = years;
+      }
+
+      let h1 = new Sayhi('js', 2020);
+      console.log(h1);
+      let h2 = new Sayhi('html', 2010);
+      console.log(h2);
+      console.log(h1 instanceof Sayhi);
+      console.log(h2 instanceof Object);
+    </script>
+  </body>
+</html>

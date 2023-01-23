@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+    
+    The window.history object contains the browsers history.
+
+    Window History
+    he window.history object can be written without the window prefix.
+
+    To protect the privacy of the users, there are limitations to how JavaScript can access this object.
+
+    Some methods:
+
+    history.back() - same as clicking back in the browser
+    history.forward() - same as clicking forward in the browser
+  */
+
+      //1.Window History Back
+
+      function goBack() {
+        window.history.back();
+      }
+
+      //2.Window History Forward
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
+  </head>
+  <body>
+    <!--1.back-->
+    <input type="button" value="Forward" onclick="goForward()" />
+
+    <!--2.forward-->
+    <input type="button" value="Forward" onclick="goForward()" />
+  </body>
+</html>

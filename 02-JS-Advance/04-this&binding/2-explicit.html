@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>explicit</title>
+  </head>
+  <body>
+    <script>
+      //There are three very special methods, call(), apply() and bind() that help us achieve explicit binding.
+
+      let getName = function () {
+        console.log(this.name);
+      };
+
+      let user = {
+        name: "Tapas",
+        address: "Freecodecamp",
+      };
+
+      getName.call(user);
+    </script>
+
+    <script>
+      //apply
+      let getName1 = function (hobby1, hobby2) {
+        console.log(this.name + " likes " + hobby1 + " , " + hobby2);
+      };
+
+      let user1 = {
+        name: "Tapas",
+        address: "Bangalore",
+      };
+
+      let hobbies = ["Swimming", "Blogging"];
+
+      getName1.apply(user1, hobbies);
+    </script>
+
+    <script>
+      //bind
+      let getName2 = function (hobby1, hobby2) {
+        console.log(this.name + " likes " + hobby1 + " , " + hobby2);
+      };
+
+      let user2 = {
+        name: "Tapas",
+        address: "Bangalore",
+      };
+
+      let hobbies3 = ["Swimming", "Blogging"];
+      let newFn = getName.bind(user2, hobbies2[0], hobbies2[1]);
+
+      newFn();
+    </script>
+  </body>
+</html>

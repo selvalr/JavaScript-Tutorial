@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.con{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 300px
+}
+input{
+    margin: 10px;
+    width: 20%;
+}
+select{
+    margin: 10px;
+    width: 10%;
+}
+button{
+    width: 5%;
+    margin-left: 40px;
+
+}
+#result{
+    height: 40px;
+    width: 10%;
+}

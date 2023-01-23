@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //map
+    //map: Iterate an array elements and modify the array elements. It takes a callback function with elements, index , array parameter and return a new array.
+//1.
+  const modifiedArray = arr.map(function (element, index, arr) {
+  return element
+})
+
+//2.
+/*Arrow function and explicit return
+const modifiedArray = arr.map((element,index) => element);
+*/
+//Example
+const numbers = [1, 2, 3, 4, 5]
+const numbersSquare = numbers.map((num) => num * num)
+
+console.log(numbersSquare)
+
+//3.
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const namesToUpperCase = names.map((name) => name.toUpperCase())
+console.log(namesToUpperCase)
+
+//4.
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya',
+]
+const countriesToUpperCase = countries.map((country) => country.toUpperCase())
+console.log(countriesToUpperCase)
+
+/*
+// Arrow function
+const countriesToUpperCase = countries.map((country) => {
+  return country.toUpperCase();
+})
+//Explicit return arrow function
+const countriesToUpperCase = countries.map(country => country.toUpperCase());
+*/
+  </script>
+</body>
+</html>

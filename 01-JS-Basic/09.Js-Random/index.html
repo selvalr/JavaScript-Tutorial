@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Random Number</h1>
+
+    <p>
+      Math.random() returns a random number between 0 (included) and 1
+      (excluded):
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById('demo').innerHTML = Math.random();
+    </script>
+    <hr />
+
+    <h2>JavaScript Math</h2>
+
+    <p>
+      Math.floor(Math.random() * 10) returns a random integer between 0 and 9
+      (both included):
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      // Returns a random integer from 0 to 9:
+      document.getElementById('demo').innerHTML = Math.floor(
+        Math.random() * 10
+      );
+
+      // Returns a random integer from 1 to 10:
+      document.getElementById('demo1').innerHTML =
+        Math.floor(Math.random() * 11) + 1;
+    </script>
+    <hr />
+
+    <h2>A Proper Random Function</h2>
+    <script>
+      //This JavaScript function always returns a random number between min (included) and max (excluded):
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      console.log(getRndInteger(0, 10));
+
+      //This JavaScript function always returns a random number between min and max (both included):
+
+      function getRndInteger1(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      console.log(getRndInteger1(1, 10));
+    </script>
+  </body>
+</html>

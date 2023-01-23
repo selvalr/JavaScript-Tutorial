@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--JavaScript HTML DOM Collections-->
+    <!--
+  The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.
+  -->
+    <!--1.The HTMLCollection Object-->
+    <h2>JavaScript HTML DOM</h2>
+    <p>Hello World!</p>
+    <p>Hello Norway!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const myCollection = document.getElementsByTagName('p');
+
+      document.getElementById('demo').innerHTML =
+        'The innerHTML of the second paragraph is: ' +
+        myCollection[1].innerHTML;
+    </script>
+    <hr />
+
+    <!--2.HTML HTMLCollection Length-->
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p id="demo1"></p>
+
+    <script>
+      const myCollection1 = document.getElementsByTagName('p');
+
+      document.getElementById('demo1').innerHTML =
+        'This document contains ' + myCollection1.length + ' paragraphs.';
+    </script>
+    <hr />
+    <!--OR-->
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p>Click the button to change the color of all p elements.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        const myCollection = document.getElementsByTagName('p');
+        for (let i = 0; i < myCollection.length; i++) {
+          myCollection[i].style.color = 'red';
+        }
+      }
+    </script>
+  </body>
+</html>

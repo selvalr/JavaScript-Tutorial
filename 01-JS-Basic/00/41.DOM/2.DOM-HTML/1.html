@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Hello World!</p>
+    <!--JavaScript HTML DOM - Changing HTML-->
+    <script>
+      //Changing HTML Content
+      //syntax:
+      //document.getElementById(id).innerHTML = new HTML
+
+      document.getElementById('p1').innerHTML = 'New text!';
+    </script>
+
+    <hr />
+
+    <h1 id="id01">Old Heading</h1>
+
+    <script>
+      const element = document.getElementById('id01');
+      element.innerHTML = 'New Heading';
+    </script>
+
+    <hr />
+
+    <img id="myImage" src="smiley.gif" />
+    <!--Changing the Value of an Attribute-->
+    <script>
+      //Syntax:
+      //document.getElementById(id).attribute = new value
+
+      document.getElementById('myImage').src = 'landscape.jpg';
+    </script>
+
+    <hr />
+
+    <h1>Change HTML Elements using JavaScript</h1>
+    <p id="p1">This is the first p element.</p>
+    <div id="div1">This is the first div element.</div>
+
+    <script>
+      document.getElementById('p1').innerHTML = 'Hi';
+      document.getElementById('div1').innerHTML = 'this is linuxhint.com';
+    </script>
+
+    <hr />
+
+    <p id="demo1">Click on the below given button to delete the HTML content</p>
+    <button onclick="myFunction()">Delete</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById('demo1').innerHTML = '';
+      }
+    </script>
+
+    <hr />
+
+    <!--Dynamic HTML content-->
+    <p id="demo2"></p>
+
+    <script>
+      document.getElementById('demo2').innerHTML = 'Date : ' + Date();
+    </script>
+
+    <hr />
+
+    <!--document.write()-->
+    <p>Bla bla bla</p>
+    <script>
+      document.write(Date());
+    </script>
+    <p>Bla bla bla</p>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeour Refresh page</title>
+</head>
+
+<body id="aa">
+
+    <h1 id="first">Settimeoutpage Refresh page</h1>
+    <input type="text" id="page" placeholder="enter your second">
+    <button onclick="Click()">send</button>
+    <script>
+        function Click() {
+            let time = document.getElementById("page").value;
+            let value = parseInt(time);
+            setTimeout("location.reload(true)", value * 1000);
+            if(setTimeout("location.reload(true)", value * 1000)){
+                document.getElementById("aa").style.backgroundColor="red";
+
+            }
+        }
+       // setInterval(Click,3000)
+    </script>
+</body>
+
+</html>

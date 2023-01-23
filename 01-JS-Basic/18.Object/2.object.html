@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding object</title>
+  </head>
+  <body>
+    <h1>Understanding Object part 1</h1>
+
+    <script>
+      /*
+      //two type create Object
+      //1.Object Constructor Object syntax
+      let person = new Object();
+
+      //2.Object Literal syntax
+      let person1 = {};
+      */
+
+      //1.Object Constructor Object Example:
+
+      let user = new Object();
+      user.name = 'selva';
+      user.profession = 'freelance web';
+
+      user.sayhi = function () {
+        console.log('hello' + user.name);
+      };
+      user.sayhi();
+
+      //2.Object Literal example:
+      let user1 = {
+        name: 'selvamanan',
+        profession: 'web devveloper',
+        sayhi: function () {
+          console.log('hello' + this.name);
+        },
+      };
+      user1.sayhi();
+
+      let user2 = user1; //user1 object stored user 2
+      user2.sayhi(); //new copy object user2 sayhi method calling
+      user1 = null; //user1 object null
+      user2.sayhi(); //user2 object called method
+      console.log(user2);
+
+      //first name added object
+      //syntax error
+      //user2.firstname = 'selva';
+
+      user2['fname'] = 'selvalr';
+      console.log(user2);
+
+      //access method
+      let promName = 'fname';
+      console.log(user2[promName]); //selvalr
+
+      //for in loop
+      for (pro in user2) {
+        console.log(user2[pro]);
+      }
+    </script>
+  </body>
+</html>

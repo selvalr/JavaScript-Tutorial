@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COnsole in JS</title>
+  </head>
+  <body>
+    <script>
+      console.log('hello Selva');
+      console.error('message error');
+      console.warn('warning log');
+      console.table({ fname: 'selva', age: 25 });
+      console.time('Timer');
+      console.timeEnd('Timer');
+      //console.clear();
+      console.group('simple');
+      console.count('count');
+      console.groupEnd('simple');
+
+      // Custom Console log example
+      const spacing = '10px';
+      const styles = `padding: ${spacing}; background-color: white; color: green; font-style:
+		italic; border: 1px solid black; font-size: 2em;`;
+      console.log('%cGeeks for Geeks', styles);
+    </script>
+  </body>
+</html>

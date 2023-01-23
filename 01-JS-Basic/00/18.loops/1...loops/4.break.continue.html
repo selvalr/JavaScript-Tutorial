@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Break & continue</h1>
+
+    <script>
+      //break 
+      for(let i = 0; i <= 5; i++)
+      {
+      if(i == 3){
+      break
+      }
+      console.log(i);// 0 1 2
+      }
+
+
+
+      //continue
+      for(let i = 0; i <= 5; i++)
+      {
+        if(i == 3)
+        {
+          continue
+        }
+        console.log(i)
+      }
+
+// 0 1 2 4 5
+
+      //example program:
+      /*
+      let month = prompt('enter your month', 12);
+
+      for (let day = 1; day <= 31; day++) {
+        if (
+          (month == 4 || month == 6 || month == 9 || month == 11) &&
+          day == 31
+        )
+          continue;
+
+        console.log('days' + day);
+        if (month == 2 && day == 28) break;
+      }
+
+      */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //find: Return the first element which satisfies the condition
+      const ages = [24, 22, 25, 32, 35, 18];
+      const age = ages.find((age) => age < 20);
+
+      console.log(age);
+
+      //2.
+      const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+      const result = names.find((name) => name.length > 7);
+      console.log(result);
+
+      //3.
+      const scores = [
+        { name: "Asabeneh", score: 95 },
+        { name: "Mathias", score: 80 },
+        { name: "Elias", score: 50 },
+        { name: "Martha", score: 85 },
+        { name: "John", score: 100 },
+      ];
+
+      const score = scores.find((user) => user.score > 80);
+      console.log(score);
+    </script>
+  </body>
+</html>

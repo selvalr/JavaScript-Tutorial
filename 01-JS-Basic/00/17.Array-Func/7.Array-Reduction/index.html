@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Reduction</h1>
+    <script>
+      //array reduction is a all iteration method value add one value to return
+
+      //1.reduce method :left to right array iterate
+
+      //syntax:
+
+      // [3, 45, 67, 86, 43].reduce(function (
+      //   accumulator,
+      //   currentValue,
+      //   index,
+      //   array
+      // ) {
+      //   //statement
+      // },
+      // initialValue);
+
+      let number = [10, 20, 30, 40, 50, 60, 70, 80]; //360 total value
+      let result = number.reduce(function (accumulator, currentValue, index) {
+        console.log('Iteration', index);
+        console.log('accumulator', accumulator);
+        console.log('current value', currentValue);
+        return accumulator + currentValue;
+      });
+      console.log(result);
+
+      //
+      let nestedArray = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [7, 8],
+      ];
+      let oneArray = nestedArray.reduce(function (accumulator, currentValue) {
+        return accumulator.concat(currentValue);
+      });
+      console.log(oneArray); //[1,2,3,4,5,6,7,8]
+
+      //duplicate remove
+      let randomChar = ['a', 'a', 'b', 'c', 'd', 'd'];
+      let unique = randomChar.reduce(function (accumulator, currentValue) {
+        if (accumulator.indexOf(currentValue) === -1) {
+          accumulator.push(currentValue);
+        }
+        return accumulator;
+      }, []);
+
+      console.log(unique);
+
+      //2.reduce right : right to left array iterate
+    </script>
+  </body>
+</html>

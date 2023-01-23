@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lexical scoping</title>
+    <script>
+      function init() {
+        var name = "Mozilla"; // name is a local variable created by init
+        function displayName() {
+          // displayName() is the inner function, a closure
+          console.log(name); // use variable declared in the parent function
+        }
+        displayName();
+      }
+      init();
+    </script>
+  </head>
+  <body>
+    <h1>lexical scoping</h1>
+
+    <script>
+      var a = 10;
+      var func = function () {
+        var b = 20;
+        console.log("a and b is accessible (outer):", a, b);
+        var innerFunc = function () {
+          var c = 30;
+          console.log("a and b and c is accessible (inner):", a, b, c);
+        };
+        innerFunc();
+        return;
+      };
+      func();
+      console.log("only a is accessible (global):", a);
+    </script>
+  </body>
+</html>

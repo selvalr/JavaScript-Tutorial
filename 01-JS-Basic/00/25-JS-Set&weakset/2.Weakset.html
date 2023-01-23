@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>WeakSet</h1>
+    <script>
+      //weakset use primitive value is not allowed
+      //Weakset Allowed only allowed Objects
+      //weakset is not iterable object
+
+      let obj1 = {
+        name: 'selva',
+      };
+      let obj2 = {
+        name: 'karthi',
+      };
+      let obj3 = {
+        name: 'bass',
+      };
+
+      //1.create weakSet:
+      let weak = new WeakSet([
+        { name: 'bass', age: 32 },
+        { name: 'revi', age: 23 },
+      ]);
+      console.log(weak);
+
+      //2.add Method weakSet :
+      let weak1 = new WeakSet();
+      weak1.add(obj1);
+      weak1.add(obj2);
+      weak1.add(obj1); //not duplicate allowed two time adding object
+      console.log(weak1);
+
+      //3.has method weakSet:
+      weak1.has(obj3);
+      console.log(weak1.has(obj3)); //false
+      console.log(weak1.has(obj2)); //true  is add a obj2 method to add a object weakset
+
+      //4.delete method:
+      weak1.delete(obj1);
+      console.log(weak1); //selva object deleted
+    </script>
+  </body>
+</html>

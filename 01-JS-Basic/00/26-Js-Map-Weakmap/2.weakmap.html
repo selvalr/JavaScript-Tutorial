@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Weakmap</h1>
+
+    <script>
+      //WeakMap accepts only objects but not any primitive values (strings, numbers)
+      //weakMap is a not iterable object
+      let obj1 = { name: 'hello' };
+      let obj2 = { name: 'karthi' };
+      let obj3 = { name: 'ravi' };
+
+      //1. Creating a WeakMap and set
+      let myWeakMap = new WeakMap();
+      console.log(myWeakMap);
+      myWeakMap.set(obj1, 'hello1');
+      myWeakMap.set(obj2, 'welcome');
+      myWeakMap.set(obj2, 'welcome'); //already visit obj2
+      myWeakMap.set(obj3, 'hello');
+      console.log(myWeakMap);
+
+      //2.get method:
+      console.log(myWeakMap.get(obj1));
+
+      //3.has:
+      console.log(myWeakMap.has(obj1));
+
+      //4.delete
+      myWeakMap.delete(obj3);
+      console.log(myWeakMap);
+    </script>
+  </body>
+</html>

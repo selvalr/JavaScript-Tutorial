@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Primitive Wrapper</h1>
+    <script>
+      let name = 'Javascript';
+      console.log(name.substring(0, 4)); //Java
+
+      let name1 = 'Selva';
+      let obj = {};
+      console.log(name1); //name only display
+      console.log(obj); //object empty but insert value to prototype object
+
+      //Three types of primitive wrapper
+
+      //1.String
+      let friend = new String('karthi');
+      console.log(friend);
+
+      console.log('selvamanan'.length);
+
+      console.log(new String('selvamanan').length);
+
+      let yourse = 'javascript learner';
+      yourse.color = 'Dark';
+      console.log(yourse.color);
+
+      //2.Number:
+      let number = new Number(1000);
+      console.log(number);
+
+      console.log(number.toString());
+      console.log(number.toString(2));
+      console.log(number.toString(8));
+      console.log(number.toString(16));
+      console.log(number.toLocaleString());
+      console.log(number.toFixed(2));
+      console.log(number.toExponential(2));
+      console.log(number.toPrecision(3));
+      console.log(number.toPrecision(4));
+      console.log(number.toPrecision(5));
+
+      //3.Boolean
+      let no = new Boolean(false);
+      if (no) {
+        console.log('I am Boolean false,but an object with false value');
+      }
+
+      //
+      let trueObj = new Boolean(true);
+      console.log(trueObj);
+      console.log(trueObj.toString());
+      console.log(trueObj.valueOf());
+    </script>
+  </body>
+</html>

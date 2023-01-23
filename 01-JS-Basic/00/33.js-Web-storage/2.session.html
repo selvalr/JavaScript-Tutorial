@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session</title>
+  </head>
+  <body>
+    <h1>session storage</h1>
+    <script>
+      //The session storage object let you store key/value pairs in browser
+
+      //the only difference is has an expiration date.once the browser is closed,the session data is deleted.
+
+      //it stores data only for a session.it means that the data stored in the session storage will be deleted when the browser is closed
+
+      sessionStorage; //access the session storage
+      sessionStorage.setItem('key', 'value'); //save data to session storage
+      sessionStorage.getItem('key'); //read data from session storage
+      sessionStorage.removeItem('key'); //remove data from sessionstorage
+      sessionStorage.clear(); //remove all(clear session storage)
+
+      //1.setItem():
+      let user = {
+        name: 'selva',
+      };
+      //convert js object to Json Format
+      const userToJSON = JSON.stringify(user);
+
+      sessionStorage.setItem('user', userToJSON);
+
+      //2.getItem():
+
+      const user1 = sessionStorage.getItem('user');
+
+      //convert JSOn to js Object
+      const JSONToUser = JSON.parse(user1);
+      console.log(JSONToUser);
+
+      //3.removeItem():=>delete particular data
+
+      //sessionStorage.removeItem('lastname');
+
+      //4.clear()=>delete every data
+
+      //sessionStorage.clear();
+
+      //5.length
+      let len = sessionStorage.length;
+      console.log(len); //1
+    </script>
+  </body>
+</html>

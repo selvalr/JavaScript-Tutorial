@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>Reference Type Introduction</h1>
+    <script>
+      //person is object value or Object
+      let person = new Object(); //Object is Constructor Function
+      console.log(person instanceof Object); //true; //typeof operator is primitive data check. Instanceof operator is check Object which reference type
+      console.log(person); //{}
+
+      person.name = 'selva';
+      person.age = 23;
+      person.status = 'single';
+
+      console.log(person.name); //selva
+      console.log(person.age); //23
+      console.log(person.status); //single
+
+      //person sayhi() is a function but call method inside a object
+      person.sayhi = function () {
+        console.log('hi' + person.name);
+      };
+      person.sayhi(); //call function
+
+      //1.next stduy difference between primitive data type And Object data type:
+
+      let num1 = 10;
+      let num2 = num1;
+      let obj1 = new Object();
+      let obj2 = obj1;
+
+      num2 = 20;
+      console.log('num1 =' + num1); //10
+      console.log('num2 =' + num2); //20 ; //two difference value stored in stack method storing value
+
+      obj2.newProp = 'by Reference';
+      console.log('object1', obj1); //'by reference ;
+      console.log('object2', obj2); //'by reference ; // one value added two object value changed the object value in the object data type
+    </script>
+  </body>
+</html>

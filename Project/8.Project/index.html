@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        #pic{
+            height: 400px;
+            width: 40%;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <img src="./img/0.jpeg" alt="home" id="pic"><br>
+    <button onclick="backward()"><span><</span></button>
+    <button onclick="forward()"><span>></span></button>
+    
+    <script>
+        let image=["./img/1.jpeg","./img/2.jpeg","./img/3.jpeg"];
+        console.log(image);
+        count=-1;
+        slide=document.getElementById("pic");
+        function forward(){
+                
+                count=count+1;
+                if(count<=image.length){
+                    if(count==image.length){
+                        count=0;
+                    }
+                slide.src=image[count];
+               
+                }
+            }
+
+                function backward(){
+                
+                count=count-1;
+                if(count<image.length){
+                    if(count==-1 || count==-2){
+                        count=2;
+                    }
+                slide.src=image[count];
+            console.log(slide)   
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.
+
+      //1.Window Size
+      document.getElementById('demo').innerHTML =
+        'Browser inner window width: ' +
+        window.innerWidth +
+        'px<br>' +
+        'Browser inner window height: ' +
+        window.innerHeight +
+        'px';
+
+      /*
+        Other Window Methods
+        Some other methods:
+
+        window.open() - open a new window
+        window.close() - close the current window
+        window.moveTo() - move the current window
+        window.resizeTo() - resize the current window
+
+      */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    background-color: aqua;
+    height: 100vh;
+}
+input{
+    height:30px ;
+}
+button{
+    width: 35px;
+    margin-top: 10px;
+    margin-right: -1px;
+}
+.ee{
+    width:30px;
+}

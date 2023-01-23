@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+    <pre>
+      String length
+      String slice()
+      String substring()
+      String substr()
+      String replace() 
+      String replaceAll() 
+      String toUpperCase()
+      String toLowerCase()
+      String concat()
+      String trim()
+      String trimStart()
+      String trimEnd() 
+      String padStart()
+      String padEnd() 
+      String charAt()
+      String charCodeAt()
+      String split()
+    </pre>
+    <script>
+      //1.string length
+      let text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      let length = text.length;
+      console.log(length);
+
+      //Extracting String Parts:
+      //2.slice(start, end)
+      let text1 = 'Apple, Banana, Kiwi';
+      let part = text1.slice(7, 13);
+      console.log(part); //Banana
+
+      let text2 = 'Apple, Banana, Kiwi';
+      let part2 = text2.slice(7);
+      console.log(part2); //banana,kiwi
+
+      let text3 = 'Apple, Banana, Kiwi';
+      let part3 = text3.slice(-12); //Banana, Kiwi
+      console.log(part3);
+
+      let text4 = 'Apple, Banana, Kiwi';
+      let part4 = text4.slice(-12, -6);
+      console.log(part4); //Banana is back side to left
+
+      //3.substring(start, end):
+      //substring() is similar to slice().
+
+      let str5 = 'Apple, Banana, Kiwi';
+      let part5 = str5.substring(7, 13);
+      console.log(part5); //Banana is a output The difference is that start and end values less than 0 are treated as 0 in substring().
+
+      //4.substr(start,s length):
+      //substr() is similar to slice().
+
+      let str6 = 'Apple, Banana, Kiwi';
+      let part6 = str6.substr(7, 6);//B start 7 is end 6 in A
+      console.log(part6); //Banana is The difference is that the second parameter specifies the length of the extracted part.
+
+      //5.Replacing String Content:
+      let text7 = 'Please visit Microsoft!';
+      let newText = text7.replace('Microsoft', 'W3Schools');
+      console.log(newText); //Please visit W3Schools!
+
+      //6.JavaScript String ReplaceAll():
+      let text8 =
+        'I love cats. Cats are very easy to love. Cats are very popular.';
+      text = text8.replaceAll('Cats', 'Dogs');
+      text = text8.replaceAll('cats', 'dogs');
+      console.log(text); //I love dogs. Cats are very easy to love. Cats are very popular.
+
+      //7.JavaScript String toUpperCase() & lowercase:
+      let h = 'selva';
+      let cap = h.toUpperCase();
+      console.log(cap); //SELVA
+      console.log(cap.toLowerCase()); //selva
+
+      //8.JavaScript String concat():
+      let text11 = 'Hello';
+      let text21 = 'World';
+      let text31 = text11.concat(' ', text21);
+      console.log(text31); //Hello World
+
+      //9.trim(): Removes trailing space in the beginning or the end of a string.
+      let text12 = '      Hello World!      ';
+      let text22 = text12.trim();
+      console.log(text22); //Hello world
+
+      //10.JavaScript String Padding:
+      //-string method of paddStrat and end method
+      let text13 = '5';
+      let padded13 = text13.padStart(4, 'x');
+      console.log(padded13); //xxx5
+
+      let numb = 5;
+      let text14 = numb.toString();
+      let padded = text14.padStart(4, '0');
+      console.log(padded); //0005
+
+      //Extracting String Characters:
+      //11. charAt(position)->index of position
+      let t = 'HELLO WORLD';
+      let char = t.charAt(0);
+      console.log(char); //H
+
+      //12.charCodeAt(position)->unicode of the character at a specified index in a string:
+      let t2 = 'HELLO WORLD';
+      let char2 = t2.charCodeAt(0);
+      console.log(char2); //72
+
+      //13.Property access [ ]->ECMAScript 5 (2009) allows property access [ ] on strings:
+      let text15 = 'HELLO WORLD';
+      let char3 = text15[0];
+      console.log(char3); //H
+
+      //14.split(): The split method splits a string at a specified place
+      let text16 = 'a,b,c,d,e,f';
+      const myArray = text16.split(',');
+      console.log(myArray[0]); //a
+
+      //15.includes(): It takes a substring argument and it checks if substring argument exists in the string. includes() returns a boolean.
+      let string = '30 Days Of JavaScript'
+      console.log(string.includes('Days'))     // true
+      console.log(string.includes('days'))     // false - it is case sensitive!
+      console.log(string.includes('Script'))   // true
+      console.log(string.includes('script'))   // false
+      console.log(string.includes('java'))     // false
+      console.log(string.includes('Java'))     // true
+
+      //16.indexOf(): Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+      //string.indexOf(substring)
+      let string1 = '30 Days Of JavaScript'
+
+      console.log(string1.indexOf('D'))          // 3
+      console.log(string1.indexOf('Days'))       // 3
+      console.log(string1.indexOf('days'))       // -1
+      console.log(string1.indexOf('a'))          // 4
+      console.log(string1.indexOf('JavaScript')) // 11
+      console.log(string1.indexOf('Script'))     //15
+      console.log(string1.indexOf('script'))     // -1
+
+      //17.lastIndexOf(): Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+      //syntax
+      //string.lastIndexOf(substring)
+      let string2 = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+
+      console.log(string2.lastIndexOf('love'))       // 67
+      console.log(string2.lastIndexOf('you'))        // 63
+      console.log(string2.lastIndexOf('JavaScript')) // 38
+
+      //18.startsWith: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+      let string3 = 'Love is the best to in this world'
+
+      console.log(string3.startsWith('Love'))   // true
+      console.log(string3.startsWith('love'))   // false
+      console.log(string3.startsWith('world'))  // false
+
+      //19.endsWith: it takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+      let string4 = 'Love is the most powerful feeling in the world'
+
+      console.log(string4.endsWith('world'))         // true
+      console.log(string4.endsWith('love'))          // false
+      console.log(string4.endsWith('in the world')) // true
+
+      //20.search: it takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern.
+      let string5 = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+      console.log(string5.search('love'))          // 2
+      console.log(string5.search(/javascript/gi))  // 7
+
+      //21.match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
+      let strin = 'love'
+      let patternOne = /love/     // with out any flag
+      let patternTwo = /love/gi   // g-means to search in the whole text, i - case insensitive
+
+
+      //match
+      let string6 = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+      console.log(string6.match('love'));
+
+      let pattern = /love/gi
+      console.log(string6.match(pattern))   // ["love", "love", "love"]
+
+      let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge'
+      let regEx = /\d+/
+
+      // d with escape character means d not a normal d instead acts a digit
+      // + means one or more digit numbers,
+      // if there is g after that it means global, search everywhere.
+
+        console.log(txt.match(regEx))  // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
+        console.log(txt.match(/\d+/g)) // ["2019", "30", "2020"]
+
+
+      //22.repeat(): it takes a number as argument and it returns the repeated version of the string.
+      let string7 = 'love'
+      console.log(string7.repeat(10)) // lovelovelovelovelovelovelovelovelovelove
+    </script>
+  </body>
+</html>

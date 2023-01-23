@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        form{
+            background: rgb(187, 243, 240);
+            text-align: center;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        .bad{
+            background-color: rgb(94, 15, 15);
+            height: 30px;
+            width: 80px;
+            color: aliceblue;
+            padding: 10px;
+        }
+        .medium{
+            background-color: blue;
+            height: 30px;
+            width: 80px;
+            color: wheat;
+            padding: 10px;
+        }
+        .strong{
+            background-color: rgb(84, 218, 22);
+            height: 30px;
+            width: 80px;
+            color: wheat;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Regular Expression name email phone</h1>
+    <div>
+    <form action="#id"  onsubmit="send()" autocomplete="off">
+        <p>Name
+            <input type="text">
+        </p>
+
+        <p>Email
+            <input type="text">
+        </p>
+
+        <p>Address
+            <input type="text">
+        </p>
+
+        <p>Telephone
+            <input type="text">
+        </p>
+
+        <p>Password
+            <input type="password" oninput="clickinput()" onmouseout="out()"><br><br>
+            <span id="spam"></span>
+        </p>
+
+<input type="submit" value="submit">
+
+    </form>
+    </div>
+</body>
+
+<script>
+    let x=document.getElementsByTagName("input");
+    function send(){
+        
+        alpha=/^[A-Za-z]+$/;
+
+    if(x[0].value==""){
+        alert("pls fill the name");
+        return false;
+        
+    }
+    
+    if(!alpha.test(x[0].value)){
+        alert("pls fill the alphapets");
+        return false;
+    }
+    email=/^([A-Za-z0-9_.])+\@([a-z])+\.([a-z])+$/;
+
+    if(x[1].value==""){
+        alert("please fill email");
+        return false;
+    }
+    if(!email.test(x[1].value)){
+        alert("pls u can crct @gmail.com");
+        return false;
+    }
+
+
+    num=/^[(0-9){10}]+$/;
+    if(x[3].value==""){
+        alert("pls fill your mobile number");
+        return false;
+    }
+    if(!num.test(x[3].value)){
+        alert("pls fill to 10 digit number")
+        return false;
+    }
+    passwords=/^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+    if(x[4].value==""){
+        alert("please enter your password");
+    }
+    if(!passwords.test(x[4].value)){
+        alert("please your password is alphapets number and keys")
+    }
+    
+
+ 
+}
+function clickinput(){
+    length=x[4].value.length;
+    if(length<3){
+        document.getElementById("spam").className="bad";
+        document.getElementById("spam").innerHTML="passwrd is very bad";
+    }
+    if(length>3 && length<5){
+        document.getElementById("spam").className="medium";
+        document.getElementById("spam").innerHTML="your password medium";
+    }
+    if(length>5 && length<=7){
+        document.getElementById("spam").className="strong";
+        document.getElementById("spam").innerHTML="Your password is strong";
+    }
+  
+
+
+}
+function out(){
+    document.getElementById("spam").classList.remove("bad","medium","strong");
+    document.getElementById("spam").innerHTML="";
+}
+</script>
+
+</html>

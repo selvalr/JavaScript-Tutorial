@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onKeyUp</title>
+  </head>
+  <body>
+    <h1>OnkeyUp</h1>
+    <input
+      id="bg"
+      onkeyup="changeBackground()"
+      placeholder="write something"
+      style="color: #fff"
+    />
+
+    <script>
+      var a = 0;
+      var b = 0;
+      var c = 0;
+      function changeBackground() {
+        var x = document.getElementById('bg');
+        x.style.backgroundColor = 'rgb(' + a + ', ' + b + ', ' + c + ')';
+        a += 1; //0+1=1
+        console.log(a);
+        b += a + 1; //0+=1+1=2
+        console.log(b);
+        c += b + 1; //0+=2+1=3
+        console.log(c);
+        if (a > 255) a = a - b; //1=1-2
+        console.log(a);
+        if (b > 255) b = a; //2=-1
+        console.log(b);
+        if (c > 255) c = b; //3=-1
+        console.log(c);
+      }
+    </script>
+  </body>
+</html>

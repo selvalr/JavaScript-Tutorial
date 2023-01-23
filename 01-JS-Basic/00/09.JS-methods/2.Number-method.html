@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Number method</h1>
+    <pre>
+      toString()	   - Returns a number as a string
+      toExponential()	 - Returns a number written in exponential notation
+      toFixed()	     - Returns a number written with a number of decimals
+      toPrecision()	 - Returns a number written with a specified length
+      ValueOf()	     - Returns a number as a number
+    </pre>
+    <script>
+      //The toString() Method:
+      let x = 123;
+      console.log(
+        x.toString() +
+          '<br>' +
+          (123).toString() +
+          '<br>' +
+          (100 + 23).toString()
+      );
+
+      //The toExponential() Method:
+      let x1 = 9.656;
+      console.log(
+        x1.toExponential() +
+          '<br>' +
+          x1.toExponential(2) +
+          '<br>' +
+          x1.toExponential(4) +
+          '<br>' +
+          x1.toExponential(6)
+      );
+
+      //The toFixed() Method:
+      let x2 = 9.656;
+
+      console.log(
+        x2.toFixed(0), //10
+        x2.toFixed(2), //9.66
+        x2.toFixed(4), //9.6560
+        x2.toFixed(6) //9.656000
+      );
+
+      //The toPrecision() Method:
+      let x3 = 9.656;
+      console.log(
+        x3.toPrecision() + //9.656
+          '<br>' +
+          x3.toPrecision(2) + //9.7
+          '<br>' +
+          x3.toPrecision(4) + //9.656
+          '<br>' +
+          x3.toPrecision(6) //9.65600
+      );
+
+      //The valueOf() Method:
+      let x4 = 123;
+      console.log(x4.valueOf(), (123).valueOf(), (100 + 23).valueOf()); //123 123 123
+    </script>
+  </body>
+</html>

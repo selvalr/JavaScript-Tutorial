@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //for - loop through a block of code a number of time
+      /*
+      // For loop structure:
+        for(initialization, condition, increment/decrement)
+          {
+            // code goes here
+          }
+      
+      */
+
+      //1.
+      for(let i = 0; i <= 5; i++)
+      {
+        console.log(i);// 0 1 2 3 4 5
+      }
+
+      //2.
+      for(let i = 5; i >= 0; i--)
+      {
+        console.log(i);// 5 4 3 2 1 0
+      }
+
+      //3.
+      for(let i = 0; i <= 5; i++)
+      {
+        console.log(`${i} * ${i} = ${i * i}`)
+      }
+
+      //4.
+      const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+      const newArr = []
+      for(let i = 0; i < countries.length; i++)
+      {
+        newArr.push(countries[i].toUpperCase())
+      }
+
+// ["FINLAND", "SWEDEN", "DENMARK", "NORWAY", "ICELAND"]
+
+
+//5.Adding all elements in the array
+
+const numbers = [1, 2, 3, 4, 5]
+let sum = 0
+for(let i = 0; i < numbers.length; i++){
+  sum  = sum + numbers[i]  // can be shorten, sum += numbers[i]
+
+}
+console.log(sum)  // 15
+
+
+//6.Creating a new array based on the existing array
+
+const numbers1 = [1, 2, 3, 4, 5]
+const newArr1 = []
+let sum1 = 0
+for(let i = 0; i < numbers1.length; i++){
+  newArr1.push( numbers1[i] ** 2)
+
+}
+console.log(newArr1)  // [1, 4, 9, 16, 25]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form valitation</title>
+</head>
+
+<body>
+    <h1>Form valitation</h1>
+    <form action="./join html/index.html" onsubmit="return send()" autocomplete="off">
+        <label for="Name">Name <span>**</span></label>
+        <input type="text" id="name1"><br>
+        <label for="Email">Email</label>
+        <input type="email"><br>
+        <label for="number">phone <span>**</span></label>
+        <input type="phone" id="contact"><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+    <script>
+        function send() {
+            let x = document.getElementById("name1").value;
+            let y = document.getElementById("contact").value;
+            if (x == "") {
+                alert('please fill name');
+                return false;
+            }
+            else if (y == "") {
+                alert("please fill mobile");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

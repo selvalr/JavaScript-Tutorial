@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Functional Programming
+Instead of writing regular loop, latest version of JavaScript introduced lots of built in methods which can help us to solve complicated problems. All builtin methods take callback function. In this section, we will see forEach, map, filter, reduce, find, every, some, and sort.-->
+    <script>
+      //foreach:
+      //forEach: Iterate an array elements. We use forEach only with arrays. It takes a callback function with elements, index parameter and array itself. The index and the array optional.
+      arr.forEach(function (element, index, arr) {
+        console.log(index, element, arr);
+      });
+      // The above code can be written using arrow function
+      arr.forEach((element, index, arr) => {
+        console.log(index, element, arr);
+      });
+      // The above code can be written using arrow function and explicit return
+      arr.forEach((element, index, arr) => console.log(index, element, arr));
+
+      //1.
+      let sum = 0;
+      const numbers = [1, 2, 3, 4, 5];
+      numbers.forEach((num) => console.log(num));
+      console.log(sum);
+
+      //2.
+      let sum1 = 0;
+      const numbers1 = [1, 2, 3, 4, 5];
+      numbers1.forEach((num) => (sum1 += num));
+      console.log(sum1);
+
+      //3.
+      const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"];
+      countries.forEach((element) => console.log(element.toUpperCase()));
+    </script>
+  </body>
+</html>

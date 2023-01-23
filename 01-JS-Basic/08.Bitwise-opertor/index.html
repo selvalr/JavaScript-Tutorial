@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Bitwise AND</h2>
+    <p id="demo">My First Paragraph.</p>
+
+    <h2>JavaScript Bitwise OR</h2>
+    <p id="demo1">My First Paragraph.</p>
+
+    <h2>JavaScript Bitwise XOR</h2>
+    <p id="demo2"></p>
+
+    <h2>JavaScript Bitwise NOT</h2>
+    <p id="demo3"></p>
+
+    <h2>JavaScript Bitwise Left</h2>
+    <p id="demo4"></p>
+
+    <h2>JavaScript Sign Preserving Bitwise Right.</h2>
+    <p id="demo5"></p>
+
+    <h2>The >>> Operator</h2>
+    <p id="demo6"></p>
+
+    <script>
+      /*
+    //Bitwise AND &
+    Operation	Result
+        0 & 0	0
+        0 & 1	0
+        1 & 0	0
+        1 & 1	1
+
+        //Bitwise OR |
+        Operation	Result
+            0 | 0	0
+            0 | 1	1 
+            1 | 0	1
+            1 | 1	1
+
+            //Bitwise XOR ^
+
+            Operation	Result
+                0 ^ 0	0
+                0 ^ 1	1 
+                1 ^ 0	1
+                1 ^ 1	0 
+
+                //JavaScript Bitwise NOT (~)
+                Decimal	 Binary
+                    5	 00000000000000000000000000000101
+                    ~5	 11111111111111111111111111111010 (-6)
+
+
+                //JavaScript (Zero Fill) Bitwise Left Shift (<<)
+
+                Decimal	    Binary
+                    5	    00000000000000000000000000000101
+                    5 << 1	00000000000000000000000000001010 (10)
+
+
+                  //  JavaScript (Sign Preserving) Bitwise Right Shift (>>)
+                This is a sign preserving right shift. Copies of the leftmost bit are pushed in from the left, and the rightmost bits fall off:
+
+        Decimal	 Binary
+            -5	  11111111111111111111111111111011
+        -5 >> 1	  11111111111111111111111111111101 (-3)
+
+
+    */
+      document.getElementById('demo').innerHTML = 5 & 1;
+      document.getElementById('demo1').innerHTML = 5 | 1;
+      document.getElementById('demo2').innerHTML = 5 ^ 1;
+      document.getElementById('demo3').innerHTML = ~5;
+      document.getElementById('demo4').innerHTML = 5 << 1;
+      document.getElementById('demo5').innerHTML = -5 >> 1;
+      document.getElementById('demo6').innerHTML = 5 >>> 1;
+    </script>
+  </body>
+</html>

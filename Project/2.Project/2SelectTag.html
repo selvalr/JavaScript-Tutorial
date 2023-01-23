@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selcet Tag name</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+
+        }
+
+        input {
+            justify-content: center;
+
+            text-align: center;
+            height: 40px;
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: rgb(9, 116, 209);
+            border: none;
+            height: 30px;
+            width: 50px;
+        }
+        p{
+            color: blue;
+        }
+        .mycass{
+            background-color: aquamarine;
+            height: 20px;
+            width: 70px;
+            color: orange;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select Tag name</h1>
+    <input type="text" placeholder="id">
+    <div id="first">
+        <input type="text" placeholder="fname">
+        <input type="text" placeholder="lastname">
+        <input type="text" placeholder="country">
+
+        <button type="submit" onclick="demo()">submit</button>
+                <p>      </p>
+                <p>      </p>
+                <p>      </p>
+    </div>
+
+    <script>
+        function demo(){
+            let area=document.getElementById('first');
+            let box=area.getElementsByTagName("input");
+            let data=document.getElementsByTagName("p");
+
+            for(let i=0;i<=box.length;i++){
+                data[i].innerHTML=box[i].value;
+                data[i].className="mycass";
+            }
+
+         /*   data[0].innerHTML=box[0].value;
+            data[1].innerHTML=box[1].value;
+            data[2].innerHTML=box[2].value;
+        */
+        }
+
+
+    </script>
+  
+</body>
+
+</html>

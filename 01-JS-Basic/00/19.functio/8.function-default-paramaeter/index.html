@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // syntax:
+      /*
+    // Declaring a function
+    function functionName(param = value) {
+        //codes
+      }
+      // Calling function
+      functionName()
+      functionName(arg)
+    */
+
+      //Example:
+      //i.
+      function greetings(name = "Peter") {
+        let message = `${name}, welcome to 30 Days Of JavaScript!`;
+        return message;
+      }
+      console.log(greetings());
+      console.log(greetings("Asabeneh"));
+
+      //ii
+      function generateFullName(firstName = "Asabeneh", lastName = "Yetayeh") {
+        let space = " ";
+        let fullName = firstName + space + lastName;
+        return fullName;
+      }
+      console.log(generateFullName());
+      console.log(generateFullName("David", "Smith"));
+
+      //iii.
+      function weightOfObject(mass, gravity = 9.81) {
+        let weight = mass * gravity + " N"; // the value has to be changed to string first
+        return weight;
+      }
+      console.log("Weight of an object in Newton: ", weightOfObject(100)); // 9.81 gravity at the surface of Earth
+      console.log("Weight of an object in Newton: ", weightOfObject(100, 1.62)); // gravity at surface of Moon
+
+      //2.Let us see how we write the above functions with arrow functions
+
+      /*
+        // syntax:
+
+        // Declaring a function
+          const functionName = (param = value) => {
+            //codes
+          }
+          // Calling function
+          functionName()
+          functionName(arg)
+  
+      */
+      //Example:
+      //i.
+      const greetings = (name = "Peter") => {
+        let message = name + ", welcome to 30 Days Of JavaScript!";
+        return message;
+      };
+      console.log(greetings());
+      console.log(greetings("Asabeneh"));
+
+      //ii.
+      const generateFullName = (
+        firstName = "Asabeneh",
+        lastName = "Yetayeh"
+      ) => {
+        let space = " ";
+        let fullName = firstName + space + lastName;
+        return fullName;
+      };
+      console.log(generateFullName());
+      console.log(generateFullName("David", "Smith"));
+
+      //iii.
+
+      const calculateAge = (birthYear, currentYear = 2019) =>
+        currentYear - birthYear;
+      console.log("Age: ", calculateAge(1819));
+
+      //iv.
+
+      const weightOfObject = (mass, gravity = 9.81) => mass * gravity + " N";
+      console.log("Weight of an object in Newton: ", weightOfObject(100)); // 9.81 gravity at the surface of Earth
+      console.log("Weight of an object in Newton: ", weightOfObject(100, 1.62)); // gravity at surface of Moon
+    </script>
+  </body>
+</html>

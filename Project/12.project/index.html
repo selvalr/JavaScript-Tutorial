@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add class and remove class in javascript</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        div {
+            background-color: azure;
+            height: 230px;
+            margin: 50px;
+        }
+
+        label {
+            margin: 10px;
+        }
+
+        input {
+            margin: 10px;
+        }
+
+        .fill {
+            width: 200px;
+            background-color: rgb(236, 2, 2);
+            color: aliceblue;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Class And Remove Class In javascript</h1>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td><input type="text" onmouseover="onMouseOver(0)" onmouseout="onMouseOut(0)"></td>
+                <td>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="native">Native:</label></td>
+                <td><input type="text" onmouseover="onMouseOver(1)" onmouseout="onMouseOut(1)"></td>
+                <td>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+           <td> <label for="phone">Mobile:</label></td>
+            <td><input type="text" onmouseover="onMouseOver(2)" onmouseout="onMouseOut(2)"></td>
+           <td><p></p></td>
+            </tr>
+          <tr>
+              <td><label for="email">email:</label></td>
+            <td><input type="text" onmouseover="onMouseOver(3)" onmouseout="onMouseOut(3)"></td>
+            <td><p></p></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        let x = document.getElementsByTagName("input");
+        let y = document.getElementsByTagName("p");
+
+        function onMouseOver(i) {
+            if (x[i].value == "") {
+                y[i].innerHTML = "please Fill the field";
+                y[i].className = "fill";
+            }
+        }
+        function onMouseOut(i) {
+            y[i].innerHTML = "";
+            y[i].classList.remove("fill");
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

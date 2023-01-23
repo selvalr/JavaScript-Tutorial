@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map</h1>
+    <script>
+      //Es6 Feature:map
+      //map is object
+      //map is iterable object
+      //map keys object accept pannum and primitive data type accept pannum
+
+      //map use problem  :
+      let obj1 = { name: "hello" };
+      let obj2 = { name: "karthi" };
+      let obj3 = { name: "ravi" };
+      let c = {};
+      c[obj1] = "welcome1";
+      c[obj2] = "welcome2";
+      console.log(c); //welcome2
+
+      //1.create Map and set add value:
+      let map = new Map();
+      map.set(obj1, "welcome");
+      map.set(obj2, "welcome");
+      map.set(obj1, "welcome"); //not exiquted already object visit
+      map.set(obj3, "helo");
+      console.log(map);
+
+      //2.delete
+      // map.delete(obj1);
+      // console.log(map); //delete obj one method
+
+      //3.size
+      console.log(map.size); //1
+
+      //4.has-->Checking key in Map
+      console.log(map.has(obj1)); //false
+      console.log(map.has(obj2)); //true
+
+      //5.clear
+      //map.clear();
+      // console.log(map); //undefind
+
+      //6.Getting a value from Map
+
+      console.log(map.get(obj2)); //welcome
+
+      //iterable keys (or) value
+      /*
+      for (let i of map.keys()) {
+        console.log(i);
+        console.log(`name=${i.name}`);
+      }
+*/
+      //7.foreach method:
+      //keys and values
+      map.forEach((values, keys) => {
+        console.log(`name=${keys.name} value=${values}`);
+      });
+
+      //map accept primitive value
+      //map array accept
+      map.set(10, "number");
+      map.set("selva", "string");
+      map.set([1, 2, 3, 4, 5]);
+      console.log(map);
+    </script>
+  </body>
+</html>

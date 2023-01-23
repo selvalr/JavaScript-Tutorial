@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--The nodeName Property-->
+    <h1 id="id01">My First Page</h1>
+    <p id="id02"></p>
+
+    <script>
+      document.getElementById('id02').innerHTML =
+        document.getElementById('id01').nodeName;
+    </script>
+
+    <hr />
+
+    <!--The nodeType Property-->
+    <!--
+      ELEMENT_NODE	  1	    <h1 class="heading">W3Schools</h1>
+      ATTRIBUTE_NODE	2	    class = "heading" (deprecated)
+      TEXT_NODE	      3	    W3Schools
+      COMMENT_NODE	  8	   <- This is a comment ->
+      DOCUMENT_NODE	  9	  The HTML document itself(the parent of <html>)
+      DOCUMENT_TYPE_NODE	10	<!Doctype html>
+    -->
+    <h1 id="id01">My First Page</h1>
+    <p id="id02"></p>
+
+    <script>
+      document.getElementById('id02').innerHTML =
+        document.getElementById('id01').nodeType;
+    </script>
+  </body>
+</html>

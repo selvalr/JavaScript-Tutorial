@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert,Confirm,PromptBOX</title>
+</head>
+<body>
+    <h1>Alert,Confirm,PromptBOX</h1>
+    
+    <input type="radio" id="alert" name="box" value="alert">
+    <label for="alert">Alert</label><br>
+    <input type="radio" id="cofirm" name="box" value="confirm">
+    <label for="confirm">Confirm</label><br>
+    <input type="radio" id="prompt" name="box" value="prompt">
+    <label for="prompt">Prompt</label><br>
+    <button onclick="Result()">Submit</button>
+    <p id="error"></p>
+    
+    <script>
+        function Result(){
+            if(document.getElementById('alert').checked){
+                alert('alert');
+            }
+            else if(document.getElementById('cofirm').checked){
+                confirm('bye');
+            }
+            else if(document.getElementById('prompt').checked){
+                prompt('enter name',"");
+            }
+            else{
+                document.getElementById("error").innerHTML="You have not selected any season";
+            }
+        }
+    </script>
+</body>
+</html>

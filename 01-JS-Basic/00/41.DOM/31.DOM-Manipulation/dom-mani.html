@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="parent"></p>
+    <script>
+      //1.create element
+
+      //Example1:
+      const div = document.createElement('div');
+      console.log(div); //<div></div>
+
+      //Example2:
+      const ul = document.createElement('ul');
+      const li = document.createElement('li');
+      ul.appendChild(li);
+
+      //set content:(innerHTML()):
+      let para = (div.innerHTML = 'hello');
+      console.log(para); //<div>hello</div>
+
+      //2.insert an element:
+
+      //i.appendChild()
+
+      let parent = document.getElementById('parent');
+      parent.appendChild(div);
+
+      //ii.insertbefore()
+
+      const innerhtml = (creteEl.innerHTML = 'iam tex');
+      console.log(innerhtml);
+
+      //2.Removing element
+
+      //Example:
+      ul.removeChild(li);
+      //(OR)
+      li.remove();
+
+      //3.Querying element
+
+      //query by id
+      const element0 = document.querySelector('#hello');
+
+      //query group of element by id
+      const element1 = document.querySelectorAll('#hello');
+
+      //query element by class name
+
+      const element2 = document.querySelector('.classname');
+
+      //query group of element by classname
+      const element3 = document.querySelectorAll('.classname');
+
+      //4.modify element
+
+      //modify the style obj
+
+      element.style.fontSize = '18px';
+      element.style.backgroundColor = '#ffffff';
+
+      //modify the id
+      element.id = 'myId';
+
+      //modify class
+      element.classList.add('myclass');
+      element.classList.remove('myclass');
+
+      //modify text
+      element.textContent = 'hello';
+      element.innerText = 'hello';
+
+      //modifying attributed general
+
+      //example:
+      input.setAttributes(name, 'myInput');
+      input.removeAttribute('name');
+    </script>
+  </body>
+</html>

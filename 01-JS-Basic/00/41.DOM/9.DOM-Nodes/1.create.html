@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Creating New HTML Elements (Nodes)-->
+    <h2>JavaScript HTML DOM</h2>
+    <p>Add a new HTML Element.</p>
+
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script>
+      const para = document.createElement('p'); //create p tag
+      const node = document.createTextNode('This is new.'); //create text in p
+      para.appendChild(node); //p tag inside text
+      const element = document.getElementById('div1');
+      element.appendChild(para);
+    </script>
+
+    <hr />
+  </body>
+</html>

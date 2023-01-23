@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Understanding object part 2</h1>
+    <script>
+      let user = new Object();
+
+      user.name = 'selva';
+      user.age = 23;
+      user.sayhi = function () {
+        console.log('hello' + user.name);
+      };
+      console.log(user.hasOwnProperty('name')); //user go the check property name property is true
+      console.log(user.hasOwnProperty('age')); //user go the check property age property is true
+      console.log(user.hasOwnProperty('pro')); //user go the check property pro property is false
+      console.log(user.hasOwnProperty('sayhi')); //user go the check property sayhi property is true
+      console.log(user.hasOwnProperty('toString')); //user go the check property toString property is false in your object
+      console.log(user.hasOwnProperty('valueOf')); //user go the valueof property is false
+
+      console.log(user.toString()); //[object Object]
+      console.log(user.valueOf()); //{name: 'selva', age: 23, sayhi: ƒ}
+
+      //example :
+      let employee = {
+        empName: 'selva',
+        age: 23,
+        salary: 24000,
+      };
+      employee.salary = 100000;
+      console.log(employee.salary); //1000000
+
+      //normal object change the value:
+      let employee2 = {
+        name: 'karthick',
+        job: 'Police',
+      };
+      employee2.name = 'Kar';
+      console.log(employee2.name); //kar
+
+      //DATA PROPERTIES are four type:
+      //1.Configurable --->the last three attribute configurable of the design
+      //2.Enumerable --> for in loop use to a display (or) display none properties choose the Enumerable
+      //3.Writable -->writable attribute is a readable or writeable design to a value
+      //4.Value  ---> actual value storing
+
+      //1.Value method
+      //Object not changeable value rewrite off mode:
+      let employee3 = {}; //empty object
+      //name not change the object
+      Object.defineProperty(employee3, 'name', {
+        configurable: true,
+        writable: false,
+        enumerable: true,
+        value: 'baskar',
+      });
+      employee3.name = 'muguntha';
+      console.log(employee3.name); //baskar
+
+      //2.writeable
+      //salary display  :
+      employee3.designation = 'develop';
+      employee3.salary = 28000;
+      //salary display in:
+      for (prop in employee3) {
+        console.log(prop, employee3[prop]);
+      }
+
+      //3.enumerable
+      //salary display none:
+      Object.defineProperty(employee3, 'salary', {
+        configurable: true, //forin allowed
+        writable: false, //rewrite is no allowed
+        enumerable: false, //display property and value none
+      });
+
+      console.log('Results after enumerable change');
+
+      for (prop in employee3) {
+        console.log(prop, employee3[prop]);
+      }
+
+      employee3.bonus = 100000;
+      console.log(employee3);
+      delete employee3.bonus;
+      console.log(employee3);
+
+      //4.configurable is a delete to the properties abstract value
+      employee3.bonus = 10000000;
+      Object.defineProperty(employee3, 'bonus', {
+        configurable: false,
+      });
+      delete employee3.bonus;
+      console.log(employee3);
+
+      //ACCESS PROPERTIES:
+      //1.[GET]
+      //2.[SET]
+
+      let emp = {
+        name: 'ravi',
+        yoj: 2020,
+      };
+
+      emp.bonus = 10;
+
+      let emp1 = {
+        name: 'kar',
+        _bonus: 0,
+        yoj: 2014,
+      };
+
+      Object.defineProperty(emp1, 'bonus', {
+        get: function () {
+          return this._bonus;
+        },
+        set: function (newBonus) {
+          if (newBonus <= 20 && this.yoj < 2015) {
+            this._bonus = newBonus;
+          }
+        },
+      });
+      emp1.bonus = 10;
+      console.log(emp1);
+
+      //defineProperties
+      let employee6 = {};
+      Object.defineProperties(employee6, {
+        name: { value: 'selva' },
+        yoj: {
+          value: 2019,
+          writable: true,
+        },
+        _bonus: {
+          value: 0,
+          writable: true,
+        },
+        bonus: {
+          get: function () {
+            return this._bonus;
+          },
+          set: function (newBonus) {
+            if (newBonus <= 20 && this.yoj < 2015) {
+              this._bonus = newBonus;
+            }
+          },
+        },
+      });
+      employee6.bonus = 10;
+      console.log(employee6);
+
+      employee6.yoj = 2010;
+      employee6.bonus = 17;
+      console.log(employee6);
+      console.log(employee6.bonus);
+    </script>
+  </body>
+</html>

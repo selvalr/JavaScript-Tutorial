@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.-->
+
+    <h2>JavaScript Confirm Box</h2>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
+    <h2>JavaScript Prompt</h2>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
+    <script>
+      //1,Alert Box
+
+      alert('hello selva');
+
+      //2.Confirm Box
+      function myFunction() {
+        var txt;
+        if (confirm('Press a button!')) {
+          txt = 'You pressed OK!';
+        } else {
+          txt = 'You pressed Cancel!';
+        }
+        document.getElementById('demo').innerHTML = txt;
+      }
+
+      //3.Prompt Box
+      function myFunction() {
+        let text;
+        let person = prompt('Please enter your name:', 'Harry Potter');
+        if (person == null || person == '') {
+          text = 'User cancelled the prompt.';
+        } else {
+          text = 'Hello ' + person + '! How are you today?';
+        }
+        document.getElementById('demo1').innerHTML = text;
+      }
+    </script>
+    <!--4.line breaks-->
+    <h2>JavaScript</h2>
+    <p>Line-breaks in a popup box.</p>
+    <button onclick="alert('Hello\nHow are you?')">Try it</button>
+  </body>
+</html>

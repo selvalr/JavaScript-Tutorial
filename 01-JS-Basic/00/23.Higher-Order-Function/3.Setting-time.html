@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    In JavaScript we can execute some activities in a certain interval of time or we can schedule(wait) for some time to execute some activities.
+
+setInterval
+setTimeout
+    */
+
+      //Setting Interval using a setInterval function
+      // syntax
+      function callback() {
+        // code goes here
+      }
+      setInterval(callback, duration);
+
+      function sayHello() {
+        console.log("Hello");
+      }
+      setInterval(sayHello, 1000); // it prints hello in every second, 1000ms is 1s
+
+      //2.Setting a time using a setTimeout
+
+      // syntax
+      function callback() {
+        // code goes here
+      }
+      setTimeout(callback, duration); // duration in milliseconds
+
+      function sayHello() {
+        console.log("Hello");
+      }
+      setTimeout(sayHello, 2000); // it prints hello after it waits for 2 seconds.
+    </script>
+  </body>
+</html>

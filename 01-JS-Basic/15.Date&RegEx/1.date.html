@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and RegEx</title>
+  </head>
+  <body>
+    <h1>Date and RegEx Object</h1>
+
+    <script>
+      let now = new Date();
+      console.log(now); //current date and time
+
+      let dob = new Date('1,Jan 1990');
+      console.log(dob); //fixed date
+      dob = new Date('1990-01-01');
+      console.log(dob);
+      console.log(dob.valueOf()); //1990 after how much millisecond running
+
+      let day = now.getDate();
+      console.log(day); //date get method
+
+      //Regular Expression two type create regex:
+      //1.constructor syntax
+      let regex = /[0-9]/;
+      console.log(regex.test('some text')); //false
+      console.log(regex.test('some 12345 text')); //true
+
+      //2.Literal syntax:
+
+      regex = new RegExp('[0-9]');
+      console.log(regex.test('some  text')); //false
+      console.log(regex.test('some 12345 text')); //true
+    </script>
+  </body>
+</html>

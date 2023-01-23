@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIEF</title>
+  </head>
+  <body>
+    <!--
+        
+        (function () {
+                        // …
+                    })();
+
+        (() => {
+                // …
+                })();
+
+        (async () => {
+                    // …
+                    })();
+    
+    -->
+    <script>
+      //bad ex
+      /*
+      var x = 2(
+        //no semicolon, will throw error
+        function (y) {
+          return x;
+        }
+      )(x); //Uncaught TypeError: 2 is not a function
+*/
+
+      //IIEF (Immediately Invoked Function Expression)
+      (function () {
+        var name = 'selva';
+        console.log(name);
+      })();
+      console.log(name);
+
+      //name iife function
+      (function sayName(value) {
+        console.log(' ' + value);
+      })('IIFEs');
+    </script>
+  </body>
+</html>

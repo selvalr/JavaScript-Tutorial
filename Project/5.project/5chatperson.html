@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting with two person</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(20, 122, 88);
+            width: 70%;
+            border: 3px solid navy;
+            box-shadow: 0 0 10px rgb(103, 99, 116);
+
+        }
+        
+        #person1{
+           flex-direction: column;
+        }
+        #person2{
+          
+           flex-direction: column;
+        }
+        #chatpart{
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            height: 309px;
+            width: 344px;
+            margin-top: 20px;
+           
+        }
+        li {
+            font-size: 40px;
+            background-color: darkcyan;
+            border-radius: 10px;
+            list-style: none;
+            width: 40%;
+            margin: 10px;
+        }
+        
+        div{
+            display: flex;
+            margin: 4px;
+        }
+       
+        button{
+          background-color: green;
+          border: none;
+          margin-left: 5px;
+          color: aliceblue;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatting with two person</h1>
+    <div class="container">
+        <div id="person1">
+            <h1>person A</h1>
+            <img src="./chat.png" alt="">
+            <div>
+            <input type="text" id="chat1">
+            <button onclick="send()">Send</button>
+            </div>
+        </div>
+        <div id="chatpart">
+
+        </div>
+        <div id="person2">
+            <h1>person B</h1>
+            <img src="./chat1.png" alt="">
+            <div>
+            <input type="text" id="chat2">
+            <button onclick="send()">Send</button>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script>
+        function send()
+        {
+        let value1=document.getElementById("chat1").value;
+        let value2=document.getElementById("chat2").value;
+        console.log(value1);
+        element=document.createElement("li");
+console.log(element);
+
+            if(value1!=""){
+                text1=document.createTextNode(value1);
+                element.appendChild(text1);
+                mydiv=document.getElementById("chatpart");
+                mydiv.appendChild(element);
+                element.style.color="blue";
+                document.getElementById("chat1").value="";
+            }
+            else  if(value2!=""){
+                text2=document.createTextNode(value2);
+                element.appendChild(text2);
+                mydiv=document.getElementById("chatpart");
+                mydiv.appendChild(element);
+                element.style.color="red";
+                
+                document.getElementById("chat2").value="";
+            }
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

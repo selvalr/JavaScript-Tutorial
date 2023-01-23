@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+  </head>
+
+  <body>
+    <!--1.click-->
+    <button>Click Me</button>
+
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", (e) => {
+        console.log("e gives the event listener object:", e);
+        console.log("e.target gives the selected element: ", e.target);
+        console.log(
+          "e.target.textContent gives content of selected element: ",
+          e.target.textContent
+        );
+      });
+    </script>
+    <hr />
+
+    <!--2.onclick-->
+    <button onclick="clickMe()">Click Me</button>
+
+    <script>
+      const clickMe = () => {
+        alert("We can attach event on HTML element");
+      };
+    </script>
+
+    <hr />
+
+    <!--3.Double click-->
+
+    <button>Click Me</button>
+    <script>
+      const button1 = document.querySelector("button");
+      button1.addEventListener("dblclick", (e) => {
+        console.log("e gives the event listener object:", e);
+        console.log("e.target gives the selected element: ", e.target);
+        console.log(
+          "e.target.textContent gives content of selected element: ",
+          e.target.textContent
+        );
+      });
+    </script>
+
+    <hr />
+
+    <!--4.Mouse enter-->
+    <button>Click Me</button>
+    <script>
+      const button2 = document.querySelector("button");
+      button2.addEventListener("mouseenter", (e) => {
+        console.log("e gives the event listener object:", e);
+        console.log("e.target gives the selected element: ", e.target);
+        console.log(
+          "e.target.textContent gives content of selected element: ",
+          e.target.textContent
+        );
+      });
+    </script>
+  </body>
+</html>

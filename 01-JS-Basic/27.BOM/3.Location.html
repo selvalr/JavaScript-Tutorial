@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JavaScript Window Location
+      //The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+      /*
+    Window Location
+    The window.location object can be written without the window prefix.
+
+Some examples:
+
+window.location.href     returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+
+    */
+
+      //1.Window Location Href
+      document.write('Page location is ' + window.location.href);
+
+      //2.Window Location Hostname
+      document.write('Page hostname is ' + window.location.hostname);
+
+      //3.Window Location Pathname
+      document.write('Page path is ' + window.location.pathname);
+
+      //4.Window Location Protocol
+
+      document.write('Page protocol is ' + window.location.protocol);
+
+      //5.Window Location Port
+      document.write('Port number is ' + window.location.port);
+    </script>
+
+    <hr />
+
+    <!--6.Window Location Assign-->
+    <h2>JavaScript</h2>
+
+    <h3>The window.location object</h3>
+
+    <input type="button" value="Load new document" onclick="newDoc()" />
+
+    <script>
+      function newDoc() {
+        window.location.assign('https://www.w3schools.com');
+      }
+    </script>
+  </body>
+</html>

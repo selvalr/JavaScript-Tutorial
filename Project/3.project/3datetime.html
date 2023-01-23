@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time</title>
+    <style>
+        div{
+            
+        }
+        p{
+            height: 100px;
+            width: 400px;
+            background-color: aqua;
+        }
+        button{
+            height: 100px;
+            width: 400px;
+            background: rgb(177, 25, 25);
+            border: none;
+            color: aliceblue;
+        }
+        .edit{
+            text-align: center;
+            
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>date and time</h1>
+    <p id="demo"></p>
+    <button onclick="start()">start</button>
+    <button onclick="end()">stop</button>
+    </div>
+    
+    <script>
+        function colorchange(){
+       let date=new Date();
+       let hour=date.getHours();
+       let minutes=date.getMinutes();
+        let second=date.getSeconds();
+        let timing=date.toLocaleTimeString();
+        let x=document.getElementById("demo");
+        x.innerHTML=timing;
+        x.className="edit";
+       console.log(timing);
+
+       if(second%2==0){
+           x.style.color="red";
+
+       }
+       else{
+           x.style.color="blue";
+       }
+        }
+        function start(){
+       z=setInterval(colorchange,1000)
+        }
+        function end(){
+            clearInterval(z)
+        }
+    </script>
+</body>
+</html>

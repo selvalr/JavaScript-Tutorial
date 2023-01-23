@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Set</h1>
+
+    <script>
+      //ES6 feature:set use  duplicate remove
+      //Set is a iterable objects:
+      //syntax:
+      // new Set([it]);
+
+      //1.Creating an empty set
+      const companies = new Set();
+      console.log(companies);
+
+      //2.Creating set from array
+      const languages = [
+        "English",
+        "Finnish",
+        "English",
+        "French",
+        "Spanish",
+        "English",
+        "French",
+      ];
+
+      const setOfLanguages = new Set(languages);
+      console.log(setOfLanguages);
+
+      //Set is an iterable object and we can iterate through each elements.
+      const language = [
+        "English",
+        "Finnish",
+        "English",
+        "French",
+        "Spanish",
+        "English",
+        "French",
+      ];
+
+      const setOfLanguage = new Set(language);
+
+      for (const languag of setOfLanguage) {
+        console.log(languag);
+      }
+
+      //3.Adding an element to a set
+
+      const companies1 = new Set(); // creating an empty set
+      console.log(companies1.size); // 0
+
+      companies1.add("Google"); // add element to the set
+      companies1.add("Facebook");
+      companies1.add("Amazon");
+      companies1.add("Oracle");
+      companies1.add("Microsoft");
+      console.log(companies1.size); // 5 elements in the set
+      console.log(companies1);
+
+      //We can also use loop to add element to a set.
+      const companies2 = [
+        "Google",
+        "Facebook",
+        "Amazon",
+        "Oracle",
+        "Microsoft",
+      ];
+      setOfCompanies = new Set();
+      for (const company of companies2) {
+        setOfCompanies.add(company);
+      }
+
+      //4.Deleting element a set
+
+      console.log(companies.delete("Google"));
+      console.log(companies.size); // 4 elements left in the set
+
+      //5.Checking an element in the set
+
+      console.log(companies.has("Apple")); // false
+      console.log(companies.has("Facebook")); // true
+
+      //6.Checking an element in the set
+
+      console.log(companies.has("Apple")); // false
+      console.log(companies.has("Facebook")); // true
+
+      //7.Clearing the set
+
+      companies.clear();
+      console.log(companies);
+
+      //8.Union of sets
+
+      let a = [1, 2, 3, 4, 5];
+      let b = [3, 4, 5, 6];
+      let c = [...a, ...b];
+
+      let A = new Set(a);
+      let B = new Set(b);
+      let C = new Set(c);
+
+      console.log(C);
+
+      //9.Intersection of sets
+
+      let a1 = [1, 2, 3, 4, 5];
+      let b1 = [3, 4, 5, 6];
+
+      let A1 = new Set(a1);
+      let B1 = new Set(b1);
+
+      let c1 = a.filter((num) => B1.has(num));
+      let C1 = new Set(c1);
+
+      console.log(C1);
+
+      //10.Difference of sets
+
+      let a2 = [1, 2, 3, 4, 5];
+      let b2 = [3, 4, 5, 6];
+
+      let A2 = new Set(a2);
+      let B2 = new Set(b2);
+
+      let c2 = a2.filter((num) => !B2.has(num));
+      let C2 = new Set(c2);
+      console.log(C2);
+
+      //=========================================================================================
+
+      //literal array created
+      let arr = [1, 2, 3, 4, 5, 5, 5];
+      console.log(arr); // [1, 2, 3, 4, 5, 5, 5]
+
+      //constructor array created
+      let arr1 = new Array(1, 2, 3, 4, 5, 6, 6, 6);
+      console.log(arr1); // [1, 2, 3, 4, 5, 6,6,6]
+
+      //set create constructor set only create set
+      // it contains
+      // ["sumit","amit","anil","anish"]
+      var set1 = new Set(["sumit", "sumit", "amit", "anil", "anish"]);
+      console.log(set1);
+
+      // it contains 'f', 'o', 'd'
+      var set2 = new Set("fooooooood");
+      console.log(set2);
+
+      // it contains [10, 20, 30, 40]
+      var set3 = new Set([10, 20, 30, 30, 40, 40]);
+      console.log(set3);
+
+      // it is an empty set
+      var set4 = new Set();
+      console.log(set4);
+    </script>
+    <hr />
+
+    <h1>Methods:</h1>
+    <p>new Set() --> Creates a new Set</p>
+
+    <!--1.Create new set-->
+    <p>Create a Set from an Array:</p>
+    <p id="demo"></p>
+    <script>
+      // Create a Set
+      const letters = new Set(["a", "b", "c"]);
+
+      // Display set.size
+      document.getElementById("demo").innerHTML = letters.size;
+    </script>
+
+    <!--2.Add method-->
+
+    <p>Set.prototype.add() -> Adds a new element to the Set</p>
+    <p>Adding new elements to a Set:</p>
+    <p id="demo1"></p>
+
+    <script>
+      // Create a new Set
+      const letters1 = new Set(["a", "b", "c"]);
+
+      // Add a new Element
+      letters1.add("d"); //{a,b,c,d}
+      letters1.add("e"); //{a,b,c,d,e}
+      letters1.add("e"); //not display same value
+
+      // Display set.size
+      document.getElementById("demo1").innerHTML = letters1.size;
+      console.log(letters1.size); //{a,b,c,d,e}
+    </script>
+    <hr />
+
+    <!--3.Delete Method-->
+    <p>Set.prototype.delete() -> Removes an element from a Set</p>
+    <p>Adding delete elements to a Set:</p>
+    <p id="demo2"></p>
+
+    <script>
+      // Create a new Set
+      const letters2 = new Set(["a", "b", "c"]);
+
+      // Add a new Element
+      letters1.add("d"); //{a,b,c,d}
+      letters1.add("e"); //{a,b,c,d,e}
+      letters1.add("e"); //not display same value
+      letters1.delete("a"); //{'b', 'c', 'd', 'e'}
+
+      // Display set.size array to use length set use size
+      document.getElementById("demo1").innerHTML = letters1.size;
+      console.log(letters1); //{b,c,d,e}
+    </script>
+    <hr />
+
+    <!--4.Clear method-->
+    <p>Set.prototype.clear() ->Removes all elements from a Set</p>
+    <p>Adding clear elements to a Set:</p>
+    <p id="demo3"></p>
+
+    <script>
+      // Create a new Set
+      const letters3 = new Set(["a", "b", "c"]);
+
+      // Add a new Element
+      letters3.add("d"); //{a,b,c,d}
+      letters3.add("e"); //{a,b,c,d,e}
+      letters3.add("e"); //not display same value
+      letters3.delete("a"); //{'b', 'c', 'd', 'e'}
+      letters3.clear(); //
+      console.log(letters3.clear()); //undefined
+    </script>
+
+    <hr />
+
+    <h1>array to set & set to array</h1>
+    <script>
+      let no = [1, 2, 3, 3, 3, 4, 4, 4, 5, 6, 7, 8, 9, 9, 9];
+      let no1 = new Set(no);
+      console.log(no1);
+      let ar = [...no1];
+      console.log(ar);
+    </script>
+
+    <p>
+      Set.prototype.entries() ->Returns an Iterator with the [value,value] pairs
+      from a Set
+    </p>
+
+    <p>Set.prototype.has() -> Returns true if a value exists</p>
+
+    <p>
+      Set.prototype.values() ->Returns an Iterator with all the values in a Set
+    </p>
+
+    <p>
+      Set.prototype.keys() -> It also returns all the values from the Set in the
+      insertion order.
+    </p>
+
+    <p>
+      Set.prototype.forEach() -> It executes the given function once for every
+      element in the Set, in the insertion order
+    </p>
+  </body>
+</html>
