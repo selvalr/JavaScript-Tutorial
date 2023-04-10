@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <script>
-      //A function can be stored in a variable:
-      const dog = function () {
-        return "Woof!";
-      };
-      console.log(dog());
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      // Function expression
-      const square = function (n) {
-        return n * n;
-      };
-      console.log(square(2)); // -> 4
-    </script>
-  </body>
+<body>
+  <script>
+    //A function can be stored in a variable:
+    const dog = function () {
+      return "Woof!";
+    };
+    console.log(dog());
+
+    // Function expression
+    const square = function (n) {
+      return n * n;
+    };
+    console.log(square(2)); // -> 4
+
+    // Function expression hosting not working
+    console.log(square1(2)); // -> not working hoisting in  expression function
+
+    const square1 = function (n) {
+      return n * n;
+    };
+
+  </script>
+</body>
+
 </html>

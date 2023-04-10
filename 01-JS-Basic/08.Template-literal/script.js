@@ -45,3 +45,20 @@ for (const x of tags) {
 
 html += `</ul>`;
 console.log(html);
+
+
+
+//long literal string
+//method-1
+let longText="loream dhjfsdhfvsdhfvsdhfvhdvfhasbw dscv bhdsv sdvbdvjb"+
+"ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"+
+"jhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
+
+console.log(longText);
+
+//method-2
+longText="loream dhjfsdhfvsdhfvsdhfvhdvfhasbw dscv bhdsv sdvbdvjb \
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg \
+jhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
+
+console.log(longText);

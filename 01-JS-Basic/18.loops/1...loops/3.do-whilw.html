@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Do-WHile</title>
-  </head>
-  <body>
-    <h1>Do-while</h1>
-    <script>
-      //do while - also loops through a block of code while a specified condition is true  but one time executed.
-      let i = 26; //initialize
 
-      //enters cycle at least once
-      do {
-        console.log(
-          i + '=>The while loop is condition false is a one time executed <br/>'
-        );
-        i++;
-      } while (i <= 25); //repeats cycle if statement is true at the end
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do-WHile</title>
+</head>
 
-      //for in - loops through the properties of an object
+<body>
+  <h1>Do-while</h1>
+  <script>
+    /*
+    do{
+//code to be executed if the condition is true
+    }while(condition);
+    
+    
+    */
+    let table = 5, start = 1, end = 5;
+    do {
+      console.log(start + "X" + table + "=" + start * table);
+      start++
+    } while (start <= end)
 
-      //syntax
-      /*
-            for(key in object){
-                //code block to be executed
-            }*/
-      const person = { fname: 'selva', lname: 'manan' };
-      let text = ' ';
-      for (let x in person) {
-        text += person[x] + ' ';
-      }
-      console.log(text);
-    </script>
-  </body>
+
+    //2,example
+
+    //do while - also loops through a block of code while a specified condition is true  but one time executed.
+    let i = 26; //initialize
+
+    //enters cycle at least once
+    do {
+      console.log(
+        i + '=>The while loop is condition false is a one time executed <br/>'
+      );
+      i++;
+    } while (i <= 25); //repeats cycle if statement is true at the end
+
+    //for in - loops through the properties of an object
+
+    //syntax
+    /*
+          for(key in object){
+              //code block to be executed
+          }*/
+    const person = { fname: 'selva', lname: 'manan' };
+    let text = ' ';
+    for (let x in person) {
+      text += person[x] + ' ';
+    }
+    console.log(text);
+  </script>
+</body>
+
 </html>

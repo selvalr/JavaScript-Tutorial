@@ -3,6 +3,7 @@
 let a=10;//= is a assign the value
 
 //a=a+5;//+=
+
 a+=20;
 console.log(a);
 a-=20;//-=

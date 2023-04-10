@@ -42,3 +42,43 @@ var age = 2,
 
 isMajor = age >= 18 ? 'eligible vote' : 'not eligible vote';
 console.log(isMajor);
+
+
+//1.handling null values
+
+function welcome(fname){
+  const result=fname?fname:"noname";
+  console.log("welcome to " + fname);
+}
+welcome();
+welcome(null);
+welcome("selva")
+
+  //object handling null value
+  user={'name':"selva",'age':22};
+  console.log(user);
+  console.log(user.name);
+
+  const greeting3=(user)=>{
+    const name=user.name?user.name:"noname";
+    return "hello"+name;
+
+  }
+
+  console.log(greeting3(user));//no name
+
+
+//conditional chains
+
+/*
+avg>=90 A grade
+avg>=80 B grade
+C grade
+*/
+
+let mark=90;
+
+let result1=mark>=90?"A grade":mark>=80?"B grade":"not grade"
+
+console.log("grade"+result1);
+

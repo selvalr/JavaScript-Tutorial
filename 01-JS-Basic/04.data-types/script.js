@@ -16,9 +16,10 @@ JavaScript non-primitive data types or complex data type (Object References)
 Array
 Object Literals
 Date
+
 */
 
-//1.primitive Data Type is not modify and mutale 
+//1.primitive Data Type is not modify and mutable 
 let word = 'JavaScript';
 word[0]="m";
 console.log(word);//Javascript
@@ -164,8 +165,9 @@ console.log(weird); //undefined
 
 //6.Symbol
 //ES6 2015
+//unique value generate
 
-let s1 = Symbol('hello');
+let s1 = Symbol('hello');//fgdfgbhdfjbghdfb12344
 console.log(s1); //symbol()
 
 console.log(Symbol() == Symbol()); // false
@@ -173,7 +175,7 @@ console.log(Symbol() == Symbol()); // false
 const first = Symbol(); //symbol
 console.log(first);
 
-const second = Symbol();
+const second = Symbol();//hbjdbvsvshjchsfvg
 console.log(second); //symbol
 
 console.log(first == second); //false

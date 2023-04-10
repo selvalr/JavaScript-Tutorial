@@ -1,4 +1,4 @@
-//Type Coericon
+//Type Coercion
 
 let a = '24';
 let b = 21;

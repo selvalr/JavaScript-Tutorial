@@ -2,6 +2,7 @@
   1997--->var
     
   2015 E6--->let,const
+
 */
 
 var a = 23;
@@ -14,8 +15,8 @@ console.log(a + b);
 
 if (true) {
   //var msg = 'selva'; //inside and outside block
-  //let msg = 'Welcome to Tutor Joes'; //inside block
-  const msg = 'Welcome to Tutor Joes'; //constant
+  //let msg = 'Welcome to selva'; //inside block
+  const msg = 'selva'; //constant
   console.log(msg);
 }
 console.log(msg);
@@ -54,6 +55,7 @@ const a=45;
 //-----------------------------------
 
 //3.Value assignment
+
 /*
 var a=25;
 console.log(a);

@@ -1,4 +1,4 @@
-//if() Statement
+//if(condition) Statement
 
 if(7===7){ //true
   console.log('yes');//yess
