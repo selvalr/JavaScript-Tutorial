@@ -1,55 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>closures</title>
-  </head>
-  <body>
-    <script>
-      // javascript closure example
 
-      // outer function
-      function greet() {
-        // variable defined outside the inner function
-        let name = "John";
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>closures</title>
+</head>
 
-        // inner function
-        function displayName() {
-          // accessing name variable
-          return "Hi" + " " + name;
-        }
+<body>
+  <script src="script.js">
 
-        return displayName;
-      }
+  </script>
+</body>
 
-      const g1 = greet();
-      console.log(g1); // returns the function definition
-      console.log(g1()); // returns the value
-
-      //2.Let us more example of inner functions
-
-      function outerFunction() {
-        let count = 0;
-        function plusOne() {
-          count++;
-          return count;
-        }
-        function minusOne() {
-          count--;
-          return count;
-        }
-
-        return {
-          plusOne: plusOne(),
-          minusOne: minusOne(),
-        };
-      }
-      const innerFuncs = outerFunction();
-
-      console.log(innerFuncs.plusOne);
-      console.log(innerFuncs.minusOne);
-    </script>
-  </body>
 </html>
