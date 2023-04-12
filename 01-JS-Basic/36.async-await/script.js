@@ -1,19 +1,75 @@
-//.
+//.async - always return a promise
+//resolve is a async automatically take it function
+
+/*
+async function fun(){
+  return 'hello';
+}
+console.log(fun());
+
+fun().then((msg)=>{
+  console.log(msg);
+})
+*/
+
+//await
+
+let rechA=new Promise((resolve,reject)=>{
+  const reached=true;
+  if(reached){
+      setTimeout(resolve,1000,'selva reached');
+  }
+  else{
+      reject('not reached')
+  }
+  
+})
+
+
+
+async function asyncstatus(){
+  try{
+    console.log('hi');
+    res=await rechA; //await the promise call waiting true 
+    console.log(res);
+    console.log('bye');
+  }
+  catch(err){
+    console.log(err);
+  }
+ 
+}
+
+asyncstatus();
+
+
+
+
+
+
+//
+/*
 const square = async function (n) {
   return n * n;
 };
 square(2);
+*/
 
 //.
+
+/*
 const square1 = async function (n) {
   return n * n;
 };
 const value = await square1(2);
 console.log(value);
+*/
+
 
 //1.Let us fetch API data using both promise method and async and await method.
 
 //i.promise
+/*
 const url = "https://restcountries.com/v2/all";
 fetch(url)
   .then((response) => response.json())
@@ -21,8 +77,10 @@ fetch(url)
     console.log(data);
   })
   .catch((error) => console.error(error));
+*/
 
 //ii.async and await
+/*
 const fetchData = async () => {
   try {
     const response = await fetch(url);
@@ -34,3 +92,4 @@ const fetchData = async () => {
 };
 console.log("===== async and await");
 fetchData();
+*/

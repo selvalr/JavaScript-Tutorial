@@ -119,3 +119,27 @@ console.log(paiduser1);
 //method chaining
 
 paiduser1.login().message();
+
+
+
+//2.get and set how to use class
+
+class Temperature{
+    constructor(temp){
+        this._temp=temp;//_ is a private variable dont use the outside same name method in undersocre
+    }
+    get temp(){
+        return this._temp
+    }
+    set temp(temp){
+        if(temp>100)
+        temp=100
+            this._temp=temp
+        
+    }
+}
+
+let temp1=new Temperature(25);
+//console.log(temp1._temp);//dont use underscore private in script
+temp1.temp=130;
+console.log(temp1.temp);
