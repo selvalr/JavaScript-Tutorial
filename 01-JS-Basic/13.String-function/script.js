@@ -15,7 +15,18 @@ c = 'Selva ';
 c += 'manan';
 console.log('Append : ' + c);
 
-//Escaping
+//Escaping sequences
+/*
+\' - single quote
+\" - double quote
+\\ - backslash
+\n - newline
+\r - carriage return
+\t -tab
+\b - backspace
+\f - form feed
+*/
+
 c = "She Can't run";
 console.log(c);
 

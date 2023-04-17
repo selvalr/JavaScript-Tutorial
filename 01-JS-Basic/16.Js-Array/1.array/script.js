@@ -14,6 +14,12 @@
     console.log(house);//['saood', 'harish', true, 910]
     console.log(house[0]);//saood
 
+    //.
+    let myArra=[];
+    myArra[0]="selva";
+    myArra[1]="tamil";
+    myArra[2]=true;
+    console.log(myArra);
     //2.JavaScript Array directly (new keyword)
 
     var i;

@@ -6,6 +6,7 @@ console.log('E', c); //2.71
 
 c = Math.round(4.8);
 console.log('round', c); //5
+console.log(Math.round(4.1));//4
 
 c = Math.floor(5.58);
 console.log('floor', c); //5
@@ -27,7 +28,7 @@ c = Math.trunc(4.9); //Return Integer only
 console.log('trunc', c); //4
 
 c = Math.pow(2, 4);
-console.log('pow', c); //16
+console.log('pow', c); //2*2*2*2=16
 
 c = Math.min(10, 50, 5, 45, 8);
 console.log('min', c); //5
@@ -38,7 +39,7 @@ console.log('max', c); //50
 c = Math.random();
 console.log('random', c); //0.43
 
-c = Math.floor(Math.random() * 50 + 1);
+c = Math.floor(Math.random() * 50) + 1;//1 to 50
 console.log('floor', c); //17
 
 c = Math.sign(1); //Return Neg=-1 Zero=0 Pos=1

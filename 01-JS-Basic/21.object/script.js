@@ -1,4 +1,5 @@
 //object Syntax:
+//key-value pairs in curly braces
 /*
 let object_name = {
     key_name : value,
@@ -209,3 +210,23 @@ function emp(id, name, salary) {
 e = new emp(103, "Vimal Jaiswal", 30000);
 
 document.write(e.id + " " + e.name + " " + e.salary);
+
+//.4 inherite the object
+
+let objName1 = {
+  name: "hello",
+  lname: "selva",
+  fname: function () {
+    return `${this.name} ${this.lname}`;
+  }
+}
+
+console.log(objName1.fname());
+
+let anotherObj = Object.create(objName1);
+anotherObj.sName = "manan";
+anotherObj.fname = function () { return 'hello' }
+
+console.log(anotherObj);
+console.log(anotherObj.lname);
+console.log(anotherObj.fname());

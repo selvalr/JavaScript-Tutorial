@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scope</title>
 </head>
+
 <body>
     <script src="./script.js"></script>
+
+    <script>
+        //global scope
+        var x = 2;
+        let y = 5;
+        const z = 20;
+
+        //local scope //block scope
+        {
+            let y = 10;
+        }
+
+        //local scope //function scope
+        function myFun() {
+            const z = 12;
+            console.log("function", x);//2
+            console.log("function", y);//5
+            console.log("function", z);//12
+            if (true) {
+                let y = 10;
+                console.log("block", x);//2
+                console.log("block", y);//10
+                console.log("block", z);//12
+            }
+            console.log("function", x);//2
+            console.log("function", y);//5
+            console.log("function", z);//12
+
+        }
+        myFun();
+
+        console.log("global" + x);//2
+        console.log("global" + y);//5
+        console.log("global" + z);//20
+    </script>
 </body>
+
 </html>

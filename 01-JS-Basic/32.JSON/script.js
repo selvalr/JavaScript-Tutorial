@@ -1,3 +1,7 @@
+//JSON-JavaScript Object Notation
+//text format
+//to send and receive data in many programming language
+
 let json1="selva";
 let json2=2;
 let json3=true;

@@ -47,3 +47,20 @@ console.log(entries);
 //hasOwnProperty: To check if a specific key or property exist in an object
 console.log(copyPerson.hasOwnProperty("name"));
 console.log(copyPerson.hasOwnProperty("score"));
+
+
+//object using for loop
+
+let person1={
+  firstName:"selva",
+  work:"none",
+  study:"BCA"
+
+}
+
+delete person1.study;//delete object
+
+
+for(let hi in person1){
+  console.log(hi+" :"+person1[hi]);
+}

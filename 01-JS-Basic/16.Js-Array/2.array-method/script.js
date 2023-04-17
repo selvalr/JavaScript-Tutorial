@@ -195,8 +195,8 @@ console.log(numbers1) // -> [0,1,2,3,4,5]
 //splice
 numbers1.splice(2,1);
 console.log(numbers1);//[1,2,4,5];
-numbers1.splice(2,1,'he');
-console.log(numbers1);//[1,2,4,5];
+numbers1.splice(1,1,'he');
+console.log(numbers1);//[1,'he',4,5];
 
 
 //xvi.Reversing array order

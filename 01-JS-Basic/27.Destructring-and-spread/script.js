@@ -228,3 +228,8 @@ const todoList = [
 for (const { task, time, completed } of todoList) {
   console.log(task, time, completed);
 }
+
+const {task, time, completed}=todoList;
+
+function signs({task}){return task};
+console.log(signs(todoList));

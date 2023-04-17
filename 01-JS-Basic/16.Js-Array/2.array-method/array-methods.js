@@ -55,6 +55,7 @@ console.log(sqrt);
 //3.slice(start,end)
 console.log(number.slice(2));
 console.log(number.slice(2,5));
+console.log(number.slice(2,0,'s'));
 
 //4.Splice(start,length,new element)
 //splice is to remove element is array it willchange original array
