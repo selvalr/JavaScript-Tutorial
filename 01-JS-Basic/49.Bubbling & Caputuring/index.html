@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <title>JS DOM in Tamil</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header onclick="alert('Header Element')">
+        🍊 FoodCook Planner
+        <button style="padding:2px 10px;font-size:10px;margin-left:10px" id="creditBtn">Credits</button>
+    </header>
+
+    <main id="main">
+        <div class="input-container">
+            <input type="text" name="input-food-name" placeholder="I like to eat..." class="input-food" id="input-food">
+            <button class="input-button" id="input-btn">Save</button>
+        </div>
+        <ul id="food-container" class="food-container">
+            <li class="food-item">
+                <div>Sambar</div>
+                <div onclick="removeFoodItem(event)"><i class="fa fa-xmark"></i></div>
+            </li>
+            <li class="food-item">
+                <div>Rasam</div>
+                <div onclick="removeFoodItem(event)"><i class="fa fa-xmark"></i></div>
+            </li>
+            <li class="food-item">
+                <div>Curd</div>
+                <div onclick="removeFoodItem(event)"><i class="fa fa-xmark"></i></div>
+            </li>
+        </ul>
+
+        <!-- Event Capturing & Event Bubbling -->
+        <style>
+            form {
+                background-color: white;
+                padding: 10px;
+            }
+
+            form,
+            form * {
+                margin: 10px;
+                border: 1px solid rgb(46, 88, 213);
+                font-weight: bold;
+            }
+
+            form {
+                background: royalblue;
+            }
+
+            form div {
+                border: 1px solid green;
+                background-color: lightgreen;
+
+            }
+
+            form p {
+                border: 1px solid red;
+                background-color: rosybrown;
+            }
+        </style>
+        <form>FORM
+            <div>DIV
+                <p>P</p>
+            </div>
+        </form>
+        <!-- End -->
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- For Learning purpose -->
+    <script src="learning.js"></script>
+</body>
+
+</html>

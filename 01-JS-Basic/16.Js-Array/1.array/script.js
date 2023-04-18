@@ -1,5 +1,6 @@
 
     /*
+    Array-variables that hold multiple values
     Array is an object which can store a collection of items under a single variable name
 
     syntax:
