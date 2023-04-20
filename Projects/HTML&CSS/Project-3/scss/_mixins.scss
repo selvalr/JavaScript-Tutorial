@@ -1,0 +1,6 @@
+
+
+@mixin padding($padding: 8px,$text-transform:upperCase) {
+    padding:$padding;
+    text-transform: $text-transform;
+  }

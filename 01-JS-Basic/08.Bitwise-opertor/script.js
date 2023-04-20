@@ -1,4 +1,8 @@
 /*
+//Bitwise Operators
+//Human code -> Machine code(0,1)
+//1->00000001->1
+//2->00000010->2
 
 &	AND	Sets each bit to 1 if both bits are 1
 |	OR	Sets each bit to 1 if one of two bits is 1

@@ -3,4 +3,5 @@
 // (condition) ? true-statement : false-statement;
 
 let age=33;
-(age>18)?console.log('eligible'):console.log('not eligible');
+let type=(age>18)?'eligible':'not eligible';
+console.log(type);

@@ -6,12 +6,14 @@
     `String literal text ${expression}`
   */
 
+
 //1.Back-Tics Syntax
 let text = `Hello world!`;
 console.log(text);
 
 //2.Quotes Inside Strings
-let text1 = `He's often called "Johnny"`;
+let text1 = `He's often 
+called "Johnny"`;
 console.log(text1);
 
 //3.Multiline Strings

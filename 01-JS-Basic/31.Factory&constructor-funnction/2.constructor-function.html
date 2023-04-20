@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //constructor Function
+        function Person(name, age) {//PascalCase - Person,User,MyFirstName
+
+            this.name = name,
+                this.age = age,
+
+                this.greeting = function () {
+                    let msg = "my name" + this.name + "is" + this.age + "ing";
+                    console.log(msg);
+
+                }
+
+        }
+
+        let person1 = new Person("selva", 23);
+        person1.greeting();
+
+        //Another way is Call
+        Person.call({}, "selva");//{}is a constructor inside elements this.
+
+
+        //array to the value in appy method
+        Person.apply({}, ["selva", "23"]);
+
+
+        //Another way constructor create
+
+        //JS function are objects
+
+        let person = new Function('name', `
+        this.name = name;
+        this.greeting=function(){
+            console.log("hello");
+        }
+        
+        `)
+
+    </script>
+</body>
+
+</html>

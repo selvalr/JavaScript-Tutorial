@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Factory function
+        function createPerson(name, age) {//camelCase-createPerson,userName
+            return {
+                name: name,
+                age: age,
+
+                greeting: function () {
+                    let msg = "my name" + this.name + "is" + this.age + "ing";
+                    console.log(msg);
+
+                }
+
+            }
+        }
+
+        let selva = createPerson("selva", 23);
+        selva.greeting();
+
+
+        let kar = createPerson("karthi", 25);
+        kar.greeting();
+
+    </script>
+</body>
+
+</html>

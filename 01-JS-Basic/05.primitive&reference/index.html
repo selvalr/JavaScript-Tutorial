@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Primitive data type
+
+        let x = 5;
+        let y = x;
+
+        console.log(x);//5
+        console.log(y);//5
+
+        x = 20;
+        console.log(x);//20
+        console.log(y);//5
+
+        //Reference data Type
+
+        let h = {
+            name: "selva"
+        }
+
+
+        let i = h;
+        i.name = "karthi"
+
+        console.log(h);//karthi
+        console.log(i);//karthi
+    </script>
+</body>
+
+</html>

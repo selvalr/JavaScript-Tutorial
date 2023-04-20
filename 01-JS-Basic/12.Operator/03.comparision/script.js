@@ -52,3 +52,11 @@ console.log('milk'.length == 'meat'.length)      // true
 console.log('milk'.length != 'meat'.length)      // false
 console.log('tomato'.length == 'potato'.length)  // true
 console.log('python'.length > 'dragon'.length)   // false
+
+//string comparison is dictionary format search 
+console.log('Alen'>'Anubu');//false
+
+//comparison of different type
+console.log('1'<5);//1<5; //true
+console.log(true==1); //true
+console.log(true==0);//false
