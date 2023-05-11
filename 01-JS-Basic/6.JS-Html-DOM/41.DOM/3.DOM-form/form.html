@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Validation</h2>
+    <!--JavaScript Form Validation-->
+    <form
+      name="myForm"
+      action="/action_page.php"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      Name: <input type="text" name="fname" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      /*
+    function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+    
+    */
+
+      function validateForm() {
+        let x = document.forms['myForm']['fname'].value;
+        if (x == '') {
+          alert('Name must be filled out');
+          return false;
+        }
+      }
+    </script>
+
+    <hr />
+
+    <!--JavaScript Can Validate Numeric Input-->
+    <h2>JavaScript Validation</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="numb" />
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        // Get the value of the input field with id="numb"
+        let x = document.getElementById('numb').value;
+        // If x is Not a Number or less than one or greater than 10
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+          text = 'Input not valid';
+        } else {
+          text = 'Input OK';
+        }
+        document.getElementById('demo').innerHTML = text;
+      }
+    </script>
+
+    <hr />
+    <!--Automatic HTML Form Validation-->
+    <h2>JavaScript Validation</h2>
+
+    <form action="/action_page.php" method="post">
+      <input type="text" name="fname" required />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>
+      If you click submit, without filling out the text field, your browser will
+      display an error message.
+    </p>
+
+
+
+
+
+
+
+
+
+    <!--HTML Constraint Validation
+HTML5 introduced a new HTML validation concept called constraint validation.
+
+HTML constraint validation is based on:
+
+Constraint validation HTML Input Attributes
+Constraint validation CSS Pseudo Selectors
+Constraint validation DOM Properties and Methods
+
+
+
+1.Constraint Validation HTML Input Attributes
+Attribute	                                Description
+disabled	                         Specifies that the input element should be disabled
+max	                                Specifies the maximum value of an input element
+min	                                Specifies the minimum value of an input element
+pattern	                            Specifies the value pattern of an input element
+required	                          Specifies that the input field requires an element
+type 	                               Specifies the type of an input element
+
+For a full list, go to HTML Input Attributes.
+
+2.Constraint Validation CSS Pseudo Selectors
+
+Selector	                              Description
+:disabled	                Selects input elements with the "disabled" attribute specified
+:invalid	                Selects input elements with invalid values
+:optional	                Selects input elements with no "required" attribute specified
+:required	                Selects input elements with the "required" attribute specified
+:valid	                  Selects input elements with valid values
+
+For a full list, go to CSS Pseudo Classes.
+-->
+  </body>
+</html>

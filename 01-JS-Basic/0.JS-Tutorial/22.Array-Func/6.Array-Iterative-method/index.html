@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iterative Method</title>
+  </head>
+  <body>
+    <h1>Array Iterative method</h1>
+
+    <script>
+      //iteration is a any loop to execute a array. iteration is Repetition of a array item process is called iteration
+
+      let vegetable = ['potato', 'tomato', 'chilly', 'beans'];
+      //for loop
+      for (let i = 0; i < vegetable.length; i++) {
+        //some work on array
+      }
+
+      //1.foreach
+      vegetable.forEach(function (item, index, array) {
+        console.log('in this vegetable array =' + array);
+        console.log('Fruit =' + item + 'is at position =' + index);
+      });
+
+      //2.map array
+
+      let priceValue = [100, 400, 500, 300];
+      let discount = 10;
+      let disPrice = priceValue.map(function (price) {
+        return price - (price * 10) / 100;
+      });
+
+      console.log(disPrice); //map value
+      console.log(priceValue); //normal value
+
+      //3.filter
+
+      let serverEmp = [
+        {
+          name: 'karthi',
+          salary: 300000,
+        },
+        {
+          name: 'selva',
+          salary: 100000,
+        },
+        {
+          name: 'bass',
+          salary: 50000,
+        },
+      ];
+      console.log(serverEmp);
+      let highPay = serverEmp.filter(function (employee) {
+        return employee.salary >= 60000;
+      });
+      console.log(highPay);
+
+      //4.every Method
+      function getResult(markValue) {
+        let result = markValue.every(function (mark) {
+          return mark > 45;
+        });
+        if (result) {
+          return 'All Pass';
+        } else {
+          return 'it some fail';
+        }
+      }
+      console.log(getResult([33, 45, 66, 77, 88, 65]));
+      console.log(getResult([63, 55, 66, 77, 88, 65]));
+
+      //5.some method
+
+      function getResults(results) {
+        let result = results.some(isPass);
+        if (result) {
+          return 'Only some studend pass';
+        } else {
+          return 'All student pass';
+        }
+      }
+
+      function isPass(result) {
+        return result !== 'pass';
+      }
+      console.log(getResults(['pass', 'pass', 'pass', 'pass']));
+      console.log(getResults(['pass', 'fail', 'pass', 'fail']));
+    
+    
+      //6.Array indexof
+
+      const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") + 1;
+    console.log(position);
+    
+
+
+    //7.JavaScript Array find()
+
+    const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+console.log(first);
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+
+//8.JavaScript Array findIndex()
+const numbers1 = [4, 9, 16, 25, 29];
+let first1 = numbers1.findIndex(myFunction1);
+
+function myFunction1(value, index, array) {
+  return value > 18;
+}
+
+
+//9.JavaScript Array Keys()
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruit.keys();
+
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+
+//10.JavaScript Array entries()
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits2.entries();
+
+for (let x of f) {
+ console.log(x);
+}
+
+
+//11.JavaScript Array includes()
+
+const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits4.includes("Mango"); // is true
+console.log(fruits4);
+    </script>
+  </body>
+</html>

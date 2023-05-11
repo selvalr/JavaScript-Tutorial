@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OUTPUT JS</h1>
+    <hr>
+
+    <!--Using innerHTML-->
+    <p>Using innerHTML</p>
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = 5 + 6;
+    </script>
+
+    <hr>
+
+    <!--Using document.write()--should only be used for testing.-->
+    <p>Using doucment.write</p>
+    
+    <script>
+        document.write(5 + 6);
+    </script>
+     <button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+
+
+<hr>
+
+<!--Alert-->
+<p>Using window.alert()</p>
+
+<script>
+alert(5 + 6);
+</script>
+
+<hr>
+
+<!--Using console.log()-->
+
+<p>f12 (or) click inspect console show</p>
+<script>
+    console.log("hello selva");
+</script>
+
+
+<hr>
+
+<!--JavaScript Print-->
+
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>

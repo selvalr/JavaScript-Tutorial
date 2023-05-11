@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        /*
+        The Function() Constructor
+As you have seen in the previous examples, JavaScript functions are defined with the function keyword.
+
+Functions can also be defined with a built-in JavaScript function constructor called Function().
+
+
+        */
+      const myFunction = new Function("a", "b", "return a * b");
+
+      let x = myFunction(4, 3);
+      console.log(x);
+    </script>
+  </body>
+</html>

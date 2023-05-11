@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JavaScript Hoisting syntax:
+
+      /*
+      
+      //using test before declaring
+      console.log(a); //undefined
+      var a; #hoisting
+      
+      */
+
+      // using test before declaring
+      console.log(test); // undefined
+      var test;
+
+      // using test before declaring
+      var test;
+      console.log(test); // undefined
+
+      //1.Variable Hoisting
+
+      // program to display value
+      a = 5;
+      console.log(a);
+      var a; // 5
+
+      // program to display value
+      var a;
+      a = 5;
+      console.log(a); // 5
+
+      // program to display value
+      console.log(a);
+      var a = 5;
+
+      //2.Function Hoisting
+
+      // program to print the text
+      greet();
+      function greet() {
+        console.log('Hi, there.');
+      }
+
+      // program to print the text
+      greet();
+      let greet = function () {
+        console.log('Hi, there.');
+
+
+
+
+      };
+
+
+
+      //JavaScript Declarations are Hoisted
+
+
+      //ex1:
+      x = 5; // Assign 5 to x
+      console.log(x);
+      var x; // Declare x
+
+      //ex2:
+      var x; // Declare x
+      x = 5; // Assign 5 to x
+
+      console.log(x);
+
+
+      //The let and const Keywords
+
+      carName = "Volvo";
+      let carName;
+      console.log(carName);//error
+
+    </script>
+  </body>
+</html>

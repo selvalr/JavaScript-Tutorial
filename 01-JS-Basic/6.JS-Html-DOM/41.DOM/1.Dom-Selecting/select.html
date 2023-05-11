@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="para">This is your phone</p>
+ 
+  <p class="para1">hello class name</p>
+  
+  <ul>
+    <li>coffee</li>
+    <li>tea</li>
+  </ul>
+
+
+  <p class="myParagraphs theLastParagraph" name="theLastOne">
+    of paragraph tags.
+  </p>
+  <script>
+
+    //single element:getID,querySelector
+    //multiple element:getClassName,querySelectorAll,TagName
+
+
+    //1.GET element by ID:
+    let para = document.getElementById('para'); //HTML ID selector
+    console.log(para);
+
+    //2.GET element by CLASS:
+    let para1 = document.getElementsByClassName('para1'); //HTML Class selector
+    console.log(para1);
+
+    //3.GET element by tag name:
+    let node = document.getElementsByTagName('li'); //HTML Tag Selector
+    console.log(node);
+
+    //4.query selector:
+    let header = document.querySelector('#header'); //using id
+  
+    let item = document.querySelector('.list-item'); //using class
+    
+    let heading = document.querySelector('h1'); //using tag
+  
+    let paragraph = document.querySelector('div >p'); // css selector
+
+
+    //5.QuerySelectorAll:
+    let a = document.querySelectorAll('#header'); //using id all same id name
+   
+    let b = document.querySelectorAll('.list-item'); //using class all same class name
+   
+    let c = document.querySelectorAll('h1'); //using all h1 tag
+    
+    let e = document.querySelectorAll('div>p'); //using
+
+    //6.getElementsByName:
+    let theLastOne = document.getElementsByName('theLastOne')[0];
+    console.log(theLastOne);
+
+    //7.getAttributes
+
+    //element.getAttribute(name)
+    let text = element.getAttribute('class');
+
+      //8.setAttributes
+      //element.setAttribute(name, value)
+  </script>
+
+  <!--9.Finding HTML Elements by HTML Object Collections-->
+
+  <h2>JavaScript HTML DOM</h2>
+  <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+  <form id="frm1" action="/action_page.php">
+    First name: <input type="text" name="fname" value="Donald" /><br />
+    Last name: <input type="text" name="lname" value="Duck" /><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <p>These are the values of each element in the form:</p>
+
+  <p id="demo"></p>
+
+  <script>
+    const x = document.forms['frm1'];
+    let text1 = '';
+    for (let i = 0; i < x.length; i++) {
+      text1 += x.elements[i].value + '<br>';
+    }
+    document.getElementById('demo').innerHTML = text1;
+  </script>
+</body>
+
+</html>
