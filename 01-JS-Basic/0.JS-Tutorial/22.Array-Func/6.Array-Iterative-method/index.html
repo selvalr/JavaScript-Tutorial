@@ -24,7 +24,12 @@
         console.log('Fruit =' + item + 'is at position =' + index);
       });
 
-      //2.map array
+      //best practice foreach
+      vegetable.forEach( (item, index, array)=> {
+        console.log('best practice', item, index, array);
+      });
+
+      //2.map array --> new array returned 
 
       let priceValue = [100, 400, 500, 300];
       let discount = 10;

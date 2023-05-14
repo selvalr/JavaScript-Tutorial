@@ -9,6 +9,9 @@ console.log(b);//24
 const c=null??55;
 console.log(c);//55
 
+let a1;
+let b1=a1??"not a value";
+console.log(b1);
 
 // ??=
 

@@ -160,7 +160,12 @@ console.log(numbers0.slice(1,4)) // -> [2,3,4] // it doesn't include the ending 
 const number = [1, 2, 3, 4, 5]
 number.splice()
 console.log(number)                // -> remove all items
+number.splice(1);
+console.log(number);//[1]
 
+let fruit=["Apple","mongo","banana","orange"];
+fruit.splice(1,1,"kiwi");
+console.log(fruit);
 
 //xii.Adding item to an array using push
 

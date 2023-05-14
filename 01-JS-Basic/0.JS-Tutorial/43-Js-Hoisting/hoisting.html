@@ -54,13 +54,13 @@
       greet();
       let greet = function () {
         console.log('Hi, there.');
-
-
-
-
       };
 
-
+      //arrow function is not the top call hoisting this is error
+      hello();
+      let hello = ()=> {
+        console.log("hello");
+      }
 
       //JavaScript Declarations are Hoisted
 

@@ -100,7 +100,26 @@
     for (const tech of webTechs) {
       console.log(tech[0]) // get only the first letter of each element,  H C J R N M
     }
-    console.log(text);
+    
+
+    //forof object not working
+
+  let  test = { first: "one"}
+
+for(var item of test) {
+  console.log(item)
+}
+
+//object worked for of
+const myObject = {
+  first: "one",
+  second: "two",
+};
+
+for (const [key, value] of Object.entries(myObject)) {
+  console.log(key, value);  // first one, second two
+}
+
   </script>
 </body>
 
