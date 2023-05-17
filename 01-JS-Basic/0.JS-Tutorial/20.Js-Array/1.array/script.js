@@ -118,3 +118,18 @@
 // the text has special characters think how you can just get only the words
 // ["I", "love", "teaching", "and", "empowering", "people.", "I", "teach", "HTML,", "CSS,", "JS,", "React,", "Python"]
   
+
+
+
+//nested Array
+
+let ourArray=[["selva",23],["karthi",25]];
+
+console.log(ourArray[0][1]);//23
+
+
+//Multi dimenson array
+
+let ourArray2=[["selva",23],["karthi",25,["Police"]],[["bass",32],"hosur"]];
+
+console.log(ourArray2[1][2][0]);//police

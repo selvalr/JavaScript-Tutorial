@@ -113,12 +113,14 @@ console.log('a' / 2); // NaN;
 console.log(NaN / 2); // NaN
 console.log(NaN == NaN); // false
 
-//2.String --->'',""
+//2.String --->'',"",` `
 
 var fName = 'selva'; //string literal
 var lName = 'manan';
+let phrase = `can embed another ${lName}`;
 console.log(fName); //selva
 console.log(lName); //manan
+console.log(phrase);
 
 // use \ to escape the single quote (')
 let message = "I'm also a valid string";
@@ -138,6 +140,11 @@ let inProgress = true; //Boolean Literal
 let completed = false;
 
 console.log(typeof completed); // boolean
+
+
+let isGreater = 4 > 1;
+console.log( isGreater );
+
 
 //example boolean:
 console.log(Boolean('Hi')); // true

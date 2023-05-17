@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //unary
+      let x = 1;
+      x = -x;
+      alert(x); // -1, unary negation was applied
+
+      //binary
+      let x1 = 1,
+        y = 3;
+      alert(y - x1); // 2, binary minus subtracts values
+
+      //String concatenation with binary +
+
+      let s = "my" + "string";
+      alert(s); // mystring
+
+      alert("1" + 2); // "12"
+      alert(2 + "1"); // "21"
+
+      alert(2 + 2 + "1"); // "41" and not "221"
+
+      alert("1" + 2 + 2); // "122" and not "14"
+
+
+      alert( 6 - '2' ); // 4, converts '2' to a number
+alert( '6' / '2' ); // 3, converts both operands to numbers
+
+
+//Numeric conversion, unary +
+
+// No effect on numbers
+let x2 = 1;
+alert( +x2 ); // 1
+
+let y2 = -2;
+alert( +y2 ); // -2
+
+// Converts non-numbers
+alert( +true ); // 1
+alert( +"" );   // 0
+
+
+let apples = "2";
+let oranges = "3";
+alert( apples + oranges ); // "23", the binary plus concatenates strings
+
+
+
+let apple = "2";
+let orange = "3";
+
+// both values converted to numbers before the binary plus
+alert( +apple + +orange ); // 5
+
+// the longer variant
+// alert( Number(apples) + Number(oranges) ); // 5
+
+    </script>
+  </body>
+</html>
