@@ -70,6 +70,9 @@ console.log(a,typeof a);
 a=Number(a);
 console.log(a,typeof a);
  
+console.log( Number("123z") );      // NaN (error reading a number at "z")
+
+
 a='35';
 console.log(a,typeof a);
 a=parseInt(a);

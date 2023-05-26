@@ -85,6 +85,26 @@ const secondList = [4, 5, 6]
 const thirdList = firstList.concat(secondList)
 console.log(thirdList) // [1, 2, 3, 4, 5, 6]
 
+
+let ar = [1, 2];
+let arrayLike = {
+  0: "something",
+  length: 1
+};
+console.log( ar.concat(arrayLike) ); // 1,2,[object Object]
+
+//solved
+let ar1 = [1, 2];
+
+let arrayLike1 = {
+  0: "something",
+  1: "else",
+  [Symbol.isConcatSpreadable]: true,
+  length: 2
+};
+console.log( ar1.concat(arrayLike1) ); // 1,2,something,else
+
+
 //iv.Getting array length
 
 const numbers7 = [1, 2, 3, 4, 5]
@@ -267,3 +287,16 @@ console.log(fArray.concat(sArray));
 
 //spreard
 console.log([...fArray,...sArray]);
+
+
+
+//delete
+
+let arr5 = ["I", "go", "home"];
+
+delete arr5[1]; // remove "go"
+
+console.log( arr5[1] ); // undefined
+
+// now arr = ["I",  , "home"];
+console.log( arr5.length ); // 3

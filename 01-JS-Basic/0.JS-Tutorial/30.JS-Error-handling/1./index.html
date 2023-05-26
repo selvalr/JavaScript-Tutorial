@@ -26,6 +26,29 @@
     <button type="button" onclick="myFunction1()">Test Input</button>
 
     <p id="p02"></p>
+
+    <script>
+      //1. Error Handling in JS
+      try {
+        var result = Sum(10, 20); // Sum is not defined yet
+      } catch (ex) {
+        document.getElementById("errorMessage").innerHTML = ex;
+      }
+
+    //2.finally Block
+try
+{
+     var result  =  Sum(10, 20); // Sum is not defined yet
+}
+catch(ex)
+{
+    document.getElementById("errorMessage").innerHTML = ex;
+}
+finally{
+    document.getElementById("message").innerHTML = "finally block executed";
+}
+
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -76,3 +76,37 @@ const arr = ["John", "Peter", "Sally", "Jane"];
 
 let myString4 = JSON.stringify(arr);
 console.log(myString4);
+
+//8.for in loop
+
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+for (let key in user) {
+  // keys
+  alert( key );  // name, age, isAdmin
+  // values for the keys
+  alert( user[key] ); // John, 30, true
+}
+
+
+//9.Ordered like an object
+
+let codes = {
+  "49": "Germany",
+  "41": "Switzerland",
+  "44": "Great Britain",
+  // ..,
+  "1": "USA"
+};
+
+for (let code in codes) {
+  alert(code); // 1, 41, 44, 49
+}
+// Adding a plus "+" sign before each code is enough.
+for (let code in codes) {
+  alert( +code ); // 49, 41, 44, 1
+}

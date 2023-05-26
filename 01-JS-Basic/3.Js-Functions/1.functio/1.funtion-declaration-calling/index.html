@@ -40,6 +40,27 @@
       }
       addTwoNumbers(); // a function has to be called by its name to be executed
 
+      //i.Local variables
+      /*
+      function showMessage() {
+        let message = "Hello, I'm JavaScript!"; // local variable
+        alert(message);
+      }
+      showMessage(); // Hello, I'm JavaScript!
+      alert(message); // <-- Error! The variable is local to the function
+*/
+
+      //ii.Outer variables
+      let userName = "John";
+      function showMessage() {
+        userName="manan"
+        let message = "Hello, " + userName;
+        console.log(message);//hello manan
+      }
+      console.log(userName);//john before the fun
+      showMessage();
+      console.log(userName);//manan after the fun
+
       //2.Function returning value
 
       //example1:
@@ -183,10 +204,10 @@
 
       //default parameters
 
-      function normal(name = "normal") {
-        console.log("hi", name);
+      function normal(name = "normal",last) {
+        console.log("hi", name,last);
       }
-      normal("selva"); //hi selva
+      normal("selva","manan"); //hi selva manan
       normal(); //hi normal
 
       //Functions are Objects

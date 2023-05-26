@@ -55,8 +55,33 @@ console.log('python'.length > 'dragon'.length)   // false
 
 //string comparison is dictionary format search 
 console.log('Alen'>'Anubu');//false
+console.log( 'Z' > 'A' ); // true
+console.log( 'Glow' > 'Glee' ); // true
+console.log( 'Bee' > 'Be' ); // true
 
 //comparison of different type
 console.log('1'<5);//1<5; //true
+console.log('01' == 1);//// true, string '01' becomes a number 1
 console.log(true==1); //true
 console.log(true==0);//false
+
+console.log( 0 == false );//true
+console.log('' == false);//true
+
+console.log(0 === false);// false, because the types are different
+
+//Comparison with null and undefined
+console.log( null === undefined );// false
+console.log(null == undefined );//true
+
+//Strange result: null vs 0
+console.log(null > 0);//false
+console.log(null == 0);//false
+console.log(null >= 0);//true
+
+
+//An incomparable undefined
+
+console.log( undefined > 0 ); // false (1)
+console.log( undefined < 0 ); // false (2)
+console.log( undefined == 0 ); // false (3)

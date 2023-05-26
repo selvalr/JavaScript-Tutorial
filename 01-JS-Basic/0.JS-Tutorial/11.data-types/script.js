@@ -116,7 +116,7 @@ console.log(NaN == NaN); // false
 //2.String --->'',"",` `
 
 var fName = 'selva'; //string literal
-var lName = 'manan';
+var lName = "manan";
 let phrase = `can embed another ${lName}`;
 console.log(fName); //selva
 console.log(lName); //manan

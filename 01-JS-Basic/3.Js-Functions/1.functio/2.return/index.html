@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // With return
-function sum(num1, num2) {
-  return num1 + num2;
-}
- console.log(sum(2,3));
+      // With return
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+      console.log(sum(2, 3));
 
- // Without return, so the function doesn't output the sum
-function sum1(num1, num2) {
-  num1 + num2;
-}
-console.log(sum1(2,3));
+      // Without return, so the function doesn't output the sum
+      function sum1(num1, num2) {
+        num1 + num2;
+      }
+      console.log(sum1(2, 3));
+
+      //example:
+
+      function checkAge(age) {
+        if (age >= 18) {
+          return true;
+        } else {
+          return confirm("Do you have permission from your parents?");
+        }
+      }
+
+      let age = prompt("How old are you?", 18);
+
+      if (checkAge(age)) {
+        alert("Access granted");
+      } else {
+        alert("Access denied");
+      }
+
+      //A function with an empty return or without it returns undefined
+      function doNothing() {
+        /* empty */
+      }
+      alert(doNothing() === undefined); // true
+
+      //An empty return is also the same as return undefined:
+      function doNothing1() {
+        return;
+      }
+      alert(doNothing1() === undefined); // true
+
+      //Example: Function Returning a Function
+      function multiple(x) {
+        
+        function fn(y) {
+          return x * y;
+        }
+
+        return fn;
+      }
+
+      var triple = multiple(3);
+      triple(2); // returns 6
+      triple(3); // returns 9
     </script>
-</body>
+  </body>
 </html>

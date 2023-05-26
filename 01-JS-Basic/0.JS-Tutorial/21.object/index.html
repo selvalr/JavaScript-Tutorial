@@ -1,17 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Object</title>
-</head>
+  <body>
+    <h1>Reference type introduction</h1>
+    <script src="./script.js"></script>
 
-<body>
+    <script>
+      //1,Object Literal Syntax
 
-  <h1>Reference type introduction</h1>
-  <script src="./script.js"></script>
-</body>
+      var emptyObject = {}; // object with no properties or methods
 
+      var person = { firstName: "John" }; // object with single property
+
+      // object with single method
+      var message = {
+        showMessage: function (val) {
+          alert(val);
+        },
+      };
+
+      // object with properties & method
+      var person = {
+        firstName: "James",
+        lastName: "Bond",
+        age: 15,
+        getFullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      //2.Create Object using Object() Constructor
+      var person = new Object();
+
+      // Attach properties and methods to person object
+      person.firstName = "James";
+      person["lastName"] = "Bond";
+      person.age = 25;
+      person.getFullName = function () {
+        return this.firstName + " " + this.lastName;
+      };
+
+      //3.Variables as Object Properties
+      var firstName = "James";
+      var lastName = "Bond";
+
+      var person = { firstName, lastName };
+
+      //4. Access JS Object
+      var person = {
+        firstName: "James",
+        lastName: "Bond",
+        age: 25,
+        getFullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      person.firstName; // returns James
+      person.lastName; // returns Bond
+
+      person["firstName"]; // returns James
+      person["lastName"]; // returns Bond
+
+      person.getFullName(); // calling getFullName function
+
+      //5.hasOwnProperty()
+      var person = new Object();
+
+      person.firstName; // returns undefined
+
+      if (person.hasOwnProperty("firstName")) {
+        person.firstName;
+      }
+
+      //6.Object Constructor
+      var p1 = new Object();
+      p1.firstName = "James";
+      p1.lastName = "Bond";
+
+      var p2 = new Object();
+      p2.firstName; // undefined
+      p2.lastName; // undefined
+
+      p3 = p1; // assigns object
+      p3.firstName; // James
+      p3.lastName; // Bond
+      p3.firstName = "Sachin"; // assigns new value
+      p3.lastName = "Tendulkar"; // assigns new value
+
+      //7.Enumerate Object's Properties
+
+      //i.Access Object Keys
+
+      var person = new Object();
+      person.firstName = "James";
+      person.lastName = "Bond";
+
+      for (var prop in person) {
+        alert(prop); // access property name
+        alert(person[prop]); // access property value
+      }
+
+      //8.Pass by Reference
+      //i.JS Object Passes by Reference
+      function changeFirstName(per) {
+        per.firstName = "Steve";
+      }
+
+      var person = { firstName: "Bill" };
+
+      changeFirstName(person);
+
+      person.firstName; // returns Steve
+
+      //9.Nested Objects
+
+      var person = {
+        firstName: "James",
+        lastName: "Bond",
+        age: 25,
+        address: {
+          id: 1,
+          country: "UK",
+        },
+      };
+
+      person.address.country; // returns "UK"
+      
+    </script>
+  </body>
 </html>

@@ -64,3 +64,17 @@ delete person1.study;//delete object
 for(let hi in person1){
   console.log(hi+" :"+person1[hi]);
 }
+
+
+
+//Object.fromEntries: Object from Map
+
+let prices = Object.fromEntries([
+  ['banana', 1],
+  ['orange', 2],
+  ['meat', 4]
+]);
+
+// now prices = { banana: 1, orange: 2, meat: 4 }
+
+alert(prices.orange); // 2

@@ -10,30 +10,67 @@
 
 <body>
     <script>
-        //Primitive data type
+        //Primitive data type:
 
+        //i.String
+        let name1="Selva";
+        let name2='manan';
+        let name3=`hello ${name1}`;
+        console.log("welcome: " + name1 + " " +name2+ " " +name3);
+
+        //ii.number
         let x = 5;
         let y = x;
 
         console.log(x);//5
         console.log(y);//5
 
-        x = 20;
-        console.log(x);//20
+        x = 20.04;
+        console.log(x);//20.04
         console.log(y);//5
 
+        
+        //iii.Boolean
+        let isAlive=true;
+        console.log(isAlive);
+        isAlive=false;
+        console.log(isAlive);
+
+        //iv.BigInt
+        let no1=453889879865131n;
+        console.log(no1);
+        let no2=200n;
+        console.log(no2);
+
+        //v.Null
+        let age=null;
+        console.log(age);
+
+        //vi.undefined
+        let hello;
+        console.log(hello);
+        
         //Reference data Type
 
-        let h = {
-            name: "selva"
-        }
+        //i.object
+        let person = { 
+                firstName: "James", 
+                lastName: "Bond", 
+                age: 15
+            }; 
 
+        let i = person;
+        i.firstName = "karthi"
+        console.log(person);
+        console.log(i);
 
-        let i = h;
-        i.name = "karthi"
+        //ii.Date
+        let today = new Date("25 July 2021");
+        console.log(today);
 
-        console.log(h);//karthi
-        console.log(i);//karthi
+        //iii.Array
+        let nums = [1, 2, 3, 4];
+        console.log(nums);
     </script>
 </body>
 

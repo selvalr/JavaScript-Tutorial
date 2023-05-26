@@ -10,6 +10,36 @@
 
 <body>
   <h1>Number</h1>
+<script>
+    var num1 = 100; // integer
+    console.log(num1);
+		
+    var num2 = -100; //negative integer
+    console.log(num2);
+
+		var num3 = 10.52; // float
+    console.log(num3);
+		
+    var num4 = -10.52; //negative float
+    console.log(num4);
+
+		var num5 = 0xfff; // hexadecimal
+    console.log(num5);
+		
+    var num6 = 256e-5; // exponential
+    console.log(num6);
+		
+    var num7 = 030; // octal
+    console.log(num7);
+		
+    var num8 = 0b0010001; // binary
+    console.log(num8);
+
+
+
+
+</script>
+
   <script>
     //Numbers can be written with or without decimals:
 
@@ -115,7 +145,142 @@
 let y3 = -2 / 0;
 console.log(y3);
 
+
+
+//5.More ways to write a number
+
+//Imagine we need to write 1 billion. The obvious way is:
+
+let billion = 1000000000;
+
+//We also can use underscore _ as the separator:
+
+let billion1 = 1_000_000_000;
+
+//In JavaScript, we can shorten a number by appending the letter "e" to it and specifying the zeroes count:
+
+let billion2 = 1e9;  // 1 billion, literally: 1 and 9 zeroes
+
+alert( 7.3e9 );  // 7.3 billions (same as 7300000000 or 7_300_000_000)
+
+/*
+In other words, e multiplies the number by 1 with the given zeroes count.
+
+1e3 === 1 * 1000; // e3 means *1000
+1.23e6 === 1.23 * 1000000; // e6 means *1000000
+*/
+
+/*
+Now let’s write something very small. Say, 1 microsecond (one millionth of a second):
+
+let mсs = 0.000001;
+Just like before, using "e" can help. If we’d like to avoid writing the zeroes explicitly, we could write the same as:
+
+let mcs = 1e-6; // five zeroes to the left from 1
+
+*/
+
+/*
+In other words, a negative number after "e" means a division by 1 with the given number of zeroes:
+
+// -3 divides by 1 with 3 zeroes
+1e-3 === 1 / 1000; // 0.001
+
+// -6 divides by 1 with 6 zeroes
+1.23e-6 === 1.23 / 1000000; // 0.00000123
+
+// an example with a bigger number
+1234e-2 === 1234 / 100; // 12.34, decimal point moves 2 times
+*/
+
+//4.Hex, binary and octal numbers
+
+alert( 0xff ); // 255
+alert( 0xFF ); // 255 (the same, case doesn't matter)
+
+
+//Binary and octal numeral systems are rarely used, but also supported using the 0b and 0o prefixes:
+
+let a = 0b11111111; // binary form of 255
+let b = 0o377; // octal form of 255
+
+alert( a == b ); // true, the same number 255 at both sides
+
+//5.toString(base)
+//The method num.toString(base) returns a string representation of num in the numeral system with the given base.
+
+//For example:
+
+let num = 255;
+
+alert( num.toString(16) );  // ff
+alert( num.toString(2) );   // 11111111
+
+/*
+Common use cases for this are:
+
+base=16 is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
+
+base=2 is mostly for debugging bitwise operations, digits can be 0 or 1.
+
+base=36 is the maximum, digits can be 0..9 or A..Z. The whole latin alphabet is used to represent a number. A funny, but useful case for 36 is when we need to turn a long numeric identifier into something shorter, for example to make a short url. Can simply represent it in the numeral system with base 36:
+
+alert( 123456..toString(36) ); // 2n9c
+
+*/
+
+
+//5.Imprecise calculations
+alert( 1e500 ); // Infinity
+alert( 0.1 + 0.2 == 0.3 ); // false
+alert( 0.1 + 0.2 ); // 0.30000000000000004
+
+
+//6.Tests: isFinite and isNaN
+
+//i.isNaN(value) converts its argument to a number and then tests it for being NaN:
+
+alert( isNaN(NaN) ); // true
+alert( isNaN("str") ); // true
+
+alert( NaN === NaN ); // false
+
+//ii.isFinite(value) converts its argument to a number and returns true if it’s a regular number, not NaN/Infinity/-Infinity:
+
+alert( isFinite("15") ); // true
+alert( isFinite("str") ); // false, because a special value: NaN
+alert( isFinite(Infinity) ); // false, because a special value: Infinity
+
+
+//Sometimes isFinite is used to validate whether a string value is a regular number:
+
+let num2 = +prompt("Enter a number", '');
+
+// will be true unless you enter Infinity, -Infinity or not a number
+alert( isFinite(num2) );
+
+//iii.Number.isNaN(value) returns true if the argument belongs to the number type and it is NaN. In any other case it returns false.
+
+alert( Number.isNaN(NaN) ); // true
+alert( Number.isNaN("str" / 2) ); // true
+
+// Note the difference:
+alert( Number.isNaN("str") ); // false, because "str" belongs to the string type, not the number type
+alert( isNaN("str") ); // true, because isNaN converts string "str" into a number and gets NaN as a result of this conversion
+
+
+//iv.Number.isFinite(value) returns true if the argument belongs to the number type and it is not NaN/Infinity/-Infinity. In any other case it returns false.
+
+alert( Number.isFinite(123) ); // true
+alert( Number.isFinite(Infinity) ); // false
+alert( Number.isFinite(2 / 0) ); // false
+
+// Note the difference:
+alert( Number.isFinite("123") ); // false, because "123" belongs to the string type, not the number type
+alert( isFinite("123") ); // true, because isFinite converts string "123" into a number 123
   </script>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

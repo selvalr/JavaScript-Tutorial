@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.eval() is a global function in JavaScript that evaluates a specified string as JavaScript code and executes it.
+
+      eval("alert('this is executed by eval()')");
+
+      //2.eval
+      var result;
+
+      function Sum(val1, val2) {
+        return val1 + val2;
+      }
+
+      eval("result = Sum(5, 5);");
+
+      alert(result);
+
+
+
+      //3. eval with JSON Object
+var str = '({"firstName":"Bill","lastName":"Gates"})';
+
+var obj = eval(str);
+
+obj.firstName; // Bill 
+
+    </script>
+
+    
+  </body>
+</html>

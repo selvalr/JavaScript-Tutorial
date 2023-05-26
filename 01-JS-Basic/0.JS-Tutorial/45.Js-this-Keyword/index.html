@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="demo"></p>
 
     <script>
-    // Create an object:
-    const person = {
-      firstName: "John",
-      lastName: "Doe",
-      id: 5566,
-      fullName : function() {
-        return this.firstName + " " + this.lastName;
-      }
-    };
-    
-    // Display data from the object:
-    document.getElementById("demo").innerHTML = person.fullName();
+      // Create an object:
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      // Display data from the object:
+      document.getElementById("demo").innerHTML = person.fullName();
+
+      //2.exampe:
+
+      let user = {
+        name: "John",
+        age: 30,
+        sayHi() {
+          // "this" is the "current object"
+          alert(this.name);
+        },
+      };
+
+      user.sayHi(); // John
+
+
+//Technically, it’s also possible to access the object without this, by referencing it via the outer variable:
+/*
+  let user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    alert(user.name); // "user" instead of "this"
+  }
+
+};
+*/
+
+
+//That’s demonstrated below:
+/*
+let user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    alert( user.name ); // leads to an error
+  }
+
+};
+
+
+let admin = user;
+user = null; // overwrite to make things obvious
+
+admin.sayHi(); // TypeError: Cannot read property 'name' of null
+*/
+
+
+//1.“this” is not bound
+/*
+There’s no syntax error in the following example:
+
+function sayHi() {
+  alert( this.name );
+}
+*/
+/*
+let user = { name: "John" };
+let admin = { name: "Admin" };
+
+function sayHi() {
+  alert( this.name );
+}
+
+// use the same function in two objects
+user.f = sayHi;
+admin.f = sayHi;
+
+// these calls have different this
+// "this" inside the function is the object "before the dot"
+user.f(); // John  (this == user)
+admin.f(); // Admin  (this == admin)
+
+admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
+*/
+
+
+
+//4.Arrow functions have no “this”
+
+let use = {
+  firstName: "Ilya",
+  sayHi() {
+    let arrow = () => alert(this.firstName);
+    arrow();
+  }
+};
+
+use.sayHi(); // Ilya
+
+
     </script>
-    
-</body>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 /*
-switch(choice){
+switch(expression or literal value){
     case choice:
         ------
         break;

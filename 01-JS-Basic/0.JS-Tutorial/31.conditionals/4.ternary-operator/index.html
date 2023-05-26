@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <script>
+      let isRaining = true;
+      isRaining
+        ? console.log("You need a rain coat.")
+        : console.log("No need for a rain coat.");
 
-<body>
-  <script>
-    let isRaining = true
-    isRaining
-      ? console.log('You need a rain coat.')
-      : console.log('No need for a rain coat.')
+      //.multiple ?
+      let mark = 66;
+      let result =
+        mark > 90 ? "good" : mark > 80 ? "ok" : mark > 50 ? "well" : "bad";
 
-    //.
-    let mark = 66;
-    let result = mark > 90 ? "good" : mark > 80 ? "ok" : mark > 50 ? "well" : "bad";
+      console.log(result);
 
-    console.log(result);
-  </script>
-</body>
-
+      //Non-traditional use of ‘?’
+      let company = prompt("Which company created JavaScript?", "");
+      company == "Netscape" ? console.log("Right!") : console.log("Wrong.");
+    </script>
+  </body>
 </html>

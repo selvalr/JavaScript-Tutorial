@@ -38,6 +38,36 @@ function myFunction() {
 
 document.getElementById("demo2").innerHTML =
 typeof carName;
+
+
+
+// 1.Function Returning a Function
+
+function multiple(x) {
+
+function fn(y)
+{
+    return x * y;
+}
+
+return fn;
+}
+
+var triple = multiple(3);
+triple(2); // returns 6
+triple(3); // returns 9
+
+//2.Nested Functions
+function greet(firstName)
+{
+    function SayHello() {
+        alert("Hello " + firstName);
+    }
+
+    return SayHello();
+}
+
+greet("Steve");
     </script>
   </body>
 </html>

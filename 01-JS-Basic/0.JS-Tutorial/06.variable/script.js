@@ -3,7 +3,7 @@
 //should be meaningful:
 //cannot start with a number:(1name)
 //cannot contain a space or hyphen (-)
-//Are case-sensitive:firstName,FirstName
+//Are case-sensitive:Variables named apple and APPLE are two different variables.
 
 
 /*
@@ -23,8 +23,9 @@ Using nothing
 
 //Incorrect JavaScript variables syntax:
 /*
-    var  123=30;  
+    var  123=30;  // cannot start with a digit
     var *aa=320;  
+    let my-name; // hyphens '-' aren't allowed in the name
 */
 
 //sample declaration:

@@ -133,3 +133,18 @@ console.log(ourArray[0][1]);//23
 let ourArray2=[["selva",23],["karthi",25,["Police"]],[["bass",32],"hosur"]];
 
 console.log(ourArray2[1][2][0]);//police
+
+
+
+//An array can store elements of any type.
+
+//For instance:
+
+// mix of values
+let arra3 = [ 'Apple', { name: 'John' }, true, function() { alert('hello'); } ];
+
+// get the object at index 1 and then show its name
+alert( arra3[1].name ); // John
+
+// get the function at index 3 and run it
+arra3[3](); // hello
