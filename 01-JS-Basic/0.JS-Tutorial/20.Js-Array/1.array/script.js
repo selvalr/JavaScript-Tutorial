@@ -14,6 +14,14 @@
     var house = ['saood', 'harish', true, 910];
     console.log(house);//['saood', 'harish', true, 910]
     console.log(house[0]);//saood
+    console.log(house[1]);//harish
+    console.log(house[4]);//undefined   // getter
+    house[4]="bala";//setter
+    console.log(house[4]);//bala
+
+    let lengthOfArray=house["length"];
+    console.log(lengthOfArray);//5
+    house[lengthOfArray]="selva"//selva added to 5 index
 
     //.
     let myArra=[];

@@ -22,6 +22,13 @@ let person = {
 console.log(person);
 console.log(typeof person); //object
 console.log(person.firstName); //selva
+console.log(person["lastName"]);//manan //getter
+person["age"]=23;//setter age but already age is object to overwrite
+console.log(person);
+
+//length calculate in object
+let ke=Object.keys(person);
+console.log(ke["length"]);//3
 
 //ii.
 const rectangle = {
@@ -91,6 +98,16 @@ console.log(person3["location"]); // undefined
 
 // for instance to access the phone number we only use the square bracket method
 console.log(person3["phone number"]);
+
+
+//dot and square notation
+
+let babyName={boy:"selva",girl:"trisha"}
+let baby="boy";
+
+console.log(babyName[baby]);//selva is using array notation working dynamically
+console.log(babyName.baby);//undefined is not notation is not supported static
+
 
 //4.Creating object methods
 

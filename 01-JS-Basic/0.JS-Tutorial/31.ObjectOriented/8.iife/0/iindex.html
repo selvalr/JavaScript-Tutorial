@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        What is an IIFE?
+As name suggest, IIFE is a function expression that automatically invokes after completion of the definition. The parenthesis () plays important role in IIFE pattern. In JavaScript, parenthesis cannot contain statements; it can only contain an expression.
+
+// Parenthesis ()
+(var foo = 10 > 9); // syntax error
+(var foo = "foo", bar = "bar"); // syntax error
+(10 > 9); // valid
+(alert("Hi")); // valid
+
+        */
+
+
+ //1.IIFE
+(function () {
+    var userName = "Steve";
+    
+    function display(name)
+    {
+        alert("MyScript2.js: " + name);
+    }
+
+    display(userName);
+  })();
+
+
+  //2.IIFE
+var userName = "Bill";
+
+(function (name) {
+
+    function display(name)
+    {
+        alert("MyScript2.js: " + name);
+    }
+
+    display(name);
+})(userName);
+
+
+/*
+Advantages of IIFE:
+
+Do not create unnecessary global variables and functions
+Functions and variables defined in IIFE do not conflict with other functions & variables even if they have same name.
+Organize JavaScript code.
+Make JavaScript code maintainable.
+*/
+
+    </script>
+</body>
+</html>

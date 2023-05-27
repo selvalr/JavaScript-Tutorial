@@ -143,3 +143,45 @@ let temp1=new Temperature(25);
 //console.log(temp1._temp);//dont use underscore private in script
 temp1.temp=130;
 console.log(temp1.temp);
+
+
+
+
+//1.Inheritance
+function Student(firstName, lastName, schoolName, grade)
+{
+    Person.call(this, firstName, lastName);
+
+    this.SchoolName = schoolName || "unknown";
+    this.Grade = grade || 0;
+}
+//Student.prototype = Person.prototype;
+Student.prototype = new Person();
+Student.prototype.constructor = Student;
+
+
+//i.Inheritance
+function Person(firstName, lastName) {
+    this.FirstName = firstName || "unknown";
+    this.LastName = lastName || "unknown";            
+}
+
+Person.prototype.getFullName = function () {
+    return this.FirstName + " " + this.LastName;
+}
+function Student(firstName, lastName, schoolName, grade)
+{
+    Person.call(this, firstName, lastName);
+
+    this.SchoolName = schoolName || "unknown";
+    this.Grade = grade || 0;
+}
+//Student.prototype = Person.prototype;
+Student.prototype = new Person();
+Student.prototype.constructor = Student;
+
+var std = new Student("James","Bond", "XYZ", 10);
+            
+alert(std.getFullName()); // James Bond
+alert(std instanceof Student); // true
+alert(std instanceof Person); // true
