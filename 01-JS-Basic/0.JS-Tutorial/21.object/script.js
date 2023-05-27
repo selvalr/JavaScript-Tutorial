@@ -247,3 +247,37 @@ anotherObj.fname = function () { return 'hello' }
 console.log(anotherObj);
 console.log(anotherObj.lname);
 console.log(anotherObj.fname());
+
+
+
+//array--->array
+
+let sName=["hello", "hello", "hello", "hello"];
+let lName=["welcome"];
+
+let finalArr=[sName, lName];
+console.log(finalArr);
+
+//object--->object
+
+let oName={name:"Selva",age:21};
+let olName={isFinite:true};
+
+let finalObj={firstObject:oName, secondObject:olName};//{oName,olName}--->keyy and value same in browser read
+console.log(finalObj);
+
+//array--->object
+
+let oName1={name:"Selva",age:21};
+let olName1={isFinite:true};
+
+let finalObj1=[oName1,olName1];
+console.log(finalObj1);
+
+//object--->array
+
+let oName2=["Selva",21];
+let olName2=[true];
+
+let finalObj2={firstKeyName:oName2,sKeyName:olName2};
+console.log(finalObj2);
