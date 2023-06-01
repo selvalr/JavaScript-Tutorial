@@ -12,6 +12,71 @@
     <button type="button" onclick="hiThere()">Click me event</button>
 
     <script>
+      //1.keyboards events
+          //i.keydown
+          //ii.keyup
+          //iii.keypress
+      
+      //2.Mouse events
+          //i.Mouse move
+          //ii.click
+          //iii.double click
+          //iv.mouse over
+          //v.mouse leave
+          //vi.wheel
+
+      //3.Global
+
+          //i.scroll
+          //ii.resize-->window
+
+          //anonymous functtion..
+          window.addEventListener("resize", function(){})
+
+          window.addEventListener("scroll", function(){})
+
+
+
+
+
+          // ? Inline eventhandlers--->bad practices
+
+              //Advantages
+              //1.Easy
+              //2.Slightly Fast
+
+              //Disadvantages...
+              //1.unmanageble
+              //2.scope
+          
+          // ? Object model
+
+          //example:
+              //btn.onclick=functionname;
+              //btn.onclick=functionname;
+
+              //Advantages...
+              //1.Managable
+              //2.scope
+              //3.Object
+
+              //Disadvantage
+              //1.can not run two function
+
+          // ? Build-in methods....
+
+            //Advantage:
+            //1.can be able to run more then handeler
+            //2.build in methods
+
+            //DisAdvantage:
+            //1.not supported old browser IE 8 or previoes
+
+          //solved two function event action:
+            //btn.addEventListener("click", functionName);
+            //btn.addEventListener("click", functionName);
+
+
       function hiThere() {
         alert('Hi there!');
       }
