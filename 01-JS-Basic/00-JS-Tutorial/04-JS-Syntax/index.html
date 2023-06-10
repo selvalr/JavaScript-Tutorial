@@ -34,7 +34,7 @@
     <script>
       // Declare a variable and initialize it
       // Global variable declaration
-      var Name = 'Apple';
+      var Name = "Apple";
 
       // Function definition
       function MyFunction() {
@@ -42,10 +42,10 @@
         var num = 45;
 
         // Display the value of Global variable
-        document.writeln(' output:<br>' + Name);
+        document.writeln(" output:<br>" + Name);
 
         // Display the value of local variable
-        document.writeln('<br>' + num);
+        document.writeln("<br>" + num);
       }
 
       // Function call
@@ -74,6 +74,7 @@
       sum = x + y;
 
       document.write(sum);
+      console.log((5 + 6) * 10);
     </script>
     <hr />
 
@@ -96,27 +97,37 @@
       // Expression to add two numbers
       sum = x + y;
 
-      document.write(num + '<br>' + sum);
+      document.write(num + "<br>" + sum);
+      console.log(5 * 10);
+
+      //Expressions can also contain variable values:
+      var x;
+      x = 5;
+      console.log(x * 10);
     </script>
     <hr />
 
     <h2>4.JavaScript Keyword:</h2>
     <p>
       The keywords are the reserved words that have special meaning in
-      JavaScript.
+      JavaScript.(let,var)
     </p>
     <script>
+      let x, y;
+      x = 5 + 6;
+      y = x * 10;
+      console.log(y);
+
       // var is the keyword used to define the variable
       var a, b;
-
       // function is the keyword which tells the browser to create a function
       function GFG() {}
     </script>
-    
+
     <hr />
 
     <h2>5.JavaScript Comments:</h2>
-    <p>// & /**/</p>
+    <p>// & /**/ Comments are ignored, and will not be executed:</p>
     <script>
       // Variable Declarations
       var x, num, sum;
@@ -130,7 +141,7 @@
 
       document.write(sum);
     </script>
-    
+
     <hr />
 
     <h2>6.JavaScript Data Types:</h2>
@@ -138,7 +149,7 @@
     <p>2.Non-primitive (reference) data type</p>
     <script>
       // It store string data type
-      var txt = 'GeeksforGeeks';
+      var txt = "GeeksforGeeks";
 
       // It store integer data type
       var a = 5;
@@ -151,14 +162,14 @@
       ); //---> returns true to the console
 
       // It store array data type
-      var places = ['GFG', 'Computer', 'Hello'];
+      var places = ["GFG", "Computer", "Hello"];
 
       // It store object data (objects are represented in the below way mainly)
       var Student = {
-        firstName: 'Johnny',
-        lastName: 'Diaz',
+        firstName: "Johnny",
+        lastName: "Diaz",
         age: 35,
-        mark: 'blueEYE',
+        mark: "blueEYE",
       };
     </script>
 
@@ -210,15 +221,19 @@
     </p>
     <h2>JavaScript and Camel Case</h2>
     <p>
-      Hyphens:first-name, last-name, master-card, inter-city.<br />
-      Underscore: first_name, last_name, master_card, inter_city.<br />
-      Camel Case: FirstName, LastName, MasterCard, InterCity.<br />
+      Hyphens:first-name, last-name<br /><!--no javascript-->
+      Underscore: first_name, last_name<br />
+      Camel Case: FirstName, LastName<br />
+      Upper Camel Case (Pascal Case):FirstName, LastName, MasterCard, InterCity.
     </p>
     <script>
-      var lastName = 'Doe';
-      var lastname = 'Peterson';
+      //case sensitive is two name is different
+      var lastName = "Doe";
+      var lastname = "Peterson";
       document.write(lastName);
     </script>
     <hr />
+
+    <script src="script.js"></script>
   </body>
 </html>

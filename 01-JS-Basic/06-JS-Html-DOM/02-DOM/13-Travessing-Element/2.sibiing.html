@@ -18,12 +18,14 @@
     </ul>
 
     <script>
-      let current = document.querySelector('.current');
+      let current = document.querySelector(".current");
+      console.log(current.nextSibling);
       let nextSibling = current.nextElementSibling;
       console.log(nextSibling);
 
       //previous sibiling
-      let current1 = document.querySelector('.current');
+      let current1 = document.querySelector(".current");
+      console.log(current1.previousSibling);
       let prevSiblings = current1.previousElementSibling;
       console.log(prevSiblings);
     </script>

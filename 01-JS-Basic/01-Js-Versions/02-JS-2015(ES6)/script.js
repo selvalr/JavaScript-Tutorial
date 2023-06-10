@@ -35,7 +35,6 @@ var x = 10;
 
 //You don't need the function keyword, the return keyword, and the curly brackets.
 
-
 // ES5
 /*
 var x = function(x, y) {
@@ -45,11 +44,10 @@ var x = function(x, y) {
 
 // ES6
 const arrowFun = (x, y) => x * y;
-console.log(arrowFun(3,4));
+console.log(arrowFun(3, 4));
 
 //4.The Spread (...) Operator
 //The ... operator expands an iterable (like an array) into more elements:
-
 
 const q1 = ["Jan", "Feb", "Mar"];
 const q2 = ["Apr", "May", "Jun"];
@@ -62,12 +60,11 @@ console.log(year);
 //The ... operator can be used to expand an iterable into more arguments for function calls:
 
 //Example:
-const numbers = [23,55,21,87,56];
+const numbers = [23, 55, 21, 87, 56];
 let maxValue = Math.max(...numbers);
 
 //5.The For/Of Loop
 //The JavaScript for/of statement loops through the values of an iterable objects.
-
 
 //Looping over an Array
 
@@ -79,26 +76,24 @@ for (let x of cars) {
 }
 console.log(text);
 
-
 //Looping over a String
 
 let language = "JavaScript";
 let text1 = "";
 
 for (let x of language) {
-    text1 += x + " ";
+  text1 += x + " ";
 }
 console.log(text1);
 
 //6.JavaScript Maps
 //Being able to use an Object as a key is an important Map feature.
 
-
 const fruits = new Map([
-["apples", 500],
-["bananas", 300],
-["oranges", 200],
-["apples", 500]
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200],
+  ["apples", 500],
 ]);
 console.log(fruits);
 
@@ -113,7 +108,6 @@ letters.add("b");
 letters.add("c");
 
 console.log(letters);
-
 
 //8.JavaScript Classes
 /*
@@ -169,35 +163,34 @@ myPromise.then(
 
 //Example Using a Promise
 
-const myPromise = new Promise(function(myResolve, myReject) {
-  setTimeout(function() { myResolve("I love You !!"); }, 3000);
+const myPromise = new Promise(function (myResolve, myReject) {
+  setTimeout(function () {
+    myResolve("I love You !!");
+  }, 3000);
 });
 
-myPromise.then(function(value) {
+myPromise.then(function (value) {
   console.log(value);
 });
-
 
 //10.The Symbol Type
 //A JavaScript Symbol is a primitive datatype just like Number, String, or Boolean.
 
 const person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue"
-  };
-  
-  let id = Symbol('id');
-  person[id] = 140353;
-  // Now person[id] = 140353
-  // but person.id is still undefined
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+
+let id = Symbol("id");
+person[id] = 140353;
+// Now person[id] = 140353
+// but person.id is still undefined
 console.log(person[id] + " " + person.id);
-  
 
 //11.Default Parameter Values
 //ES6 allows function parameters to have default values.
-
 
 function myFunction(x, y = 10) {
   // y is 10 if not passed or undefined
@@ -205,10 +198,8 @@ function myFunction(x, y = 10) {
 }
 console.log(myFunction(5)); // will return 15
 
-
 //12.Function Rest Parameter
 //The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:
-
 
 function sum(...args) {
   let sum = 0;
@@ -222,9 +213,8 @@ console.log(x1);
 //13.String.includes()
 //The includes() method returns true if a string contains a specified value, otherwise false:
 
-
 let text2 = "Hello world, welcome to the universe.";
-text2.includes("world")    // Returns true
+text2.includes("world"); // Returns true
 console.log(text2.includes("world"));
 
 //14.String.startsWith()
@@ -232,31 +222,27 @@ console.log(text2.includes("world"));
 
 let text3 = "Hello world, welcome to the universe.";
 
-text3.startsWith("Hello")   // Returns true
-console.log(text3.startsWith("Hello") );
-
+text3.startsWith("Hello"); // Returns true
+console.log(text3.startsWith("Hello"));
 
 //15.String.endsWith()
 //The endsWith() method returns true if a string ends with a specified value, otherwise false:
 
-
 var text4 = "John Doe";
-text4.endsWith("Doe")    // Returns true
-console.log(text4.endsWith("Doe") );
+text4.endsWith("Doe"); // Returns true
+console.log(text4.endsWith("Doe"));
 
 //16.Array.from()
 //The Array.from() method returns an Array object from any object with a length property or any iterable object.
 
 //Create an Array from a String:
 
-Array.from("ABCDEFG")   // Returns [A,B,C,D,E,F,G]
-console.log(  Array.from("ABCDEFG"));
-
+Array.from("ABCDEFG"); // Returns [A,B,C,D,E,F,G]
+console.log(Array.from("ABCDEFG"));
 
 //17.Array keys()
 
 //The keys() method returns an Array Iterator object with the keys of an array.
-
 
 //Create an Array Iterator object, containing the keys of the array:
 
@@ -269,13 +255,11 @@ for (let x of keys) {
 }
 console.log(text5);
 
-
 //18.Array find()
 
 //The find() method returns the value of the first array element that passes a test function.
 
 //This example finds (returns the value of ) the first element that is larger than 18:
-
 
 const numbers1 = [4, 9, 16, 25, 29];
 let first = numbers1.find(myFunction3);
@@ -293,12 +277,10 @@ The array itself
 
 */
 
-
 //19.Array findIndex()
 //The findIndex() method returns the index of the first array element that passes a test function.
 
 //This example finds the index of the first element that is larger than 18:
-
 
 const numbers2 = [4, 9, 16, 25, 29];
 let first2 = numbers2.findIndex(myFunction4);
@@ -321,40 +303,35 @@ The Math.trunc() Method
 Math.trunc(x) returns the integer part of x:
 */
 
-
-Math.trunc(4.9);    // returns 4
-Math.trunc(4.7);    // returns 4
-Math.trunc(4.4);    // returns 4
-Math.trunc(4.2);    // returns 4
-Math.trunc(-4.2);    // returns -4
+Math.trunc(4.9); // returns 4
+Math.trunc(4.7); // returns 4
+Math.trunc(4.4); // returns 4
+Math.trunc(4.2); // returns 4
+Math.trunc(-4.2); // returns -4
 
 //21.The Math.sign() Method
 //Math.sign(x) returns if x is negative, null or positive:
 
-
-Math.sign(-4);    // returns -1
-Math.sign(0);    // returns 0
-Math.sign(4);    // returns 1
+Math.sign(-4); // returns -1
+Math.sign(0); // returns 0
+Math.sign(4); // returns 1
 
 //22.The Math.cbrt() Method
 //Math.cbrt(x) returns the cube root of x:
 
-
-Math.cbrt(8);    // returns 2
-Math.cbrt(64);    // returns 4
-Math.cbrt(125);    // returns 5
+Math.cbrt(8); // returns 2
+Math.cbrt(64); // returns 4
+Math.cbrt(125); // returns 5
 
 //23.The Math.log2() Method
 //Math.log2(x) returns the base 2 logarithm of x:
 
-
-Math.log2(2);    // returns 1
+Math.log2(2); // returns 1
 
 //24.The Math.log10() Method
 //Math.log10(x) returns the base 10 logarithm of x:
 
-
-Math.log10(10);    // returns 1
+Math.log10(10); // returns 1
 
 //25.New Number Properties
 //ES6 added the following properties to the Number object:
@@ -385,19 +362,16 @@ Number.isSafeInteger()
 //The Number.isInteger() Method
 //The Number.isInteger() method returns true if the argument is an integer.
 
-
-Number.isInteger(10);        // returns true
-Number.isInteger(10.5);      // returns false
+Number.isInteger(10); // returns true
+Number.isInteger(10.5); // returns false
 
 //The Number.isSafeInteger() Method
 //A safe integer is an integer that can be exactly represented as a double precision number.
 
 //The Number.isSafeInteger() method returns true if the argument is a safe integer.
 
-
-Number.isSafeInteger(10);    // returns true
-Number.isSafeInteger(12345678901234567890);  // returns false
-
+Number.isSafeInteger(10); // returns true
+Number.isSafeInteger(12345678901234567890); // returns false
 
 //27.New Global Methods
 //ES6 added 2 new global number methods:
@@ -413,16 +387,14 @@ The global isFinite() method returns false if the argument is Infinity or NaN.
 Otherwise it returns true:
 */
 
-isFinite(10/0);       // returns false
-isFinite(10/1);       // returns true
+isFinite(10 / 0); // returns false
+isFinite(10 / 1); // returns true
 
 //The isNaN() Method
 
 //The global isNaN() method returns true if the argument is NaN. Otherwise it returns false:
 
-
-isNaN("Hello");       // returns true
-
+isNaN("Hello"); // returns true
 
 //Object entries()
 
@@ -453,7 +425,6 @@ The entries() method does not change the original array.
 
 //Import from named exports
 //Import named exports from the file person.js:
-
 
 //  import { name, age } from "./person.js";
 

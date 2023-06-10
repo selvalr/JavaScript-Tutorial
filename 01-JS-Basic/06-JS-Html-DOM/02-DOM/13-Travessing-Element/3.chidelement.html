@@ -16,20 +16,27 @@
     </ul>
 
     <script>
-      let content = document.getElementById('menu');
+      //childnode:
+      let ul = document.getElementById("menu");
+      console.log(ul.childNodes);
+      console.log(ul.firstChild);
+      console.log(ul.lastChild);
+
+      //
+      let content = document.getElementById("menu");
       let firstChild = content.firstChild.nodeName;
       console.log(firstChild);
 
       //first child element
-      let content1 = document.getElementById('menu');
+      let content1 = document.getElementById("menu");
       console.log(content1.firstElementChild);
 
       //lastChildElement
-      let menu = document.getElementById('menu');
+      let menu = document.getElementById("menu");
       console.log(main.lastElementChild);
 
       //allChild
-      let menu1 = document.getElementById('menu');
+      let menu1 = document.getElementById("menu");
       let children = menu1.children;
       console.log(children);
     </script>

@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>OUTPUT JS</h1>
-    <hr>
+    <hr />
 
-    <!--Using innerHTML-->
+    <!--Using innerHTML--Writing into an HTML element -->
     <p>Using innerHTML</p>
     <p id="demo"></p>
     <script>
-    document.getElementById("demo").innerHTML = 5 + 6;
+      document.getElementById("demo").innerHTML = 5 + 6;
     </script>
 
-    <hr>
+    <hr />
 
     <!--Using document.write()--should only be used for testing.-->
     <p>Using doucment.write</p>
-    
+
     <script>
-        document.write(5 + 6);
+      document.write(5 + 6);
     </script>
-     <button type="button" onclick="document.write(5 + 6)">Try it</button>
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>
 
+    <hr />
 
+    <!--Alert--Writing into an alert box-->
+    <p>Using window.alert()</p>
 
-<hr>
+    <script>
+      window.alert(5 + 6);
+    </script>
 
-<!--Alert-->
-<p>Using window.alert()</p>
+    <hr />
 
-<script>
-alert(5 + 6);
-</script>
+    <!--Using console.log()--Writing into the browser console-->
 
-<hr>
+    <p>f12 (or) click inspect console show</p>
+    <script>
+      console.log("hello selva");
+    </script>
 
-<!--Using console.log()-->
+    <hr />
 
-<p>f12 (or) click inspect console show</p>
-<script>
-    console.log("hello selva");
-</script>
+    <!--JavaScript Print-->
 
+    <h2>The window.print() Method</h2>
 
-<hr>
+    <p>Click the button to print the current page.</p>
 
-<!--JavaScript Print-->
-
-<h2>The window.print() Method</h2>
-
-<p>Click the button to print the current page.</p>
-
-<button onclick="window.print()">Print this page</button>
-
-</body>
+    <button onclick="window.print()">Print this page</button>
+  </body>
 </html>

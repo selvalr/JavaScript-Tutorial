@@ -78,3 +78,25 @@ doPromise2
     console.log(result);
   })
   .catch((error) => console.error(error));
+
+/*
+  function someAsyncFunction() {
+    return new Promise((resolve, reject) => {
+        // code to execute asynchronously
+        if (success) {
+            resolve(result); // resolve with result
+        } else {
+            reject(error);   // reject with error
+        }
+    });
+}
+
+someAsyncFunction()
+    .then(result => {
+        // code to execute on success
+    })
+    .catch(error => {
+        // code to execute on error
+    });
+  
+  */

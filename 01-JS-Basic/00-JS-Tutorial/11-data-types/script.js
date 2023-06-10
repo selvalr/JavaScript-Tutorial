@@ -1,5 +1,26 @@
 //Data Types in JavaScript
 
+// Numbers:
+let length = 16;
+let weight = 7.5;
+
+// Strings:
+let color = "Yellow";
+let lastName = "Johnson";
+
+// Booleans
+let x = true;
+let y = false;
+
+// Object:
+const person = { firstName: "John", lastName: "Doe" };
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object:
+const date = new Date("2022-03-25");
+
 /*
 JavaScript primitive data types:
 
@@ -13,78 +34,97 @@ JavaScript primitive data types:
 
 JavaScript non-primitive data types or complex data type (Object References)
 
-Array
-Object Literals
-Date
+1.Array
+2.Object Literals
+3.Date
 
 */
 
-//1.primitive Data Type is not modify and mutable 
-let word = 'JavaScript';
-word[0]="m";
-console.log(word);//Javascript
+//1.primitive Data Type is not modify and mutable
+let word = "JavaScript";
+word[0] = "m";
+console.log(word); //Javascript
 
-let numOne = 3
-let numTwo = 3
-console.log(numOne == numTwo)      // true
+let numOne = 3;
+let numTwo = 3;
+console.log(numOne == numTwo); // true
 
-let js = 'JavaScript'
-let py = 'Python'
-console.log(js == py)             //false 
+let js = "JavaScript";
+let py = "Python";
+console.log(js == py); //false
 
-let lightOn = true
-let lightOff = false
-console.log(lightOn == lightOff) // false
+let lightOn = true;
+let lightOff = false;
+console.log(lightOn == lightOff); // false
 
 //2.Non-Primitive data type
 //Non-primitive data types are modifiable or mutable
 
-let nums = [1, 2, 3]
-nums[0] = 10
-console.log(nums)  // [10, 2, 3]
+let nums = [1, 2, 3];
+nums[0] = 10;
+console.log(nums); // [10, 2, 3]
 
 //As you can see, an array, which is a non-primitive data type is mutable. Non-primitive data types cannot be compared by value. Even if two non-primitive data types have the same properties and values, they are not strictly equal.
 
-let nums = [1, 2, 3]
-let numbers = [1, 2, 3]
-console.log(nums == numbers)  // false
+let nums = [1, 2, 3];
+let numbers = [1, 2, 3];
+console.log(nums == numbers); // false
 
 let userOne = {
-name:'Asabeneh',
-role:'teaching',
-country:'Finland'
-}
+  name: "Asabeneh",
+  role: "teaching",
+  country: "Finland",
+};
 
 let userTwo = {
-name:'Asabeneh',
-role:'teaching',
-country:'Finland'
-}
-console.log(userOne == userTwo) // false
+  name: "Asabeneh",
+  role: "teaching",
+  country: "Finland",
+};
+console.log(userOne == userTwo); // false
 
 //Rule of thumb, we do not compare non-primitive data types. Do not compare arrays, functions, or objects. Non-primitive values are referred to as reference types, because they are being compared by reference instead of value. Two objects are only strictly equal if they refer to the same underlying object.
 
-let nums = [1, 2, 3]
-let numbers1 = nums
+let nums = [1, 2, 3];
+let numbers1 = nums;
 
-console.log(nums == numbers1)  // true
+console.log(nums == numbers1); // true
 
 let userOne1 = {
-name:'Asabeneh',
-role:'teaching',
-country:'Finland'
-}
+  name: "Asabeneh",
+  role: "teaching",
+  country: "Finland",
+};
 
-let userTwo1 = userOne1
+let userTwo1 = userOne1;
 
-console.log(userOne1 == userTwo1)  // true
+console.log(userOne1 == userTwo1); // true
 
 //1.Numbers:
+
+/*
+Most programming languages have many number types:
+
+Whole numbers (integers):
+byte (8-bit), short (16-bit), int (32-bit), long (64-bit)
+
+Real numbers (floating-point):
+float (32-bit), double (64-bit).
+
+Javascript numbers are always one type:
+double (64-bit floating point).
+*/
+
+// With decimals:
+let x1 = 34.0;
+
+// Without decimals:
+let x2 = 34;
 
 var age = 23; //Number Literal
 var gpay = 34.6;
 console.log(age); //23
-console.log(typeof age);//Number
+console.log(typeof age); //Number
 console.log(gpay); //34.6
 
 var octNumber = 0255;
@@ -109,13 +149,18 @@ console.log(mayBeInfinity); //infinity
 console.log(negativeInfinity); //-Infinity
 
 //NaN
-console.log('a' / 2); // NaN;
+console.log("a" / 2); // NaN;
 console.log(NaN / 2); // NaN
 console.log(NaN == NaN); // false
 
+//Exponential Notation
+//Extra large or extra small numbers can be written with scientific (exponential) notation:
+let y1 = 123e5; // 12300000
+let z1 = 123e-5; // 0.00123
+
 //2.String --->'',"",` `
 
-var fName = 'selva'; //string literal
+var fName = "selva"; //string literal
 var lName = "manan";
 let phrase = `can embed another ${lName}`;
 console.log(fName); //selva
@@ -126,29 +171,43 @@ console.log(phrase);
 let message = "I'm also a valid string";
 
 //concat +
-let str = 'JavaScript';
-str = str + ' String';
+let str = "JavaScript";
+str = str + " String";
 
 //
-let s = 'JavaScript';
-s[0] = 'j';
+let s = "JavaScript";
+s[0] = "j";
 console.log(s); //JavaScript
 
+//
+// Single quote inside double quotes:
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes:
+let answer3 = 'He is called "Johnny"';
+
 //3.Boolean
+
+let x11 = 5;
+let y11 = 5;
+let z11 = 6;
+console.log(x11 == y11); // Returns true
+console.log(x11 == z11); // Returns false
 
 let inProgress = true; //Boolean Literal
 let completed = false;
 
 console.log(typeof completed); // boolean
 
-
 let isGreater = 4 > 1;
-console.log( isGreater );
-
+console.log(isGreater);
 
 //example boolean:
-console.log(Boolean('Hi')); // true
-console.log(Boolean('')); // false
+console.log(Boolean("Hi")); // true
+console.log(Boolean("")); // false
 
 console.log(Boolean(20)); // true
 console.log(Boolean(Infinity)); // true
@@ -166,15 +225,20 @@ console.log(typeof h1); // object
 
 //5.undefined
 /*
-var weird;
-console.log(weird); //undefined
+var weird;// Value is undefined, type is undefined
+console.log(weird,typeof weird); //undefined,undefined
+
+//.
+let car = "Volvo";
+car = undefined; // Value is undefined, type is undefined
+console.log(car,typeof car);
 */
 
 //6.Symbol
 //ES6 2015
 //unique value generate
 
-let s1 = Symbol('hello');//fgdfgbhdfjbghdfb12344
+let s1 = Symbol("hello"); //fgdfgbhdfjbghdfb12344
 console.log(s1); //symbol()
 
 console.log(Symbol() == Symbol()); // false
@@ -182,7 +246,7 @@ console.log(Symbol() == Symbol()); // false
 const first = Symbol(); //symbol
 console.log(first);
 
-const second = Symbol();//hbjdbvsvshjchsfvg
+const second = Symbol(); //hbjdbvsvshjchsfvg
 console.log(second); //symbol
 
 console.log(first == second); //false
@@ -191,19 +255,58 @@ console.log(first == second); //false
 let pageView = 9007199254740991n;
 console.log(typeof pageView); // 'bigint'
 
+//
+let x4 = BigInt("123456789012345678901234567890");
+
 //Reference Data Types
 /*
+//1.Arrays
 var courses = ['C', 'C++', 'Java']; //Array
 console.log(typeof courses); //object
 
+//.
+const cars = ["Saab", "Volvo", "BMW"];
+console.log(cars[0]);
+
+//2.Object
 var student = {
   name: 'Joes', //Object
   age: 22,
 };
 console.log(typeof student); //object
 
+//.
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+console.log(person.firstName);
+
 var d = new Date(); //Date function
 console.log(d);
 console.log(typeof d); //object
 */
 
+//The typeof Operator
+
+//Returns "string"
+document.getElementById("demo").innerHTML =
+  typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+
+//Returns "number"
+document.getElementById("demo").innerHTML =
+  typeof 0 +
+  "<br>" +
+  typeof 314 +
+  "<br>" +
+  typeof 3.14 +
+  "<br>" +
+  typeof 3 +
+  "<br>" +
+  typeof (3 + 4);
+
+/*
+i.Empty Values
+An empty value has nothing to do with undefined.
+
+An empty string has both a legal value and a type.
+*/
+let car1 = "";
+console.log(car1, typeof car1);

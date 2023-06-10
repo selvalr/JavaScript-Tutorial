@@ -11,28 +11,34 @@
     <script>
       //The session storage object let you store key/value pairs in browser
 
+      /*
+      1. browser
+      2. 5mb maximum storage
+      3. window closed , data deleted
+      4. Temporary data
+      */
       //the only difference is has an expiration date.once the browser is closed,the session data is deleted.
 
       //it stores data only for a session.it means that the data stored in the session storage will be deleted when the browser is closed
 
       sessionStorage; //access the session storage
-      sessionStorage.setItem('key', 'value'); //save data to session storage
-      sessionStorage.getItem('key'); //read data from session storage
-      sessionStorage.removeItem('key'); //remove data from sessionstorage
+      sessionStorage.setItem("key", "value"); //save data to session storage
+      sessionStorage.getItem("key"); //read data from session storage
+      sessionStorage.removeItem("key"); //remove data from sessionstorage
       sessionStorage.clear(); //remove all(clear session storage)
 
       //1.setItem():
       let user = {
-        name: 'selva',
+        name: "selva",
       };
       //convert js object to Json Format
       const userToJSON = JSON.stringify(user);
 
-      sessionStorage.setItem('user', userToJSON);
+      sessionStorage.setItem("user", userToJSON);
 
       //2.getItem():
 
-      const user1 = sessionStorage.getItem('user');
+      const user1 = sessionStorage.getItem("user");
 
       //convert JSOn to js Object
       const JSONToUser = JSON.parse(user1);

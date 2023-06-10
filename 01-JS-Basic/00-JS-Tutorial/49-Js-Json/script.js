@@ -2,6 +2,7 @@
 //JSON is a format for storing and transporting data.
 //JSON is often used when data is sent from a server to a web page.
 //JSON use Datatype:number,string,boolean,Array,object,null
+
 /*
 JSON Syntax Rules
 Data is in name/value pairs

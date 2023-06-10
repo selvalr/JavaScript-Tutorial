@@ -9,65 +9,125 @@
   <body>
     <p id="demo1"></p>
     <p id="demo2"></p>
-    
+
     <script>
-      function greet(name){
-        console.log("hello"+name);
+      /*
+        //syntax:
+        function name(parameter1, parameter2, parameter3) {
+        // code to be executed
+        }
+      */
+
+      //1.function return
+      // Function is called, the return value will end up in x
+      let x = myFunction(4, 3);
+      console.log(x);
+
+      function myFunction(a, b) {
+        // Function returns the product of a and b
+        return a * b;
+      }
+
+      //2.The () Operator
+      //The () operator invokes (calls) the function:
+
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+
+      let value = toCelsius(77);
+      console.log(value);
+
+      //i.Accessing a function with incorrect parameters can return an incorrect answer:
+
+      function toCelsius1(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+
+      let value1 = toCelsius1();
+      console.log(value1); //nan
+
+      //ii.Accessing a function without () returns the function and not the function result:
+
+      function toCelsius2(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+
+      let value2 = toCelsius2;
+      console.log(value2);
+
+      //2.Functions Used as Variable Values
+      let text = "The temperature is " + toCelsius3(77) + " Celsius.";
+      console.log(text);
+
+      function toCelsius3(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+
+      /*
+      //i.
+      let x = toCelsius(77);
+      let text = "The temperature is " + x + " Celsius";
+      */
+
+      //.3
+      function greet(name) {
+        console.log("hello" + name);
       }
       greet("selva");
       greet("manan");
 
-      
+      //.
       function addNum(a, b) {
         return a + b;
       }
       x = addNum(6 + 8);
       console.log(x);
 
+      //4.Local Variables
+      /*
+          // code here can NOT use carName
+          function myFunction() {
+          let carName = "Volvo";
+          // code here CAN use carName
+          }
+          // code here can NOT use carName
 
-
-      //Local Variables
-
+      */
       myFunction();
 
-function myFunction() {
-  let carName = "Volvo";
-  document.getElementById("demo1").innerHTML =
-  typeof carName + " " + carName;
-}
+      function myFunction() {
+        let carName = "Volvo";
+        document.getElementById("demo1").innerHTML =
+          typeof carName + " " + carName;
+      }
 
-document.getElementById("demo2").innerHTML =
-typeof carName;
+      document.getElementById("demo2").innerHTML = typeof carName;
 
+      // 1.Function Returning a Function
 
+      function multiple(x) {
+        function fn(y) {
+          return x * y;
+        }
 
-// 1.Function Returning a Function
+        return fn;
+      }
 
-function multiple(x) {
+      var triple = multiple(3);
+      triple(2); // returns 6
+      triple(3); // returns 9
 
-function fn(y)
-{
-    return x * y;
-}
+      //2.Nested Functions
+      function greet(firstName) {
+        function SayHello() {
+          alert("Hello " + firstName);
+        }
 
-return fn;
-}
+        return SayHello();
+      }
 
-var triple = multiple(3);
-triple(2); // returns 6
-triple(3); // returns 9
-
-//2.Nested Functions
-function greet(firstName)
-{
-    function SayHello() {
-        alert("Hello " + firstName);
-    }
-
-    return SayHello();
-}
-
-greet("Steve");
+      greet("Steve");
     </script>
   </body>
 </html>

@@ -1,5 +1,12 @@
 //3.)Adding Text to HTML element
 
+/*
+let textValue = document.getElementById("first-title");
+console.log((textValue.innerHTML = "<h4>helo</h4>"));
+console.log(textValue.innerText);
+console.log(textValue.textContent);
+*/
+
 //i.Adding Text content using textContent
 const titles = document.querySelectorAll("h1");
 titles[3].textContent = "Fourth Title";
@@ -7,8 +14,8 @@ titles[3].textContent = "Fourth Title";
 //ii.Adding Text Content using innerHTML
 
 //text content
-const titles = document.querySelectorAll("h1");
-titles[3].textContent = "Fourth Title";
+const titles1 = document.querySelectorAll("h1");
+titles1[3].textContent = "Fourth Title";
 
 //inner html
 /*
@@ -34,9 +41,7 @@ titles[3].textContent = "Fourth Title";
             <li>30DaysOfMachineLearning Challenge Coming</li>`
   const ul = document.querySelector('ul')
   ul.innerHTML = lists
-    </script>
-  </body>
-</html>
+    
 */
 
 /*

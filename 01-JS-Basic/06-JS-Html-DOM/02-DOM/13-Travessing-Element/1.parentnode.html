@@ -10,8 +10,18 @@
     </div>
 
     <script>
-      let note = document.querySelector('.note');
+      //parentNode
+      let note = document.querySelector(".note");
       console.log(note.parentNode);
+      console.log(note.parentNode.parentNode);
+
+      //parentElement
+      console.log(note.parentElement.parentElement);
+
+      //ex
+      let html = document.documentElement;
+      console.log(html.parentNode);
+      console.log(html.parentElement);
     </script>
   </body>
 </html>

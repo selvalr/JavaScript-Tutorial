@@ -12,75 +12,81 @@
     <button type="button" onclick="hiThere()">Click me event</button>
 
     <script>
+      /*
+Here are some examples of HTML events:
+
+-An HTML web page has finished loading
+-An HTML input field was changed
+-An HTML button was clicked
+
+*/
+
       //1.keyboards events
-          //i.keydown
-          //ii.keyup
-          //iii.keypress
-      
+      //i.keydown
+      //ii.keyup
+      //iii.keypress
+
       //2.Mouse events
-          //i.Mouse move
-          //ii.click
-          //iii.double click
-          //iv.mouse over
-          //v.mouse leave
-          //vi.wheel
+      //i.Mouse move
+      //ii.click
+      //iii.double click
+      //iv.mouse over
+      //v.mouse leave
+      //vi.wheel
 
       //3.Global
 
-          //i.scroll
-          //ii.resize-->window
+      //i.scroll
+      //ii.resize-->window
 
-          //anonymous functtion..
-          window.addEventListener("resize", function(){})
+      //anonymous function..
+      window.addEventListener("resize", function () {});
 
-          window.addEventListener("scroll", function(){})
+      window.addEventListener("scroll", function () {});
 
+      // ? Inline eventhandlers--->bad practices
 
+      //Advantages
+      //1.Easy
+      //2.Slightly Fast
 
+      //Disadvantages...
+      //1.unmanageble
+      //2.scope
 
+      // ? Object model
 
-          // ? Inline eventhandlers--->bad practices
+      //example:
+      //btn.onclick=functionname;
+      //btn.onclick=functionname;
 
-              //Advantages
-              //1.Easy
-              //2.Slightly Fast
+      //Advantages...
+      //1.Managable
+      //2.scope
+      //3.Object
 
-              //Disadvantages...
-              //1.unmanageble
-              //2.scope
-          
-          // ? Object model
+      //Disadvantage
+      //1.can not run two function
 
-          //example:
-              //btn.onclick=functionname;
-              //btn.onclick=functionname;
+      // ? Build-in methods....
 
-              //Advantages...
-              //1.Managable
-              //2.scope
-              //3.Object
+      //Advantage:
+      //1.can be able to run more then handeler
+      //2.build in methods
 
-              //Disadvantage
-              //1.can not run two function
+      //DisAdvantage:
+      //1.not supported old browser IE 8 or previoes
 
-          // ? Build-in methods....
-
-            //Advantage:
-            //1.can be able to run more then handeler
-            //2.build in methods
-
-            //DisAdvantage:
-            //1.not supported old browser IE 8 or previoes
-
-          //solved two function event action:
-            //btn.addEventListener("click", functionName);
-            //btn.addEventListener("click", functionName);
-
+      //solved two function event action:
+      //btn.addEventListener("click", functionName);
+      //btn.addEventListener("click", functionName);
 
       function hiThere() {
-        alert('Hi there!');
+        alert("Hi there!");
       }
     </script>
+    <!--own element change-->
+    <button onclick="this.innerHTML=Date()">The time is?</button>
 
     <hr />
   </body>
