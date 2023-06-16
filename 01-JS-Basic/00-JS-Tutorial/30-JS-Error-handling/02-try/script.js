@@ -73,3 +73,24 @@ console.log('Hello, world")
 //iii.TypeError: A type error has occurred
 let num = 10;
 console.log(num.toLowerCase());
+
+//iv.Range Error
+//A RangeError is thrown if you use a number that is outside the range of legal values.
+
+//For example: You cannot set the number of significant digits of a number to 500.
+
+let num1 = 1;
+try {
+  num1.toPrecision(500);
+} catch (err) {
+  document.getElementById("demo").innerHTML = err.name;
+}
+
+//v.URI (Uniform Resource Identifier) Error
+//A URIError is thrown if you use illegal characters in a URI function:
+
+try {
+  decodeURI("%%%");
+} catch (err) {
+  document.getElementById("demo").innerHTML = err.name;
+}

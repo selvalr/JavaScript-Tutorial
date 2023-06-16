@@ -1,31 +1,26 @@
-
-
-
-
 //1.Property Access on Strings
 //The charAt() method returns the character at a specified index (position) in a string:
 var str = "HELLO WORLD";
-console.log(str.charAt(0));            // returns H
+console.log(str.charAt(0)); // returns H
 
 //ES5
 var str = "HELLO WORLD";
-console.log(str[0]);                   // returns H
-
+console.log(str[0]); // returns H
 
 //2.Strings Over Multiple Lines
 //ES5 allows string literals over multiple lines if escaped with a backslash:
-console.log("Hello \
-Dolly!");
+console.log(
+  "Hello \
+Dolly!"
+);
 
 //A safer way to break up a string literal, is to use string addition:
-console.log("Hello " +
-"Dolly!");
+console.log("Hello " + "Dolly!");
 
 //3.Reserved Words as Property Names
 //ES5 allows reserved words as property names:new is a reserved word
 
-
-var obj = {name: "John", new: "yes"}
+var obj = { name: "John", new: "yes" };
 console.log(obj.new);
 
 //4.String trim()
@@ -43,25 +38,20 @@ function myFunction() {
 }
 */
 
+//6.Array forEach()
+//The forEach() method calls a function once for each array element.
 
-  //6.Array forEach()
-  //The forEach() method calls a function once for each array element.
-
-
-  var txt = "";
+var txt = "";
 var numbers = [45, 4, 9, 16, 25];
 numbers.forEach(myFunction1);
 console.log(txt);
 
 function myFunction1(value) {
-  txt = txt +","+ value ;
+  txt = txt + "," + value;
 }
-
 
 //7.Array map()
 //This example multiplies each array value by 2:
-
-
 
 var numbers1 = [45, 4, 9, 16, 25];
 var numbers2 = numbers1.map(myFunction2);
@@ -70,7 +60,6 @@ console.log(numbers2);
 function myFunction2(value) {
   return value * 2;
 }
-
 
 //8.Array filter()
 //This example creates a new array from elements with a value larger than 18:
@@ -95,7 +84,6 @@ function myFunction4(total, value) {
 //10.Array reduceRight()
 //This example also finds the sum of all numbers in an array:
 
-
 var numbers1 = [45, 4, 9, 16, 25];
 var sum = numbers1.reduceRight(myFunction5);
 console.log(sum);
@@ -115,7 +103,6 @@ function myFunction6(value) {
   return value > 18;
 }
 
-
 //12.Array some()
 
 //This example checks if some values are over 18:
@@ -128,19 +115,16 @@ function myFunction7(value) {
   return value > 18;
 }
 
-
 //13.Array indexOf()
 
 //Search an array for an element value and returns its position.
 
-
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
-var a = fruits.indexOf("Banana")+1;
-console.log("index change",a);
+var a = fruits.indexOf("Banana") + 1;
+console.log("index change", a);
 
 //14.Array lastIndexOf()
 //lastIndexOf() is the same as indexOf(), but searches from the end of the array.
-
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var a = fruits.lastIndexOf("Apple");
@@ -168,32 +152,28 @@ When sending data to a web server, the data has to be a string.
 Imagine we have this object in JavaScript:
 */
 
-var obj = {name:"John", age:30, city:"New York"};
+var obj = { name: "John", age: 30, city: "New York" };
 console.log(obj);
-
 
 //17.Date.now()
 
 //Date.now() returns the number of milliseconds since zero date (January 1. 1970 00:00:00 UTC).
 
-
 var timInMSs = Date.now();
 console.log(timInMSs);
+
 //18.Date toISOString()
 //The toISOString() method converts a Date object to a string, using the ISO standard format:
 
-
 const d = new Date();
-c= d.toISOString();
+c = d.toISOString();
 console.log(c);
-
 
 //19.Date toJSON()
 
 //toJSON() converts a Date object into a string, formatted as a JSON date.
 
 //JSON dates have the same format as the ISO-8601 standard: YYYY-MM-DDTHH:mm:ss.sssZ:
-
 
 d1 = new Date();
 console.log(d1.toJSON());
@@ -204,39 +184,36 @@ console.log(d1.toJSON());
 
 //This example creates a getter for a property called fullName:
 
-
 // Create an object:
 var person = {
   firstName: "John",
-  lastName : "Doe",
+  lastName: "Doe",
   get fullName() {
     return this.firstName + " " + this.lastName;
-  }
+  },
 };
 
 // Display data from the object using a getter:
 console.log(person.fullName);
-
 
 //21.Object.defineProperty()
 //Object.defineProperty() is a new Object method in ES5.
 
 //It lets you define an object property and/or change a property's value and/or metadata.
 
-
 // Create an Object:
 var person = {
   firstName: "John",
-  lastName : "Doe",
-  language : "NO",
+  lastName: "Doe",
+  language: "NO",
 };
 
 // Change a Property:
 Object.defineProperty(person, "language", {
   value: "EN",
-  writable : true,
-  enumerable : true,
-  configurable : true
+  writable: true,
+  enumerable: true,
+  configurable: true,
 });
 
 // Enumerate Properties
@@ -272,8 +249,6 @@ console.log(txt);
 // Returns enumerable properties as an array
 //Object.keys(object)
 
-
-
 //Protecting Objects
 // Prevents adding properties to an object
 //Object.preventExtensions(object)
@@ -293,8 +268,6 @@ console.log(txt);
 // Returns true if object is frozen
 //Object.isFrozen(object)
 
-
-
 //24.Function Bind()
 //With the bind() method, an object can borrow a method from another object.
 
@@ -304,17 +277,17 @@ console.log(txt);
 
 //Example
 const person2 = {
-  firstName:"John",
+  firstName: "John",
   lastName: "Doe",
   fullName: function () {
     return this.firstName + " " + this.lastName;
-  }
-}
+  },
+};
 
 const member = {
-  firstName:"Hege",
+  firstName: "Hege",
   lastName: "Nilsen",
-}
+};
 
 let fullName = person2.fullName.bind(member);
 console.log(fullName());
@@ -327,18 +300,9 @@ person = {
   firstName: "John",
   lastName: " Doe",
   age: 46,
-}
+};
 //Array Example
-points = [
-  1,
-  5,
-  10,
-  25,
-  40,
-  100,
-];
-
-
+points = [1, 5, 10, 25, 40, 100];
 
 //26.JSON Objects:
 // Allowed:

@@ -36,84 +36,169 @@
 
       user.sayHi(); // John
 
+      //Technically, it’s also possible to access the object without this, by referencing it via the outer variable:
+      /*
+                                let user = {
+                                name: "John",
+                                age: 30,
 
-//Technically, it’s also possible to access the object without this, by referencing it via the outer variable:
-/*
-  let user = {
-  name: "John",
-  age: 30,
+                                sayHi() {
+                                  alert(user.name); // "user" instead of "this"
+                                }
 
-  sayHi() {
-    alert(user.name); // "user" instead of "this"
-  }
+                              };
+                              */
 
-};
-*/
+      //That’s demonstrated below:
+      /*
+                              let user = {
+                                name: "John",
+                                age: 30,
 
+                                sayHi() {
+                                  alert( user.name ); // leads to an error
+                                }
 
-//That’s demonstrated below:
-/*
-let user = {
-  name: "John",
-  age: 30,
-
-  sayHi() {
-    alert( user.name ); // leads to an error
-  }
-
-};
+                              };
 
 
-let admin = user;
-user = null; // overwrite to make things obvious
+                              let admin = user;
+                              user = null; // overwrite to make things obvious
 
-admin.sayHi(); // TypeError: Cannot read property 'name' of null
-*/
+                              admin.sayHi(); // TypeError: Cannot read property 'name' of null
+                              */
 
+      //1.“this” is not bound
+      /*
+                              There’s no syntax error in the following example:
 
-//1.“this” is not bound
-/*
-There’s no syntax error in the following example:
+                              function sayHi() {
+                                alert( this.name );
+                              }
+                              */
+      /*
+                              let user = { name: "John" };
+                              let admin = { name: "Admin" };
 
-function sayHi() {
-  alert( this.name );
-}
-*/
-/*
-let user = { name: "John" };
-let admin = { name: "Admin" };
+                              function sayHi() {
+                                alert( this.name );
+                              }
 
-function sayHi() {
-  alert( this.name );
-}
+                              // use the same function in two objects
+                              user.f = sayHi;
+                              admin.f = sayHi;
 
-// use the same function in two objects
-user.f = sayHi;
-admin.f = sayHi;
+                              // these calls have different this
+                              // "this" inside the function is the object "before the dot"
+                              user.f(); // John  (this == user)
+                              admin.f(); // Admin  (this == admin)
 
-// these calls have different this
-// "this" inside the function is the object "before the dot"
-user.f(); // John  (this == user)
-admin.f(); // Admin  (this == admin)
+                              admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
+                              */
 
-admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
-*/
+      //4.Arrow functions have no “this”
 
+      let use = {
+        firstName: "Ilya",
+        sayHi() {
+          let arrow = () => alert(this.firstName);
+          arrow();
+        },
+      };
 
+      use.sayHi(); // Ilya
 
-//4.Arrow functions have no “this”
+      //2.this Alone
+      //When used alone, this refers to the global object.
 
-let use = {
-  firstName: "Ilya",
-  sayHi() {
-    let arrow = () => alert(this.firstName);
-    arrow();
-  }
-};
+      let x = this;
+      console.log(x);
 
-use.sayHi(); // Ilya
+      //In strict mode, when used alone, this also refers to the global object:
 
+      ("use strict");
+      let x1 = this;
+      console.log(x1);
 
+      //3.this in a Function (Default)
+      //In a function, the global object is the default binding for this.
+      ///In a browser window the global object is [object Window]:
+
+      function myFunction() {
+        return this;
+      }
+
+      //4.this in a Function (Strict)
+      //JavaScript strict mode does not allow default binding.
+      // So, when used in a function, in strict mode, this is undefined.
+
+      ("use strict");
+      console.log(myFunction());
+      function myFunction() {
+        return this;
+      }
+
+      //5.this in Event Handlers
+      /*
+                        <button onclick="this.style.display='none'">
+                    Click to Remove Me!
+                  </button>
+                        */
+
+      //6.Object Method Binding
+      //In these examples, this is the person object:
+
+      // Create an object:
+      const person2 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        myFunction: function () {
+          return this;
+        },
+      };
+
+      // Display data from the object:
+      document.getElementById("demo").innerHTML = person2.myFunction();
+
+      //5.Explicit Function Binding
+      //The call() and apply() methods are predefined JavaScript methods.
+      // They can both be used to call an object method with another object as argument.
+
+      const person1 = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const person20 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      // Return "John Doe":
+      person1.fullName.call(person20);
+
+      //7.Function Borrowing
+      // With the bind() method, an object can borrow a method from another object.
+      // This example creates 2 objects (person and member).
+      // The member object borrows the fullname method from the person object:
+
+      const person00 = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const member = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+      };
+
+      let fullName = person00.fullName.bind(member);
+      console.log(fullName());
     </script>
   </body>
 </html>

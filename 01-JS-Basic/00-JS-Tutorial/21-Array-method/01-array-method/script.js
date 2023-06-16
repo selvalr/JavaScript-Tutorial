@@ -218,6 +218,12 @@ console.log(numbers1); //[1,2,4,5];
 numbers1.splice(1, 1, "he");
 console.log(numbers1); //[1,'he',4,5];
 
+const fru = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fru);
+
+fru.splice(2, 0, "Lemon", "Kiwi");
+console.log(fru);
+
 //xvi.Reversing array order
 
 const numbers2 = [1, 2, 3, 4, 5];
@@ -225,6 +231,13 @@ numbers2.reverse(); // -> reverse array order
 console.log(numbers2); // [5, 4, 3, 2, 1]
 numbers2.reverse();
 console.log(numbers2); // [1, 2, 3, 4, 5]
+
+const points = [40, 100, 1, 5, 25, 10];
+console.log(points);
+points.sort(function (a, b) {
+  return a - b;
+});
+console.log(points);
 
 //xvii.Sorting elements in array
 

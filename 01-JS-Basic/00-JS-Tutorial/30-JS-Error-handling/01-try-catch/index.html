@@ -35,41 +35,31 @@
         document.getElementById("errorMessage").innerHTML = ex;
       }
 
-    //2.finally Block
-try
-{
-     var result  =  Sum(10, 20); // Sum is not defined yet
-}
-catch(ex)
-{
-    document.getElementById("errorMessage").innerHTML = ex;
-}
-finally{
-    document.getElementById("message").innerHTML = "finally block executed";
-}
+      //2.finally Block
+      try {
+        var result = Sum(10, 20); // Sum is not defined yet
+      } catch (ex) {
+        document.getElementById("errorMessage").innerHTML = ex;
+      } finally {
+        document.getElementById("message").innerHTML = "finally block executed";
+      }
 
-//3. throw Error
-try
-{
-    throw "Error occurred";
-}
-catch(ex)
-{
-    alert(ex);
-}
+      //3. throw Error
+      try {
+        throw "Error occurred";
+      } catch (ex) {
+        alert(ex);
+      }
 
-//4. throw error with error info
-try 
-{
-    throw {
-        number: 101,
-        message: "Error occurred"
-    };
-}
-catch (ex) {
-    alert(ex.number + "- " + ex.message);
-}
-
+      //4. throw error with error info
+      try {
+        throw {
+          number: 101,
+          message: "Error occurred",
+        };
+      } catch (ex) {
+        alert(ex.number + "- " + ex.message);
+      }
     </script>
     <script src="./script.js"></script>
   </body>

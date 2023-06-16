@@ -99,6 +99,12 @@
       let position = fruits.indexOf("Apple") + 1;
       console.log(position);
 
+      //JavaScript Array lastIndexOf()
+
+      const frui = ["Apple", "Orange", "Apple", "Mango"];
+      let positi = frui.lastIndexOf("Apple") + 1;
+      console.log(positi);
+
       //7.JavaScript Array find()
 
       const numbers = [4, 9, 16, 25, 29];
@@ -138,6 +144,31 @@
 
       fruits4.includes("Mango"); // is true
       console.log(fruits4);
+
+      //12.JavaScript Array reduce()
+      const numbers2 = [45, 4, 9, 16, 25];
+      let sum = numbers2.reduce(myFunction2);
+      console.log(sum);
+      function myFunction2(total, value, index, array) {
+        return total + value;
+      }
+
+      //13.JavaScript Array reduceRight()
+      const numbers3 = [45, 4, 9, 16, 25];
+      let sum3 = numbers3.reduceRight(myFunction3);
+      console.log(sum3);
+      function myFunction3(total, value, index, array) {
+        return total + value;
+      }
+
+      //14.JavaScript Array Spread (...)
+      const q1 = ["Jan", "Feb", "Mar"];
+      const q2 = ["Apr", "May", "Jun"];
+      const q3 = ["Jul", "Aug", "Sep"];
+      const q4 = ["Oct", "Nov", "May"];
+
+      const year = [...q1, ...q2, ...q3, ...q4];
+      console.log(year);
     </script>
   </body>
 </html>

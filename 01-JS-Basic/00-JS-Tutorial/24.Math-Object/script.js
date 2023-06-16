@@ -6,6 +6,14 @@ console.log("E", c); //2.71
 
 //Math Methods:
 
+//1.Number to Integer
+/*
+Math.round(x)	Returns x rounded to its nearest integer
+Math.ceil(x)	Returns x rounded up to its nearest integer
+Math.floor(x)	Returns x rounded down to its nearest integer
+Math.trunc(x)	Returns the integer part of x (new in ES6)
+*/
+
 c = Math.round(4.8);
 console.log("round", c); //5
 console.log(Math.round(4.1)); //4

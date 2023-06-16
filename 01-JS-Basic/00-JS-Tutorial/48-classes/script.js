@@ -1,3 +1,6 @@
+//ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+//JavaScript Classes are templates for JavaScript Objects.
+
 //syntex
 /*
 class classname {

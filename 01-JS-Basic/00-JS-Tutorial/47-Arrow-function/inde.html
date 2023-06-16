@@ -27,6 +27,43 @@
         return "Hello World!";
       };
       console.log(hello1);
+
+      //Arrow Functions Return Value by Default:
+      let hello4 = "";
+      hello4 = () => "Hello World!";
+
+      //Arrow Function With Parameters:
+      let hello5 = "";
+      hello5 = (val) => "Hello " + val;
+
+      //Arrow Function Without Parentheses:
+      let hello6 = "";
+      hello6 = (val) => "Hello " + val;
+
+      //What About this?
+      //With a regular function this represents the object that calls the function:
+
+      // i.Regular Function:
+      let hello7 = "";
+      hello7 = function () {
+        document.getElementById("demo").innerHTML += this;
+      };
+      // The window object calls the function:
+      window.addEventListener("load", hello);
+      // A button object calls the function:
+      document.getElementById("btn").addEventListener("click", hello);
+
+      //ii.With an arrow function this represents the owner of the function:
+
+      // Arrow Function:
+      let hello8 = "";
+      hello8 = () => {
+        document.getElementById("demo").innerHTML += this;
+      };
+      // The window object calls the function:
+      window.addEventListener("load", hello);
+      // A button object calls the function:
+      document.getElementById("btn").addEventListener("click", hello);
     </script>
   </body>
 </html>

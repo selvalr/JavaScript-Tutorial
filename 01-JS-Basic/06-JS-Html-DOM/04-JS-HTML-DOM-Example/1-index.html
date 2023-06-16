@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //The Document Object
+
+      //1.cookie
+      console.log(document.cookie);
+
+      //2.domain
+      console.log(document.domain);
+
+      //3.document Last Modified
+      console.log(document.lastModified);
+
+      //4.title
+      console.log(document.title);
+
+      //5.URL
+      console.log(document.URL);
+
+      //6. replace this document with new content
+      function myFunction() {
+        document.open("text/html", "replace");
+        document.write("<h2>Learning about the HTML DOM is fun!</h2>");
+        document.close();
+      }
+
+      //7.open a new window and add some content
+      function myFunction() {
+        var w = window.open();
+        w.document.open();
+        w.document.write("<h2>Hello World!</h2>");
+        w.document.close();
+      }
+
+      //8.Display the number of elements witha specific name
+      function getElements() {
+        var x = document.getElementsByName("x");
+        document.getElementById("demo").innerHTML = x.length;
+      }
+
+      //9.display thr number of elements with a specific tag name
+      function getElements() {
+        var x = document.getElementsByTagName("input");
+        document.getElementById("demo").innerHTML = x.length;
+      }
+    </script>
+
+    <!--8-->
+    <p>
+      Cats: <input name="x" type="radio" value="Cats" /> Dogs:
+      <input name="x" type="radio" value="Dogs" />
+    </p>
+    <p>
+      <input
+        type="button"
+        onclick="getElements()"
+        value="How many elements named x?"
+      />
+    </p>
+    <p id="demo"></p>
+
+    <!--9-->
+
+    <input type="text" size="20" /><br />
+    <input type="text" size="20" /><br />
+    <input type="text" size="20" /><br />
+
+    <p>
+      <input
+        type="button"
+        onclick="getElements()"
+        value="How many input elements?"
+      />
+    </p>
+
+    <p id="demo"></p>
+  </body>
+</html>

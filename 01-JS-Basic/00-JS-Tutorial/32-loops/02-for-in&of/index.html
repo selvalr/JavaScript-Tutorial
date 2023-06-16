@@ -1,126 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
+  <body>
+    <h1>For in & For of</h1>
 
-<body>
-  <h1>For in & For of</h1>
-
-  <script>
-    /*
+    <script>
+      /*
    
     for (key in object) {
   // code block to be executed
 }
     */
 
-    //for in ->The JavaScript for in statement loops through the properties of an Object:
+      //for in ->The JavaScript for in statement loops through the properties of an Object:
 
-    const person = { fname: 'John', lname: 'Doe', age: 25 };
-    let txt = '';
-    for (let x in person) {
-      txt += person[x] + ' ';
-    }
-    console.log(txt);
+      const person = { fname: "John", lname: "Doe", age: 25 };
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+      console.log(txt);
 
-    //For In Over Arrays
-   
-    /*Syntax:
+      //For In Over Arrays
+
+      /*Syntax:
 
     for (variable in array) {
   code
 }
 */
-    const numbers = [45, 4, 9, 16, 25];
+      const numbers = [45, 4, 9, 16, 25];
 
-    let txt1 = '';
-    for (let x in numbers) {
-      txt1 += numbers[x] + '<br>';
-    }
-    console.log(txt1);
+      let txt1 = "";
+      for (let x in numbers) {
+        txt1 += numbers[x] + "<br>";
+      }
+      console.log(txt1);
 
-    
-    //Array.forEach()
-    const numbers1 = [45, 4, 9, 16, 25];
+      //Array.forEach()
+      const numbers1 = [45, 4, 9, 16, 25];
 
-    let txt2 = '';
-    numbers1.forEach(myFunction);
-    console.log(txt2);
+      let txt2 = "";
+      numbers1.forEach(myFunction);
+      console.log(txt2);
 
-    function myFunction(value, index, array) {
-      txt2 += value + '<br>';
-    }
+      function myFunction(value, index, array) {
+        txt2 += value + "<br>";
+      }
 
-    //For-of use to array printing
+      //For-of use to array printing
 
-    const numbers2 = [1, 2, 3, 4, 5]
+      const numbers2 = [1, 2, 3, 4, 5];
 
-    for (const num of numbers2) {
-      console.log(num)
-    }
+      for (const num of numbers2) {
+        console.log(num);
+      }
 
-    // 1 2 3 4 5
+      // 1 2 3 4 5
 
-    for (const num of numbers2) {
-      console.log(num * num)
-    }
+      for (const num of numbers2) {
+        console.log(num * num);
+      }
 
-    // 1 4 9 16 25
+      // 1 4 9 16 25
 
-    // adding all the numbers in the array
-    let sum = 0
-    for (const num of numbers2) {
-      sum = sum + num
-      // can be also shorten like this, sum += num
-      // after this we will use the shorter synthax(+=, -=, *=, /= etc)
-    }
-    console.log(sum) // 15
+      // adding all the numbers in the array
+      let sum = 0;
+      for (const num of numbers2) {
+        sum = sum + num;
+        // can be also shorten like this, sum += num
+        // after this we will use the shorter synthax(+=, -=, *=, /= etc)
+      }
+      console.log(sum); // 15
 
-    const webTechs = [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'Redux',
-      'Node',
-      'MongoDB'
-    ]
+      const webTechs = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+      ];
 
-    for (const tech of webTechs) {
-      console.log(tech.toUpperCase())
-    }
+      for (const tech of webTechs) {
+        console.log(tech.toUpperCase());
+      }
 
-    // HTML CSS JAVASCRIPT REACT NODE MONGODB
+      // HTML CSS JAVASCRIPT REACT NODE MONGODB
 
-    for (const tech of webTechs) {
-      console.log(tech[0]) // get only the first letter of each element,  H C J R N M
-    }
-    
+      for (const tech of webTechs) {
+        console.log(tech[0]); // get only the first letter of each element,  H C J R N M
+      }
 
-    //forof object not working
+      //forof object not working
 
-  let  test = { first: "one"}
+      let test = { first: "one" };
 
-for(var item of test) {
-  console.log(item)
-}
+      for (var item of test) {
+        console.log(item);
+      }
 
-//object worked for of
-const myObject = {
-  first: "one",
-  second: "two",
-};
+      //object worked for of
+      const myObject = {
+        first: "one",
+        second: "two",
+      };
 
-for (const [key, value] of Object.entries(myObject)) {
-  console.log(key, value);  // first one, second two
-}
-
-  </script>
-</body>
-
+      for (const [key, value] of Object.entries(myObject)) {
+        console.log(key, value); // first one, second two
+      }
+    </script>
+  </body>
 </html>
