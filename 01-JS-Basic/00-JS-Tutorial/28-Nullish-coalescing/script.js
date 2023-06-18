@@ -1,18 +1,17 @@
 //nullish coalescing operator (??)
 
-const a=null??'No Value';
-console.log(a);//no value
+const a = null ?? "No Value";
+console.log(a); //no value
 
-const b=24??45;
-console.log(b);//24
+const b = 24 ?? 45;
+console.log(b); //24
 
-const c=null??55;
-console.log(c);//55
+const c = null ?? 55;
+console.log(c); //55
 
 let a1;
-let b1=a1??"not a value";
+let b1 = a1 ?? "not a value";
 console.log(b1);
-
 
 let firstName = null;
 let lastName = null;
@@ -22,17 +21,23 @@ alert(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder
 
 // ??=
 
-const user={'name':"selva"};
+const user = { name: "selva" };
 console.log(user);
 console.log(user.name);
-user.city??="tenkasi";
+user.city ??= "tenkasi";
 console.log(user.city);
 console.log(user);
-
-
 
 // || or ?? difference
 let height = 0;
 
 alert(height || 100); // 100
 alert(height ?? 100); // 0
+
+//.
+null ?? "I win"; //  'I win'
+undefined ?? "Me too"; //  'Me too'
+
+false ?? "I lose"; //  false
+0 ?? "I lose again"; //  0
+"" ?? "Damn it"; //  ''

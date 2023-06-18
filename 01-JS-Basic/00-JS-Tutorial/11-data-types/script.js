@@ -127,7 +127,7 @@ console.log(age); //23
 console.log(typeof age); //Number
 console.log(gpay); //34.6
 
-var octNumber = 0255;
+//var octNumber = 0255;
 var hexNum = 0xff;
 console.log(octNumber); //173
 console.log(hexNum); //255

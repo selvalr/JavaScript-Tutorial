@@ -7,6 +7,14 @@
     let arrayName = new Array(); // Method 2
 */
 
+//0.Array
+
+// An array containing numbers
+const numberArray = [0, 1, 2, 3];
+
+// An array containing different data types
+const mixedArray = [1, "chicken", false];
+
 //1.JavaScript array literal
 
 // Initializing while declaring

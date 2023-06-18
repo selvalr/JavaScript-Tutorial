@@ -189,6 +189,8 @@ console.log(fruit);
 const arr3 = ["item1", "item2", "item3"];
 arr3.push("new item");
 console.log(arr3); // ['item1', 'item2','item3','new item']
+arr3.push(6, 7, 9); // Adding multiple elements:
+console.log(numbers9);
 
 //xiii.Removing the end element using pop
 

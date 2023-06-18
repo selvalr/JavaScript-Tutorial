@@ -1,4 +1,14 @@
 /*
+&	AND 	 5 & 1 (0101 & 0001)	1 (1)
+|	OR 	 5 | 1 (0101 | 0001)	5 (101)
+~	NOT 	 ~ 5 (~0101)	10 (1010)
+^	XOR 	 5 ^ 1 (0101 ^ 0001)	4 (100)
+<<	left shift 	 5 << 1 (0101 << 1)	10 (1010)
+>>	right shift 	 5 >> 1 (0101 >> 1)	2 (10)
+>>>	zero fill right shift 	 5 >>> 1 (0101 >>> 1)	2 (10)
+*/
+
+/*
 //Bitwise Operators
 //Human code -> Machine code(0,1)
 //1->00000001->1
@@ -14,15 +24,15 @@
 
 */
 
-document.getElementById('demo').innerHTML = 5 & 1; //(0101 & 0001)   1(1)
-document.getElementById('demo1').innerHTML = 5 | 1; //(0101 | 0001)  5(101)
+document.getElementById("demo").innerHTML = 5 & 1; //(0101 & 0001)   1(1)
+document.getElementById("demo1").innerHTML = 5 | 1; //(0101 | 0001)  5(101)
 
-document.getElementById('demo2').innerHTML = 5 ^ 1; //(0101 ^ 0001 )  4(100)
+document.getElementById("demo2").innerHTML = 5 ^ 1; //(0101 ^ 0001 )  4(100)
 
-document.getElementById('demo3').innerHTML = ~5; //(~0101)   -6(1010)
+document.getElementById("demo3").innerHTML = ~5; //(~0101)   -6(1010)
 
-document.getElementById('demo4').innerHTML = 5 << 1; //(0101 << 1) 10(1010) left side one zero adding before
+document.getElementById("demo4").innerHTML = 5 << 1; //(0101 << 1) 10(1010) left side one zero adding before
 
-document.getElementById('demo5').innerHTML = 5 >> 1; //(0101 >> 1)  2(10) right one element 
+document.getElementById("demo5").innerHTML = 5 >> 1; //(0101 >> 1)  2(10) right one element
 
-document.getElementById('demo6').innerHTML = 5 >>> 1; //(0101>>>1)  2(10)
+document.getElementById("demo6").innerHTML = 5 >>> 1; //(0101>>>1)  2(10)

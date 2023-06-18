@@ -2,22 +2,67 @@
 //A regular expression is a sequence of character that from a search pattern.
 //The Search pattern can be for search and text replace operation.
 
+/*
+Regular Expressions\n:
+
+var a = str.search(/CheatSheet/i);
+
+Modifiers:
+
+i - perform case-insensitive matching
+g - perform a global match
+m - perform multiline matching
+
+Patterns:
+\ - Escape character
+\d - find a digit
+\s  - find a whitespace character
+\b  - find match at beginning or end of a word
+n+  - contains at least one n
+n*  - contains zero or more occurrences of n
+n? - contains zero or one occurrences of n
+^ - Start of string
+$  - End of string
+\uxxxx - find the Unicode character
+. - Any single character
+(a|b) - a or b
+(...) - Group section
+[abc] - In range (a, b or c)
+[0-9] - any of the digits between the brackets
+[^abc] - Not in range
+\s  - White space
+a? - Zero or one of a
+a* - Zero or more of a
+a*? - Zero or more, ungreedy
+a+ - One or more of a
+a+? - One or more, ungreedy
+a{2} - Exactly 2 of a
+a{2,} - 2 or more of a
+a{,5} - Up to 5 of a
+a{2,5} - 2 to 5 of a
+a{2,5}? - 2 to 5 of a, ungreedy
+[:punct:] - Any punctu­ation symbol
+[:space:] - Any space character
+[:blank:] - Space or tab
+
+*/
+
 //Syntax:
 // /pattern/modifiers;
 
 //i.String replace() with Regular Expression
 
-let exam = 'hi hello';
-let output = exam.replace(/hi/i, 'hello');
+let exam = "hi hello";
+let output = exam.replace(/hi/i, "hello");
 console.log(output); //hello hello
 
 //ii.String search() with a regular expression
-let exam1 = 'hello hai';
+let exam1 = "hello hai";
 let output1 = exam1.search(/hai/i);
 console.log(output1); //6
 
 //1.Regular Expression Modifiers:i,g,m
-let letter = 'JavaScript is a programming language';
+let letter = "JavaScript is a programming language";
 let a = /a/g; //Perform a global match (find all matches rather than stopping after the first match)
 console.log(letter.match(a)); // ['a', 'a', 'a', 'a', 'a', 'a']
 let b = /A/i; //Perform case-insensitive matching
@@ -30,7 +75,7 @@ let e = /av/gim;
 console.log(letter.match(e)); //['av']
 
 //index position search method:
-let txt = 'hello selva how are u';
+let txt = "hello selva how are u";
 let f = /a/g;
 console.log(txt.search(f)); //10
 let g = /E/i;
@@ -39,7 +84,7 @@ let h = /how/gi;
 console.log(txt.search(h)); //12
 
 //2.Regular Expression Patterns:[abc],[0-9],(x|y)
-let txt1 = 'welcome back tamilnadu 1234';
+let txt1 = "welcome back tamilnadu 1234";
 let i = /[e]/g; //Find any of the character between the brackets
 console.log(txt1.match(i)); // ['e', 'e']
 let j = /[^e]/g; //^ is not e
@@ -52,7 +97,7 @@ console.log(txt1.match(l)); //['1', '2']
 //3.Metacharacters:\w,\d,\s,\uxxxx,\v,\t
 
 //Metacharacters are characters with a special meaning:
-let txt2 = ' Hello Selva $ % ^ & @ * 123 \v \t';
+let txt2 = " Hello Selva $ % ^ & @ * 123 \v \t";
 let m = /\w/g; //w is a letter and digit only
 console.log(txt2.match(m)); //
 let n = /\W/g; //W is a special character display
@@ -78,7 +123,7 @@ console.log(txt2.search(v));
 
 //Quantifiers define quantities:
 
-let txt3 = 'welcome back to the 1230491010 w';
+let txt3 = "welcome back to the 1230491010 w";
 let w = /\d{1,2}/g;
 console.log(txt3.match(w)); // (5) ['12', '30', '49', '10', '10']
 let x = /e*/g; //Matches any string that contains zero or more occurrences of n
@@ -86,7 +131,7 @@ console.log(txt3.match(x)); // ['', 'e', '', '', '', '', 'e', '', '', '', '', '
 let y = /10?/g; //Matches any string that contains zero or one occurrences of n
 console.log(txt3.match(y)); //['1', '10', '10']
 
-let s1 = 'Is this his';
+let s1 = "Is this his";
 let s2 = /is$/gi; // $ is end of the is printed
 console.log(s1.match(s2)); //['is']
 let s3 = /^is/gi; //^ is first word search
@@ -101,7 +146,7 @@ let z2 = /.his/gi; //. is a frond letter to add printed
 console.log(s1.match(z2)); //['this', ' his']
 
 //5.Regex Properties:
-let text = 'hai selva welcome back';
+let text = "hai selva welcome back";
 let text2 = /hai/g;
 let text3 = text2.global; //checked global variable
 console.log(text3); //true
@@ -113,25 +158,25 @@ console.log(text5); //false
 //6.RegEx method:
 
 //1.exec method:
-let a1 = 'hello world is a popular place india';
+let a1 = "hello world is a popular place india";
 let a2 = /s/gi;
 let a3 = a2.exec(a1); //exec is a how to index line in s display
 console.log(a3);
 
 //2.test method:
-let b1 = 'hello world is a popular place india';
+let b1 = "hello world is a popular place india";
 let b2 = /s/gi;
 let b3 = b2.test(b1); //test is true or false checked
 console.log(b3);
 
 //3.toString:
-let c1 = 'hello world is a popular place india';
+let c1 = "hello world is a popular place india";
 let c2 = /s/gi;
 let c3 = c2.toString(c1); //return /s/gi value
 console.log(c3);
 
 //4.compaile
-let d1 = 'hello world is a popular place india';
+let d1 = "hello world is a popular place india";
 let d2 = /s/gi;
 let d3 = d2.compile(d1); //return d1 string displed
 console.log(d3);

@@ -1,3 +1,19 @@
+//.objectName.methodName(arguments)
+
+const engine = {
+  // method shorthand, with one argument
+  start(adverb) {
+    console.log(`The engine starts up ${adverb}...`);
+  },
+  // anonymous arrow function expression with no arguments
+  sputter: () => {
+    console.log("The engine sputters...");
+  },
+};
+
+engine.start("noisily");
+engine.sputter();
+
 //Object.assign: To copy an object without modifying the original object
 
 const person = {
@@ -48,31 +64,26 @@ console.log(entries);
 console.log(copyPerson.hasOwnProperty("name"));
 console.log(copyPerson.hasOwnProperty("score"));
 
-
 //object using for loop
 
-let person1={
-  firstName:"selva",
-  work:"none",
-  study:"BCA"
+let person1 = {
+  firstName: "selva",
+  work: "none",
+  study: "BCA",
+};
 
+delete person1.study; //delete object
+
+for (let hi in person1) {
+  console.log(hi + " :" + person1[hi]);
 }
-
-delete person1.study;//delete object
-
-
-for(let hi in person1){
-  console.log(hi+" :"+person1[hi]);
-}
-
-
 
 //Object.fromEntries: Object from Map
 
 let prices = Object.fromEntries([
-  ['banana', 1],
-  ['orange', 2],
-  ['meat', 4]
+  ["banana", 1],
+  ["orange", 2],
+  ["meat", 4],
 ]);
 
 // now prices = { banana: 1, orange: 2, meat: 4 }
