@@ -90,3 +90,13 @@ const sumAllNums1 = (...args) => {
   return sum;
 };
 console.log(sumAllNums1(1, 2, 3, 4, 5));
+
+// .
+const newObject = { ..."abc" }; //(not work in number) {...1234}
+console.log(newObject); //{0:"a",1:"b",2:"c"}
+
+const newArray = [..."abc"]; //not no working [...123]
+console.log(newArray);
+
+const objArray = { ...["item1", "item2"] };
+console.log(objArray); //
