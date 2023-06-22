@@ -48,6 +48,7 @@ var a1 = 45;
 console.log(a1);
 
 //ReDeclaration not allowed let const
+// declare variable with let keyword
 /*
 let a=25;
 a=26;

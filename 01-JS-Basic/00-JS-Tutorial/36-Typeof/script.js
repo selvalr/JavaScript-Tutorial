@@ -1,11 +1,13 @@
 /*
-In JavaScript there are 5 different data types that can contain values:
+In JavaScript there are  different data types that can contain values:
 
 string
 number
 boolean
 object
 function
+BigInt
+Symbol
 
 There are 6 types of objects:
 
@@ -41,7 +43,23 @@ console.log(typeof Symbol("id")); // "symbol"
 console.log(typeof Math); // "object"
 console.log(typeof alert); // "function"
 
-//Primitive Data
+// 22 -> "22"
+// convert number to string.
+
+//let age=22;
+// age = age + "";
+// console.log(typeof(age)); "22"
+
+// convert string to number.
+
+// let myStr = +"34";
+// console.log(typeof myStr);
+
+// let age = "18";
+// age = Number(age);
+// console.log(typeof age);
+
+//Primitive Data:
 
 console.log(typeof "John"); // Returns "string"
 console.log(typeof 3.14); // Returns "number"

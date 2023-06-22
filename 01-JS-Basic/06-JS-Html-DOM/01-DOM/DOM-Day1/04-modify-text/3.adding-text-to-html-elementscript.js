@@ -1,3 +1,11 @@
+// change text
+// textContent and innerText
+
+// const mainHeading = document.getElementById("main-heading");
+// console.log(mainHeading.innerText);
+// mainHeading.textContent = "This is something else";
+// console.log(mainHeading.textContent);
+
 //3.)Adding Text to HTML element
 
 /*
@@ -72,3 +80,10 @@ titles1[3].textContent = "Fourth Title";
 </html>
 
 */
+
+//5.// innerHtML
+const headline = document.querySelector(".headline");
+// console.log(headline.innerHTML);
+// headline.innerHTML = "<h1>Inner html changed </h1>";
+// headline.innerHTML += "<button class= \"btn\"> Learn More </button>"
+// console.log(headline.innerHTML);

@@ -12,7 +12,7 @@ bar = 9;
 
 console.log(foo, bar); // => 1, 9
 
-//2.Complex:object,array,function
+//2.reference Complex:object,array,function
 
 const food = [1, 2];
 const bars = food;

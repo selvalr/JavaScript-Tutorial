@@ -54,5 +54,24 @@
 
       newFn();
     </script>
+
+    <script>
+      function about(hobby, favMusician) {
+        console.log(this.firstName, this.age, hobby, favMusician);
+      }
+      const user01 = {
+        firstName: "harshit",
+        age: 8,
+      };
+      const user02 = {
+        firstName: "mohit",
+        age: 9,
+      };
+
+      // apply
+      // about.apply(user01, ["guitar", "bach"]);
+      // const func = about.bind(user02, "guitar", "bach");
+      // func();
+    </script>
   </body>
 </html>

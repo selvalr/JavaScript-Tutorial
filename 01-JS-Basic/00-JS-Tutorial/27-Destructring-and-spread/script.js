@@ -2,6 +2,20 @@
 
 //1.Destructing Arrays
 
+const myArray = ["value1", "value2", "value3", "value4"];
+
+//old:
+// let myvar1 = myArray[0];
+// let myvar2 = myArray[1];
+// console.log("value of myvar1", myvar1);
+// console.log("value of myvar2", myvar2);
+
+//New:
+let [myvar1, myvar2, ...myNewArray] = myArray;
+console.log("value of myvar1", myvar1);
+console.log("value of myvar2", myvar2);
+console.log(myNewArray);
+
 //example1:
 const numbers = [1, 2, 3];
 let [numOne, numTwo, numThree] = numbers;
@@ -85,6 +99,19 @@ const rectangle = {
 let { width, height, area, perimeter } = rectangle;
 console.log(width, height, area, perimeter);
 
+//ex2:
+// object destructuring:
+const band = {
+  bandName: "led zepplin",
+  famousSong: "stairway to heaven",
+  year: 1968,
+  anotherFamousSong: "kashmir",
+};
+
+let { bandName, famousSong, ...restProps } = band;
+console.log(bandName);
+console.log(restProps);
+
 //4.Renaming during structuring:
 
 const rectangle1 = {
@@ -94,6 +121,19 @@ const rectangle1 = {
 };
 let { width: w, height: h, area: a, perimeter: p } = rectangle1;
 console.log(w, h, a, p);
+
+// nested destructuring
+const users2 = [
+  { userId1: 1, firstName: "harshit", gender: "male" },
+  { userId1: 2, firstName: "mohit", gender: "male" },
+  { userId1: 3, firstName: "nitish", gender: "male" },
+];
+
+const [{ firstName: userfirstName, userId1 }, , { gender: usergender }] =
+  users2;
+console.log(userfirstName);
+console.log(userId1);
+console.log(usergender);
 
 //If the key is not found in the object the variable will be assigned to undefined. Sometimes the key might not be in the object, in that case we can give a default value during declaration. See the example.
 
@@ -249,3 +289,27 @@ const [{ firstName: user1firstName, userId }, , { gender: user3gender }] =
 console.log(user1firstName);
 console.log(userId);
 console.log(user3gender);
+
+//9. param destructuring
+
+// object
+// react
+
+const person4 = {
+  firstName: "harshit",
+  gender: "male",
+  age: 500,
+};
+
+// function printDetails(obj){
+//     console.log(obj.firstName);
+//     console.log(obj.gender);
+// }
+
+function printDetails({ firstName, gender, age }) {
+  console.log(firstName);
+  console.log(gender);
+  console.log(age);
+}
+
+printDetails(person4);

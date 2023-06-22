@@ -222,6 +222,12 @@ var h1 = null;
 console.log(h1);//null
 console.log(typeof h1); // object
 */
+// let myVariable = null;
+// console.log(myVariable);
+// myVariable = "harshit";
+// console.log(myVariable, typeof myVariable);
+// console.log(typeof null);
+// bug , error
 
 //5.undefined
 /*
@@ -254,6 +260,13 @@ console.log(first == second); //false
 //7.The bigint type
 let pageView = 9007199254740991n;
 console.log(typeof pageView); // 'bigint'
+
+// BigInt:
+// let myNumber = BigInt(12);
+// let sameMyNumber = 123n;
+// console.log(myNumber);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(myNumber+ sameMyNumber);
 
 //
 let x4 = BigInt("123456789012345678901234567890");

@@ -236,3 +236,14 @@ Array.isArray(fruits2); //true
 //const fruits = ["Banana", "Orange", "Apple"];
 
 fruits2 instanceof Array; //true
+
+//10.
+// let numbers = [1,2,3];
+
+// // console.log(Object.getPrototypeOf(numbers));
+// console.log(Array.prototype);
+// console.log(numbers);
+
+// function hello(){
+//     console.log("hello");
+// }

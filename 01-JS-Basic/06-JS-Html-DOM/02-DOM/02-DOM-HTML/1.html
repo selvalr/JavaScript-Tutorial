@@ -14,7 +14,7 @@
       //syntax:
       //document.getElementById(id).innerHTML = new HTML
 
-      document.getElementById('p1').innerHTML = 'New text!';
+      document.getElementById("p1").innerHTML = "New text!";
     </script>
 
     <hr />
@@ -22,8 +22,8 @@
     <h1 id="id01">Old Heading</h1>
 
     <script>
-      const element = document.getElementById('id01');
-      element.innerHTML = 'New Heading';
+      const element = document.getElementById("id01");
+      element.innerHTML = "New Heading";
     </script>
 
     <hr />
@@ -34,7 +34,7 @@
       //Syntax:
       //document.getElementById(id).attribute = new value
 
-      document.getElementById('myImage').src = 'landscape.jpg';
+      document.getElementById("myImage").src = "landscape.jpg";
     </script>
 
     <hr />
@@ -44,8 +44,8 @@
     <div id="div1">This is the first div element.</div>
 
     <script>
-      document.getElementById('p1').innerHTML = 'Hi';
-      document.getElementById('div1').innerHTML = 'this is linuxhint.com';
+      document.getElementById("p1").innerHTML = "Hi";
+      document.getElementById("div1").innerHTML = "this is linuxhint.com";
     </script>
 
     <hr />
@@ -55,7 +55,7 @@
 
     <script>
       function myFunction() {
-        document.getElementById('demo1').innerHTML = '';
+        document.getElementById("demo1").innerHTML = "";
       }
     </script>
 
@@ -65,7 +65,7 @@
     <p id="demo2"></p>
 
     <script>
-      document.getElementById('demo2').innerHTML = 'Date : ' + Date();
+      document.getElementById("demo2").innerHTML = "Date : " + Date();
     </script>
 
     <hr />
@@ -76,5 +76,21 @@
       document.write(Date());
     </script>
     <p>Bla bla bla</p>
+
+    <p class="todo-list"></p>
+    <script>
+      // Add new HTML elements to page
+
+      // innerHTML to add html element
+
+      const todoList = document.querySelector(".todo-list");
+      // console.log(todoList.innerHTML)
+      // todoList.innerHTML = "<li>New Todo 2 </li>"
+      // todoList.innerHTML += "<li>New Todo </li>";
+      // todoList.innerHTML += "<li>teach students </li>";
+
+      // when you should use it , when you should not
+      todoList.insertAdjacentElement("afterbegin", "<li>Hi</li>");
+    </script>
   </body>
 </html>

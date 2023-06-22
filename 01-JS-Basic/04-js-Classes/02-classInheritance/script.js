@@ -11,43 +11,42 @@ class Car {
     this.carname = brand;
   }
   present() {
-    return 'I have a ' + this.carname;
+    return "I have a " + this.carname;
   }
 }
 
 class Model extends Car {
   constructor(brand, mod) {
-    super(brand);//The super() method refers to the parent class.
+    super(brand); //The super() method refers to the parent class.
     this.model = mod;
   }
   show() {
-    return this.present() + ', it is a ' + this.model;
+    return this.present() + ", it is a " + this.model;
   }
 }
 
 let myCar = new Model("Ford", "Mustang");
-console.log( myCar.show());
+console.log(myCar.show());
 
 //Getters and Setters
 
 class Car2 {
-    constructor(brand) {
-      this.carname = brand;
-    }
-    get cnam() {
-      return this.carname;
-    }
-    set cnam(x) {
-      this.carname = x;
-    }
+  constructor(brand) {
+    this.carname = brand;
   }
-  
-  const myCar2 = new Car2("Ford");
-  
-  console.log( myCar2.cnam);
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;
+  }
+}
 
+const myCar2 = new Car2("Ford");
 
-  //Many programmers use an underscore character _ before the property name to separate the getter/setter from the actual property:
+console.log(myCar2.cnam);
+
+//Many programmers use an underscore character _ before the property name to separate the getter/setter from the actual property:
 
 //Example
 //You can use the underscore character to separate the getter/setter from the actual property:
@@ -67,7 +66,6 @@ class Car3 {
 const myCar3 = new Car3("Ford");
 
 console.log(myCar3.carname);
-
 
 //To use a setter, use the same syntax as when you set a property value, without parentheses:
 
@@ -92,4 +90,25 @@ myCar.carname = "Volvo";
 document.getElementById("demo").innerHTML = myCar.carname;
 */
 
+//1. getter and setters
+class Person {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  set fullName(fullName) {
+    const [firstName, lastName] = fullName.split(" ");
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
 
+const person1 = new Person("harshit", "sharma", 5);
+// console.log(person1.fullName());
+// console.log(person1.fullName);
+// person1.fullName = "mohit vashistha";
+// console.log(person1);

@@ -1,3 +1,20 @@
+//0. intro to variables
+
+// variables can store some information
+// we can use that information later
+// we can change that information later
+
+// declare a variable
+var firstName = "Harshit";
+
+// use a variable
+console.log(firstName);
+
+// change value
+firstName = "Mohit";
+console.log(firstName);
+
+//1.all types variables
 var a; // variable
 var b = "init"; // string
 var c = "Hi" + " " + "Joe"; // = "Hi Joe"
@@ -12,12 +29,13 @@ var a = 1,
   c = a + b; // one line
 let z4 = "zzz"; // block scope local variable
 
-//Rules variables:
-//cannot be a reserved keyword:if,for,
-//should be meaningful:
-//cannot start with a number:(1name)
-//cannot contain a space or hyphen (-)
-//Are case-sensitive:Variables named apple and APPLE are two different variables.
+//Rules for naming variables:
+
+//-cannot be a reserved keyword:if,for,
+//-should be meaningful:
+//-cannot start with a number:(1name)
+//-cannot contain a space or hyphen (-)
+//-Are case-sensitive:Variables named apple and APPLE are two different variables.
 
 /*
 4 Ways to Declare a JavaScript Variable:
@@ -106,6 +124,7 @@ console.log(x5);
     var *aa=320;  
     let my-name; // hyphens '-' aren't allowed in the name
 */
+
 //JavaScript Dollar Sign $
 let $ = "Hello World";
 let $$$ = 2;

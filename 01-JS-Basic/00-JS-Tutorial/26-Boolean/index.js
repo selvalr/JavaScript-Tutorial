@@ -1,5 +1,21 @@
 //JavaScript Booleans
-//A JavaScript Boolean represents one of two values: true or false.
+
+// 1.booleans & comparison operator
+
+// booleans
+// true, false
+
+let num1 = 7;
+let num2 = "7";
+console.log(num1 < num2);
+
+// == vs ===
+console.log(num1 === num2);
+
+// != vs !==
+console.log(num1 !== num2);
+
+//2.A JavaScript Boolean represents one of two values: true or false.
 
 //Boolean Function
 
@@ -67,7 +83,7 @@ console.log(
     Boolean(1 + 7 + 3.14)
 );
 
-//Everything Without a "Value" is False
+//Everything Without a "Value" is False: false,"",null,undefined,0
 let x = 0;
 console.log(Boolean(x));
 

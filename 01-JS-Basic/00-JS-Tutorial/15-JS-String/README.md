@@ -1,5 +1,3 @@
-![console notes!](/01-JS-Basic/00-JS-Tutorial/01-console/notes/0.jpg "console notes")
+![string  notes!](/01-JS-Basic/00-JS-Tutorial/15-JS-String/notes/1.jpg "string notes")
 
 ---
-
-![console notes!](/01-JS-Basic/00-JS-Tutorial/01-console/notes/1.jpg "console notes")

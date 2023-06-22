@@ -1,4 +1,31 @@
-//.objectName.methodName(arguments)
+//1.// methods
+// function inside object
+
+function personInfo() {
+  console.log(`person name is ${this.firstName} and age is ${this.age}`);
+}
+
+const person01 = {
+  firstName: "harsh",
+  age: 8,
+  about: personInfo,
+};
+const person2 = {
+  firstName: "mohit",
+  age: 18,
+  about: personInfo,
+};
+const person3 = {
+  firstName: "nitish",
+  age: 17,
+  about: personInfo,
+};
+
+person01.about();
+person2.about();
+person3.about();
+
+//2.objectName.methodName(arguments)
 
 const engine = {
   // method shorthand, with one argument
@@ -89,3 +116,18 @@ let prices = Object.fromEntries([
 // now prices = { banana: 1, orange: 2, meat: 4 }
 
 alert(prices.orange); // 2
+
+//3. clone using Object.assign
+
+// memory
+
+const obj = {
+  key1: "value1",
+  key2: "value2",
+};
+
+// const obj2 = {'key69': "value69",...obj};
+// const obj2 = Object.assign({'key69': "value69"}, obj);
+// obj.key3 = "value3";
+// console.log(obj);
+// console.log(obj2);

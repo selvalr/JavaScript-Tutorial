@@ -52,3 +52,16 @@ var UseMe;
 function UseMe() {
   alert("UseMe function called");
 }
+
+//Example 2:
+
+// hoisting:
+
+hello();
+
+function hello() {
+  console.log("hello world");
+}
+console.log(hello);
+const hello = "hello world";
+console.log(hello);

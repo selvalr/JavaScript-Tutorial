@@ -2,17 +2,17 @@
 
 //Quotes
 
-let single = 'single-quoted';
+let single = "single-quoted";
 let double = "double-quoted";
 
 let backticks = `backticks`;
 
 //
 function sum(a, b) {
-    return a + b;
-  }
-  
-  alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
+  return a + b;
+}
+
+alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
 
 //Another advantage of using backticks is that they allow a string to span multiple lines:
 
@@ -36,9 +36,7 @@ let guestList2 = "Guests:\n * John\n * Pete\n * Mary";
 
 alert(guestList2); // a multiline list of guests, same as above
 
-
 //
-
 
 //As a simpler example, these two lines are equal, just written differently:
 
@@ -50,18 +48,15 @@ World`;
 
 alert(str1 == str2); // true
 
-
 // backslash
-alert( `The backslash: \\` ); // The backslash: \
-alert( 'I\'m the Walrus!' ); // I'm the Walrus!
-alert( "I'm the Walrus!" ); // I'm the Walrus!
-
+alert(`The backslash: \\`); // The backslash: \
+alert("I'm the Walrus!"); // I'm the Walrus!
+alert("I'm the Walrus!"); // I'm the Walrus!
 
 //String length
 //The length property has the string length:
 
-alert( `My\n`.length ); // 3
-
+alert(`My\n`.length); // 3
 
 //Accessing characters
 //To get a character at position pos, use square brackets [pos] or call the method str.at(pos). The first character starts from the zero position:
@@ -69,29 +64,25 @@ alert( `My\n`.length ); // 3
 let str = `Hello`;
 
 // the first character
-alert( str[0] ); // H
-alert( str.at(0) ); // H
+alert(str[0]); // H
+alert(str.at(0)); // H
 
 // the last character
-alert( str[str.length - 1] ); // o
-alert( str.at(-1) );
-
-
+alert(str[str.length - 1]); // o
+alert(str.at(-1));
 
 //The square brackets always return undefined for negative indexes, for instance:
 
 let str3 = `Hello`;
 
-alert( str3[-2] ); // undefined
-alert( str3.at(-2) ); // l
+alert(str3[-2]); // undefined
+alert(str3.at(-2)); // l
 
 //We can also iterate over characters using for..of:
 
 for (let char of "Hello") {
   alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
 }
-
-
 
 //4.Strings are immutable
 
@@ -114,28 +105,25 @@ str = 'h' + str[1]; // replace the string
 alert( str ); // hi
 */
 
-
 //5.Changing the case
 //Methods toLowerCase() and toUpperCase() change the case:
 
-alert( 'Interface'.toUpperCase() ); // INTERFACE
-alert( 'Interface'.toLowerCase() ); // interface
+alert("Interface".toUpperCase()); // INTERFACE
+alert("Interface".toLowerCase()); // interface
 
 //Or, if we want a single character lowercased:
 
-alert( 'Interface'[0].toLowerCase() ); // 'i'
-
+alert("Interface"[0].toLowerCase()); // 'i'
 
 //7.Comparing strings
 
 //A lowercase letter is always greater than the uppercase:
 
-alert( 'a' > 'Z' ); // true
+alert("a" > "Z"); // true
 
 //Letters with diacritical marks are “out of order”:
 
-alert( 'Österreich' > 'Zealand' ); // true
-
+alert("Österreich" > "Zealand"); // true
 
 //
 /*
@@ -164,9 +152,23 @@ alert( str );
 // ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ
 */
 
-
 //Correct comparisons
 
-alert( 'Österreich'.localeCompare('Zealand') ); // -1
+alert("Österreich".localeCompare("Zealand")); // -1
 
+//8.String indexing
 
+let firstName = "harshitdfjakldsfdf";
+
+//  h    a   r   s   h   i   t
+//  0    1   2   3   4   5   6
+
+// console.log(firstName[0]);
+// length of string
+// firstName.length
+
+console.log(firstName.length);
+
+console.log(firstName[firstName.length - 2]);
+
+// last Index : length - 1

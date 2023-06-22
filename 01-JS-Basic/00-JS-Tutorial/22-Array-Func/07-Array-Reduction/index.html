@@ -27,9 +27,9 @@
 
       let number = [10, 20, 30, 40, 50, 60, 70, 80]; //360 total value
       let result = number.reduce(function (accumulator, currentValue, index) {
-        console.log('Iteration', index);
-        console.log('accumulator', accumulator);
-        console.log('current value', currentValue);
+        console.log("Iteration", index);
+        console.log("accumulator", accumulator);
+        console.log("current value", currentValue);
         return accumulator + currentValue;
       });
       console.log(result);
@@ -47,7 +47,7 @@
       console.log(oneArray); //[1,2,3,4,5,6,7,8]
 
       //duplicate remove
-      let randomChar = ['a', 'a', 'b', 'c', 'd', 'd'];
+      let randomChar = ["a", "a", "b", "c", "d", "d"];
       let unique = randomChar.reduce(function (accumulator, currentValue) {
         if (accumulator.indexOf(currentValue) === -1) {
           accumulator.push(currentValue);
@@ -58,6 +58,40 @@
       console.log(unique);
 
       //2.reduce right : right to left array iterate
+
+      //3. reduce
+      const numbers = [1, 2, 3, 4, 5, 10];
+
+      // aim : sum of all the numbers in array
+
+      // const sum = numbers.reduce((accumulator, currentValue)=>{
+      //     return accumulator + currentValue;
+      // }, 100);
+
+      // console.log(sum);
+      // accumulator , currentValue,  return
+      // 1               2              3
+      // 3               3              6
+      // 6               4              10
+      // 10              5              15
+      // 15              10             25
+
+      // const userCart = [
+      //     {productId: 1, productName: "mobile", price: 12000},
+      //     {productId: 2, productName: "laptop", price: 22000},
+      //     {productId: 3, productName: "tv", price: 15000},
+      // ]
+
+      // const totalAmount = userCart.reduce((totalPrice, currentProduct)=>{
+      //     return totalPrice + currentProduct.price;
+      // }, 0)
+
+      // console.log(totalAmount);
+
+      // total price      currentValue     return
+      // 0                {}                  12000
+      // 12000            22000                34000
+      // 34000            15000                49000
     </script>
   </body>
 </html>

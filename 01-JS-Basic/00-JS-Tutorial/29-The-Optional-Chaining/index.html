@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        const car = {type:"Fiat", model:"500", color:"white"};
-        let name = car?.name;
-        console.log(name);
+      const car = { type: "Fiat", model: "500", color: "white" };
+      let name = car?.name;
+      console.log(name);
+
+      //1. optional chaining
+
+      const user = {
+        firstName: "harshit",
+        // address: {houseNumber: '1234'}
+      };
+
+      console.log(user?.firstName);
+      console.log(user?.address?.houseNumber);
     </script>
-</body>
+  </body>
 </html>

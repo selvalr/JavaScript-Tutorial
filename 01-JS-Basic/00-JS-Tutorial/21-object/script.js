@@ -1,3 +1,9 @@
+// objects reference type
+// arrays are good but not sufficient
+// for real world data
+// objects store key value pairs
+// objects don't have index
+
 //object Syntax:
 //key-value pairs in curly braces
 /*
@@ -21,14 +27,18 @@ let person = {
 };
 console.log(person);
 console.log(typeof person); //object
+
+// how to access data from objects
 console.log(person.firstName); //selva
-console.log(person["lastName"]);//manan //getter
-person["age"]=23;//setter age but already age is object to overwrite
+console.log(person["lastName"]); //manan //getter
+
+// how to add key value pair to objects
+person["age"] = 23; //setter age but already age is object to overwrite
 console.log(person);
 
 //length calculate in object
-let ke=Object.keys(person);
-console.log(ke["length"]);//3
+let ke = Object.keys(person);
+console.log(ke["length"]); //3
 
 //ii.
 const rectangle = {
@@ -99,15 +109,13 @@ console.log(person3["location"]); // undefined
 // for instance to access the phone number we only use the square bracket method
 console.log(person3["phone number"]);
 
-
 //dot and square notation
 
-let babyName={boy:"selva",girl:"trisha"}
-let baby="boy";
+let babyName = { boy: "selva", girl: "trisha" };
+let baby = "boy";
 
-console.log(babyName[baby]);//selva is using array notation working dynamically
-console.log(babyName.baby);//undefined is not notation is not supported static
-
+console.log(babyName[baby]); //selva is using array notation working dynamically
+console.log(babyName.baby); //undefined is not notation is not supported static
 
 //4.Creating object methods
 
@@ -235,49 +243,73 @@ let objName1 = {
   lname: "selva",
   fname: function () {
     return `${this.name} ${this.lname}`;
-  }
-}
+  },
+};
 
 console.log(objName1.fname());
 
 let anotherObj = Object.create(objName1);
 anotherObj.sName = "manan";
-anotherObj.fname = function () { return 'hello' }
+anotherObj.fname = function () {
+  return "hello";
+};
 
 console.log(anotherObj);
 console.log(anotherObj.lname);
 console.log(anotherObj.fname());
 
-
-
 //array--->array
 
-let sName=["hello", "hello", "hello", "hello"];
-let lName=["welcome"];
+let sName = ["hello", "hello", "hello", "hello"];
+let lName = ["welcome"];
 
-let finalArr=[sName, lName];
+let finalArr = [sName, lName];
 console.log(finalArr);
 
 //object--->object
 
-let oName={name:"Selva",age:21};
-let olName={isFinite:true};
+let oName = { name: "Selva", age: 21 };
+let olName = { isFinite: true };
 
-let finalObj={firstObject:oName, secondObject:olName};//{oName,olName}--->keyy and value same in browser read
+let finalObj = { firstObject: oName, secondObject: olName }; //{oName,olName}--->keyy and value same in browser read
 console.log(finalObj);
 
 //array--->object
 
-let oName1={name:"Selva",age:21};
-let olName1={isFinite:true};
+let oName1 = { name: "Selva", age: 21 };
+let olName1 = { isFinite: true };
 
-let finalObj1=[oName1,olName1];
+let finalObj1 = [oName1, olName1];
 console.log(finalObj1);
 
 //object--->array
 
-let oName2=["Selva",21];
-let olName2=[true];
+let oName2 = ["Selva", 21];
+let olName2 = [true];
 
-let finalObj2={firstKeyName:oName2,sKeyName:olName2};
+let finalObj2 = { firstKeyName: oName2, sKeyName: olName2 };
 console.log(finalObj2);
+
+//1.How to iterate object
+
+const person = {
+  name: "harshit",
+  age: 22,
+  "person hobbies": ["guitar", "sleeping", "listening music"],
+};
+
+// for in loop
+// Object.keys
+
+for (let key in person) {
+  console.log(`${key} : ${person[key]}`);
+  console.log(key, " : ", person[key]);
+}
+
+console.log(typeof Object.keys(person));
+const val = Array.isArray(Object.keys(person));
+console.log(val);
+
+for (let key of Object.keys(person)) {
+  console.log(person[key]);
+}
