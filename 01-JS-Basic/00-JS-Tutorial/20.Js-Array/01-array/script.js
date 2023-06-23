@@ -247,3 +247,54 @@ fruits2 instanceof Array; //true
 // function hello(){
 //     console.log("hello");
 // }
+
+//11.Modifying array element
+
+const numbers2 = [1, 2, 3, 4, 5];
+numbers2[0] = 10; // changing 1 at index 0 to 10
+numbers2[1] = 20; // changing  2 at index 1 to 20
+
+console.log(numbers2); // [10, 20, 3, 4, 5]
+
+const countries2 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+countries2[0] = "Afghanistan"; // Replacing Albania by Afghanistan
+let lastIndex = countries2.length - 1;
+countries2[lastIndex] = "Korea"; // Replacing Kenya by Korea
+
+console.log(countries2);
+
+//12.Methods to manipulate array
+//Array Constructor
+//Array:To create an array.
+
+const arr2 = Array(); // creates an an empty array
+console.log(arr2);
+
+const eightEmptyValues = Array(8); // it creates eight empty values
+console.log(eightEmptyValues); // [empty x 8]
+
+//ii.Creating static values with fill
+const arr3 = Array(); // creates an an empty array
+console.log(arr3);
+
+const eightXvalues = Array(8).fill("X"); // it creates eight element values filled with 'X'
+console.log(eightXvalues); // ['X', 'X','X','X','X','X','X','X']
+
+const eight0values = Array(8).fill(0); // it creates eight element values filled with '0'
+console.log(eight0values); // [0, 0, 0, 0, 0, 0, 0, 0]
+
+const four4values = Array(4).fill(4); // it creates 4 element values filled with '4'
+console.log(four4values); // [4, 4, 4, 4]

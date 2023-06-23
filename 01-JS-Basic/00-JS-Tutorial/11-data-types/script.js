@@ -1,24 +1,46 @@
 //Data Types in JavaScript
 
-// Numbers:
+// 1.Numbers:
+//Integers: Integer (negative, zero and positive) numbers Example: ... -3, -2, -1, 0, 1, 2, 3 ...
+//Float-point numbers: Decimal number Example ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
+
 let length = 16;
 let weight = 7.5;
 
-// Strings:
+// 2.Strings:
+//A collection of one or more characters between two single quotes, double quotes, or backticks.
+
 let color = "Yellow";
 let lastName = "Johnson";
+//let surName='Asabeneh';
+//let nickName=`mahi`;
 
-// Booleans
+// 3.Booleans:
+//A boolean value is either True or False. Any comparisons returns a boolean value, which is either true or false.
+//A boolean data type is either a true or false value.
+
 let x = true;
 let y = false;
 
-// Object:
+// 4.Undefined:
+//In JavaScript, if we don't assign a value to a variable, the value is undefined. In addition to that, if a function is not returning anything, it returns undefined.
+
+let firstName;
+console.log(firstName); // undefined, because it is not assigned to a value yet
+
+// 5.Null
+// Null in JavaScript means an empty value.
+
+let emptyValue = null;
+console.log(emptyValue);
+
+// 1.Object:
 const person = { firstName: "John", lastName: "Doe" };
 
-// Array object:
+// 2.Array object:
 const cars = ["Saab", "Volvo", "BMW"];
 
-// Date object:
+// 3.Date object:
 const date = new Date("2022-03-25");
 
 /*

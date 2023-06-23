@@ -139,7 +139,7 @@ console.log(numbe.toString()); // 1,2,3,4,5
 const names1 = ["Asabeneh", "Mathias", "Elias", "Brook"];
 console.log(names1.toString()); // Asabeneh,Mathias,Elias,Brook
 
-//ix.Joining array elements is -convert array to string
+//ix.Joining array elements is -It is used to join the elements of the array,
 
 const numbers00 = [1, 2, 3, 4, 5];
 console.log(numbers00.join()); // 1,2,3,4,5
@@ -310,3 +310,23 @@ console.log(arr5[1]); // undefined
 
 // now arr = ["I",  , "home"];
 console.log(arr5.length); // 3
+
+//10.Array of arrays
+//Array can store different data types including an array itself. Let us create an array of arrays
+
+const firstNums1 = [1, 2, 3];
+const secondNums1 = [1, 4, 9];
+
+const arrayOfArray1 = [
+  [1, 2, 3],
+  [1, 2, 3],
+];
+console.log(arrayOfArray1[0]); // [1, 2, 3]
+
+const frontEnd1 = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd1 = ["Node", "Express", "MongoDB"];
+const fullStack1 = [frontEnd1, backEnd1];
+console.log(fullStack1); // [["HTML", "CSS", "JS", "React", "Redux"], ["Node", "Express", "MongoDB"]]
+console.log(fullStack1.length); // 2
+console.log(fullStack1[0]); // ["HTML", "CSS", "JS", "React", "Redux"]
+console.log(fullStack1[1]); // ["Node", "Express", "MongoDB"]

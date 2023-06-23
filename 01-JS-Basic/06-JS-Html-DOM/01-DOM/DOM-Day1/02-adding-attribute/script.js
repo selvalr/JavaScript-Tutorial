@@ -1,4 +1,4 @@
-// get and set attrubutes
+// 1.get and set attributes
 
 const link = document.querySelector("a");
 console.log(link.getAttribute("href").slice(1));

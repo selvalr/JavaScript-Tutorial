@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        //Primitive data type:
+      //Primitive data type:
 
-        //i.String
-        let name1="Selva";
-        let name2='manan';
-        let name3=`hello ${name1}`;
-        console.log("welcome: " + name1 + " " +name2+ " " +name3);
+      //i.String
+      let name1 = "Selva";
+      let name2 = "manan";
+      let name3 = `hello ${name1}`;
+      console.log("welcome: " + name1 + " " + name2 + " " + name3);
 
-        //ii.number
-        let x = 5;
-        let y = x;
+      //ii.number
+      let x = 5;
+      let y = x;
 
-        console.log(x);//5
-        console.log(y);//5
+      console.log(x); //5
+      console.log(y); //5
 
-        x = 20.04;
-        console.log(x);//20.04
-        console.log(y);//5
+      x = 20.04;
+      console.log(x); //20.04
+      console.log(y); //5
 
-        
-        //iii.Boolean
-        let isAlive=true;
-        console.log(isAlive);
-        isAlive=false;
-        console.log(isAlive);
+      //iii.Boolean
+      let isAlive = true;
+      console.log(isAlive);
+      isAlive = false;
+      console.log(isAlive);
 
-        //iv.BigInt
-        let no1=453889879865131n;
-        console.log(no1);
-        let no2=200n;
-        console.log(no2);
+      //iv.BigInt
+      let no1 = 453889879865131n;
+      console.log(no1);
+      let no2 = 200n;
+      console.log(no2);
 
-        //v.Null
-        let age=null;
-        console.log(age);
+      //v.Null
+      let age = null;
+      console.log(age);
 
-        //vi.undefined
-        let hello;
-        console.log(hello);
-        
-        //Reference data Type
+      //vi.undefined
+      let hello;
+      console.log(hello);
 
-        //i.object
-        let person = { 
-                firstName: "James", 
-                lastName: "Bond", 
-                age: 15
-            }; 
+      //Reference data Type
 
-        let i = person;
-        i.firstName = "karthi"
-        console.log(person);
-        console.log(i);
+      //i.object
+      let person = {
+        firstName: "James",
+        lastName: "Bond",
+        age: 15,
+      };
 
-        //ii.Date
-        let today = new Date("25 July 2021");
-        console.log(today);
+      let i = person;
+      i.firstName = "karthi";
+      console.log(person);
+      console.log(i);
 
-        //iii.Array
-        let nums = [1, 2, 3, 4];
-        console.log(nums);
+      //ii.Date
+      let today = new Date("25 July 2021");
+      console.log(today);
+
+      //iii.Array
+      let nums = [1, 2, 3, 4];
+      console.log(nums);
+
+      let nums1 = [1, 2, 3];
+      nums1[0] = 10;
+      console.log(nums1); // [10, 2, 3]
     </script>
-</body>
-
+  </body>
 </html>

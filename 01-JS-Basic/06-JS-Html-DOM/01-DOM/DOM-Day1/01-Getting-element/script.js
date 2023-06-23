@@ -2,8 +2,8 @@
 
 //1.Getting elements by tag name:
 
-// syntax
-document.getElementsByTagName("tagname");
+// syntax:
+//document.getElementsByTagName("tagname");
 
 const allTitles = document.getElementsByTagName("h1");
 
@@ -16,8 +16,8 @@ for (let i = 0; i < allTitles.length; i++) {
 
 //2.Getting elements by class name
 
-//syntax
-document.getElementsByClassName("classname");
+//syntax:
+//document.getElementsByClassName("classname");
 
 const allTitle = document.getElementsByClassName("title");
 

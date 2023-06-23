@@ -10,23 +10,23 @@
     <h1>Date</h1>
     <script>
       /*Syntax:
-      1.new Date()
-      2.new Date(milliseconds)
-      3.new Date(dataString)
-      4.new Date(year, month, date, hour, minute, second, millisecond)
+            1.new Date()
+            2.new Date(milliseconds)
+            3.new Date(dataString)
+            4.new Date(year, month, date, hour, minute, second, millisecond)
 
-      new Date()
-      new Date(date string)
+            new Date()
+            new Date(date string)
 
-      new Date(year,month)
-      new Date(year,month,day)
-      new Date(year,month,day,hours)
-      new Date(year,month,day,hours,minutes)
-      new Date(year,month,day,hours,minutes,seconds)
-      new Date(year,month,day,hours,minutes,seconds,ms)
+            new Date(year,month)
+            new Date(year,month,day)
+            new Date(year,month,day,hours)
+            new Date(year,month,day,hours,minutes)
+            new Date(year,month,day,hours,minutes,seconds)
+            new Date(year,month,day,hours,minutes,seconds,ms)
 
-      new Date(milliseconds)
-      */
+            new Date(milliseconds)
+            */
 
       //1.Creating a time object:
       const now = new Date();
@@ -67,6 +67,17 @@
       //9.Getting time
       const now8 = new Date(); //
       console.log(now8.getTime()); // 1578092201341, this is the number of seconds passed from January 1, 1970 to January 4, 2020 00:56:41
+
+      //i.Using getTime()
+      const now22 = new Date(); //
+      console.log(now22.getTime()); // 1578092201341, this is the number of seconds passed from January 1, 1970 to January 4, 2020 00:56:41
+
+      //i.Using Date.now()
+      const allSeconds = Date.now(); //
+      console.log(allSeconds); // 1578092201341, this is the number of seconds passed from January 1, 1970 to January 4, 2020 00:56:41
+
+      const timeInSeconds = new Date().getTime();
+      console.log(allSeconds == timeInSeconds); // true
 
       //Human Let us format these values to a human readable time format. Example:
 

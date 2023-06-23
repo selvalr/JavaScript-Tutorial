@@ -1,4 +1,4 @@
-//Scope
+//1.Scope
 
 function myFunction() {
   var pizzaName = "Volvo";
@@ -6,7 +6,7 @@ function myFunction() {
 }
 // Code here can't use pizzaName
 
-//Block Scoped Variables
+//2.Block Scoped Variables
 
 const isLoggedIn = true;
 if (isLoggedIn == true) {
@@ -15,7 +15,7 @@ if (isLoggedIn == true) {
 console.log(statusMessage);
 // Uncaught ReferenceError: statusMessage is not defined
 
-//Global Variables
+//3.Global Variables
 
 // Variable declared globally
 const color = "blue";

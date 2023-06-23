@@ -32,8 +32,6 @@ if (state !== "tamil") {
 }
 console.log(textPercent); //0
 
-
-
 //Sometimes, we need to assign a variable depending on a condition.
 let accessAllowed;
 let age = prompt("How old are you?", "");
@@ -44,3 +42,15 @@ if (age > 18) {
 }
 
 alert(accessAllowed);
+
+//i.
+let num = 3;
+if (num > 0) {
+  console.log(`${num} is a positive number`); //  3 is a positive number
+}
+
+//ii.
+let isRaining = true;
+if (isRaining) {
+  console.log("Remember to take your rain coat.");
+}
