@@ -9,3 +9,5 @@ const person = {
 };
 const { name: n, age, work } = person;
 console.log(n, age, work);
+
+//

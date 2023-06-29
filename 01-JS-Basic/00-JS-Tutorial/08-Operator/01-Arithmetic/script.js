@@ -10,19 +10,26 @@ let powerOf = numOne ** numTwo; //Exponentiation (ES2016)
 //(or)same exponentiation
 let x3 = 5;
 let z3 = Math.pow(x3, 2);
-console.log(z3);
+console.log(z3); //25
 
-console.log(sum, diff, mult, div, remainder, powerOf); // 7,1,12,1.33,1, 64
+console.log("Add 4+3=", sum); // 7
+console.log("sub 4-3=", diff); //1
+console.log("multi 4*3=", mult); //12
+console.log("div 4/3=", div); //1.33333333333
+console.log("mod 4%3=", remainder); //1
+console.log("pow 4**3=", powerOf); //64
 
 //Incrementing
 let x = 5;
+//console.log(x++); //5
 x++;
+console.log(x); //6
 let z = x;
-console.log(z);
+console.log(z); //6
 
 //Decrementing
 
 let x1 = 5;
 x1--;
 let z1 = x1;
-console.log(z1);
+console.log(z1); //4

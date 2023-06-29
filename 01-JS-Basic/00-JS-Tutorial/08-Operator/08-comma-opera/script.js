@@ -2,16 +2,11 @@
 // expr1, expr2, expr3/* , … */
 
 let x = 1;
-
 x = (x++, x);
-
-console.log(x);
-// Expected output: 2
+console.log(x); // Expected output: 2
 
 x = (2, 3);
-
-console.log(x);
-// Expected output: 3
+console.log(x); // Expected output: 3
 
 /*
 The comma operator is completely different from commas used as syntactic separators in other locations, which include:

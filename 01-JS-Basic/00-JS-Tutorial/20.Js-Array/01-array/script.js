@@ -36,7 +36,7 @@ let myArra = [];
 myArra[0] = "selva";
 myArra[1] = "tamil";
 myArra[2] = true;
-console.log(myArra);
+console.log(myArra); //["selva", "tamil",true]
 
 //2.JavaScript Array directly (new keyword)
 
@@ -84,13 +84,13 @@ const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"]; // arra
 //i.Accessing Array Elements
 //You access an array element by referring to the index number:
 
-const cars = ["Saab", "Volvo", "BMW"];
-let car = cars[0];
+const cars0 = ["Saab", "Volvo", "BMW"];
+let car = cars0[0];
 
 //ii.Changing an Array Element
 //This statement changes the value of the first element in cars:
 
-cars[0] = "Opel";
+cars0[0] = "Opel";
 
 //Example;
 const cars = ["Saab", "Volvo", "BMW"];
@@ -101,7 +101,7 @@ cars[0] = "Opel";
 
 //Example
 const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits1.toString();
+console.log(fruits1.toString());
 
 //3.Access the Full Array
 console.log(fruits1);
@@ -194,7 +194,7 @@ let ourArray = [
 
 console.log(ourArray[0][1]); //23
 
-//Multi dimenson array
+//Multi dimension array
 
 let ourArray2 = [
   ["selva", 23],

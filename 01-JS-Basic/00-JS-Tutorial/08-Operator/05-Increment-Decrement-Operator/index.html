@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increment & Decrement</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <script>
+      //Increment operator:
+      //1.pre-increment operator
+      let count = 0;
+      console.log(++count); // 1
+      console.log(count); // 1
 
-<body>
-  <script>
-    //Increment operator:
-    //1.pre-increment operator
-    let count = 0
-    console.log(++count)        // 1
-    console.log(count)          // 1
+      //2.post-increment (count=count+1)
+      let count1 = 0;
 
-    //2.post-increment (count=count+1)
-    let count1 = 0
-    console.log(count1++)        // 0++
-    //0+1
-    console.log(count1)          // 1
+      console.log(count1++); // 0++
+      //0+1
+      console.log(count1); // 1
 
-    //Decrement operator
+      //Decrement operator
 
-    //1.pre-decrement ()
-    let count2 = 0
-    console.log(--count2) // -1
-    console.log(count2)  // -1
+      //1.pre-decrement ()
+      let count2 = 0;
+      console.log(--count2); // -1
+      console.log(count2); // -1
 
-    //2.post-decrement (count=count-1)
-    let count3 = 0
-    console.log(count3--) // 0
-    console.log(count3)   // -1
-  </script>
-</body>
-
+      //2.post-decrement (count=count-1)
+      let count3 = 0;
+      console.log(count3--); // 0
+      console.log(count3); // -1
+    </script>
+  </body>
 </html>

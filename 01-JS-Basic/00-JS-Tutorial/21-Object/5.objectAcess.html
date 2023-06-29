@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Two types of access object
+      //i.dot notation
+      //ii.brackets notation
+
+      //i.dot notation
+      const user = {
+        name: "Tutor Joes",
+        age: 30,
+        job: "Developer",
+      };
+
+      // Dot notation
+      console.log(user.name); // Output: "Tutor Joes"
+      user.name = "Joes";
+      console.log(user.name); // Output: "Joes"
+
+      //ii.bracket notation
+      // Bracket notation
+      console.log(user["age"]); // Output: 30
+      user["age"] = 25;
+      console.log(user["age"]); // Output: 25
+
+      //a).
+      const prop = "name";
+      console.log(user[prop]); // Output: "Joes"
+
+      //b).Keys with Space
+
+      let user = {
+        "first name": "Tutor",
+        "last name": "Joes",
+      };
+      console.log(user["first name"]); // "Tutor"
+      console.log(user["last name"]); // "Joes"
+
+      let key = "first name";
+      console.log(user[key]); // "Tutor"
+    </script>
+  </body>
+</html>

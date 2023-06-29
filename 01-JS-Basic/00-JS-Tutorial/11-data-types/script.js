@@ -1,4 +1,5 @@
 //Data Types in JavaScript
+//Javascript is a Dynamic programming (var a=45) is automatic number type in javascript
 
 // 1.Numbers:
 //Integers: Integer (negative, zero and positive) numbers Example: ... -3, -2, -1, 0, 1, 2, 3 ...
@@ -6,12 +7,14 @@
 
 let length = 16;
 let weight = 7.5;
+console.log(length, weight, typeof length); //16 7.5 "number"
 
 // 2.Strings:
 //A collection of one or more characters between two single quotes, double quotes, or backticks.
 
 let color = "Yellow";
 let lastName = "Johnson";
+console.log(color, lastName, typeof color); //Yellow Johnson string
 //let surName='Asabeneh';
 //let nickName=`mahi`;
 
@@ -21,27 +24,31 @@ let lastName = "Johnson";
 
 let x = true;
 let y = false;
+console.log(x, y, typeof x); //true false boolean
 
 // 4.Undefined:
 //In JavaScript, if we don't assign a value to a variable, the value is undefined. In addition to that, if a function is not returning anything, it returns undefined.
 
 let firstName;
-console.log(firstName); // undefined, because it is not assigned to a value yet
+console.log(firstName, typeof firstName); // undefined, because it is not assigned to a value yet
 
 // 5.Null
 // Null in JavaScript means an empty value.
 
 let emptyValue = null;
-console.log(emptyValue);
+console.log(emptyValue, typeof emptyValue); //null,object
 
 // 1.Object:
 const person = { firstName: "John", lastName: "Doe" };
+console.log(person, typeof person); //{firstName: 'John', lastName: 'Doe'} 'object'
 
 // 2.Array object:
 const cars = ["Saab", "Volvo", "BMW"];
+console.log(cars, typeof cars); //["Saab", "Volvo", "BMW"] 'object'
 
 // 3.Date object:
 const date = new Date("2022-03-25");
+console.log(date, typeof date); //today date 'object'
 
 /*
 JavaScript primitive data types:
@@ -62,7 +69,7 @@ JavaScript non-primitive data types or complex data type (Object References)
 
 */
 
-//1.primitive Data Type is not modify and mutable
+//1.primitive Data Type is not modify and mutable:
 let word = "JavaScript";
 word[0] = "m";
 console.log(word); //Javascript
@@ -88,9 +95,9 @@ console.log(nums); // [10, 2, 3]
 
 //As you can see, an array, which is a non-primitive data type is mutable. Non-primitive data types cannot be compared by value. Even if two non-primitive data types have the same properties and values, they are not strictly equal.
 
-let nums = [1, 2, 3];
+let nums1 = [1, 2, 3];
 let numbers = [1, 2, 3];
-console.log(nums == numbers); // false
+console.log(nums1 == numbers); // false
 
 let userOne = {
   name: "Asabeneh",
@@ -107,10 +114,10 @@ console.log(userOne == userTwo); // false
 
 //Rule of thumb, we do not compare non-primitive data types. Do not compare arrays, functions, or objects. Non-primitive values are referred to as reference types, because they are being compared by reference instead of value. Two objects are only strictly equal if they refer to the same underlying object.
 
-let nums = [1, 2, 3];
-let numbers1 = nums;
+let nums2 = [1, 2, 3];
+let numbers1 = nums2;
 
-console.log(nums == numbers1); // true
+console.log(nums2 == numbers1); // true
 
 let userOne1 = {
   name: "Asabeneh",
@@ -139,9 +146,11 @@ double (64-bit floating point).
 
 // With decimals:
 let x1 = 34.0;
+console.log("with decimals", x1); //34
 
 // Without decimals:
 let x2 = 34;
+console.log("without decimals", x2); //34
 
 var age = 23; //Number Literal
 var gpay = 34.6;
@@ -151,14 +160,14 @@ console.log(gpay); //34.6
 
 //var octNumber = 0255;
 var hexNum = 0xff;
-console.log(octNumber); //173
+//console.log(octNumber);//previous octNumber is a zero not printing
 console.log(hexNum); //255
 
 var amt = 1.1e6;
 console.log(amt); //1100000
 
 let price = 200.0; // interpreted as an integer 200
-console.log(price);
+console.log(price); //200
 
 //js storage min max value storage
 console.log(Number.MAX_VALUE); //1.7976931348623157e+308
@@ -177,8 +186,10 @@ console.log(NaN == NaN); // false
 
 //Exponential Notation
 //Extra large or extra small numbers can be written with scientific (exponential) notation:
-let y1 = 123e5; // 12300000
-let z1 = 123e-5; // 0.00123
+let y1 = 123e5;
+let z1 = 123e-5;
+console.log(y1); // 12300000
+console.log(z1); // 0.00123
 
 //2.String --->'',"",` `
 
@@ -187,14 +198,16 @@ var lName = "manan";
 let phrase = `can embed another ${lName}`;
 console.log(fName); //selva
 console.log(lName); //manan
-console.log(phrase);
+console.log(phrase); //can embed another manan
 
 // use \ to escape the single quote (')
 let message = "I'm also a valid string";
+console.log(message); //I'm also a valid string
 
 //concat +
 let str = "JavaScript";
 str = str + " String";
+console.log(str); //JavaScript String
 
 //
 let s = "JavaScript";
@@ -204,12 +217,15 @@ console.log(s); //JavaScript
 //
 // Single quote inside double quotes:
 let answer1 = "It's alright";
+console.log(answer1); //It's alright
 
 // Single quotes inside double quotes:
 let answer2 = "He is called 'Johnny'";
+console.log(answer2); //He is called 'Johnny'
 
 // Double quotes inside single quotes:
 let answer3 = 'He is called "Johnny"';
+console.log(answer3); //He is called "Johnny"
 
 //3.Boolean
 
@@ -239,28 +255,27 @@ console.log(Boolean({ foo: 100 })); // true on non-empty object
 console.log(Boolean(null)); // false
 
 //4.null
-/*
+
 var h1 = null;
-console.log(h1);//null
+console.log(h1); //null
 console.log(typeof h1); // object
-*/
+
 // let myVariable = null;
-// console.log(myVariable);
+// console.log(myVariable); //null
 // myVariable = "harshit";
-// console.log(myVariable, typeof myVariable);
-// console.log(typeof null);
+// console.log(myVariable, typeof myVariable); //harshit string
+// console.log(typeof null); //object
 // bug , error
 
 //5.undefined
-/*
-var weird;// Value is undefined, type is undefined
-console.log(weird,typeof weird); //undefined,undefined
+
+var weird; // Value is undefined, type is undefined
+console.log(weird, typeof weird); //undefined,undefined
 
 //.
 let car = "Volvo";
 car = undefined; // Value is undefined, type is undefined
-console.log(car,typeof car);
-*/
+console.log(car, typeof car); //undefined undefined
 
 //6.Symbol
 //ES6 2015
@@ -292,50 +307,46 @@ console.log(typeof pageView); // 'bigint'
 
 //
 let x4 = BigInt("123456789012345678901234567890");
+console.log(x4); //123456789012345678901234567890n
 
 //Reference Data Types
-/*
+
 //1.Arrays
-var courses = ['C', 'C++', 'Java']; //Array
+var courses = ["C", "C++", "Java"]; //Array
 console.log(typeof courses); //object
 
 //.
-const cars = ["Saab", "Volvo", "BMW"];
-console.log(cars[0]);
+const cars2 = ["Saab", "Volvo", "BMW"];
+console.log(cars2[0]);
 
 //2.Object
 var student = {
-  name: 'Joes', //Object
+  name: "Joes", //Object
   age: 22,
 };
 console.log(typeof student); //object
 
 //.
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-console.log(person.firstName);
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+console.log(person3.firstName);
 
+//3.Date
 var d = new Date(); //Date function
 console.log(d);
 console.log(typeof d); //object
-*/
 
 //The typeof Operator
 
 //Returns "string"
-document.getElementById("demo").innerHTML =
-  typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+console.log(typeof "", typeof "John", typeof "John Doe"); //string string string string
 
 //Returns "number"
-document.getElementById("demo").innerHTML =
-  typeof 0 +
-  "<br>" +
-  typeof 314 +
-  "<br>" +
-  typeof 3.14 +
-  "<br>" +
-  typeof 3 +
-  "<br>" +
-  typeof (3 + 4);
+console.log(typeof 0, typeof 314, typeof 3.14, typeof 3, typeof (3 + 4)); //number number number number number
 
 /*
 i.Empty Values
@@ -344,4 +355,4 @@ An empty value has nothing to do with undefined.
 An empty string has both a legal value and a type.
 */
 let car1 = "";
-console.log(car1, typeof car1);
+console.log(car1, typeof car1); //  string

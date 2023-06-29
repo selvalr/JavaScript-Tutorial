@@ -8,7 +8,7 @@
 
 //1.Back-Tics Syntax
 let text = `Hello world!`;
-console.log(text);
+console.log(text); //Hello World
 
 //2.Quotes Inside Strings
 let text1 = `He's often 

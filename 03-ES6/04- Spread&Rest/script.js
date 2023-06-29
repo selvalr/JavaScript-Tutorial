@@ -49,3 +49,20 @@ function addAll(...numbers) {
 
 const ans = addAll(4, 5, 4, 2, 10);
 console.log(ans);
+
+//i.A rest parameter function is used to accept an arbitrary number of arguments as an array. The rest parameter is defined by three dots (...) followed by the parameter name.
+
+//For example
+
+function myFunction(first, second, ...rest) {
+  console.log(first);
+  console.log(second);
+  console.log(rest);
+}
+
+//ii.On the other hand, the spread operator is used to expand an iterable (such as an array or string) into individual elements. The spread operator is defined by three dots (...) and can be used in function calls, array literals, and object literals. For example:
+
+let myArray = [1, 2, 3];
+let newArray = [...myArray, 4, 5];
+console.log(newArray);
+// Output: [1, 2, 3, 4, 5]

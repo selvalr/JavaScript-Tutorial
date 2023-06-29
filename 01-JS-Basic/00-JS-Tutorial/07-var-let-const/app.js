@@ -33,59 +33,62 @@ if (true) {
   //var msg = 'selva'; //inside and outside block
   //let msg = 'Welcome to selva'; //inside block
   const msg = "selva"; //constant
-  console.log(msg);
+  console.log(msg); //selva
 }
-console.log(msg);
+//console.log(msg); //error message
 
 //2.Redeclarations
 
 //Redeclaration Allowed var:
 
 var a1 = 25;
-console.log(a1);
+console.log(a1); //25
 
 var a1 = 45;
-console.log(a1);
+console.log(a1); //45
 
 //ReDeclaration not allowed let const
 // declare variable with let keyword
+
 /*
-let a=25;
-a=26;
-console.log(a);
- 
- //error in let a in two time declared
-let a=45;
+ let a=25;
+ a=26;
  console.log(a);
- */
+
+  error in let a in two time declared
+ let a=45;
+  console.log(a);
+
+*/
 
 //Redeclaration and reasign is not allowed:
 
 /*
-const a=25;
-console.log(a)
- //error to redeclared const to asign one time
-const a=45;
- 
-*/
+ const a=25;
+ a=26;//reasign not allowed
+ console.log(a)
+  //error to redeclared const to asign one time
+ const a=45;//Redeclaration not allowed
+
+ */
 
 //-----------------------------------
 
 //3.Value assignment
 
 /*
-var a=25;
-console.log(a);
-a=45;
-console.log(a);
-*/
+ var a=25;
+ console.log(a);
+ a=45;
+ console.log(a);
+ */
 
 /*
-let a = 25;
-console.log(a);
-a = 45;
-console.log(a);
-*/
+ let a = 25;
+ console.log(a);//25
+ a = 45;
+ console.log(a);//45
+ */
 
 /*
 const a=25;
@@ -94,7 +97,6 @@ a=45;  //Constant Error
 console.log(a);
 */
 
-/*
 //Change the elements of constant array
 //Change the properties of constant object
 
@@ -104,7 +106,6 @@ console.log(student.name);
 student.name = "selva";
 console.table(student);
 
-
 // You can create a constant array:
 const cars = ["Saab", "Volvo", "BMW"];
 // You can change an element:
@@ -112,8 +113,6 @@ cars[0] = "Toyota";
 // You can add an element:
 cars.push("Audi");
 console.log(cars);
-
-*/
 
 /*5,Let Hoisting */
 
@@ -129,13 +128,13 @@ let carName = "Volvo";
 
 // const and let only exist in the blocks they are defined in.
 {
-  let a = 1;
-  const b = 1;
-  var c = 1;
+  let a2 = 1;
+  const b2 = 1;
+  var c2 = 1;
 }
-console.log(a); // ReferenceError
-console.log(b); // ReferenceError
-console.log(c); // Prints 1
+//console.log(a2); // ReferenceError
+//console.log(b2); // ReferenceError
+console.log(c2); // Prints 1
 
 //Redeclaring Variables
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main-div">
+      <form action="" method="post">
+        <input type="number" id="num-input" />
+        <button type="submit" id="click-btn">send</button>
+      </form>
+    </div>
+    <script>
+      const btn = document.getElementById("click-btn");
+      const input = document.getElementById("num-input");
+      const mainDiv = document.getElementById("main-div");
+
+      input.focus();
+
+      /*
+        btn.addEventListener("click", (e) => {
+                //e.preventDefault();
+                //e.stopPropagation();
+                //e.stopImmediatePropagation();
+        });
+      */
+
+      btn.addEventListener("click", (e) => {
+        console.log("hello world from click");
+      });
+
+      mainDiv.addEventListener("click", (e) => {
+        console.log("hello world from click");
+      });
+    </script>
+  </body>
+</html>

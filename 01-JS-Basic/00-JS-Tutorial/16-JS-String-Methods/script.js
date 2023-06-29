@@ -1,19 +1,19 @@
 //append
 let a = "selva";
 a += "manan";
-console.log("append" + a);
+console.log("append " + a); //append selvamanan
 
 //escape
 let c = "she can't run";
-console.log(c);
+console.log(c); //she can't run
 
 //1.string length:
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let length = text.length;
-console.log(length);
+console.log(length); //26
 
 let lastIndex = text.length - 1;
-console.log(lastIndex); // 26
+console.log(lastIndex); // 25
 console.log(text[lastIndex]); // z
 
 //Extracting String Parts:

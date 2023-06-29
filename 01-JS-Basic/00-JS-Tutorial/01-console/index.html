@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console in JS</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COnsole in JS</title>
-</head>
+  <body>
+    <script>
+      console.log("hello Selva"); //string
+      console.log(123456); //number
+      console.log(18.25); //float number
+      console.log(true); //boolean
+      console.log([58, 78, 96, 35]); //array
+      console.log({ fname: "selva", age: 25 }); //object
+      console.table({ fname: "selva", age: 25 }); //table object
+      console.error("Custom Sample Error"); //error console
+      console.warn("Custom Sample Error"); //warn console
+      //console.clear(); //clear console
 
-<body>
-  <script>
+      console.time("Timer"); //time console start
+      for (i = 0; i < 10; i++) {
+        console.log(i);
+      }
+      console.timeEnd("Timer"); //end console code timing
 
-    console.log('hello Selva');//string
-    console.log(123456);//number
-    console.log(18.25);//float number
-    console.log(true);//boolean
-    console.log([58, 78, 96, 35]);//array
-    console.log({ fname: 'selva', age: 25 });//object
-    console.table({ fname: 'selva', age: 25 });//table object
-    console.error("Custom Sample Error");//error console
-    console.warn("Custom Sample Error");//warn console
-    //console.clear();//clear console
+      console.group("simple");
+      console.count("count");
+      console.groupEnd("simple");
 
-    console.time("Timer");//time console start
-    for (i = 0; i < 10; i++) {
-      console.log(i);
-    }
-    console.timeEnd("Timer");//end console code timing
-
-
-    console.group('simple');
-    console.count('count');
-    console.groupEnd('simple');
-
-    // Custom Console log example
-    const spacing = '10px';
-    const styles = `padding: ${spacing}; background-color: white; color: green; font-style:
-		italic; border: 1px solid black; font-size: 2em;`;
-    console.log('%cGeeks for Geeks', styles);
-  </script>
-</body>
-
+      // Custom Console log examples
+      const spacing = "10px";
+      const styles = `padding: ${spacing}; background-color: white; color: green; font-style:
+       italic; border: 1px solid black; font-size: 2em;`;
+      console.log("%cSelva", styles);
+    </script>
+  </body>
 </html>

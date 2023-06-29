@@ -15,28 +15,28 @@ Non-primitive data types in JavaScript includes:
 
 1.Objects
 2.Arrays
+3.Date Objects
 */
 
 //1.primitive:string,number,boolean,null,undefined,symbol,bigint
 
-const foo = 1;
-let bar = foo;
+let foo = 1; //foo=1;
+let bar = foo; //bar=1;
 console.log(foo); //1
 console.log(bar); //1
 foo++;
 console.log(foo); //2
 console.log(bar); //1
 
-bar = 9;
+foo = 9; //foo=9;
+console.log(foo, bar); //9,1
 
-console.log(foo, bar); // => 1, 9
-
-//i.
+//i.string
 let word = "JavaScript";
 word[0] = "Y";
-console.log(word);
+console.log(word); //JavaScript
 
-//ii.
+//ii.Number
 let numOne = 3;
 let numTwo = 3;
 
@@ -56,14 +56,15 @@ console.log(lightOn == lightOff); // false
 
 const food = [1, 2];
 const bars = food;
-console.log(food);
-console.log(bars);
+console.log(food); //[1, 2]
+console.log(bars); //[1, 2]
 food.push(3);
-console.log(food);
-console.log(bars);
+console.log(food); //[1,2,3]
+console.log(bars); //[1,2,3]
 
 bars[0] = 9;
 
+console.log(bars); //[9,2,3]
 console.log(food[0], bars[0]); // => 9, 9
 
 //i.reference Complex:object,array,function
@@ -79,13 +80,13 @@ let numbers = [1, 2, 3];
 console.log(nums2 == numbers); // false
 
 let userOne = {
-  name: "Asabeneh",
+  name: "selva",
   role: "teaching",
   country: "Finland",
 };
 
 let userTwo = {
-  name: "Asabeneh",
+  name: "selva",
   role: "teaching",
   country: "Finland",
 };

@@ -24,6 +24,14 @@
 
 */
 
+/*
+Decimal Binary
+2       0010
+3       0011
+4       0100
+5       0101
+*/
+
 document.getElementById("demo").innerHTML = 5 & 1; //(0101 & 0001)   1(1)
 document.getElementById("demo1").innerHTML = 5 | 1; //(0101 | 0001)  5(101)
 

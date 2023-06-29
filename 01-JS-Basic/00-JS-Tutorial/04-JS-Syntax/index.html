@@ -77,13 +77,16 @@
       document.write(sum); //26
       console.log((5 + 6) * 10); //110
     </script>
+
     <hr />
 
     <h2>3.JS Expression</h2>
+
     <p>
       Expression is the combination of values, operators, and variables. It is
       used to compute the values.
     </p>
+
     <script>
       // Variable Declarations
       var x, num, sum;
@@ -146,24 +149,26 @@
     <hr />
 
     <h2>6.JavaScript Data Types:</h2>
+
     <p>1.Primitive data type</p>
+
     <p>2.Non-primitive (reference) data type</p>
+
     <script>
       // It store string data type
-      var txt = "GeeksforGeeks";
+      var txt = "Geeks";
 
       // It store integer data type
       var a = 5;
       var b = 5;
 
       // It store Boolean data type
-      (a == b)(
-        //=== is a data type  and value true ans true
-        a === b
-      ); //---> returns true to the console
+      console.log(a == b); //true
+      console.log(a === b); //=== is a data type  and value true ans true
 
       // It store array data type
       var places = ["GFG", "Computer", "Hello"];
+      console.log(places);
 
       // It store object data (objects are represented in the below way mainly)
       var Student = {
@@ -172,6 +177,7 @@
         age: 35,
         mark: "blueEYE",
       };
+      console.log(Student);
     </script>
 
     <hr />
@@ -231,10 +237,15 @@
       //case sensitive is two name is different
       var lastName = "Doe";
       var lastname = "Peterson";
-      document.write(lastName);
+      console.log(
+        "caseSentive is lastname and lastName is difference :" + lastName
+      );
     </script>
     <hr />
 
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
     <script src="script.js"></script>
   </body>
 </html>

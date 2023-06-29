@@ -13,9 +13,10 @@
       let now = new Date();
       console.log(now); //current date and time
 
-      let dob = new Date('1,Jan 1990');
+      let dob = new Date("1,Jan 1990");
       console.log(dob); //fixed date
-      dob = new Date('1990-01-01');
+
+      dob = new Date("1990-01-01");
       console.log(dob);
       console.log(dob.valueOf()); //1990 after how much millisecond running
 
@@ -25,14 +26,14 @@
       //Regular Expression two type create regex:
       //1.constructor syntax
       let regex = /[0-9]/;
-      console.log(regex.test('some text')); //false
-      console.log(regex.test('some 12345 text')); //true
+      console.log(regex.test("some text")); //false
+      console.log(regex.test("some 12345 text")); //true
 
       //2.Literal syntax:
 
-      regex = new RegExp('[0-9]');
-      console.log(regex.test('some  text')); //false
-      console.log(regex.test('some 12345 text')); //true
+      regex = new RegExp("[0-9]");
+      console.log(regex.test("some  text")); //false
+      console.log(regex.test("some 12345 text")); //true
     </script>
   </body>
 </html>

@@ -27,11 +27,11 @@ Variable values are called Variables.
 
 //1.JavaScript Literals
 
-document.getElementById("de").innerHTML = 10.5; //Numbers are written with or without decimals:
-document.getElementById("de").innerHTML = "John Doe"; //Strings are text, written within double or single quotes:
+document.getElementById("demo").innerHTML = 10.5; //Numbers are written with or without decimals:
+document.getElementById("demo1").innerHTML = "John Doe"; //Strings are text, written within double or single quotes:
 
 //2.JavaScript Variables
 
-let x;
-x = 6;
-document.getElementById("demo").innerHTML = x;
+let x2;
+x2 = 6;
+document.getElementById("demo2").innerHTML = x2;

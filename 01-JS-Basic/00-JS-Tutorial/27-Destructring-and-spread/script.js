@@ -313,3 +313,13 @@ function printDetails({ firstName, gender, age }) {
 }
 
 printDetails(person4);
+
+//i.param destructuring
+const person5 = { name: "Joes", age: 30, city: "Salem", country: "India" };
+
+function sayHello({ name, age, ...rest }) {
+  console.log(`Hello, ${name}! You are ${age} years old`);
+  console.log(rest);
+}
+
+sayHello(person5); // Output: "Hello, Joes! You are 30 years old" and {city: 'Salem', country: 'India'}

@@ -44,5 +44,5 @@ When a JavaScript variable is declared with the keyword "new", the variable is c
 x = new String();        // Declares x as a String object
 y = new Number();        // Declares y as a Number object
 z = new Boolean();       // Declares z as a Boolean object
-  
-  */
+
+*/

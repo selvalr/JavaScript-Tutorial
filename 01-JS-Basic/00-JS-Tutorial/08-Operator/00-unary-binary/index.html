@@ -4,66 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>unary</title>
   </head>
   <body>
     <script>
-      //unary
+      //unary (-)
       let x = 1;
       x = -x;
-      alert(x); // -1, unary negation was applied
+      console.log(x); // -1, unary negation was applied
 
       //binary
       let x1 = 1,
         y = 3;
-      alert(y - x1); // 2, binary minus subtracts values
+      console.log(y - x1); // 2, binary minus subtracts values
 
       //String concatenation with binary +
 
       let s = "my" + "string";
-      alert(s); // mystring
+      console.log(s); // mystring
 
-      alert("1" + 2); // "12"
-      alert(2 + "1"); // "21"
+      console.log("1" + 2); // "12"
+      console.log(2 + "1"); // "21"
 
-      alert(2 + 2 + "1"); // "41" and not "221"
+      console.log(2 + 2 + "1"); // "41" and not "221"
 
-      alert("1" + 2 + 2); // "122" and not "14"
+      console.log("1" + 2 + 2); // "122" and not "14"
 
+      console.log(6 - "2"); // 4, converts '2' to a number
+      console.log("6" / "2"); // 3, converts both operands to numbers
 
-      alert( 6 - '2' ); // 4, converts '2' to a number
-alert( '6' / '2' ); // 3, converts both operands to numbers
+      //Numeric conversion, unary +
 
+      // No effect on numbers
+      let x2 = 1;
+      console.log(+x2); // 1
 
-//Numeric conversion, unary +
+      let y2 = -2;
+      console.log(+y2); // -2
 
-// No effect on numbers
-let x2 = 1;
-alert( +x2 ); // 1
+      // Converts non-numbers
+      console.log(+true); // 1
+      console.log(+""); // 0
 
-let y2 = -2;
-alert( +y2 ); // -2
+      let apples = "2";
+      let oranges = "3";
+      console.log(apples + oranges); // "23", the binary plus concatenates strings
 
-// Converts non-numbers
-alert( +true ); // 1
-alert( +"" );   // 0
+      let apple = "2";
+      let orange = "3";
 
+      // both values converted to numbers before the binary plus
+      console.log(+apple + +orange); // 5
 
-let apples = "2";
-let oranges = "3";
-alert( apples + oranges ); // "23", the binary plus concatenates strings
-
-
-
-let apple = "2";
-let orange = "3";
-
-// both values converted to numbers before the binary plus
-alert( +apple + +orange ); // 5
-
-// the longer variant
-// alert( Number(apples) + Number(oranges) ); // 5
-
+      // the longer variant
+      // console.log( Number(apples) + Number(oranges) ); // 5
     </script>
+
+    <!-- <script src="./script.js"></script>-->
   </body>
 </html>

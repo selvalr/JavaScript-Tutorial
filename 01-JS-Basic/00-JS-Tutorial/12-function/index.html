@@ -21,7 +21,7 @@
       //1.function return
       // Function is called, the return value will end up in x
       let x = myFunction(4, 3);
-      console.log(x);
+      console.log(x); //12
 
       function myFunction(a, b) {
         // Function returns the product of a and b
@@ -36,7 +36,7 @@
       }
 
       let value = toCelsius(77);
-      console.log(value);
+      console.log(value); //25
 
       //i.Accessing a function with incorrect parameters can return an incorrect answer:
 
@@ -54,11 +54,11 @@
       }
 
       let value2 = toCelsius2;
-      console.log(value2);
+      console.log(value2); //function print
 
       //2.Functions Used as Variable Values
       let text = "The temperature is " + toCelsius3(77) + " Celsius.";
-      console.log(text);
+      console.log(text); //The temperature is 25 Celsius.
 
       function toCelsius3(fahrenheit) {
         return (5 / 9) * (fahrenheit - 32);
@@ -77,12 +77,12 @@
       greet("selva");
       greet("manan");
 
-      //.
+      //i.arquemnt plus to not work
       function addNum(a, b) {
         return a + b;
       }
       x = addNum(6 + 8);
-      console.log(x);
+      console.log(x); //Nan
 
       //4.Local Variables
       /*
@@ -99,10 +99,10 @@
       function myFunction() {
         let carName = "Volvo";
         document.getElementById("demo1").innerHTML =
-          typeof carName + " " + carName;
+          typeof carName + " " + carName; //string volvo
       }
 
-      document.getElementById("demo2").innerHTML = typeof carName;
+      document.getElementById("demo2").innerHTML = typeof carName; //undefined
 
       // 1.Function Returning a Function
 
@@ -115,13 +115,16 @@
       }
 
       var triple = multiple(3);
+      console.log(triple()); //nan
+      console.log(triple(5)); //15
       triple(2); // returns 6
       triple(3); // returns 9
+      console.log(triple(2)); //6
 
       //2.Nested Functions
       function greet(firstName) {
         function SayHello() {
-          alert("Hello " + firstName);
+          console.log("Hello " + firstName);
         }
 
         return SayHello();
@@ -132,7 +135,7 @@
       //3. functions inside function
       function app() {
         const myFunc = () => {
-          console.log("hello from myFunc");
+          console.log("hello from myFunc"); //2
         };
 
         const addTwo = (num1, num2) => {
@@ -141,13 +144,14 @@
 
         const mul = (num1, num2) => num1 * num2;
 
-        console.log("inside app");
+        console.log("inside app"); //1
         myFunc();
-        console.log(addTwo(2, 3));
-        console.log(mul(2, 3));
+        console.log(addTwo(2, 3)); //3
+        console.log(mul(2, 3)); //4
       }
       app();
     </script>
-    <script src="./script.js"></script>
+    <!--<script src="./script.js"></script>-->
+    <!--<script src="./lexical.js"></script>-->
   </body>
 </html>
