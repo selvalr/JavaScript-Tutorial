@@ -16,7 +16,7 @@ arr = ["selva", "baskar", "karthi", "rav"];
 arr.forEach((val) => {
   console.log(val.toUpperCase());
 });
-console.log(arr);
+console.log(arr); //['selva', 'baskar', 'karthi', 'rav']
 
 // array uppercase change original value
 
@@ -37,4 +37,4 @@ console.log(priceUSD);
 let priceUSD1 = [20, 30, 11];
 let priceINR1 = priceUSD1.forEach((x1) => x1 * 84);
 console.log(priceINR1);
-console.log(priceUSD1);
+console.log(priceUSD1); //[20,30,11]

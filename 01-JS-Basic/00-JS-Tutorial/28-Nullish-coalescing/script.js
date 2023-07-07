@@ -11,7 +11,7 @@ console.log(c); //55
 
 let a1;
 let b1 = a1 ?? "not a value";
-console.log(b1);
+console.log(b1); //not a value
 
 let firstName = null;
 let lastName = null;

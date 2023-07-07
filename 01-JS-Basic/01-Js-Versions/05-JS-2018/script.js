@@ -3,31 +3,28 @@
 
 //With asynchronous iterables, we can use the await keyword in for/of loops.
 
-
 //  for await () {}
-
 
 //2.JavaScript Promise.finally
 //ECMAScript 2018 finalizes the full implementation of the Promise object with Promise.finally:
 
+/*
 let myPromise = new Promise();
 
 myPromise.then();
 myPromise.catch();
 myPromise.finally();
-
+*/
 
 //3.JavaScript Object Rest Properties
 //ECMAScript 2018 added rest properties.
 
 //This allows us to destruct an object and collect the leftovers onto a new object:
 
-
 let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-x; // 1
-y; // 2
-z; // { a: 3, b: 4 }
-
+console.log(x); // 1
+console.log(y); // 2
+console.log(z); // { a: 3, b: 4 }
 
 //4.New JavaScript RegExp Features
 //ECMAScript 2018 added 4 new RegExp features:
@@ -38,7 +35,6 @@ Named Capture Groups
 s (dotAll) Flag
 The new RegExp features is supported in all modern browsers since June 2020:
 */
-
 
 //5.
 /*

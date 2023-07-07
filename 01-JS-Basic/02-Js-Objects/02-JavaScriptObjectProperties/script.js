@@ -17,107 +17,98 @@ objectName[expression]   // x = "age"; person[x]
 */
 
 const person = {
-    firstname: "John",
-    lastname: "Doe",
-    age: 50,
-    eyecolor: "blue",
-    "likes birds": true  // multiword property name must be quoted
-  };
-console.log(person.age);  //dot
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue",
+  "likes birds": true, // multiword property name must be quoted
+};
+console.log(person.age); //dot
 console.log(person["firstname"]); //brackeet
 console.log(person["likes birds"]);
-
 
 //2.JavaScript for...in Loop
 
 const person1 = {
-    fname:"John",
-    lname:"Doe",
-    age:25
-  }; 
-  
-  let txt = "";
-  for (let x in person1) {
-    txt += person1[x] + " ";
-  }
-  
-console.log(txt);
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+};
 
+let txt = "";
+for (let x in person1) {
+  txt += person1[x] + " ";
+}
+
+console.log(txt);
 
 //3.Adding New Properties
 const person2 = {
-    firstname: "John",
-    lastname: "Doe",
-    age: 50,
-    eyecolor: "blue"
-  };
-  
-  person2.nationality = "English";
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue",
+};
 
-  console.log(person2);
+person2.nationality = "English";
 
+console.log(person2);
 
-  //3.Deleting Properties
-  const person4 = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50,
-    eyeColor: "blue"
-  };
-  
-  delete person4.age;//(or) delete person["age"];
-  console.log(person4);
+//3.Deleting Properties
+const person4 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
 
+delete person4.age; //(or) delete person["age"];
+console.log(person4);
 
+//4.Nested Object
 
-  //4.Nested Object
-
-  const myObj = {
-    name: "John",
-    age: 30,
-    cars: {
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: {
     car1: "Ford",
     car2: "BMW",
-    car3: "Fiat"
-    }
+    car3: "Fiat",
+  },
+};
+console.log(myObj.cars.car2); //(or )  myObj.cars["car2"]; (or)  myObj["cars"]["car2"]; (or)  let p1 = "cars";let p2 = "car2"; myObj[p1][p2];
+
+//5.Nested Arrays and Objects
+let x = "";
+const myObj1 = {
+  name: "John",
+  age: 30,
+  cars: [
+    { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+    { name: "BMW", models: ["320", "X3", "X5"] },
+    { name: "Fiat", models: ["500", "Panda"] },
+  ],
+};
+
+for (let i in myObj1.cars) {
+  x += "<h2>" + myObj1.cars[i].name + "</h2>";
+  for (let j in myObj1.cars[i].models) {
+    x += myObj1.cars[i].models[j] + "<br>";
   }
-  console.log(myObj.cars.car2);//(or )  myObj.cars["car2"]; (or)  myObj["cars"]["car2"]; (or)  let p1 = "cars";let p2 = "car2"; myObj[p1][p2];
+}
 
+console.log(x);
 
-  //5.Nested Arrays and Objects
-let x="";
-  const myObj1 = {
-    name: "John",
-    age: 30,
-    cars: [
-      {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
-      {name:"BMW", models:["320", "X3", "X5"]},
-      {name:"Fiat", models:["500", "Panda"]}
-    ]
-  }
+//Square brackets
 
-  for (let i in myObj1.cars) {
-    x += "<h2>" + myObj1.cars[i].name + "</h2>";
-    for (let j in myObj1.cars[i].models) {
-      x += myObj1.cars[i].models[j] + "<br>";
-    }
-  }
-  
-  console.log(x);
+let user = {
+  name: "John",
+  age: 30,
+  "likes birds": true, // multi word property name must be quoted
+};
 
-
-
-  //Square brackets
-
-  let user = {
-    name: "John",
-    age: 30,
-    "likes birds": true  // multiword property name must be quoted
-  };
-  
-  // this would give a syntax error
+// this would give a syntax error
 //user.likes birds = true
-
 
 let user1 = {};
 // set
@@ -127,17 +118,14 @@ alert(user1["likes birds"]); // true
 // delete
 delete user1["likes birds"];
 
-
 let key = prompt("What do you want to know about the user?", "name");
 // access by variable
-alert( user[key] ); // John (if enter "name")
+alert(user[key]); // John (if enter "name")
 
 /*
 let key = "name";
 alert( user.key ) // undefined
 */
-
-
 
 //5.Computed properties
 
@@ -147,8 +135,7 @@ let bag = {
   [fruit]: 5, // the name of the property is taken from the variable fruit
 };
 
-alert( bag.apple ); // 5 if fruit="apple"
-
+alert(bag.apple); // 5 if fruit="apple"
 
 //Essentially, that works the same as:
 /*
@@ -167,7 +154,6 @@ let bag = {
 };
 */
 
-
 //6.Property value shorthand
 
 function makeUser(name, age) {
@@ -181,7 +167,6 @@ function makeUser(name, age) {
 let user5 = makeUser("John", 30);
 alert(user5.name); // John
 
-
 //same as
 /*
 function makeUser(name, age) {
@@ -193,17 +178,16 @@ function makeUser(name, age) {
 }
 */
 
-
 //7.Property names limitations
 
 // these properties are all right
 let obj = {
   for: 1,
   let: 2,
-  return: 3
+  return: 3,
 };
 
-alert( obj.for + obj.let + obj.return );  // 6
+alert(obj.for + obj.let + obj.return); // 6
 
 //For instance, a number 0 becomes a string "0" when used as a property key:
 /*
@@ -231,12 +215,10 @@ alert(obj.__proto__); // [object Object] - the value is an object, didn't work a
 
 "key" in object */
 
-
 let user6 = { name: "John", age: 30 };
 
-alert( "age" in user6 ); // true, user.age exists
-alert( "blabla" in user6 ); // false, user.blabla doesn't exist
-
+alert("age" in user6); // true, user.age exists
+alert("blabla" in user6); // false, user.blabla doesn't exist
 
 /*
 

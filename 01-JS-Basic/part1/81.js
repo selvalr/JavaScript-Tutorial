@@ -1,21 +1,20 @@
-function hello(){
-    console.log("hello world");
+function hello() {
+  console.log("hello world");
 }
 
 // javascript function ===> function  + object
 
-// console.log(hello.name);
+console.log(hello.name);
 
-// you can add your own properties 
-// hello.myOwnProperty = "very unique value";
-// console.log(hello.myOwnProperty);
+// you can add your own properties
+hello.myOwnProperty = "very unique value";
+console.log(hello.myOwnProperty);
 
 // name property ---> tells function name;
 
 // function provides more usefull properties.
 
-
-// console.log(hello.prototype); // {}
+console.log(hello.prototype); // {}
 
 // only functions provide prototype property
 

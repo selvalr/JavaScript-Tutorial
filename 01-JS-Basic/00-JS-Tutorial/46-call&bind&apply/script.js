@@ -1,39 +1,40 @@
 //call
 var person1 = {
-    firstName: 'Jon', lastName: 'Kuperman'
-
+  firstName: "Jon",
+  lastName: "Kuperman",
 };
+
 var person2 = {
-    firstName: 'Kelly', lastName: 'King'};
+  firstName: "Kelly",
+  lastName: "King",
+};
 
 function say(greeting) {
-    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+  console.log(greeting + " " + this.firstName + " " + this.lastName);
 }
 
-say.call(person1, 'Hello'); // Hello Jon Kuperman
-say.call(person2, 'Hello'); // Hello Kelly King
-
+say.call(person1, "Hello"); // Hello Jon Kuperman
+say.call(person2, "Hello"); // Hello Kelly King
 
 //Apply
 
-var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
-var person2 = {firstName: 'Kelly', lastName: 'King'};
+var person1 = { firstName: "Jon", lastName: "Kuperman" };
+var person2 = { firstName: "Kelly", lastName: "King" };
 
 function say(greeting) {
-    console.log(greeting + ' ' + this.firstName + ' ' + this.lastName);
+  console.log(greeting + " " + this.firstName + " " + this.lastName);
 }
 
-say.apply(person1, ['Hello']); // Hello Jon Kuperman
-say.apply(person2, ['Hello']); // Hello Kelly King
-
+say.apply(person1, ["Hello"]); // Hello Jon Kuperman
+say.apply(person2, ["Hello"]); // Hello Kelly King
 
 //Bind
 
-var person1 = {firstName: 'Jon', lastName: 'Kuperman'};
-var person2 = {firstName: 'Kelly', lastName: 'King'};
+var person1 = { firstName: "Jon", lastName: "Kuperman" };
+var person2 = { firstName: "Kelly", lastName: "King" };
 
 function say() {
-    console.log('Hello ' + this.firstName + ' ' + this.lastName);
+  console.log("Hello " + this.firstName + " " + this.lastName);
 }
 
 var sayHelloJon = say.bind(person1);

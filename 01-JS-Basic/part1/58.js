@@ -1,10 +1,8 @@
-// filter method 
+// filter method
 
-const numbers = [1,3,2,6,4,8];
+const numbers = [1, 3, 2, 6, 4, 8];
 
-
-
-const evenNumbers = numbers.filter((number)=>{
-    return number % 2 === 0;
+const evenNumbers = numbers.filter((number) => {
+  return number % 2 === 0;
 });
-console.log(evenNumbers);
+console.log(evenNumbers); //[2,4,6,8]

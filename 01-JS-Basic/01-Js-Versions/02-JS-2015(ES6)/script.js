@@ -44,7 +44,7 @@ var x = function(x, y) {
 
 // ES6
 const arrowFun = (x, y) => x * y;
-console.log(arrowFun(3, 4));
+console.log(arrowFun(3, 4)); //12
 
 //4.The Spread (...) Operator
 //The ... operator expands an iterable (like an array) into more elements:
@@ -52,16 +52,17 @@ console.log(arrowFun(3, 4));
 const q1 = ["Jan", "Feb", "Mar"];
 const q2 = ["Apr", "May", "Jun"];
 const q3 = ["Jul", "Aug", "Sep"];
-const q4 = ["Oct", "Nov", "May"];
+const q4 = ["Oct", "Nov", "Dec"];
 
 const year = [...q1, ...q2, ...q3, ...q4];
-console.log(year);
+console.log(year); //["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
 //The ... operator can be used to expand an iterable into more arguments for function calls:
 
 //Example:
 const numbers = [23, 55, 21, 87, 56];
 let maxValue = Math.max(...numbers);
+console.log(maxValue); //87
 
 //5.The For/Of Loop
 //The JavaScript for/of statement loops through the values of an iterable objects.
@@ -74,7 +75,7 @@ let text = "";
 for (let x of cars) {
   text += x + " ";
 }
-console.log(text);
+console.log(text); //BMW Volvo Mini
 
 //Looping over a String
 
@@ -84,7 +85,7 @@ let text1 = "";
 for (let x of language) {
   text1 += x + " ";
 }
-console.log(text1);
+console.log(text1); //J a v a S c r p i t
 
 //6.JavaScript Maps
 //Being able to use an Object as a key is an important Map feature.
@@ -95,7 +96,7 @@ const fruits = new Map([
   ["oranges", 200],
   ["apples", 500],
 ]);
-console.log(fruits);
+console.log(fruits); //{'apples' => 500, 'bananas' => 300, 'oranges' => 200}
 
 //7.JavaScript Sets
 
@@ -107,7 +108,7 @@ letters.add("a");
 letters.add("b");
 letters.add("c");
 
-console.log(letters);
+console.log(letters); //Set(3) {'a', 'b', 'c'}
 
 //8.JavaScript Classes
 /*
@@ -116,7 +117,6 @@ JavaScript Classes are templates for JavaScript Objects.
 Use the keyword class to create a class.
 
 Always add a method named constructor():
-
 
 class ClassName {
   constructor() { ... }
@@ -135,8 +135,8 @@ class Car {
 
 const myCar1 = new Car("Ford", 2014);
 const myCar2 = new Car("Audi", 2019);
-console.log(myCar1);
-console.log(myCar2);
+console.log(myCar1); //Car {name: 'Ford', year: 2014}
+console.log(myCar2); // Car {name: 'Audi', year: 2019}
 
 //9.JavaScript Promises
 /*
@@ -170,7 +170,7 @@ const myPromise = new Promise(function (myResolve, myReject) {
 });
 
 myPromise.then(function (value) {
-  console.log(value);
+  console.log(value); //I love You !
 });
 
 //10.The Symbol Type
@@ -208,14 +208,14 @@ function sum(...args) {
 }
 
 let x1 = sum(4, 9, 16, 25, 29, 100, 66, 77);
-console.log(x1);
+console.log(x1); //326
 
 //13.String.includes()
 //The includes() method returns true if a string contains a specified value, otherwise false:
 
 let text2 = "Hello world, welcome to the universe.";
 text2.includes("world"); // Returns true
-console.log(text2.includes("world"));
+console.log(text2.includes("world")); //true
 
 //14.String.startsWith()
 //The startsWith() method returns true if a string begins with a specified value, otherwise false:
@@ -223,7 +223,7 @@ console.log(text2.includes("world"));
 let text3 = "Hello world, welcome to the universe.";
 
 text3.startsWith("Hello"); // Returns true
-console.log(text3.startsWith("Hello"));
+console.log(text3.startsWith("Hello")); //true
 
 //15.String.endsWith()
 //The endsWith() method returns true if a string ends with a specified value, otherwise false:
@@ -253,7 +253,7 @@ let text5 = "";
 for (let x of keys) {
   text5 += x + "<br>";
 }
-console.log(text5);
+console.log(text5); //0 1 2 3
 
 //18.Array find()
 
@@ -267,7 +267,7 @@ let first = numbers1.find(myFunction3);
 function myFunction3(value, index, array) {
   return value > 18;
 }
-console.log(first);
+console.log(first); //25
 /*
 Note that the function takes 3 arguments:
 
@@ -288,7 +288,7 @@ let first2 = numbers2.findIndex(myFunction4);
 function myFunction4(value, index, array) {
   return value > 18;
 }
-console.log(first2);
+console.log(first2); //3
 
 //20.New Math Methods
 
@@ -344,12 +344,15 @@ MAX_SAFE_INTEGER
 
 //EPSILON Example
 let x3 = Number.EPSILON;
+console.log(x3); //2.220446049250313e-16
 
 //MIN_SAFE_INTEGER Example
 let x4 = Number.MIN_SAFE_INTEGER;
+console.log(x4); //-9007199254740991
 
 //MAX_SAFE_INTEGER Example
 let x5 = Number.MAX_SAFE_INTEGER;
+console.log(x5); //9007199254740991
 
 //26.New Number Methods
 //ES6 added 2 new methods to the Number object:
@@ -404,9 +407,9 @@ const fruit = ["Banana", "Orange", "Apple", "Mango"];
 const f = fruit.entries();
 
 for (let x of f) {
-  console.log(x);
+  console.log(x); //[0, 'Banana'][1, 'Orange'][2, 'Apple'][3, 'Mango']
 }
-console.log(f);
+console.log(f); //Array Iterator{}
 
 /*
 The entries() method returns an Array Iterator object with key/value pairs:
@@ -421,7 +424,7 @@ The entries() method does not change the original array.
 
 //Modules
 
-//Modules are imported in two differen ways:
+//Modules are imported in two different ways:
 
 //Import from named exports
 //Import named exports from the file person.js:

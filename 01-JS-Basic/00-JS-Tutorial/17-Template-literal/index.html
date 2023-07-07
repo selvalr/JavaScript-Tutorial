@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template literals</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <h4>Template Literals</h4>
     <h4>Template Strings</h4>
     <h4>String Templates</h4>
     <h4>Back-Tics Syntax</h4>
     <script src="./script.js"></script>
-</body>
+
+    <script>
+      let full_name = "Tutor Joes";
+      let age = "12";
+      let city = "Salem";
+      let role = "CEO Tutor Joes";
+
+      let output = "";
+      output =
+        "<table border='1'><tr><th>Name</th><td>" +
+        full_name +
+        "</td></tr><tr><th>Age</th><td>" +
+        age +
+        "</td></tr><tr><th>City</th><td>" +
+        city +
+        "</td></tr><tr><th>Role</th><td>" +
+        role +
+        "</td></tr></table>";
+
+      //es5
+      output +=
+        "<hr><table border='1'>" +
+        "<tr><th>Name</th><td>" +
+        full_name +
+        "</td></tr>" +
+        "<tr><th>Age</th><td>" +
+        age +
+        "</td></tr>" +
+        "<tr><th>City</th><td>" +
+        city +
+        "</td></tr>" +
+        "<tr><th>Role</th><td>" +
+        role +
+        "</td></tr>" +
+        "</table>";
+
+      //es6
+      output += `<hr>
+<table border='1'>
+  <tr><th>Name</th><td>${full_name}</td></tr>
+  <tr><th>Age</th><td>${age >= 25 ? "Good" : "Bad"}</td></tr>
+  <tr><th>City</th><td>${city}</td></tr>
+  <tr><th>Role</th><td>${role}</td></tr>
+</table>`;
+
+      document.body.innerHTML = output;
+    </script>
+  </body>
 </html>

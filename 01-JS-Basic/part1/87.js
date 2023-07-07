@@ -1,26 +1,24 @@
 class Animal {
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-    eat(){
-        return `${this.name} is eating`;
-    }
+  eat() {
+    return `${this.name} is eating`;
+  }
 
-    isSuperCute(){
-        return this.age <= 1;
-    }
+  isSuperCute() {
+    return this.age <= 1;
+  }
 
-    isCute(){
-        return true;
-    }
+  isCute() {
+    return true;
+  }
 }
 
-class Dog extends Animal{
-    
-} 
+class Dog extends Animal {}
 
 const tommy = new Dog("tommy", 3);
-console.log(tommy);
-console.log(tommy.isCute());
+console.log(tommy); //Dog {name: 'tommy', age: 3}
+console.log(tommy.isCute()); //true

@@ -18,17 +18,17 @@ let total, avg;
 
 total = tamil + english + math;
 avg = total / 3;
-console.log("total" + total);
-console.log("avg" + avg);
+console.log("total" + total); //total 208
+console.log("avg" + avg); //69.33333333333
 
 if (tamil >= 35 && english >= 35 && math >= 35) {
-  console.log("pass");
+  console.log("pass"); //pass
   if (avg > 90) {
     console.log("A grade");
   } else if (avg < 90 && avg > 70) {
     console.log("B Grade");
   } else {
-    console.log("c grade");
+    console.log("c grade"); //c grade
   }
 } else {
   console.log("fail no grade");

@@ -104,7 +104,7 @@ console.log("random", c); //0.43
 c = Math.floor(Math.random() * 50) + 1; //1 to 50
 console.log("floor", c); //17
 
-c = Math.sign(1); //Return Neg=-1 Zero=0 Pos=1
+c = Math.sign(10); //Return Neg=-1 Zero=0 Pos=1
 console.log("sign", c); //1
 
 c = Math.sin(90);

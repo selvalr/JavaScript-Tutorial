@@ -5,15 +5,15 @@ const square = async function (n) {
   return n * n;
 };
 
-square(2);
+console.log(square(2)); //Promise {<fulfilled>: 4}
 
 //ii.How do we access the value from the promise? To access the value from the promise, we will use the keyword await.
 
-const square1 = async function (n) {
-  return n * n;
-};
-const value = await square1(2);
-console.log(value);
+// const square1 = async function (n) {
+//   return n * n;
+// };
+// const value = await square1(2);
+// console.log(value);
 
 //2.
 //.async - always return a promise
@@ -43,10 +43,10 @@ let rechA = new Promise((resolve, reject) => {
 
 async function asyncstatus() {
   try {
-    console.log("hi");
+    console.log("hi"); //1-->hi
     res = await rechA; //await the promise call waiting true
-    console.log(res);
-    console.log("bye");
+    console.log(res); //2-->selva reached
+    console.log("bye"); //4-->bye
   } catch (err) {
     console.log(err);
   }

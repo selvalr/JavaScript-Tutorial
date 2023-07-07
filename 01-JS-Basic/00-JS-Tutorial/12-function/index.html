@@ -150,6 +150,31 @@
         console.log(mul(2, 3)); //4
       }
       app();
+
+      //3.Function with Arbitrary arguments
+      function sum() {
+        let total = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          total += arguments[i];
+        }
+        return total;
+      }
+
+      console.log(sum(1, 2, 3)); // 6
+      console.log(sum(1, 2, 3, 4, 5)); // 15
+
+      //i.Additionally, the spread operator (...) can also be used to accept an arbitrary number of arguments. The spread operator allows the elements of an array to be spread out into individual arguments. For example:
+
+      function sum1(...args) {
+        let total = 0;
+        for (let i = 0; i < args.length; i++) {
+          total += args[i];
+        }
+        return total;
+      }
+
+      console.log(sum1(1, 2, 3)); // 6
+      console.log(sum1(1, 2, 3, 4, 5)); // 15
     </script>
     <!--<script src="./script.js"></script>-->
     <!--<script src="./lexical.js"></script>-->

@@ -4,16 +4,17 @@
 /*
     `String literal text`
     `String literal text ${expression}`
-  */
+*/
 
 //1.Back-Tics Syntax
 let text = `Hello world!`;
 console.log(text); //Hello World
 
 //2.Quotes Inside Strings
-let text1 = `He's often 
+let text1 = `He's often
 called "Johnny"`;
-console.log(text1);
+console.log(text1); //He's often
+//called "Johnny"
 
 //3.Multiline Strings
 let text2 = `The quick
@@ -26,13 +27,13 @@ console.log(text2);
 let firstName = "John";
 let lastName = "Doe";
 let text4 = `Welcome ${firstName}, ${lastName}!`;
-console.log(text4);
+console.log(text4); //Welcome John, Doe!
 
 //5.Expression Substitution
 let price = 10;
 let VAT = 0.25;
 let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
-console.log(total);
+console.log(total); //Total:12.50
 
 //6.HTML Templates
 

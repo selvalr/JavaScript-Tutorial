@@ -161,5 +161,5 @@ class Animal {
 class Dog extends Animal {}
 
 const tommy = new Dog("tommy", 3);
-console.log(tommy);
-console.log(tommy.isCute());
+console.log(tommy); //Dog {name: 'tommy', age: 3}
+console.log(tommy.isCute()); //true

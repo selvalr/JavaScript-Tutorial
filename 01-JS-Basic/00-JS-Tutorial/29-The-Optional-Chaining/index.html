@@ -10,7 +10,7 @@
     <script>
       const car = { type: "Fiat", model: "500", color: "white" };
       let name = car?.name;
-      console.log(name);
+      console.log(name); //undefined
 
       //1. optional chaining
 
@@ -19,8 +19,8 @@
         // address: {houseNumber: '1234'}
       };
 
-      console.log(user?.firstName);
-      console.log(user?.address?.houseNumber);
+      console.log(user?.firstName); //harshit
+      console.log(user?.address?.houseNumber); //undefined
 
       //2.Here's an example of how optional chaining can be used:
 
@@ -33,8 +33,8 @@
           contact: "9043017689",
         },
       };
-      console.log(user2?.firstName);
-      console.log(user2?.address?.contact);
+      console.log(user2?.firstName); //tutor
+      console.log(user2?.address?.contact); //9043017689
     </script>
   </body>
 </html>

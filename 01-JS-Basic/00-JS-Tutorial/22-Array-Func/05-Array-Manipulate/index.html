@@ -10,50 +10,50 @@
     <h1>Array Manipulate method</h1>
 
     <script>
-      let fruits = ['Appple', 'banana', 'Oragne', 'mango'];
+      let fruits = ["Appple", "banana", "Oragne", "mango"];
       let fruitsFresh = fruits;
 
-      console.log('fruit=' + fruits);
-      console.log('fresh=' + fruitsFresh);
+      console.log("fruit=" + fruits);
+      console.log("fresh=" + fruitsFresh);
 
-      fruitsFresh.push('stawberry');
-      console.log('fruit=' + fruits);
-      console.log('fresh=' + fruitsFresh);
+      fruitsFresh.push("stawberry");
+      console.log("fruit=" + fruits);
+      console.log("fresh=" + fruitsFresh);
 
       //concat
       let newFruits = fruits.concat();
-      newFruits.push('jack');
-      console.log('fruit=' + fruits);
-      console.log('newFruit' + newFruits);
+      newFruits.push("jack");
+      console.log("fruit=" + fruits);
+      console.log("newFruit" + newFruits);
 
       //
-      let addtionalFruit = newFruits.concat('pineapple', 'kiwi');
-      console.log('AddtionalFr', addtionalFruit);
-      let moreFruit = addtionalFruit.concat('black', 'blue', [
-        'small ',
-        'ande',
+      let addtionalFruit = newFruits.concat("pineapple", "kiwi");
+      console.log("AddtionalFr", addtionalFruit);
+      let moreFruit = addtionalFruit.concat("black", "blue", [
+        "small ",
+        "ande",
       ]);
-      console.log('more fruit', moreFruit);
+      console.log("more fruit", moreFruit);
 
       //slice
       let firstThreeFruit = moreFruit.slice(0, 3);
       console.log(firstThreeFruit);
 
       let allOtherFruit = moreFruit.slice(3);
-      console.log('3 position to next all fruit print', allOtherFruit);
+      console.log("3 position to next all fruit print", allOtherFruit);
 
       //delete array
 
       let removeFruit = moreFruit.splice(3, moreFruit.length - 3);
-      console.log('More Fruit', moreFruit);
-      console.log('removed', removeFruit);
+      console.log("More Fruit", moreFruit);
+      console.log("removed", removeFruit);
 
-      let noFruit = moreFruit.splice(0, 0, 'Banana'); //first added banana
-      console.log('More fruit', moreFruit);
-      console.log('No Fruit', noFruit);
+      let noFruit = moreFruit.splice(0, 0, "Banana"); //first added banana
+      console.log("More fruit", moreFruit);
+      console.log("No Fruit", noFruit);
 
-      moreFruit.splice(1, 1, 'Pine Apple', 'Custred apple'); //one element remove and two element insert
-      console.log('More Fruit', moreFruit);
+      moreFruit.splice(1, 1, "Pine Apple", "Custred apple"); //one element remove and two element insert
+      console.log("More Fruit", moreFruit);
     </script>
   </body>
 </html>

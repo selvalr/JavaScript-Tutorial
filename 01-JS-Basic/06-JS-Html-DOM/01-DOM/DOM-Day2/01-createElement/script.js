@@ -3,12 +3,12 @@
 // syntax
 // document.createElement("tagname");
 
-let title = document.createElement("h1");
-title.className = "title";
-title.style.fontSize = "24px";
-title.textContent = "Creating HTML element DOM Day 2";
+let title0 = document.createElement("h1");
+title0.className = "title";
+title0.style.fontSize = "24px";
+title0.textContent = "Creating HTML element DOM Day 2";
 
-console.log(title);
+console.log(title0);
 
 //ii.Creating elements
 
@@ -27,12 +27,15 @@ const lists = document.createElement("li");
 
 //adding elements
 uLists.appendChild(lists);
+//console.log(uLists);
 
 //insertBefore element
 let newHead = document.createTextNode("h4");
 uLists.appendChild(newHead);
-let container = document.querySelector("hello");
+console.log(uLists);
+let container = document.querySelector(".hello");
 container.insertBefore(newHead, div);
+console.log(container);
 
 //3.
 // document.createElement()

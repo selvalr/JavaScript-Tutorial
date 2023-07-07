@@ -11,24 +11,24 @@
     <script>
       let user = new Object();
 
-      user.name = 'selva';
+      user.name = "selva";
       user.age = 23;
       user.sayhi = function () {
-        console.log('hello' + user.name);
+        console.log("hello" + user.name);
       };
-      console.log(user.hasOwnProperty('name')); //user go the check property name property is true
-      console.log(user.hasOwnProperty('age')); //user go the check property age property is true
-      console.log(user.hasOwnProperty('pro')); //user go the check property pro property is false
-      console.log(user.hasOwnProperty('sayhi')); //user go the check property sayhi property is true
-      console.log(user.hasOwnProperty('toString')); //user go the check property toString property is false in your object
-      console.log(user.hasOwnProperty('valueOf')); //user go the valueof property is false
+      console.log(user.hasOwnProperty("name")); //user go the check property name property is true
+      console.log(user.hasOwnProperty("age")); // true
+      console.log(user.hasOwnProperty("pro")); //false
+      console.log(user.hasOwnProperty("sayhi")); // true
+      console.log(user.hasOwnProperty("toString")); //false
+      console.log(user.hasOwnProperty("valueOf")); // false
 
       console.log(user.toString()); //[object Object]
       console.log(user.valueOf()); //{name: 'selva', age: 23, sayhi: ƒ}
 
       //example :
       let employee = {
-        empName: 'selva',
+        empName: "selva",
         age: 23,
         salary: 24000,
       };
@@ -37,10 +37,10 @@
 
       //normal object change the value:
       let employee2 = {
-        name: 'karthick',
-        job: 'Police',
+        name: "karthick",
+        job: "Police",
       };
-      employee2.name = 'Kar';
+      employee2.name = "Kar";
       console.log(employee2.name); //kar
 
       //DATA PROPERTIES are four type:
@@ -50,72 +50,85 @@
       //4.Value  ---> actual value storing
 
       //1.Value method
+
       //Object not changeable value rewrite off mode:
       let employee3 = {}; //empty object
       //name not change the object
-      Object.defineProperty(employee3, 'name', {
+      Object.defineProperty(employee3, "name", {
         configurable: true,
         writable: false,
         enumerable: true,
-        value: 'baskar',
+        value: "baskar",
       });
-      employee3.name = 'muguntha';
+      employee3.name = "muguntha";
       console.log(employee3.name); //baskar
 
       //2.writeable
       //salary display  :
-      employee3.designation = 'develop';
+      employee3.designation = "develop";
       employee3.salary = 28000;
       //salary display in:
       for (prop in employee3) {
-        console.log(prop, employee3[prop]);
+        console.log(prop, employee3[prop]); //
       }
+      /*
+      OUTPUT
+      name baskar
+      designation develop
+      salary 28000
+      */
 
       //3.enumerable
+
       //salary display none:
-      Object.defineProperty(employee3, 'salary', {
+      Object.defineProperty(employee3, "salary", {
         configurable: true, //forin allowed
         writable: false, //rewrite is no allowed
         enumerable: false, //display property and value none
       });
 
-      console.log('Results after enumerable change');
+      console.log("Results after enumerable change");
 
       for (prop in employee3) {
         console.log(prop, employee3[prop]);
       }
+      /*
+      OUTPUT:
+      name baskar
+       designation develop
+      */
 
       employee3.bonus = 100000;
-      console.log(employee3);
+      console.log(employee3); //{name: 'baskar', designation: 'develop', bonus: 100000, salary: 28000}
       delete employee3.bonus;
-      console.log(employee3);
+      console.log(employee3); //{name: 'baskar', designation: 'develop', salary: 28000}
 
       //4.configurable is a delete to the properties abstract value
       employee3.bonus = 10000000;
-      Object.defineProperty(employee3, 'bonus', {
+      Object.defineProperty(employee3, "bonus", {
         configurable: false,
       });
       delete employee3.bonus;
-      console.log(employee3);
+      console.log(employee3); //{name: 'baskar', designation: 'develop', bonus: 10000000, salary: 28000}
 
       //ACCESS PROPERTIES:
       //1.[GET]
       //2.[SET]
 
       let emp = {
-        name: 'ravi',
+        name: "ravi",
         yoj: 2020,
       };
 
       emp.bonus = 10;
 
       let emp1 = {
-        name: 'kar',
+        name: "kar",
         _bonus: 0,
         yoj: 2014,
       };
 
-      Object.defineProperty(emp1, 'bonus', {
+      Object.defineProperty(emp1, "bonus", {
         get: function () {
           return this._bonus;
         },
@@ -126,12 +139,12 @@
         },
       });
       emp1.bonus = 10;
-      console.log(emp1);
+      console.log(emp1); //{name: 'kar', _bonus: 10, yoj: 2014}
 
       //defineProperties
       let employee6 = {};
       Object.defineProperties(employee6, {
-        name: { value: 'selva' },
+        name: { value: "selva" },
         yoj: {
           value: 2019,
           writable: true,
@@ -152,12 +165,12 @@
         },
       });
       employee6.bonus = 10;
-      console.log(employee6);
+      console.log(employee6); //{name: 'selva', yoj: 2019, _bonus: 0}
 
       employee6.yoj = 2010;
       employee6.bonus = 17;
-      console.log(employee6);
-      console.log(employee6.bonus);
+      console.log(employee6); //{name: 'selva', yoj: 2010, _bonus: 17}
+      console.log(employee6.bonus); //17
     </script>
   </body>
 </html>

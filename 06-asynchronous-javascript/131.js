@@ -5,6 +5,7 @@
 // //   console.log(Math.random());
 // // }, 500);
 // console.log("script end");
+
 const body = document.body;
 const button = document.querySelector("button");
 const intervalId = setInterval(() => {

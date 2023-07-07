@@ -12,19 +12,20 @@ const myArray = ["value1", "value2", "value3", "value4"];
 
 //New:
 let [myvar1, myvar2, ...myNewArray] = myArray;
-console.log("value of myvar1", myvar1);
-console.log("value of myvar2", myvar2);
-console.log(myNewArray);
+console.log(myvar1); //value1
+console.log(myvar2); //value2
+console.log(myNewArray); //["value3","value4"]
+console.log(myArray); //["value1","value2","value3","value4"]
 
 //example1:
 const numbers = [1, 2, 3];
 let [numOne, numTwo, numThree] = numbers;
-console.log(numOne, numTwo, numThree);
+console.log(numOne, numTwo, numThree); //1 2 3
 
 //example2:
 const names = ["Asabeneh", "Brook", "David", "John"];
 let [firstPerson, secondPerson, thirdPerson, fourthPerson] = names;
-console.log(firstPerson, secondPerson, thirdPerson, fourthPerson);
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson); //Asabeneh Brook David John
 
 //example3:
 const scientificConstants = [2.72, 3.14, 9.81, 37, 100];
@@ -37,17 +38,17 @@ const fullStack = [
   ["Node", "Express", "MongoDB"],
 ];
 const [frontEnd, backEnd] = fullStack;
-console.log(frontEnd);
-console.log(backEnd);
+console.log(frontEnd); //['HTML', 'CSS', 'JS', 'React']
+console.log(backEnd); //['Node', 'Express', 'MongoDB']
 
 //example5:If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that specific index
 const numbers1 = [1, 2, 3];
 let [numOne1, , numThree1] = numbers1; //2 is omitted
-console.log(numOne1, numThree1);
+console.log(numOne1, numThree1); //1 3
 
 const names2 = ["Asabeneh", "Brook", "David", "John"];
 let [, secondPerson2, , fourthPerson2] = names2; // first and third person is omitted
-console.log(secondPerson2, fourthPerson2);
+console.log(secondPerson2, fourthPerson2); //Brook John
 
 //example6:We can use default value in case the value of array for that index is undefined:
 const names3 = [undefined, "Brook", "David"];
@@ -57,13 +58,13 @@ let [
   thirdPerson3,
   fourthPerson3 = "John",
 ] = names3;
-console.log(firstPerson3, secondPerson3, thirdPerson3, fourthPerson3);
+console.log(firstPerson3, secondPerson3, thirdPerson3, fourthPerson3); //Asabeneh Brook David John
 
 //example7:We can not assign variable to all the elements in the array. We can destructure few of the first and we can get the remaining as array using spread operator(...).
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let [num1, num2, num3, ...rest] = nums;
-console.log(num1, num2, num3);
-console.log(rest);
+console.log(num1, num2, num3); //1 2 3
+console.log(rest); //[4,5,6,7,8,9,10]
 
 //2.Destructuring during iteration
 
@@ -97,7 +98,7 @@ const rectangle = {
   area: 200,
 };
 let { width, height, area, perimeter } = rectangle;
-console.log(width, height, area, perimeter);
+console.log(width, height, area, perimeter); //20 10 200 undefined undefined
 
 //ex2:
 // object destructuring:
@@ -109,8 +110,8 @@ const band = {
 };
 
 let { bandName, famousSong, ...restProps } = band;
-console.log(bandName);
-console.log(restProps);
+console.log(bandName); //led zepplin
+console.log(restProps); //{year: 1968, anotherFamousSong: 'kashmir'}
 
 //4.Renaming during structuring:
 
@@ -120,7 +121,7 @@ const rectangle1 = {
   area: 200,
 };
 let { width: w, height: h, area: a, perimeter: p } = rectangle1;
-console.log(w, h, a, p);
+console.log(w, h, a, p); //20 10 200 undefined undefined
 
 // nested destructuring
 const users2 = [
@@ -131,9 +132,9 @@ const users2 = [
 
 const [{ firstName: userfirstName, userId1 }, , { gender: usergender }] =
   users2;
-console.log(userfirstName);
-console.log(userId1);
-console.log(usergender);
+console.log(userfirstName); //harshit
+console.log(userId1); //1
+console.log(usergender); //male
 
 //If the key is not found in the object the variable will be assigned to undefined. Sometimes the key might not be in the object, in that case we can give a default value during declaration. See the example.
 

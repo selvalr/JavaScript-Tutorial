@@ -26,11 +26,11 @@
             new Date(year,month,day,hours,minutes,seconds,ms)
 
             new Date(milliseconds)
-            */
+      */
 
       //1.Creating a time object:
       const now = new Date();
-      console.log(now); // Sat Jan 04 2020 00:56:41 GMT+0200 (Eastern European Standard Time)
+      console.log(now); // current date
       const d = new Date("2022-03-25");
       console.log(d);
 
@@ -102,25 +102,25 @@
       // "geeks" is Date object
       var geeks = new Date();
       // Prints todays date
-      document.write(geeks);
+      document.write("<br>" + geeks);
 
       //2.new Date(milliseconds)
 
       // "geeks" is Date object
       var geeks = new Date(4500);
-      document.write("Todays date : " + geeks);
+      document.write("<br>Todays date : " + geeks);
 
       //3.new Date(datastring)
 
       // "geeks" is Date object
       var geeks = new Date("October 13, 2013 11:13:00");
-      document.write("Datastring with day : " + geeks);
+      document.write("<br>Datastring with day : " + geeks);
 
       //4.new Date(year, month, date, hour, minute, second, millisecond)
 
       // "geeks" is Date object
       var geeks = new Date(2014, 10, 24, 10, 33, 30, 0);
-      document.write(geeks);
+      document.write("<br>", geeks);
     </script>
   </body>
 </html>

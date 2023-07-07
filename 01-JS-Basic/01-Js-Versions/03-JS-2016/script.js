@@ -3,13 +3,13 @@
 
 let x = 5;
 let z = x ** 2;
-console.log(z);
+console.log(z); //25
 
 //x ** y produces the same result as Math.pow(x, y):
 
 let x1 = 5;
-let z1 = Math.pow(x1,2);
-console.log(z1);
+let z1 = Math.pow(x1, 2);
+console.log(z1); //25
 
 //2.Exponentiation Assignment
 
@@ -17,8 +17,7 @@ console.log(z1);
 
 let x2 = 5;
 x2 **= 2;
-console.log(x2);
-
+console.log(x2); //25
 
 //3.JavaScript Array includes()
 //ECMAScript 2016 introduced Array.includes to arrays.
@@ -29,4 +28,4 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 fruits.includes("Mango");
 
-console.log(fruits.includes("Mango"));
+console.log(fruits.includes("Mango")); //true

@@ -1,8 +1,3 @@
-//append
-let a = "selva";
-a += "manan";
-console.log("append " + a); //append selvamanan
-
 //escape
 let c = "she can't run";
 console.log(c); //she can't run
@@ -55,8 +50,8 @@ console.log(part5); //Banana is a output The difference is that start and end va
 let str6 = "Apple, Banana, Kiwi";
 let part6 = str6.substr(7, 6); //B start 7 is end 6 in A
 console.log(part6); //Banana is The difference is that the second parameter specifies the length of the extracted part.
-console.log(str6.substr(7));
-console.log(str.substr(-4));
+console.log(str6.substr(7)); //Banama,kiwi
+console.log(str6.substr(-4)); //Kiwi
 
 //5.Replacing String Content:
 let text7 = "Please visit Microsoft and Microsoft";
@@ -65,11 +60,11 @@ console.log(newText); //Please visit W3Schools!
 
 //To replace case insensitive, use a regular expression with an /i flag (insensitive):
 
-console.log(text7.replace(/MICROSOFT/i, "W3Schools"));
+console.log(text7.replace(/MICROSOFT/i, "W3Schools")); //Please visit W3Schools and Microsoft
 
 //To replace all matches, use a regular expression with a /g flag (global match):
 
-console.log(text7.replace(/Microsoft/g, "W3Schools"));
+console.log(text7.replace(/Microsoft/g, "W3Schools")); //Please visit W3Schools and W3Schools
 
 //6.JavaScript String ReplaceAll():-ES2021
 let text8 = "I love cats. Cats are very easy to love. Cats are very popular.";
@@ -79,8 +74,8 @@ console.log(text); //I love dogs. Cats are very easy to love. Cats are very popu
 
 //If the parameter is a regular expression, the global flag (g) must be set set, otherwise a TypeError is thrown.
 
-console.log(text.replaceAll(/Cats/g, "Dogs"));
-console.log(text.replaceAll(/cats/g, "dogs"));
+console.log(text.replaceAll(/Cats/g, "Dogs")); //I love dogs. Dogs are very easy to love. Dogs are very popular.
+console.log(text.replaceAll(/cats/g, "dogs")); //I love dogs. Cats are very easy to love. Cats are very popular.
 
 //7.JavaScript String toUpperCase() & lowercase:
 let h = "selva";
@@ -95,9 +90,15 @@ let text31 = text11.concat(" ", text21);
 console.log(text31); //Hello World
 
 //The concat() method can be used instead of the plus operator. These two lines do the same:
+//Concatenation:
+console.log((text = "Hello" + " " + "World!")); //Hello World!
+//Concat
+console.log((text = "Hello".concat(" ", "World!"))); //Hello World!
 
-console.log((text = "Hello" + " " + "World!"));
-console.log((text = "Hello".concat(" ", "World!")));
+//append +=
+let a = "selva";
+a += "manan";
+console.log("append " + a); //append selvamanan
 
 //9.trim(): Removes trailing space in the beginning or the end of a string.
 let text12 = "      Hello World!      ";
@@ -106,19 +107,19 @@ console.log(text22); //Hello world
 
 //9.trimStart & trimend(): Removes trailing space in the beginning or the end
 let tex1 = "     Hello World!     ";
-let tex2 = text1.trimStart();
-console.log(tex2);
+let tex22 = tex1.trimStart();
+console.log(tex22, tex22.length); //Hello World!      17
 
 let te = "     Hello World!     ";
 let te1 = te.trimEnd();
-console.log(te1);
+console.log(te1, te1.length); //     Hello World! 17
 
 //10.JavaScript String Padding:
 //-string method of paddStrat and end method
 let text13 = "5";
 let padded13 = text13.padStart(4, "x");
 console.log(padded13); //xxx5
-console.log(text.padStart(4, "0"));
+console.log(text13.padStart(4, "0")); //0005
 
 let numb = 5;
 let text14 = numb.toString();
@@ -128,16 +129,16 @@ console.log(padded); //0005
 //padend
 let text5 = "5";
 let padded5 = text5.padEnd(4, "0");
-console.log(padded5);
+console.log(padded5); //5000
 
 let text6 = "5";
 let padded6 = text6.padEnd(4, "x");
-console.log(padded6);
+console.log(padded6); //5xxx
 
 let num = 5;
 let textt = num.toString();
 let padde = textt.padEnd(4, "0");
-console.log(padde);
+console.log(padde); //5000
 
 //Extracting String Characters:
 /*
@@ -174,6 +175,7 @@ text.split("|")    // Split on pipe
 let text16 = "a,b,c,d,e,f";
 const myArray = text16.split(",");
 console.log(myArray[0]); //a
+console.log(myArray); //['a','b','c','d','e','f']
 
 let myValue = "mathematics";
 console.log(myValue.split("e")); //["math","matics"]
@@ -182,11 +184,11 @@ console.log("welcome to selva".split(" ")); //["welcome","to","selva"]
 console.log("welcome".split("")); //["w","e","l","c","o","m","e"]
 
 /*
-let text = "Hello";
-const myArr = text.split("");
+let text000 = "Hello";
+const myArr0 = text000.split("");
 text = "";
-for (let i = 0; i < myArr.length; i++) {
-  text += myArr[i] + "<br>";
+for (let i = 0; i < myArr0.length; i++) {
+  text += myArr0[i] + "<br>";
 }
 document.getElementById("demo").innerHTML = text;
 */
@@ -230,11 +232,11 @@ console.log(text.lastIndexOf("John")); //-1 is not a string inside a john text
 
 //Both methods accept a second parameter as the starting position for the search:
 
-console.log(text.indexOf("locate", 15));
+console.log(text.indexOf("locate", 15)); //-1
 
 //The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
 
-console.log(text.lastIndexOf("locate", 15));
+console.log(text.lastIndexOf("locate", 15)); //-1
 
 //18.startsWith: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
 let string3 = "Love is the best to in this world";
@@ -258,7 +260,24 @@ console.log(string4.endsWith("in the world")); // true
 //Check if the 11 first characters of a string ends with "world":
 
 let $text = "Hello world, welcome to the universe.";
-console.log($text.endsWith("world", 11));
+console.log($text.endsWith("world", 11)); //true
+
+//20.Long literal strings
+//Method-1
+let longString =
+  "C is a powerful general-purpose programming language" +
+  "developed at AT & T's Bell Laboratories of USA in 1972" +
+  "it was designed and written by Dennis Ritchie..";
+console.log(longString);
+//Method-2
+longString =
+  "C is a powerful general-purpose programming language \
+developed at AT & T's Bell Laboratories of USA in 1972\
+it was designed and written by Dennis Ritchie..";
+console.log(longString);
+
+//21.//String.fromCharCode()-->ASSCII value printed
+console.log(String.fromCharCode(65, 66, 67, 68, 97, 98, 122));
 
 /*
 The two methods, indexOf() and search(), are equal?
@@ -279,7 +298,7 @@ console.log(string5.search(/javascript/gi)); // 7
 
 //21.match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
 let strin = "love is a powered love means";
-console.log(strin.match("ve"));
+console.log(strin.match("ve")); //['ve', index: 2, input: 'love is a powered love means', groups: undefined]
 
 let patternOne = /love/; // with out any flag
 
@@ -290,7 +309,7 @@ let patternThree = /love/g;
 //match
 let string6 =
   "I love JavaScript. If you do not love JavaScript what else can you love.";
-console.log(string6.match("love"));
+console.log(string6.match("love")); //['love', index: 2, input: 'I love JavaScript. If you do not love JavaScript what else can you love.', groups: undefined]
 
 let pattern = /love/gi;
 console.log(string6.match(pattern)); // ["love", "love", "love"]
@@ -312,7 +331,7 @@ console.log(txt.match(/\d+/g)); // ["2019", "30", "2020"]
 let text000 = "I love cats. Cats are very easy to love. Cats are very popular.";
 const iterator = text000.matchAll("Cats");
 
-console.log(Array.from(iterator));
+console.log(Array.from(iterator)); //2) [Array(1), Array(1)]0: ['Cats', index: 13, input: 'I love cats. Cats are very easy to love. Cats are very popular.', groups: undefined]1: ['Cats', index: 41, input: 'I love cats. Cats are very easy to love. Cats are very popular.', groups: undefined]length: 2[[Prototype]]: Array(0)
 
 //If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
 
@@ -333,12 +352,12 @@ console.log(string7.repeat(10)); // lovelovelovelovelovelovelovelovelovelove
 //23.toString(): Returns the value of String object.
 let tex = "Hello World!";
 let result = tex.toString();
-console.log(result);
+console.log(result); //Hello World!
 
 //24.valueOf()	Returns the primitive value of the specified string object.
 let text00 = "Hello World!";
 let result00 = text00.valueOf();
-console.log(text00);
+console.log(text00); //Hello World!
 
 //25.toUpperCase(): this method changes the string to uppercase letters.
 
@@ -372,7 +391,6 @@ console.log(country26.toLowerCase()); // finland
 String Methods for Html
 
 The following string methods convert the string as a HTML wrapper element.
-
 
 anchor()	Creates an HTML anchor <a>element around string value.
 big()	     Wraps string in <big> element.

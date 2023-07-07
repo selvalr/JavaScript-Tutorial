@@ -28,13 +28,13 @@
 
     <hr />
 
-    <img id="myImage" src="smiley.gif" />
+    <!--<img id="myImage" src="smiley.gif" />-->
     <!--Changing the Value of an Attribute-->
     <script>
       //Syntax:
       //document.getElementById(id).attribute = new value
 
-      document.getElementById("myImage").src = "landscape.jpg";
+      //      document.getElementById("myImage").src = "landscape.jpg";
     </script>
 
     <hr />
@@ -78,6 +78,7 @@
     <p>Bla bla bla</p>
 
     <p class="todo-list"></p>
+    <p class="myH2"></p>
     <script>
       // Add new HTML elements to page
 
@@ -90,7 +91,9 @@
       // todoList.innerHTML += "<li>teach students </li>";
 
       // when you should use it , when you should not
-      todoList.insertAdjacentElement("afterbegin", "<li>Hi</li>");
+      const h2 = document.getElementById("myH2");
+      let html = "<p>My new paragraph.</p>";
+      h2.insertAdjacentHTML("afterend", html);
     </script>
   </body>
 </html>

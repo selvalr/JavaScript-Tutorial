@@ -2,7 +2,7 @@
 
 if (7 === 7) {
   //true
-  console.log("yes"); //yess
+  console.log("yes"); //yes
 }
 
 if (4 > 10) {
@@ -52,5 +52,5 @@ if (num > 0) {
 //ii.
 let isRaining = true;
 if (isRaining) {
-  console.log("Remember to take your rain coat.");
+  console.log("Remember to take your rain coat."); //Remember to take your rain coat.
 }

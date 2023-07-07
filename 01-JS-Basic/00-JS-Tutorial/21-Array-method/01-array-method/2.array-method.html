@@ -11,5 +11,34 @@
     <script src="./script.js"></script>
 
     <!--<script src="./array-methods.js"></script>-->
+
+    <script>
+      //There are multiple ways to create a clone of an array in JavaScript. Some of the most common ways are:
+
+      //1.spread operator
+      let originalArray = [1, 2, 3];
+      let clonedArray = [...originalArray];
+      console.log(clonedArray); // [1, 2, 3]
+
+      //2.slice method
+      let originalArray1 = [1, 2, 3];
+      let clonedArray2 = originalArray1.slice();
+      console.log(clonedArray1); // [1, 2, 3]
+
+      //3.concat method
+      let originalArray3 = [1, 2, 3];
+      let clonedArray3 = [].concat(originalArray3);
+      console.log(clonedArray3); // [1, 2, 3]
+
+      //4.Array.from() method
+      let originalArray4 = [1, 2, 3];
+      let clonedArray4 = Array.from(originalArray4);
+      console.log(clonedArray4); // [1, 2, 3]
+
+      //5.JSON.parse() and JSON.stringify()
+      let originalArray5 = [1, 2, 3];
+      let clonedArray5 = JSON.parse(JSON.stringify(originalArray5));
+      console.log(clonedArray5); // [1, 2, 3]
+    </script>
   </body>
 </html>

@@ -1,17 +1,15 @@
-// compilation 
+// compilation
 // code execution
 
-// why compilation 
+// why compilation
 
+// How javascript code executes
 
-// How javascript code executes 
-
-
-// what is global exection context ? 
-// what is local execution context ? 
+// what is global exection context ?
+// what is local execution context ?
 // closures
-console.log(this);
-console.log(window);
-console.log(firstName);
+console.log(this); //Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+console.log(window); //Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+console.log(firstName); //undefined
 var firstName = "Harshit";
-console.log(firstName);
+console.log(firstName); //Harshit

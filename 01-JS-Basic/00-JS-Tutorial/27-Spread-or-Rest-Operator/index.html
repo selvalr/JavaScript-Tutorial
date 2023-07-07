@@ -8,5 +8,76 @@
   </head>
   <body>
     <script src="./script.js"></script>
+
+    <script>
+      //1.Array Destructing
+      //i.
+      let numbers = [10, 20, 30, 40, 50];
+      let [a1, b2, c3] = numbers;
+      console.log(a1); //10
+      console.log(b2); //20
+      console.log(c3); //30
+
+      //ii.
+      let nestedArray = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ];
+      let [[a, b], [c, d], [e, f]] = nestedArray;
+      console.log(a); //1
+      console.log(b); //2
+      console.log(c); //3
+      console.log(d); //4
+      console.log(e); //5
+      console.log(f); //6
+
+      //iii.
+      let numbers1 = [10, 20, 30, 40, 50];
+      let [a0, b0, ...c0] = numbers1;
+      console.log(a0); //10
+      console.log(b0); //20
+      console.log(c0); // [30,40,50]
+
+      //2.Array destructuring in JavaScript on Objects
+
+      //i.
+      /*
+      let person = { name: "Tiya", age: 5, gender: "female" };
+      let { name, age, gender } = person;
+      console.log(name); // "Tiya"
+      console.log(age); // 5
+      console.log(gender); // "female"
+        */
+
+      //ii.
+      let address = {
+        street: "Cherry Road",
+        city: "Salem",
+        state: "Tamil Nadu",
+        zip: "636007",
+      };
+      let employee = { name: "Tiya", age: 12, gender: "female", address };
+      let {
+        name,
+        age,
+        gender,
+        address: { city, state, zip },
+      } = employee;
+      console.log(name); // "Tiya"
+      console.log(age); // 30
+      console.log(gender); // "female"
+      console.log(city); // "Salem"
+      console.log(state); // "Tamil Nadu"
+      console.log(zip); // "636007"
+
+      //iii.
+      /*
+      let { name = "guest", age = 25, gender = "unknown" } = person;
+      console.log(name); // "John"
+      console.log(age); // 30
+      console.log(gender); // "male"
+      */
+    </script>
   </body>
 </html>

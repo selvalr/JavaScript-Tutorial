@@ -7,13 +7,13 @@
 
 let num1 = 7;
 let num2 = "7";
-console.log(num1 < num2);
+console.log(num1 < num2); //false
 
 // == vs ===
-console.log(num1 === num2);
+console.log(num1 === num2); //false
 
 // != vs !==
-console.log(num1 !== num2);
+console.log(num1 !== num2); //true
 
 //2.A JavaScript Boolean represents one of two values: true or false.
 
@@ -32,7 +32,8 @@ var b4 = Boolean([]); // true
 
 var b5 = Boolean(a + b); // true
 
-//Example: Boolean() Function
+//Example: Boolean() Function falsy value
+
 var b1 = Boolean(""); // false
 
 var b2 = Boolean(0); // false
@@ -85,22 +86,22 @@ console.log(
 
 //Everything Without a "Value" is False: false,"",null,undefined,0
 let x = 0;
-console.log(Boolean(x));
+console.log(Boolean(x)); //false
 
 let x1 = -0;
-console.log(Boolean(x1));
+console.log(Boolean(x1)); //false
 
 let x2 = "";
-console.log(Boolean(x2));
+console.log(Boolean(x2)); //false
 
 let x3;
-console.log(Boolean(x3));
+console.log(Boolean(x3)); //false
 
 let x4 = null;
-console.log(Boolean(x4));
+console.log(Boolean(x4)); //false
 
 let x5 = false;
-console.log(Boolean(x5));
+console.log(Boolean(x5)); //false
 
 let x6 = 10 / "Hallo";
-console.log(Boolean(x6));
+console.log(Boolean(x6)); //false

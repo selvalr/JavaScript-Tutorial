@@ -10,20 +10,23 @@
     <script>
       //1.toLocalString()
       var result = 1 > 2;
-      result.toLocaleString(); // returns "false"
-      console.log(result);
+      let res1 = result.toLocaleString(); // returns "false"
+      console.log(result); //false
+      console.log(typeof res1); //string
 
       //2.toString()	Returns a string of Boolean.
 
-      var result = 1 > 2;
-      result.toString(); // returns "false"
-      console.log(result);
+      var result1 = 1 > 2;
+      let res2 = result1.toString(); // returns "false"
+      console.log(result1);
+      console.log(typeof res2); //string
 
       //3.valueOf()	Returns the value of the Boolean object.
 
       var result = 1 > 2;
-      result.valueOf(); // returns false
-      console.log(result);
+      let res3 = result.valueOf(); // returns false
+      console.log(result, res3); //false false
+      console.log(typeof res3); //false
     </script>
   </body>
 </html>

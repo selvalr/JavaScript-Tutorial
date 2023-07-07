@@ -2,11 +2,11 @@
 
 //16 digit integer
 var int1 = 1234567890123456; //accurate
-console.log(int1);
+console.log(int1); //1234567890123456
 
 //17 digit integer
 var int2 = 12345678901234569; //will be 12345678901234568
-console.log(int2);
+console.log(int2); //12345678901234568
 
 //16 digit integer
 var int3 = 9999999999999998; //will be 9999999999999998
@@ -34,11 +34,11 @@ console.log(int3);
 
 //17 decimal places
 var f1 = 123456789012345.9; //accurate
-console.log(f1);
+console.log(f1); //123456789012345.9
 
 //18 decimal places
 var f2 = 1234567890123456.9; //will be 1234567890123457
-console.log(f2);
+console.log(f2); //1234567890123457
 
 //19 decimal places
 var f3 = 1234567890123456.79; //will be 1234567890123456.8
@@ -52,7 +52,7 @@ var f2 = 10.1 + 10.2; //will be 20.299999999999997
 console.log(f2);
 
 var f3 = (10.1 * 100 + 10.2 * 100) / 100; //instead of 10.1 + 10.2
-console.log(f3);
+console.log(f3); //20.3
 
 //ii.Example: Arithmetic Operation of Numeric Strings
 
@@ -79,9 +79,13 @@ var result = num + str; //returns "54"
 //4.Binary, Octal, Hexadecimal, Exponential
 
 var b = 0b100; // binary
+console.log(b); //4
 var oct = 0o544; // octal
+console.log(oct); //356
 var hex = 0x123456789abcdef; // hexadecimal
+console.log(hex); //81985529216486900
 var exp = 256e-5; // exponential
+console.log(exp); //0.00256
 
 //5.Number() Function in JavaScript
 

@@ -71,7 +71,7 @@ const user1 = {
 const copiedUser1 = { ...user1, title: "instructor" };
 console.log(copiedUser1);
 
-//4.Spread operator with arrow function
+//4.Rest parameter operator with arrow function
 
 //i.
 const sumAllNums = (...args) => {

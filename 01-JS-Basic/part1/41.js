@@ -7,5 +7,5 @@ const band = {
 };
 
 let { bandName, famousSong, ...restProps } = band;
-console.log(bandName);
-console.log(restProps);
+console.log(bandName); //led zepplin
+console.log(restProps); //{year:1968, anotherFamousSong: "kashmir"}

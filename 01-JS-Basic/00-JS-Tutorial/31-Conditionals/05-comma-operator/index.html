@@ -12,16 +12,16 @@
       //leftExpression, rightExpression;
 
       let result = (10, 10 + 20);
-      console.log(result);
+      console.log(result); //30
 
       let x = 10;
       let y = (x++, x + 1);
-      console.log(x, y);
+      console.log(x, y); //11 12
 
       let x1 = 10;
       x1++;
       let y1 = x1 + 1;
-      console.log(x1, y1);
+      console.log(x1, y1); //11 12
 
       //The following example uses the comma operator in a for loop to display an array of nine elements as a matrix of 3 rows and three columns:
       let board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -31,6 +31,9 @@
         s += board[i] + " ";
         if (j % 3 == 0) {
           console.log(s);
+          //1 2 3
+          //4 5 6
+          //7 8 9
           s = "";
         }
       }

@@ -5,10 +5,10 @@
 //     i++;
 // }
 
-// let i = 10;
-// do{
-//     console.log(i);
-//     i++;
-// }while(i<=9);
+let i = 10;
+do {
+  console.log(i);
+  i++;
+} while (i <= 9);
 
-// console.log("value of i is ", i);
+console.log("value of i is ", i);

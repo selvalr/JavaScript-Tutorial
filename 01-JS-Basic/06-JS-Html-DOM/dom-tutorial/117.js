@@ -3,13 +3,15 @@
 // insertBefore;
 // replaceChild;
 // removeChild
-// const ul = document.querySelector(".todo-list");
+
+const ul = document.querySelector(".todo-list");
+console.log(ul); //<ul class="todo-list">...</ul>
 
 // new element
-// const li = document.createElement("li");
-// li.textContent = "new todo";
+const li = document.createElement("li");
+li.textContent = "new todo";
+console.log(li); //<li>new todo</li>
 
-
-// const referenceNode = document.querySelector(".first-todo");
-
-// ul.removeChild(referenceNode);
+//const referenceNode = document.querySelector(".first-todo");
+//console.log(referenceNode);
+//ul.removeChild(referenceNode);

@@ -10,7 +10,7 @@ A pattern could be a text or any form of pattern which some sort of similarity. 
 
 /*
 
-Flags are optional parameters in a regular expression which determine the type of searching. Let us see some of the flags:
+ Flags are optional parameters in a regular expression which determine the type of searching. Let us see some of the flags:
 
 g: a global flag which means looking for a pattern in whole text
 i: case insensitive flag(it searches for both lowercase and uppercase)
@@ -24,28 +24,28 @@ m: multiline
 // without flag
 let pattern = "love";
 let regEx = new RegExp(pattern);
-console.log(regEx);
+console.log(regEx); // /love/
 
 //ii.Declaring regular expression with global flag and case insensitive flag.
 let pattern1 = "love";
 let flag = "gi";
 let regEx1 = new RegExp(pattern1, flag);
-console.log(regEx1);
+console.log(regEx1); // /love/gi
 
 //iii.Declaring a regex pattern using RegExp object. Writing the pattern and the flag inside the RegExp constructor
 let regEx2 = new RegExp("love", "gi");
-console.log(regEx2);
+console.log(regEx2); // /love/gi
 
 //2.Creating a pattern without RegExp Constructor
 
 //i.Declaring regular expression with global flag and case insensitive flag.
 let regEx3 = /love/gi;
-console.log(regEx3);
+console.log(regEx3); // /love/gi
 
 //ii.The above regular expression is the same as the one which we created with RegExp constructor
 
 let regEx4 = new RegExp("love", "gi");
-console.log(regEx4);
+console.log(regEx4); // /love/gi
 
 //3.RegExpp Object Method
 
@@ -55,44 +55,44 @@ console.log(regEx4);
 const str = "I love JavaScript";
 const patter = /love/;
 const result = patter.test(str);
-console.log(result);
+console.log(result); //true
 
 //ii.Array containing all of the match
 
 const str1 = "I love JavaScript";
 const patte = /love/;
 const resul = str1.match(patte);
-console.log(resul);
+console.log(resul); //['love', index: 2, input: 'I love JavaScript', groups: undefined]
 
 const str2 = "I love JavaScript";
 const patt = /love/g;
 const resu = str2.match(patt);
-console.log(resu);
+console.log(resu); //['love']
 
 //search();
 const str3 = "I love JavaScript";
 const pattern3 = /love/g;
 const result3 = str3.search(pattern3);
-console.log(result3);
+console.log(result3); //2
 
 //iii.Replacing a substring
 const txt =
   "Python is the most beautiful language that a human begin has ever created.\
 I recommend python for a first programming language";
 matchReplaced = txt.replace(/Python|python/, "JavaScript");
-console.log(matchReplaced);
+console.log(matchReplaced); //JavaScript is the most beautiful language that a human begin has ever created.I recommend python for a first programming language
 
 const txt1 =
   "Python is the most beautiful language that a human begin has ever created.\
 I recommend python for a first programming language";
 matchReplaced = txt1.replace(/Python|python/g, "JavaScript");
-console.log(matchReplaced);
+console.log(matchReplaced); //JavaScript is the most beautiful language that a human begin has ever created.I recommend JavaScript for a first programming language
 
 const txt2 =
   "Python is the most beautiful language that a human begin has ever created.\
 I recommend python for a first programming language";
 matchReplaced = txt2.replace(/Python/gi, "JavaScript");
-console.log(matchReplaced);
+console.log(matchReplaced); //JavaScript is the most beautiful language that a human begin has ever created.I recommend JavaScript for a first programming language
 
 //4.Square Bracket
 //.
@@ -100,21 +100,21 @@ const pattern4 = "[Aa]pple"; // this square bracket means either A or a
 const txt4 =
   "Apple and banana are fruits. An old cliche says an apple a day keeps the  doctor way has been replaced by a banana a day keeps the doctor far far away. ";
 const matches = txt4.match(pattern4);
-console.log(matches);
+console.log(matches); //['Apple', index: 0, input: 'Apple and banana are fruits. An old cliche says an…by a banana a day keeps the doctor far far away. ', groups: undefined]
 
 //.
 const pattern5 = /[Aa]pple/g; // this square bracket means either A or a
 const txt5 =
   "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. ";
 const matches5 = txt5.match(pattern5);
-console.log(matches5);
+console.log(matches5); //['Apple', 'apple']
 
 //.
 const pattern6 = /[Aa]pple|[Bb]anana/g; // this square bracket mean either A or a
 const txt6 =
   "Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. Banana is easy to eat too.";
 const matches6 = txt6.match(pattern6);
-console.log(matches6);
+console.log(matches6); //['Apple', 'banana', 'apple', 'banana', 'Banana']
 
 //5.Escape character(\) in RegExp
 

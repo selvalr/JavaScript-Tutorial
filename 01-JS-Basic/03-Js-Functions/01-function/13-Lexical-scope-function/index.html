@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //In JavaScript, lexical scope refers to the way in which the variables, functions, and objects in a program are associated with specific scopes, or regions of the code where they are accessible. Each function in JavaScript has its own scope, which is determined by the location of the function in the code, and the scopes of any parent functions that contain it.
+
+      let globalVariable = "I am a global variable";
+
+      function outerFunction() {
+        let outerVariable = "I am a variable in the outer function";
+
+        function innerFunction() {
+          let innerVariable = "I am a variable in the inner function";
+          console.log(globalVariable); // Output: "I am a global variable"
+          console.log(outerVariable); // Output: "I am a variable in the outer function"
+          console.log(innerVariable); // Output: "I am a variable in the inner function"
+        }
+
+        innerFunction();
+      }
+      outerFunction();
+    </script>
+  </body>
+</html>

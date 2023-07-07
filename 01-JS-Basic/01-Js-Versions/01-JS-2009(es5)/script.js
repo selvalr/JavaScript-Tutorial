@@ -12,31 +12,30 @@ console.log(str[0]); // returns H
 console.log(
   "Hello \
 Dolly!"
-);
+); //Hello Dolly!
 
 //A safer way to break up a string literal, is to use string addition:
-console.log("Hello " + "Dolly!");
+console.log("Hello " + "Dolly!"); //Hello Dolly!
 
 //3.Reserved Words as Property Names
 //ES5 allows reserved words as property names:new is a reserved word
 
 var obj = { name: "John", new: "yes" };
-console.log(obj.new);
+console.log(obj.new); //new
 
 //4.String trim()
 //The trim() method removes whitespace from both sides of a string.
 var str = "       Hello World!        ";
-console.log(str.trim());
+console.log(str.trim()); //Hello world
 
 //5.Array.isArray()
 //The isArray() method checks whether an object is an array.
-/*
+
 function myFunction() {
   var fruits = ["Banana", "Orange", "Apple", "Mango"];
   var x = document.getElementById("demo");
-  x.innerHTML = Array.isArray(fruits);//true
+  x.innerHTML = Array.isArray(fruits); //true
 }
-*/
 
 //6.Array forEach()
 //The forEach() method calls a function once for each array element.
@@ -44,7 +43,7 @@ function myFunction() {
 var txt = "";
 var numbers = [45, 4, 9, 16, 25];
 numbers.forEach(myFunction1);
-console.log(txt);
+console.log(txt); //45,4,9,16,25
 
 function myFunction1(value) {
   txt = txt + "," + value;
@@ -55,7 +54,7 @@ function myFunction1(value) {
 
 var numbers1 = [45, 4, 9, 16, 25];
 var numbers2 = numbers1.map(myFunction2);
-console.log(numbers2);
+console.log(numbers2); //[90,8,18,32,50]
 
 function myFunction2(value) {
   return value * 2;
@@ -65,7 +64,7 @@ function myFunction2(value) {
 //This example creates a new array from elements with a value larger than 18:
 var numbers = [45, 4, 9, 16, 25];
 var over18 = numbers.filter(myFunction3);
-console.log(over18);
+console.log(over18); //[45,25]
 
 function myFunction3(value) {
   return value > 18;
@@ -75,7 +74,7 @@ function myFunction3(value) {
 //This example finds the sum of all numbers in an array:
 var numbers1 = [45, 4, 9, 16, 25];
 var sum = numbers1.reduce(myFunction4);
-console.log(sum);
+console.log(sum); //99
 
 function myFunction4(total, value) {
   return total + value;
@@ -86,7 +85,7 @@ function myFunction4(total, value) {
 
 var numbers1 = [45, 4, 9, 16, 25];
 var sum = numbers1.reduceRight(myFunction5);
-console.log(sum);
+console.log(sum); //99
 
 function myFunction5(total, value) {
   return total + value;
@@ -97,7 +96,7 @@ function myFunction5(total, value) {
 
 var numbers = [45, 4, 9, 16, 25];
 var allOver18 = numbers.every(myFunction6);
-console.log(allOver18);
+console.log(allOver18); //false
 
 function myFunction6(value) {
   return value > 18;
@@ -109,7 +108,7 @@ function myFunction6(value) {
 
 var numbers = [45, 4, 9, 16, 25];
 var allOver18 = numbers.some(myFunction7);
-console.log(allOver18);
+console.log(allOver18); //true
 
 function myFunction7(value) {
   return value > 18;
@@ -121,14 +120,14 @@ function myFunction7(value) {
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var a = fruits.indexOf("Banana") + 1;
-console.log("index change", a);
+console.log("index change", a); //1
 
 //14.Array lastIndexOf()
 //lastIndexOf() is the same as indexOf(), but searches from the end of the array.
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var a = fruits.lastIndexOf("Apple");
-console.log(a);
+console.log(a); //2
 
 //15.JSON.parse()
 /*
@@ -141,7 +140,7 @@ The JavaScript function JSON.parse() is used to convert the text into a JavaScri
 */
 
 var obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
-console.log(obj);
+console.log(obj); //{name: 'John', age: 30, city: 'New York'}
 
 //16.JSON.stringify()
 /*
@@ -153,21 +152,21 @@ Imagine we have this object in JavaScript:
 */
 
 var obj = { name: "John", age: 30, city: "New York" };
-console.log(obj);
+console.log(JSON.stringify(obj)); // {"name":"John","age":30,"city":"New York"}
 
 //17.Date.now()
 
 //Date.now() returns the number of milliseconds since zero date (January 1. 1970 00:00:00 UTC).
 
 var timInMSs = Date.now();
-console.log(timInMSs);
+console.log(timInMSs); //1688359742956
 
 //18.Date toISOString()
 //The toISOString() method converts a Date object to a string, using the ISO standard format:
 
 const d = new Date();
 c = d.toISOString();
-console.log(c);
+console.log(c); //2023-07-03T04:49:16.039Z
 
 //19.Date toJSON()
 
@@ -176,7 +175,7 @@ console.log(c);
 //JSON dates have the same format as the ISO-8601 standard: YYYY-MM-DDTHH:mm:ss.sssZ:
 
 d1 = new Date();
-console.log(d1.toJSON());
+console.log(d1.toJSON()); //2023-07-03T04:49:54.629Z
 
 //20.Property Getters and Setters
 
@@ -215,13 +214,14 @@ Object.defineProperty(person, "language", {
   enumerable: true,
   configurable: true,
 });
+console.log(person); //{firstName: 'John', lastName: 'Doe', language: 'EN'}
 
 // Enumerate Properties
 var txt = "";
 for (var x in person) {
   txt += person[x] + "<br>";
 }
-console.log(txt);
+console.log(txt); //John<br>Doe<br>EN<br>
 
 //22.E5 Object Methods
 //ES5 added a lot of new Object Methods to JavaScript:
@@ -290,7 +290,7 @@ const member = {
 };
 
 let fullName = person2.fullName.bind(member);
-console.log(fullName());
+console.log(fullName()); //Hege Nilsen
 
 //26.Trailing Commas
 //ES5 allows trailing commas in object and array definitions:

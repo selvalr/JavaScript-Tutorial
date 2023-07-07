@@ -11,9 +11,11 @@
 
 // An array containing numbers
 const numberArray = [0, 1, 2, 3];
+console.log(numberArray); //[  0,  1,  2,  3]
 
 // An array containing different data types
 const mixedArray = [1, "chicken", false];
+console.log(mixedArray); //[1, 'chicken', false]
 
 //1.JavaScript array literal
 
@@ -26,6 +28,7 @@ console.log(house[4]); //undefined   // getter
 house[4] = "bala"; //setter
 console.log(house[4]); //bala
 
+//length
 let lengthOfArray = house["length"];
 console.log(lengthOfArray); //5
 house[lengthOfArray] = "selva"; //selva added to 5 index
@@ -46,6 +49,8 @@ emp[0] = "Arun";
 emp[1] = "Varun";
 emp[2] = "John";
 
+console.log(emp);
+
 for (i = 0; i < emp.length; i++) {
   document.write(emp[i] + "<br>");
 }
@@ -53,14 +58,16 @@ for (i = 0; i < emp.length; i++) {
 //3.JavaScript array constructor (new keyword)
 
 // syntax
-const arr = Array();
-// or
+//const arr = Array();
+
+// (or)
+
 // let arr = new Array()
-console.log(arr); // []
+// console.log(arr); // []
 
 //1.How to create an empty array
 
-//Using Array constructor
+//Using Array constructor:
 // syntax
 const arra = Array();
 // or
@@ -71,7 +78,7 @@ console.log(arra); // []
 // syntax
 // This the most recommended way to create an empty list
 const arra1 = [];
-console.log(arra1);
+console.log(arra1); //[]
 
 //2.How to create an array with values
 const numbers = [0, 3.14, 9.81, 37, 98.6, 100]; // array of numbers
@@ -86,6 +93,7 @@ const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"]; // arra
 
 const cars0 = ["Saab", "Volvo", "BMW"];
 let car = cars0[0];
+console.log(car); //Saab
 
 //ii.Changing an Array Element
 //This statement changes the value of the first element in cars:
@@ -96,25 +104,26 @@ cars0[0] = "Opel";
 const cars = ["Saab", "Volvo", "BMW"];
 cars[0] = "Opel";
 
-//2.Converting an Array to a String
+//2.Converting an Array to a String:
 //The JavaScript method toString() converts an array to a string of (comma separated) array values.
 
 //Example
 const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits1.toString());
+console.log(fruits1.toString()); //Banana,orange, apple, mango
 
 //3.Access the Full Array
-console.log(fruits1);
+console.log(fruits1); //["Banana", "Orange", "Apple","Mango"]
 
 //4.Accessing the First Array Element
-console.log(fruits1[0]);
+console.log(fruits1[0]); //Banana
 
-//5.lastelement
-console.log(fruits1[fruits1.length - 1]);
+//5.last element
+console.log(fruits1[fruits1.length - 1]); //Mango
 
 //6.Looping Array Elements
 const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
 let fLen = fruits3.length;
+console.log(fLen); //4
 
 let text = "<ul>";
 for (let i = 0; i < fLen; i++) {
@@ -131,6 +140,7 @@ const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
 let text4 = "<ul>";
 fruits4.forEach(myFunction4);
 text4 += "</ul>";
+console.log(text4);
 
 function myFunction4(value) {
   text4 += "<li>" + value + "</li>";
@@ -138,23 +148,23 @@ function myFunction4(value) {
 
 //3. Print the array and its length
 
-console.log("Numbers:", numbers);
-console.log("Number of numbers:", numbers.length);
+console.log("Numbers:", numbers); // [0, 3.14, 9.81, 37, 98.6, 100]
+console.log("Number of numbers:", numbers.length); //6
 
-console.log("Fruits:", fruits);
-console.log("Number of fruits:", fruits.length);
+console.log("Fruits:", fruits); //['banana', 'orange', 'mango', 'lemon']
+console.log("Number of fruits:", fruits.length); //4
 
-console.log("Vegetables:", vegetables);
-console.log("Number of vegetables:", vegetables.length);
+console.log("Vegetables:", vegetables); // ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+console.log("Number of vegetables:", vegetables.length); //5
 
-console.log("Animal products:", animalProducts);
-console.log("Number of animal products:", animalProducts.length);
+console.log("Animal products:", animalProducts); // ['milk', 'meat', 'butter', 'yoghurt']
+console.log("Number of animal products:", animalProducts.length); //4
 
-console.log("Web technologies:", webTechs);
-console.log("Number of web technologies:", webTechs.length);
+console.log("Web technologies:", webTechs); //['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB']
+console.log("Number of web technologies:", webTechs.length); //7
 
-console.log("Countries:", countries);
-console.log("Number of countries:", countries.length);
+console.log("Countries:", countries); //['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+console.log("Number of countries:", countries.length); //5
 
 //Array can have items of different data types
 const arr1 = [
@@ -164,7 +174,7 @@ const arr1 = [
   { country: "Finland", city: "Helsinki" },
   { skills: ["HTML", "CSS", "JS", "React", "Python"] },
 ]; // arr containing different data types
-console.log(arr1);
+console.log(arr1); //['Asabeneh', 250, true, {…}, {…}]
 
 //3.Creating an array using split
 
@@ -185,7 +195,7 @@ console.log(words);
 // the text has special characters think how you can just get only the words
 // ["I", "love", "teaching", "and", "empowering", "people.", "I", "teach", "HTML,", "CSS,", "JS,", "React,", "Python"]
 
-//5.nested Array
+//5.nested Array:
 
 let ourArray = [
   ["selva", 23],
@@ -208,7 +218,8 @@ console.log(ourArray2[1][2][0]); //police
 
 //For instance:
 
-// mix of values
+// mix of values:
+
 let arra3 = [
   "Apple",
   { name: "John" },
@@ -219,7 +230,7 @@ let arra3 = [
 ];
 
 // get the object at index 1 and then show its name
-alert(arra3[1].name); // John
+console.log(arra3[1].name); // John
 
 // get the function at index 3 and run it
 arra3[3](); // hello
@@ -227,6 +238,7 @@ arra3[3](); // hello
 //How to Recognize an Array
 const fruits2 = ["Banana", "Orange", "Apple"];
 let type = typeof fruits2; //object
+
 //Solution 1:
 //To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():
 Array.isArray(fruits2); //true
@@ -281,14 +293,14 @@ console.log(countries2);
 //Array:To create an array.
 
 const arr2 = Array(); // creates an an empty array
-console.log(arr2);
+console.log(arr2); //[]
 
 const eightEmptyValues = Array(8); // it creates eight empty values
 console.log(eightEmptyValues); // [empty x 8]
 
 //ii.Creating static values with fill
 const arr3 = Array(); // creates an an empty array
-console.log(arr3);
+console.log(arr3); //[]
 
 const eightXvalues = Array(8).fill("X"); // it creates eight element values filled with 'X'
 console.log(eightXvalues); // ['X', 'X','X','X','X','X','X','X']

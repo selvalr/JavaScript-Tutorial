@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Iterating Through Javascript Object
+
+        1.using the for-in loop
+        2.Using the Object.keys()
+        3.Using the Object.values()
+        4.Using the Object.entries()
+        */
+
+      //Example 1: Using the for-in loop
+      const user = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+
+      for (let key in user) {
+        console.log(`${key}: ${user[key]}`);
+      }
+
+      //Example 2: Using Object.keys()
+      const user1 = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+
+      const keys1 = Object.keys(user1);
+      keys1.forEach((key) => {
+        console.log(`${key}: ${user1[key]}`);
+      });
+
+      //i.for loop keys
+      const person2 = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+      const keys2 = Object.keys(person2);
+      for (let i = 0; i < keys2.length; i++) {
+        console.log(keys2[i] + ": " + person2[keys2[i]]);
+      }
+
+      //Example 3: Using Object.values()
+      const user3 = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+
+      const values = Object.values(user3);
+      values.forEach((value) => {
+        console.log(value);
+      });
+
+      //Example 4: Using Object.entries()
+      const user4 = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+
+      const entries4 = Object.entries(user4);
+      entries4.forEach((entry) => {
+        console.log(`${entry[0]}: ${entry[1]}`);
+      });
+
+      //i.for loop entries
+      const person5 = {
+        name: "Tiya",
+        age: 30,
+        job: "Programmer",
+      };
+
+      const entries5 = Object.entries(person5);
+      for (let i = 0; i < entries5.length; i++) {
+        console.log(entries5[i][0] + ": " + entries5[i][1]);
+      }
+    </script>
+  </body>
+</html>

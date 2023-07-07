@@ -25,6 +25,7 @@ console.log(secondFruit); // orange
 
 let lastFruit = fruits[3];
 console.log(lastFruit); // lemon
+
 // Last index can be calculated as follows
 
 let lastIndex = fruits.length - 1;
@@ -54,21 +55,21 @@ const countries = [
 countries[0] = "Afghanistan"; // Replacing Albania by Afghanistan
 let lastIndex1 = countries.length - 1;
 countries[lastIndex1] = "Korea"; // Replacing Kenya by Korea
-console.log(countries);
+console.log(countries); //['Afghanistan', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Korea']
 
 //4.Methods to manipulate array
 
 //i.Array Constructor:Array:To create an array.
 
 const arr = Array(); // creates an an empty array
-console.log(arr);
+console.log(arr); //[]
 const eightEmptyValues = Array(8); // it creates eight empty values
 console.log(eightEmptyValues); // [empty x 8]
 
 //ii.Creating static values with fill
 
 const arra = Array(); // creates an an empty array
-console.log(arra);
+console.log(arra); //[]
 const eightXvalues = Array(8).fill("X"); // it creates eight element values filled with 'X'
 console.log(eightXvalues); // ['X', 'X','X','X','X','X','X','X']
 const eight0values = Array(8).fill(0); // it creates eight element values filled with '0'
@@ -174,7 +175,7 @@ console.log(numbers0.slice(1, 4)); // -> [2,3,4] // it doesn't include the endin
 //xi.Splice method in array
 
 const number = [1, 2, 3, 4, 5];
-number.splice();
+number.splice(); //[1,2,3,4,5]
 console.log(number); // -> remove all items
 number.splice(1);
 console.log(number); //[1]
@@ -190,13 +191,13 @@ const arr3 = ["item1", "item2", "item3"];
 arr3.push("new item");
 console.log(arr3); // ['item1', 'item2','item3','new item']
 arr3.push(6, 7, 9); // Adding multiple elements:
-console.log(numbers9);
+console.log(arr3);
 
 //xiii.Removing the end element using pop
 
-const numbers9 = [1, 2, 3, 4, 5];
-numbers9.pop(); // -> remove one item from the end
-console.log(numbers9); // -> [1,2,3,4]
+const numbers09 = [1, 2, 3, 4, 5];
+numbers09.pop(); // -> remove one item from the end
+console.log(numbers09); // -> [1,2,3,4]
 
 //xiv.Removing an element from the beginning
 
@@ -241,6 +242,17 @@ points.sort(function (a, b) {
 });
 console.log(points);
 
+const n = [1, 2, 3, 4, 5, 6];
+console.log("Before Reverse : ", n);
+n.reverse();
+console.log("After Reverse : ", n);
+
+//Array Element With Length Property
+const x = { 0: 10, 1: 20, 2: 30, 3: 40, length: 4 };
+console.log(x);
+Array.prototype.reverse.call(x);
+console.log(x);
+
 //xvii.Sorting elements in array
 
 const webTechs1 = [
@@ -265,7 +277,7 @@ const myArr = [
   [5, 6],
 ];
 const newArr = myArr.flat();
-console.log(newArr);
+console.log(newArr); //[1,2,3,4,5,6]
 
 //i.Array of arrays-->Array can store different data types including an array itself. Let us create an array of arrays
 

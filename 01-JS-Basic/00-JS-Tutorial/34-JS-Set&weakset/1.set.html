@@ -20,7 +20,7 @@
 
       //1.Creating an empty set
       const companies = new Set();
-      console.log(companies);
+      console.log(companies); //Set(0) {size: 0}
 
       //2.Creating set from array
       const languages = [
@@ -33,7 +33,7 @@
         "French",
       ];
       const setOfLanguages = new Set(languages);
-      console.log(setOfLanguages);
+      console.log(setOfLanguages); //Set(4) {'English', 'Finnish', 'French', 'Spanish'}
 
       //Set is an iterable object and we can iterate through each elements.
       const language = [
@@ -49,6 +49,13 @@
       for (const languag of setOfLanguage) {
         console.log(languag);
       }
+      /*
+      OUTPUT:
+      English
+      Finnish
+      French
+      Spanish
+      */
 
       //3.Adding an element to a set
 
@@ -61,7 +68,7 @@
       companies1.add("Oracle");
       companies1.add("Microsoft");
       console.log(companies1.size); // 5 elements in the set
-      console.log(companies1);
+      console.log(companies1); //Set(5) {'Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft'}
 
       //We can also use loop to add element to a set.
       const companies2 = [
@@ -75,26 +82,27 @@
       for (const company of companies2) {
         setOfCompanies.add(company);
       }
+      console.log(setOfCompanies); //Set(5) {'Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft'}
 
       //4.Deleting element a set
 
-      console.log(companies.delete("Google"));
-      console.log(companies.size); // 4 elements left in the set
+      console.log(setOfCompanies.delete("Google")); //true
+      console.log(setOfCompanies.size); // 4 elements left in the set
 
       //5.Checking an element in the set
 
-      console.log(companies.has("Apple")); // false
-      console.log(companies.has("Facebook")); // true
+      console.log(setOfCompanies.has("Apple")); // false
+      console.log(setOfCompanies.has("Facebook")); // true
 
-      //6.Checking an element in the set
+      // //6.Checking an element in the set
 
-      console.log(companies.has("Apple")); // false
-      console.log(companies.has("Facebook")); // true
+      console.log(setOfCompanies.has("Apple")); // false
+      console.log(setOfCompanies.has("Facebook")); // true
 
       //7.Clearing the set
 
-      companies.clear();
-      console.log(companies);
+      setOfCompanies.clear();
+      console.log(setOfCompanies); //Set(0) {size: 0}
 
       //8.Union of sets
 
@@ -106,7 +114,7 @@
       let B = new Set(b);
       let C = new Set(c);
 
-      console.log(C);
+      console.log(C); //Set(6) {1, 2, 3, 4, 5, …}
 
       //9.Intersection of sets
 
@@ -119,7 +127,7 @@
       let c1 = a.filter((num) => B1.has(num));
       let C1 = new Set(c1);
 
-      console.log(C1);
+      console.log(C1); //Set(3) {3, 4, 5}
 
       //10.Difference of sets
 
@@ -131,7 +139,7 @@
 
       let c2 = a2.filter((num) => !B2.has(num));
       let C2 = new Set(c2);
-      console.log(C2);
+      console.log(C2); //Set(2) {1, 2}
 
       //=========================================================================================
 
@@ -147,20 +155,21 @@
       // it contains
       // ["sumit","amit","anil","anish"]
       var set1 = new Set(["sumit", "sumit", "amit", "anil", "anish"]);
-      console.log(set1);
+      console.log(set1); //Set(4) {'sumit', 'amit', 'anil', 'anish'}
 
       // it contains 'f', 'o', 'd'
       var set2 = new Set("fooooooood");
-      console.log(set2);
+      console.log(set2); //Set(3) {'f', 'o', 'd'}
 
       // it contains [10, 20, 30, 40]
       var set3 = new Set([10, 20, 30, 30, 40, 40]);
-      console.log(set3);
+      console.log(set3); //Set(4) {10, 20, 30, 40}
 
       // it is an empty set
       var set4 = new Set();
-      console.log(set4);
+      console.log(set4); //Set(0) {size: 0}
     </script>
+
     <hr />
 
     <h1>Methods:</h1>
@@ -193,8 +202,8 @@
       letters1.add("e"); //not display same value
 
       // Display set.size
-      document.getElementById("demo1").innerHTML = letters1.size;
-      console.log(letters1.size); //{a,b,c,d,e}
+      document.getElementById("demo1").innerHTML = letters1.size; //5
+      console.log(letters1.size); //5
     </script>
     <hr />
 
@@ -214,7 +223,7 @@
       letters1.delete("a"); //{'b', 'c', 'd', 'e'}
 
       // Display set.size array to use length set use size
-      document.getElementById("demo1").innerHTML = letters1.size;
+      document.getElementById("demo1").innerHTML = letters1.size; //4
       console.log(letters1); //{b,c,d,e}
     </script>
     <hr />
@@ -248,7 +257,7 @@
         text += x + "<br>";
       }
 
-      console.log(text);
+      console.log(text); //a b c
     </script>
     <hr />
 
@@ -256,9 +265,9 @@
     <script>
       let no = [1, 2, 3, 3, 3, 4, 4, 4, 5, 6, 7, 8, 9, 9, 9];
       let no1 = new Set(no);
-      console.log(no1);
+      console.log(no1); //Set(9) {1, 2, 3, 4, 5, …}
       let ar = [...no1];
-      console.log(ar);
+      console.log(ar); //(9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
     </script>
 
     <p>
@@ -287,44 +296,41 @@
       let mySet2 = new Set([1, 2, 3]);
 
       let arr2 = Array.from(mySet2);
-      console.log(arr2);
+      console.log(arr2); //(3) [1, 2, 3]
     </script>
 
     <script>
-      /*
-  let set = new Set();
+      let set = new Set();
 
-let john = { name: "John" };
-let pete = { name: "Pete" };
-let mary = { name: "Mary" };
+      let john = { name: "John" };
+      let pete = { name: "Pete" };
+      let mary = { name: "Mary" };
 
-// visits, some users come multiple times
-set.add(john);
-set.add(pete);
-set.add(mary);
-set.add(john);
-set.add(mary);
+      // visits, some users come multiple times
+      set.add(john);
+      set.add(pete);
+      set.add(mary);
+      set.add(john);
+      set.add(mary);
 
-// set keeps only unique values
-alert( set.size ); // 3
+      // set keeps only unique values
+      alert(set.size); // 3
 
-for (let user of set) {
-  alert(user.name); // John (then Pete and Mary)
-}*/
+      for (let user of set) {
+        alert(user.name); // John (then Pete and Mary)
+      }
 
-      /*
-//Iteration over Set
-//We can loop over a set either with for..of or using forEach:
+      //Iteration over Set
+      //We can loop over a set either with for..of or using forEach:
 
-let set = new Set(["oranges", "apples", "bananas"]);
+      let set00 = new Set(["oranges", "apples", "bananas"]);
 
-for (let value of set) alert(value);
+      for (let value of set00) alert(value); //oranges,apple,bananas
 
-// the same with forEach:
-set.forEach((value, valueAgain, set) => {
-  alert(value);
-});
-*/
+      // the same with forEach:
+      set00.forEach((value, valueAgain, set) => {
+        alert(value); //oranges,apple,bananas
+      });
     </script>
 
     <script>
@@ -334,31 +340,34 @@ set.forEach((value, valueAgain, set) => {
       // No index-based access
       // Order is not guaranteed
       // unique items only (no duplicates allowed)
-      // const items = ['item1', 'item2', 'item3'];
-      // const numbers = new Set();
-      // numbers.add(1);
-      // numbers.add(2);
-      // numbers.add(3);
-      // numbers.add(4);
-      // numbers.add(5);
-      // numbers.add(6);
-      // numbers.add(items);
-      // if(numbers.has(1)){
-      //     console.log("1 is present")
-      // }else{
-      //     console.log("1 is not present")
-      // }
-      // for(let number of numbers){
-      //     console.log(number);
-      // }
-      // const myArray = [1,2,4,4,5,6,5,6];
-      // const uniqueElements = new Set(myArray);
-      // let length = 0;
-      // for(let element of uniqueElements){
-      //     length++;
-      // }
 
-      // console.log(length);
+      const items = ["item1", "item2", "item3"];
+      const numbers = new Set();
+      numbers.add(1);
+      numbers.add(2);
+      numbers.add(3);
+      numbers.add(4);
+      numbers.add(5);
+      numbers.add(6);
+      numbers.add(items);
+      if (numbers.has(1)) {
+        console.log("1 is present"); //1 is present
+      } else {
+        console.log("1 is not present");
+      }
+
+      for (let number of numbers) {
+        console.log(number); //1 2 3 4 5 6 (3) ['item1', 'item2', 'item3']
+      }
+
+      const myArray = [1, 2, 4, 4, 5, 6, 5, 6];
+      const uniqueElements = new Set(myArray);
+      let length = 0;
+      for (let element of uniqueElements) {
+        length++;
+      }
+
+      console.log(length); //5
     </script>
   </body>
 </html>

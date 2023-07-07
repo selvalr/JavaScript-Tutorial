@@ -14,9 +14,9 @@
       console.log(person instanceof Object); //true; //typeof operator is primitive data check. Instanceof operator is check Object which reference type
       console.log(person); //{}
 
-      person.name = 'selva';
+      person.name = "selva";
       person.age = 23;
-      person.status = 'single';
+      person.status = "single";
 
       console.log(person.name); //selva
       console.log(person.age); //23
@@ -24,7 +24,7 @@
 
       //person sayhi() is a function but call method inside a object
       person.sayhi = function () {
-        console.log('hi' + person.name);
+        console.log("hi" + person.name); //hiselva
       };
       person.sayhi(); //call function
 
@@ -36,12 +36,12 @@
       let obj2 = obj1;
 
       num2 = 20;
-      console.log('num1 =' + num1); //10
-      console.log('num2 =' + num2); //20 ; //two difference value stored in stack method storing value
+      console.log("num1 =" + num1); //10
+      console.log("num2 =" + num2); //20 ; //two difference value stored in stack method storing value
 
-      obj2.newProp = 'by Reference';
-      console.log('object1', obj1); //'by reference ;
-      console.log('object2', obj2); //'by reference ; // one value added two object value changed the object value in the object data type
+      obj2.newProp = "by Reference";
+      console.log("object1", obj1); //'by reference ;
+      console.log("object2", obj2); //'by reference ; // one value added two object value changed the object value in the object data type
     </script>
   </body>
 </html>

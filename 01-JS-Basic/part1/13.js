@@ -1,10 +1,9 @@
-// truthy and falsy values 
+// truthy and falsy values
 
-// falsy values 
-
+// falsy values
 
 // false
 // ""
-// null 
+// null
 // undefined
 // 0

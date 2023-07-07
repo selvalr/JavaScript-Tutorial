@@ -38,6 +38,10 @@ console.log(firstName, typeof firstName); // undefined, because it is not assign
 let emptyValue = null;
 console.log(emptyValue, typeof emptyValue); //null,object
 
+//6.Symbol
+let id = Symbol();
+console.log(id, typeof id); //Symbol
+
 // 1.Object:
 const person = { firstName: "John", lastName: "Doe" };
 console.log(person, typeof person); //{firstName: 'John', lastName: 'Doe'} 'object'

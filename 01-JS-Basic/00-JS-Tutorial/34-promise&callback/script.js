@@ -6,17 +6,20 @@
 
 // 1.callback functions
 
-function myFunc2(name) {
-  console.log("inside my func 2");
-  console.log(`your name is ${name}`);
+function myCallBack(name) {
+  //3
+  console.log("inside my func 2"); //2--->inside my func 2
+  console.log(`your name is ${name}`); //3-->your name is harshit
 }
 
-function myFunc(callback) {
-  console.log("hello there I am a func and I can..");
-  callback("harshit");
+//higher order functions is parameters get
+function higerOrderFun(callback) {
+  //2
+  console.log("hello there I am a func and I can.."); //1-->hello there I am a func and I can..
+  myCallBack("harshit");
 }
 
-myFunc(myFunc2);
+higerOrderFun(myCallBack); //called arquemnt is callback //1
 
 //2.Callback
 const doSomething = (callback) => {
@@ -25,9 +28,10 @@ const doSomething = (callback) => {
     callback("It did not go well", skills);
   }, 2000);
 };
+
 const callback = (err, result) => {
   if (err) {
-    return console.log(err);
+    return console.log(err); //It did not go well
   }
   return console.log(result);
 };
@@ -45,16 +49,16 @@ doSomething1((err, result) => {
   if (err) {
     return console.log(err);
   }
-  return console.log(result);
+  return console.log(result); //(3) ['HTML', 'CSS', 'JS']
 });
 
 //Promise
 
-// syntax
-const promise = new Promise((resolve, reject) => {
-  resolve("success");
-  reject("failure");
-});
+// syntax:
+// const promise = new Promise((resolve, reject) => {
+//   resolve("success");
+//   reject("failure");
+// });
 
 // Promise
 const doPromise = new Promise((resolve, reject) => {
@@ -69,12 +73,12 @@ const doPromise = new Promise((resolve, reject) => {
 });
 doPromise
   .then((result) => {
-    console.log(result);
+    console.log(result); //(3) ['HTML', 'CSS', 'JS']
   })
   .catch((error) => console.log(error));
 
 //The above promise has been settled with resolve. Let us another example when the promise is settled with reject.
-
+/*
 // Promise
 const doPromise2 = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -91,7 +95,8 @@ doPromise2
   .then((result) => {
     console.log(result);
   })
-  .catch((error) => console.error(error));
+  .catch((error) => console.error(error)); //something wrong has happened
+*/
 
 /*
   function someAsyncFunction() {
@@ -112,5 +117,5 @@ someAsyncFunction()
     .catch(error => {
         // code to execute on error
     });
-  
+
   */

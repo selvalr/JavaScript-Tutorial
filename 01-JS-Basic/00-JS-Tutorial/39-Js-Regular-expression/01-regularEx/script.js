@@ -68,7 +68,7 @@ console.log(letter.match(a)); // ['a', 'a', 'a', 'a', 'a', 'a']
 let b = /A/i; //Perform case-insensitive matching
 console.log(letter.match(b)); //first letter in A index one index
 let c = /p/m; //Perform multiline matching
-console.log(letter.match(c));
+console.log(letter.match(c)); //8th index p
 let d = /is/gi;
 console.log(letter.match(d)); //['is']
 let e = /av/gim;
@@ -97,11 +97,12 @@ console.log(txt1.match(l)); //['1', '2']
 //3.Metacharacters:\w,\d,\s,\uxxxx,\v,\t
 
 //Metacharacters are characters with a special meaning:
+
 let txt2 = " Hello Selva $ % ^ & @ * 123 \v \t";
 let m = /\w/g; //w is a letter and digit only
-console.log(txt2.match(m)); //
+console.log(txt2.match(m)); //['H', 'e', 'l', 'l', 'o', 'S', 'e', 'l', 'v', 'a', '1', '2', '3']
 let n = /\W/g; //W is a special character display
-console.log(txt2.match(n)); //
+console.log(txt2.match(n)); //[' ', ' ', ' ', '$', ' ', '%', ' ', '^', ' ', '&', ' ', '@', ' ', '*', ' ', ' ', '\v', ' ', '\t']
 let o = /\d/g; //d is 	Find a digit
 console.log(txt2.match(o)); //['1', '2', '3']
 let p = /\D/g; //D is a all character but not number
@@ -115,9 +116,9 @@ console.log(txt2.match(s)); //['He']
 let t = /va\b/g;
 console.log(txt2.match(t)); //['va']
 let u = /\v/g;
-console.log(txt2.search(u));
+console.log(txt2.search(u)); //29
 let v = /\t/g;
-console.log(txt2.search(v));
+console.log(txt2.search(v)); //31
 
 //4.Quantifiers
 

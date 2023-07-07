@@ -15,22 +15,22 @@
 //You can create named exports two ways. In-line individually, or all at once at the bottom.
 
 //i.In-line individually:
-
+/*
 export const name = "Jesse";
 export const age = 40;
-
+*/
 //ii.All at once at the bottom:
-
+/*
 const name = "Jesse";
 const age = 40;
 
 export { name, age };
-
+*/
 //Default Exports
 //Let us create another file, named message.js, and use it for demonstrating default export.
 //You can only have one default export in a file.
 
-message.js;
+//message.js;
 
 const message = () => {
   const name = "Jesse";
@@ -46,17 +46,17 @@ export default message;
 
 //Import from named exports
 //Import named exports from the file person.js:
-
+/*
 import { name, age } from "./person.js";
 let text = "My name is " + name + ", I am " + age + ".";
 
 document.getElementById("demo").innerHTML = text;
-
+*/
 //Import from default exports
 //Import a default export from the file message.js:
-
+/*
 import message from "./message.js";
 document.getElementById("demo").innerHTML = message();
-
+*/
 //Modules only work with the HTTP(s) protocol.
 //A web-page opened via the file:// protocol cannot use import / export.

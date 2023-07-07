@@ -1,12 +1,10 @@
-// Uncaught ReferenceError: 
+// Uncaught ReferenceError:
 // Cannot access 'firstName' before initialization
-
-
 
 // Uncaught ReferenceError:
 //  firstName is not defined
-console(firstName);
+//console(firstName); //Uncaught ReferenceError: firstName is not defined
 
-// console.log(firstName);
-// firstName = "harshit";
-// console.log(firstName);
+console.log(firstName); //Uncaught ReferenceError: firstName is not defined
+firstName = "harshit";
+console.log(firstName); //harshit

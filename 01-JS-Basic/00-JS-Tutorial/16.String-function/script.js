@@ -1,7 +1,7 @@
 let first_name = "selvamanan";
 let second_name = "R";
 
-//string Concatenation
+//1.string Concatenation
 
 let c = first_name + " " + second_name;
 console.log("concatenation:" + c);
@@ -9,11 +9,11 @@ console.log("concatenation:" + c);
 let string1 = "17";
 let string2 = "10";
 let newString = +string1 + +string2;
-console.log(typeof newString); //number
+console.log(newString, typeof newString); //27 number
 
 //concat
 c = first_name.concat(" ", second_name);
-console.log("Concat : " + c);
+console.log("Concat : " + c); //Concat:selvamanan R
 
 //append
 c = "Selva ";
@@ -33,46 +33,46 @@ console.log("Append : " + c);
 */
 
 c = "She Can't run";
-console.log(c);
+console.log(c); //She can't run
 
-//Length
+//2.Length
 c = first_name.length;
-console.log("Length : " + c);
+console.log("Length : " + c); //10
 
-//Change Case
+//3.Change Case
 c = first_name.toUpperCase();
-console.log("Uppercase : " + c);
+console.log("Uppercase : " + c); //SELVAMANAN
 c = first_name.toLowerCase();
-console.log("Lowercase : " + c);
+console.log("Lowercase : " + c); //selvamanan
 
-//js search method
+//4.js search method
 //String indexOf()
 c = first_name.indexOf("s");
-console.log("indexOf s : " + c);
+console.log("indexOf s : " + c); //0
 //String lastIndexOf()
-c = first_name.lastIndexOf("e");
-console.log("lastIndexOf e : " + c);
+c = first_name.lastIndexOf("a");
+console.log("lastIndexOf a : " + c); //8
 //JavaScript String startsWith()
 c = first_name.startsWith("se");
-console.log("string startwidth" + c);
+console.log("string startwidth:" + c); //true
 //JavaScript String endsWith()
 c = first_name.endsWith("an");
-console.log("string endwidth" + c);
+console.log("string endwidth :" + c); //true
 
 c = first_name.charAt(1);
-console.log("charAt 1 : " + c);
+console.log("charAt 1 : " + c); //e
 
 c = first_name.charCodeAt(1);
-console.log("charCodeAt 1 : " + c);
+console.log("charCodeAt 1 : " + c); //101
 
 c = first_name.substr(0, 3);
-console.log("substr : " + c);
+console.log("substr : " + c); //sel
 
 //Substring
 let text = "01234567890";
 
 c = text.substring(0, 4);
-console.log("Substring : " + c);
+console.log("Substring : " + c); //0123
 c = text.substring(4);
 console.log("Substring : " + c);
 c = text.substring(4, 0);
@@ -84,13 +84,13 @@ console.log("-3 : " + c);
 
 //Slice
 c = text.slice(2, 4);
-console.log("slice : " + c);
+console.log("slice : " + c); //23
 c = text.slice(4, 2);
-console.log("slice : " + c);
+console.log("slice : " + c); //
 c = text.slice(25, 30);
 console.log("slice Invalid Length : " + c);
 c = text.slice(-5);
-console.log("slice -5: " + c);
+console.log("slice -5: " + c); //67890
 
 //Split in JS
 let a = "Tutor Joes Computer Education";
@@ -106,8 +106,8 @@ console.log("After Replace : " + c);
 
 //includes in js
 const pets = ["cat", "dog", "bat"];
-console.log(pets.includes("cat"));
-console.log(pets.includes("rat"));
+console.log(pets.includes("cat")); //true
+console.log(pets.includes("rat")); //false
 
 //trim in js
 a = " Joes ";

@@ -1,11 +1,11 @@
-// arrow functions 
+// arrow functions
 
 const user1 = {
-    firstName : "harshit",
-    age: 8,
-    about: () => {
-        console.log(this.firstName, this.age);
-    }   
-}
+  firstName: "harshit",
+  age: 8,
+  about: () => {
+    console.log(this.firstName, this.age);
+  },
+};
 
-user1.about(user1);
+user1.about(user1); //undefined undefined

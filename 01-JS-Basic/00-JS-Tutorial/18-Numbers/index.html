@@ -9,57 +9,54 @@
 
   <body>
     <h1>Number</h1>
-    <!--
+
     <script>
-      var num1 = 100; // integer
-      console.log(num1); //100
+      // var num1 = 100; // integer
+      // console.log(num1); //100
 
-      var num2 = -100; //negative integer
-      console.log(num2); //-100
+      // var num2 = -100; //negative integer
+      // console.log(num2); //-100
 
-      var num3 = 10.52; // float
-      console.log(num3); //10.52
+      // var num3 = 10.52; // float
+      // console.log(num3); //10.52
 
-      var num4 = -10.52; //negative float
-      console.log(num4); //-10.52
+      // var num4 = -10.52; //negative float
+      // console.log(num4); //-10.52
 
-      var num5 = 0xfff; // hexadecimal
-      console.log(num5); //4095
+      // var num5 = 0xfff; // hexadecimal
+      // console.log(num5); //4095
 
-      var num6 = 256e-5; // exponential
-      console.log(num6); //0.00256
-      /*
-      var num7 = 030; // octal
-      console.log(num7);
-      */
-      var num8 = 0b0010001; // binary
-      console.log(num8); //17
+      // var num6 = 256e-5; // exponential
+      // console.log(num6); //0.00256
+      // /*
+      // var num7 = 030; // octal
+      // console.log(num7);
+      // */
+      // var num8 = 0b0010001; // binary
+      // console.log(num8); //17
     </script>
 
-  -->
-
     <script>
-      //i.Numbers can be written with or without decimals:
       /*
-            let x = 5; // A number with decimals
-            console.log(x);
-            let y = 3.14; // A number without decimals
-            console.log(y);
-      */
+      //i.Numbers can be written with or without decimals:
+
+      let x = 5; // A number with decimals
+      console.log(x); //5
+      let y = 3.14; // A number without decimals
+      console.log(y); //3.14
 
       //1.Number Literals: The types of number literals You can use decimal, binary, octal, and hexadecimal.
-      /*
+
       let myVaria = "423";
       let myNum = 423;
       let myFloa = 22.32;
       console.log(myNum === myVaria); //false
       console.log(myVaria + 3); //4233
-      console.log(Number(myVaria) + 3); //4236
+      console.log(Number(myVaria) + 3); //426
       console.log(Number(true) + 3); //4
-      */
 
       //2.Decimal Numbers: JavaScript Numbers does not have different types of numbers(ex: int, float, long, short) which other programming languages do. It has only one type of number and it can hold both with or without decimal values.
-      /*
+
       //example:
       var x1 = 0.22 + 0.12;
       console.log(x1); //0.33999999999999997
@@ -68,16 +65,16 @@
 
       var x2 = 0b0111;
       console.log(x2); //7
-      */
-
+*/
       //Octal Numbers: They start with 0 followed by a number of ranges from 0-7. If any number is used it will be taken as a decimal number.
       /*
-      var x3 = 07123;
-      console.log(x3);
-      */
+            var x3 = 07123;
+            console.log(x3); //3667
+            */
 
-      //Hexadecimal Numbers: They start with 0x or 0X followed by any digit belonging (0123456789ABCDEF)
       /*
+      //Hexadecimal Numbers: They start with 0x or 0X followed by any digit belonging (0123456789ABCDEF)
+
       var x4 = 0xfff;
       console.log(x4); //4095
 
@@ -112,41 +109,38 @@
       let z00 = x00 + y00;
       console.log(z00); //1020
 
-
       //If you add a string and a number, the result will be a string concatenation:
 
       var x6 = "12345"; // x will be a string(NaN)
       var x7 = 67; // x will be number
-      */
-
+*/
       /*
-                  This will work:
+                        This will work:
 
-                  let x = "100";
-                  let y = "10";
-                  let z = x / y;
+                        let x = "100";
+                        let y = "10";
+                        let z = x / y;
 
-                  This will also work:
+                        This will also work:
 
-                  let x = "100";
-                  let y = "10";
-                  let z = x * y;
+                        let x = "100";
+                        let y = "10";
+                        let z = x * y;
 
-                  And this will work:
+                        And this will work:
 
-                  let x = "100";
-                  let y = "10";
-                  let z = x - y;
+                        let x = "100";
+                        let y = "10";
+                        let z = x - y;
 
-                  But this will not work:
+                        But this will not work:
 
-                  let x = "100";
-                  let y = "10";
-                  let z = x + y;
+                        let x = "100";
+                        let y = "10";
+                        let z = x + y;
 
 
-      */
-
+            */
       /*
       //A common mistake is to expect this result to be 30:
 
@@ -162,21 +156,21 @@
       let z02 = "30";
       let result = x02 + y02 + z02;
       console.log(result); //3030
-      */
 
       //3.JavaScript Numbers as Objects
-      /*
+
       // x is a number
       let x8 = 123;
 
       // y is a Number object
       let y8 = new Number(123);
-      console.log(typeof x8, typeof y8);
+      console.log(typeof x8, typeof y8); //number object
       console.log(x8 == y8); //true
       console.log(x8 === y8); //false
 
       //Note the difference between (x==y) and (x===y).
 
+      //two objects compared return false
       let $x = new Number(500);
       let $y = new Number(500);
       console.log($x == $y); //false
@@ -190,8 +184,8 @@
       console.log(x21);
 
       //float Number Precision
-      let a = 1.1 + 1.3;
-      console.log(a); //2.4000000000000004
+      let a2 = 1.1 + 1.3;
+      console.log(a2); //2.4000000000000004
       //To solve the problem above, it helps to multiply and divide:
       let x13 = (0.2 * 10 + 0.1 * 10) / 10;
       console.log(x13); //0.3
@@ -213,100 +207,98 @@
       console.log(100 / "apple"); //Nan
       console.log(100 / "10"); //10
 
-      let x2 = 100 / "Apple";
-      console.log(isNaN(x2));
-      */
+      let x20 = 100 / "Apple";
+      console.log(isNaN(x20)); //true
 
       /*
-          // Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+                // Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
 
-             //Example
-                  let x = NaN;
-                  let y = 5;
-                  let z = x + y;
+                   //Example
+                        let x = NaN;
+                        let y = 5;
+                        let z = x + y;
 
-                  //Or the result might be a concatenation like NaN5:
+                        //Or the result might be a concatenation like NaN5:
 
-                  //Example
-                  let x = NaN;
-                  let y = "5";
-                  let z = x + y;
+                        //Example
+                        let x = NaN;
+                        let y = "5";
+                        let z = x + y;
 
-                 // NaN is a number: typeof NaN returns number:
+                       // NaN is a number: typeof NaN returns number:
 
-                  //Example
+                        //Example
 
-                  typeof NaN;
+                        typeof NaN;
 
-      */
-
-      /*
-            //Infinity
-
-            //Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
-            let myNumber = 2;
-            // Execute until Infinity
-            while (myNumber != Infinity) {
-              myNumber = myNumber * myNumber;
-            }
-
-            //Division by 0 (zero) also generates Infinity:
-
-            let x3 = 2 / 0;
-            console.log(x3);
-            let y3 = -2 / 0;
-            console.log(y3);
-
-            //Infinity is a number: typeof Infinity returns number.
-
-            console.log(typeof Infinity);
-
-            //5.More ways to write a number
-
-            //Imagine we need to write 1 billion. The obvious way is:
-
-            let billion = 1000000000;
-
-            //We also can use underscore _ as the separator:
-
-            let billion1 = 1_000_000_000;
-
-            //In JavaScript, we can shorten a number by appending the letter "e" to it and specifying the zeroes count:
-
-            let billion2 = 1e9; // 1 billion, literally: 1 and 9 zeroes
-
-            console.log(7.3e9); // 7.3 billions (same as 7300000000 or 7_300_000_000)
-      */
-      /*
-                              In other words, e multiplies the number by 1 with the given zeroes count.
-
-                              1e3 === 1 * 1000; // e3 means *1000
-                              1.23e6 === 1.23 * 1000000; // e6 means *1000000
-       */
+            */
 
       /*
-                              Now let’s write something very small. Say, 1 microsecond (one millionth of a second):
+                  //Infinity
 
-                              let mсs = 0.000001;
-                              Just like before, using "e" can help. If we’d like to avoid writing the zeroes explicitly, we could write the same as:
+                  //Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+                  let myNumber = 2;
+                  // Execute until Infinity
+                  while (myNumber != Infinity) {
+                    myNumber = myNumber * myNumber;
+                  }
 
-                              let mcs = 1e-6; // five zeroes to the left from 1
+                  //Division by 0 (zero) also generates Infinity:
 
-      */
+                  let x3 = 2 / 0;
+                  console.log(x3);
+                  let y3 = -2 / 0;
+                  console.log(y3);
+
+                  //Infinity is a number: typeof Infinity returns number.
+
+                  console.log(typeof Infinity);
+
+                  //5.More ways to write a number
+
+                  //Imagine we need to write 1 billion. The obvious way is:
+
+                  let billion = 1000000000;
+
+                  //We also can use underscore _ as the separator:
+
+                  let billion1 = 1_000_000_000;
+
+                  //In JavaScript, we can shorten a number by appending the letter "e" to it and specifying the zeroes count:
+
+                  let billion2 = 1e9; // 1 billion, literally: 1 and 9 zeroes
+
+                  console.log(7.3e9); // 7.3 billions (same as 7300000000 or 7_300_000_000)
+            */
+      /*
+                                    In other words, e multiplies the number by 1 with the given zeroes count.
+
+                                    1e3 === 1 * 1000; // e3 means *1000
+                                    1.23e6 === 1.23 * 1000000; // e6 means *1000000
+             */
 
       /*
-                              In other words, a negative number after "e" means a division by 1 with the given number of zeroes:
+                                    Now let’s write something very small. Say, 1 microsecond (one millionth of a second):
 
-                              // -3 divides by 1 with 3 zeroes
-                              1e-3 === 1 / 1000; // 0.001
+                                    let mсs = 0.000001;
+                                    Just like before, using "e" can help. If we’d like to avoid writing the zeroes explicitly, we could write the same as:
 
-                              // -6 divides by 1 with 6 zeroes
-                              1.23e-6 === 1.23 / 1000000; // 0.00000123
+                                    let mcs = 1e-6; // five zeroes to the left from 1
 
-                              // an example with a bigger number
-                              1234e-2 === 1234 / 100; // 12.34, decimal point moves 2 times
-                              */
+            */
 
+      /*
+                                    In other words, a negative number after "e" means a division by 1 with the given number of zeroes:
+
+                                    // -3 divides by 1 with 3 zeroes
+                                    1e-3 === 1 / 1000; // 0.001
+
+                                    // -6 divides by 1 with 6 zeroes
+                                    1.23e-6 === 1.23 / 1000000; // 0.00000123
+
+                                    // an example with a bigger number
+                                    1234e-2 === 1234 / 100; // 12.34, decimal point moves 2 times
+                                    */
       /*
             //4.Hex, binary and octal numbers
 
@@ -314,17 +306,17 @@
             //JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
 
             let x33 = 0xff;
-            console.log(x33);
+            console.log(x33); //255
 
             console.log(0xff); // 255
             console.log(0xff); // 255 (the same, case doesn't matter)
 
             //Binary and octal numeral systems are rarely used, but also supported using the 0b and 0o prefixes:
 
-            let a = 0b11111111; // binary form of 255
-            let b = 0o377; // octal form of 255
+            let a33 = 0b11111111; // binary form of 255
+            let b33 = 0o377; // octal form of 255
 
-            console.log(a == b); // true, the same number 255 at both sides
+            console.log(a33 == b33); // true, the same number 255 at both sides
 
             //5.toString(base)
             //The method num.toString(base) returns a string representation of num in the numeral system with the given base.
@@ -335,29 +327,30 @@
 
             console.log(num.toString(16)); // ff
             console.log(num.toString(2)); // 11111111
-      */
+*/
       /*
-                              Common use cases for this are:
+                     Common use cases for this are:
 
-                              base=16 is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
+                        base=16 is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
 
-                              base=2 is mostly for debugging bitwise operations, digits can be 0 or 1.
+                        base=2 is mostly for debugging bitwise operations, digits can be 0 or 1.
 
-                              base=36 is the maximum, digits can be 0..9 or A..Z. The whole latin alphabet is used to represent a number. A funny, but useful case for 36 is when we need to turn a long numeric identifier into something shorter, for example to make a short url. Can simply represent it in the numeral system with base 36:
+                        base=36 is the maximum, digits can be 0..9 or A..Z. The whole latin alphabet is used to represent a number. A funny, but useful case for 36 is when we need to turn a long numeric identifier into something shorter, for example to make a short url. Can simply represent it in the numeral system with base 36:
 
-                              console.log( 123456..toString(36) ); // 2n9c
+                        console.log( 123456..toString(36) ); // 2n9c
 
-                              */
+            */
 
       /*
-            let myNumber1 = 32;
-            myNumber.toString(32);
-            myNumber.toString(16);
-            myNumber.toString(12);
-            myNumber.toString(10);
-            myNumber.toString(8);
-            myNumber.toString(2);
-
+                  let myNumber1 = 32;
+                  myNumber.toString(32);
+                  myNumber.toString(16);
+                  myNumber.toString(12);
+                  myNumber.toString(10);
+                  myNumber.toString(8);
+                  myNumber.toString(2);
+            */
+      /*
             //5.Imprecise calculations
             console.log(1e500); // Infinity
             console.log(0.1 + 0.2 == 0.3); // false
@@ -380,10 +373,10 @@
 
             //Sometimes isFinite is used to validate whether a string value is a regular number:
 
-            let num2 = +prompt("Enter a number", "");
+            let num22 = +prompt("Enter a number", "");
 
             // will be true unless you enter Infinity, -Infinity or not a number
-            console.log(isFinite(num2));
+            console.log(isFinite(num22)); //true
 
             //iii.Number.isNaN(value) returns true if the argument belongs to the number type and it is NaN. In any other case it returns false.
 
@@ -406,6 +399,6 @@
           */
     </script>
 
-    <!--<script src="./script.js"></script>-->
+    <script src="./script.js"></script>
   </body>
 </html>

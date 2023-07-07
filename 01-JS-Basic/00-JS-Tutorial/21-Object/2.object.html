@@ -22,20 +22,20 @@
       //1.Object Constructor Object Example:
 
       let user = new Object();
-      user.name = 'selva';
-      user.profession = 'freelance web';
+      user.name = "selva";
+      user.profession = "freelance web";
 
       user.sayhi = function () {
-        console.log('hello' + user.name);
+        console.log("hello" + user.name);
       };
       user.sayhi();
 
       //2.Object Literal example:
       let user1 = {
-        name: 'selvamanan',
-        profession: 'web devveloper',
+        name: "selvamanan",
+        profession: "web devveloper",
         sayhi: function () {
-          console.log('hello' + this.name);
+          console.log("hello" + this.name);
         },
       };
       user1.sayhi();
@@ -44,23 +44,33 @@
       user2.sayhi(); //new copy object user2 sayhi method calling
       user1 = null; //user1 object null
       user2.sayhi(); //user2 object called method
-      console.log(user2);
+      console.log(user2); //{name: 'selvamanan', profession: 'web devveloper', sayhi: ƒ}
 
       //first name added object
       //syntax error
       //user2.firstname = 'selva';
 
-      user2['fname'] = 'selvalr';
-      console.log(user2);
+      user2["fname"] = "selvalr";
+      console.log(user2); //{name: 'selvamanan', profession: 'web devveloper', fname: 'selvalr', sayhi: ƒ}
 
       //access method
-      let promName = 'fname';
+      let promName = "fname";
       console.log(user2[promName]); //selvalr
 
       //for in loop
       for (pro in user2) {
         console.log(user2[pro]);
       }
+      /*
+      OUTPUT
+      selvamanan
+      web devveloper
+      ƒ () {
+          console.log("hello" + this.name);
+        }
+      selvalr
+
+      */
     </script>
   </body>
 </html>

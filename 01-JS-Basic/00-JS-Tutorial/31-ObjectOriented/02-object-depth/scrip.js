@@ -1,167 +1,162 @@
 //1.JavaScript Object
 
-// object literal 
+// object literal
 var person = {
-    firstName:'Steve',
-    lastName:'Jobs'
+  firstName: "Steve",
+  lastName: "Jobs",
+};
+console.log(person);
+
+// Constructor function
+function Student() {
+  this.name = "John";
+  this.gender = "Male";
+  this.sayHi = function () {
+    alert("Hi");
   };
-  
-  // Constructor function
-  function Student(){
-    this.name = "John";
-    this.gender = "Male";
-    this.sayHi = function(){
-      alert('Hi');
-    }
-  }
-  var student1 = new Student();
-  console.log(student1.name);
-  console.log(student1.gender);
-  student1.sayHi();
-  
+}
+var student1 = new Student();
+console.log(student1.name); //John
+console.log(student1.gender); //male
+student1.sayHi();
 
-  //ii.Edit Property Descriptor
-function Student(){
-    this.title = "Mr.";
-    this.name = "Steve";
-    this.gender = "Male";
-    this.sayHi = function(){    
-      alert('Hi');
-    }
-  }
-  var student1 = new Student();
-  
-  Object.keys(student1);
-
-  
-  //ii.Enumerable Properties
-function Student(){
-    this.title = "Mr.";
-    this.name = "Steve";
-    this.gender = "Male";
-    this.sayHi = function(){    
-      alert('Hi');
-    }
-  }
-  var student1 = new Student();
-  
-  //enumerate properties of student1
-  for(var prop in student1){
-    console.log(prop);
-  }
-
-  //iii.Property Descriptor
-var person = {
-    firstName:'Steve',
-    lastName:'Jobs'
-  };
-  
-  function Student(){
-    this.name = "John";
-    this.gender = "Male";
-    this.sayHi = function(){
-      alert('Hi');
-    }
-  }
-  
-  var student1 = new Student();
-  
-  console.log(Object.getOwnPropertyDescriptor(person,'firstName'));
-  console.log(Object.getOwnPropertyDescriptor(student1,'name'));
-  console.log(Object.getOwnPropertyDescriptor(student1,'sayHi'));
-
-  
-  //iv.Object.defineProperty()
-
-  //i.Edit Property Descriptor
-'use strict'
-
-function Student(){
+//ii.Edit Property Descriptor
+function Student() {
+  this.title = "Mr.";
   this.name = "Steve";
   this.gender = "Male";
+  this.sayHi = function () {
+    alert("Hi");
+  };
+}
+var student1 = new Student();
 
+Object.keys(student1);
+console.log(Object.keys(student1)); //[  "title",  "name",  "gender",  "sayHi"]
+
+//ii.Enumerable Properties
+function Student() {
+  this.title = "Mr.";
+  this.name = "Steve";
+  this.gender = "Male";
+  this.sayHi = function () {
+    alert("Hi");
+  };
+}
+var student1 = new Student();
+
+//enumerate properties of student1
+for (var prop in student1) {
+  console.log(prop);
+}
+
+//iii.Property Descriptor
+var person = {
+  firstName: "Steve",
+  lastName: "Jobs",
+};
+
+function Student() {
+  this.name = "John";
+  this.gender = "Male";
+  this.sayHi = function () {
+    alert("Hi");
+  };
 }
 
 var student1 = new Student();
 
-Object.defineProperty(student1,'name', { writable:false} );
+console.log(Object.getOwnPropertyDescriptor(person, "firstName"));
+console.log(Object.getOwnPropertyDescriptor(student1, "name"));
+console.log(Object.getOwnPropertyDescriptor(student1, "sayHi"));
 
-try
-{
-    student1.name = "James";
-    console.log(student1.name);
-}
-catch(ex)
-{
-    console.log(ex.message);
-}
+//   //iv.Object.defineProperty()
 
+//   //i.Edit Property Descriptor
+// 'use strict'
 
-//ii. Edit Property Descriptor
-function Student(){
-    this.name = "Steve";
-    this.gender = "Male";
-  }
-  
-  var student1 = new Student();
-  
-  //enumerate properties of student1
-  for(var prop in student1){
-    console.log(prop);
-  }
-  
-  //edit enumerable attributes of name property to false
-  Object.defineProperty(student1,'name',{ enumerable:false });
-  
-  console.log('After setting enumerable to false:');
-  
-  for(var prop in student1){
-    console.log(prop);
-  }
+// function Student(){
+//   this.name = "Steve";
+//   this.gender = "Male";
 
+// }
 
-  //iii. Edit Property Descriptor
-'use strict';
+// var student1 = new Student();
 
-function Student(){
-  this.name = "Steve";
-  this.gender = "Male";
-  
-}
-var student1 = new Student();
+// Object.defineProperty(student1,'name', { writable:false} );
 
-Object.defineProperty(student1,'name',{configurable:false});// set configurable to false
+// try
+// {
+//     student1.name = "James";
+//     console.log(student1.name);
+// }
+// catch(ex)
+// {
+//     console.log(ex.message);
+// }
 
-try
-{
-    Object.defineProperty(student1,'name',{writable:false}); // change writable attribute
-}
-catch(ex)
-{
-    console.log(ex.message);
-}
+// //ii. Edit Property Descriptor
+// function Student(){
+//     this.name = "Steve";
+//     this.gender = "Male";
+//   }
 
+//   var student1 = new Student();
 
-//3.Define New Property
-function Student(){
-    this.title = "Mr.";
-    this.name = "Steve";
-  }
-  
-  var student1 = new Student();
-  
-  Object.defineProperty(student1,'fullName',{
-    get:function(){
-      return this.title + ' ' + this.name;
-    },
-    set:function(_fullName){
-      this.title = _fullName.split(' ')[0];
-      this.name = _fullName.split(' ')[1];
-    }
-  });
-  
-  student1.fullName = "Mr. John";
-  
-  console.log(student1.title);
-  console.log(student1.name);
-  
+//   //enumerate properties of student1
+//   for(var prop in student1){
+//     console.log(prop);
+//   }
+
+//   //edit enumerable attributes of name property to false
+//   Object.defineProperty(student1,'name',{ enumerable:false });
+
+//   console.log('After setting enumerable to false:');
+
+//   for(var prop in student1){
+//     console.log(prop);
+//   }
+
+//   //iii. Edit Property Descriptor
+// 'use strict';
+
+// function Student(){
+//   this.name = "Steve";
+//   this.gender = "Male";
+
+// }
+// var student1 = new Student();
+
+// Object.defineProperty(student1,'name',{configurable:false});// set configurable to false
+
+// try
+// {
+//     Object.defineProperty(student1,'name',{writable:false}); // change writable attribute
+// }
+// catch(ex)
+// {
+//     console.log(ex.message);
+// }
+
+// //3.Define New Property
+// function Student(){
+//     this.title = "Mr.";
+//     this.name = "Steve";
+//   }
+
+//   var student1 = new Student();
+
+//   Object.defineProperty(student1,'fullName',{
+//     get:function(){
+//       return this.title + ' ' + this.name;
+//     },
+//     set:function(_fullName){
+//       this.title = _fullName.split(' ')[0];
+//       this.name = _fullName.split(' ')[1];
+//     }
+//   });
+
+//   student1.fullName = "Mr. John";
+
+//   console.log(student1.title);
+//   console.log(student1.name);

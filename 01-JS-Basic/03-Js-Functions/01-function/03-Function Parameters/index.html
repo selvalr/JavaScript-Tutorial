@@ -34,33 +34,25 @@
       myFunction(5, 6); //11
       console.log(myFunction(5)); //10
 
-
       //3.rest parameter
       function sum(...args) {
-  let sum = 0;
-  for (let arg of args) sum += arg;
-  return sum;
-}
-let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
-console.log(x);
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+      }
+      let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+      console.log(x);
 
+      //3.The Arguments Object
 
-
-//3.The Arguments Object
-
-
-function sumAll() {
-  let sum = 0;
-  for(let i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
-  }
-  return sum;
-}
-console.log(sumAll(1, 123, 500, 115, 44, 88));
-
-
-
-
+      function sumAll() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+      console.log(sumAll(1, 123, 500, 115, 44, 88));
 
       //1.
 

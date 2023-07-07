@@ -50,6 +50,7 @@ const promise = new Promise((resolve, reject) => {
   reject('failure')
 })
  */
+
 // Promise
 const doPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -64,7 +65,7 @@ const doPromise = new Promise((resolve, reject) => {
 
 doPromise
   .then((result) => {
-    console.log(result);
+    console.log(result); //['html', 'css', 'js]
   })
   .catch((error) => console.log(error));
 

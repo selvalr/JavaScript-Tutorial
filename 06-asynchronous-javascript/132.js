@@ -21,8 +21,8 @@ function addTwoNumbers(num1, num2) {
   console.log(num1 + num2);
 }
 
-function onFail(){
-    console.log("Wrong data type");
-    console.log("please pass numbers only")
+function onFail() {
+  console.log("Wrong data type");
+  console.log("please pass numbers only");
 }
-getTwoNumbersAndAdd(4, 4,addTwoNumbers, onFail);
+getTwoNumbersAndAdd(4, 4, addTwoNumbers, onFail);

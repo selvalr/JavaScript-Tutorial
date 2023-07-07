@@ -1,11 +1,11 @@
-// function returning function 
+// function returning function
 
-function myFunc(){
-    function hello(){
-        return "hello world"
-    }
-    return hello;
+function myFunc() {
+  function hello() {
+    return "hello world";
+  }
+  return hello;
 }
 
 const ans = myFunc();
-console.log(ans());
+console.log(ans()); //hello world

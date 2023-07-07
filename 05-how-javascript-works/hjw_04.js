@@ -1,9 +1,7 @@
-// Uncaught ReferenceError: 
+// Uncaught ReferenceError:
 // Cannot access 'firstName' before initialization
 
-
-
-// Uncaught ReferenceError: 
+// Uncaught ReferenceError:
 // firstName is not defined
 
 // console.log(firstName);

@@ -41,7 +41,24 @@ const engine = {
 engine.start("noisily");
 engine.sputter();
 
-//Object.assign: To copy an object without modifying the original object
+//i.Object Clone use Spread and Object.assign() in JavaScript
+
+//The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It returns the target object. Here is an example:
+
+const obj1 = { a: 1, b: 2 };
+const obj02 = { c: 3, d: 4 };
+const obj03 = Object.assign({}, obj1, obj02);
+obj1.c = 3; //not added
+console.log(obj03); // { a: 1, b: 2, c: 3, d: 4 }
+
+//i.The spread operator (...) can also be used to create a shallow copy of an object. Here is an example:
+
+const obj10 = { a: 1, b: 2 };
+const obj20 = { c: 3, d: 4 };
+const obj30 = { ...obj10, ...obj20 };
+console.log(obj30); // { a: 1, b: 2, c: 3, d: 4 }
+
+//ii.Object.assign: To copy an object without modifying the original object
 
 const person = {
   firstName: "Asabeneh",
@@ -59,12 +76,14 @@ const person = {
     return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`;
   },
 };
+
 //Object methods: Object.assign, Object.keys, Object.values, Object.entries
 //hasOwnProperty
 const copyPerson = Object.assign({}, person);
 console.log(copyPerson);
 
 //1.Getting object keys using Object.keys()
+//Iterating through javascript object
 
 //Object.keys: To get the keys or properties of an object as an array
 
@@ -126,8 +145,8 @@ const obj = {
   key2: "value2",
 };
 
-// const obj2 = {'key69': "value69",...obj};
-// const obj2 = Object.assign({'key69': "value69"}, obj);
-// obj.key3 = "value3";
-// console.log(obj);
-// console.log(obj2);
+const obj2 = { key69: "value69", ...obj };
+const obj3 = Object.assign({ key69: "value69" }, obj);
+obj.key3 = "value3";
+console.log(obj);
+console.log(obj3);

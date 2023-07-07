@@ -49,7 +49,7 @@ switch (letter) {
   case "I":
   case "O":
   case "U":
-    console.log(letter + "is a vowels");
+    console.log(letter + " is a vowels");
     break;
   default:
     console.log("not vowels");
@@ -70,7 +70,7 @@ switch (x) {
   default:
     text = "No value found";
 }
-console.log(text);
+console.log(text); //No value found
 
 //Example:
 
