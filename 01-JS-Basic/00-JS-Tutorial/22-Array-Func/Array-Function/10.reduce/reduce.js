@@ -1,4 +1,4 @@
-//Reduce
+//Reduce() in javascript
 //syntax:
 /*
 array.reduce(function(accumulator, currentValue, currentIndex, array) {

@@ -1,6 +1,20 @@
+function selva() {
+  console.log(this);
+}
+console.log(selva.name); //function name
+console.log(selva.toString());
+selva(); //(or)
+selva.call();
+
 //The call method is used to invoke a function and specify the this context. It takes an object as its first argument, which becomes the this context for the function, followed by any additional arguments for the function.
 
-//For example:
+function welcome() {
+  console.log("welcome" + this.name);
+}
+const student = { name: "selva" };
+welcome.call(student);
+
+//For example two parameters are:
 
 function total(eng, mat) {
   console.log(this.name + " got " + (eng + mat) + " Marks");

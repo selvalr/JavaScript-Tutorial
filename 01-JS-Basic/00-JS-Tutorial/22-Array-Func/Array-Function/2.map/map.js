@@ -1,3 +1,8 @@
+/*
+originalArray.map(current_value,index,originalArray);
+
+*/
+
 //1.Simple Transformation
 
 const numbers = [1, 2, 3, 4, 5];
@@ -84,3 +89,18 @@ const nameElements = names.map((name) => {
   return nameElement;
 });
 console.log(nameElements);
+
+//11, three parameters in map function
+
+const words1 = ["apple", "banana", "cherry"];
+
+const wordStats = words1.map(function (currentValue, index, array) {
+  return {
+    word: currentValue,
+    length: currentValue.length,
+    position: index,
+    totalWord: array.length,
+  };
+});
+
+console.log(wordStats);

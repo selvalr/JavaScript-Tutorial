@@ -42,6 +42,7 @@ numbers3.forEach((number) => {
   count++;
 });
 console.log(total3 / count); // 3
+console.log(total3 / numbers3.length); //3
 
 //6. Example of using the forEach method to filter an array:
 

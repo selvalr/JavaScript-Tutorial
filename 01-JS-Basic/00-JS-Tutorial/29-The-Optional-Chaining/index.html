@@ -8,6 +8,25 @@
   </head>
   <body>
     <script>
+      let user0 = {
+        name: "selva",
+        // address:{
+        //   city:'nellai'
+        // }
+      };
+
+      //Option-1->conditional operators
+      console.log(user.address ? user.address?.city : undefined); //undefined
+      //option-2
+      console.log(user.address && user.address.city); //undefined
+      //option-3->is optional
+      console.log(user.address?.city); //undefined
+      //option-4
+      let key = "city";
+      //console.log(user.address[key]);//error
+      console.log(user.address?.[key]);
+
+      //0.
       const car = { type: "Fiat", model: "500", color: "white" };
       let name = car?.name;
       console.log(name); //undefined
