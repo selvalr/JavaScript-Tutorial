@@ -123,3 +123,154 @@ console.log([...myMap]);
 
 console.log(Array.from(myMap.keys()));
 console.log(Array.from(myMap.values()));
+
+//5.Using Maps in JavaScript: Common Mistakes and Best Practices
+
+//i.mistakes 1
+const wrongMap = new Map();
+wrongMap["key1"] = "Data1";
+wrongMap["key2"] = "Data2";
+
+//This is incorrect because Maps are not meant to be accessed like objects. Instead, you should use the set() method to add key-value pairs to a Map:
+
+const correctMap = new Map();
+correctMap.set("key1", "Data1");
+correctMap.set("key2", "Data2");
+
+//ii.mistake 2
+const myMap1 = new Map();
+myMap1.set("key1", "value1");
+
+if (myMap1.has("key1")) {
+  console.log(myMap1.get("key1"));
+}
+
+//iii.mistake 3
+const myMap2 = new Map();
+const objKey = {};
+const arrKey = [];
+
+myMap2.set(objKey, "value1");
+myMap2.set(arrKey, "value2");
+
+console.log(myMap2.get(objKey)); // "value1"
+console.log(myMap2.get({})); // undefined
+console.log(myMap2.get(arrKey)); // "value2"
+console.log(myMap2.get([])); // undefined
+
+//6.Best practice
+/*
+To use Maps effectively in your code, follow these best practices:
+
+-Always use the set() method to add key-value pairs.
+-Use the has() method to check if a key exists before trying to access its value.
+-Use the same type of value for a key that you intend to use when you retrieve it later.
+
+*/
+
+//Using NaN as a Key in JavaScript Maps
+
+console.log(Number("Ram"));
+const myMaps = new Map();
+myMaps.set(NaN, "Not a Number");
+console.log(myMaps.get(NaN));
+
+//Challenges of Using NaN as a Key
+
+//const myMap = new Map();
+myMap.set(NaN, "Not a Number");
+console.log(myMap.has(NaN)); // false
+console.log(isNaN([...myMap.keys()][0])); // true
+
+//Another challenge of using NaN as a key is that it can cause unexpected behavior when used with certain operations, such as sorting:
+
+//const myMap = new Map();
+myMap.set(NaN, "Not a Number");
+myMap.set(1, "One");
+myMap.set(2, "Two");
+console.log([...myMap.entries()].sort()); // [[1, "One"], [2, "Two"], [NaN, "Not a Number"]]
+
+//Best Practices
+/*
+To use NaN effectively as a key in your Map, follow these best practices:
+
+Use isNaN() to check for NaN explicitly instead of using has().
+Be aware of the potential for unexpected behavior when using NaN with certain operations, such as sorting.
+*/
+
+//Merging Maps in JavaScript
+//Maps can be merged with Arrays
+const first = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+const second = new Map([
+  [1, "first"],
+  [2, "second"],
+]);
+const merged = new Map([...first, ...second, [1, "Ist"]]);
+console.log(merged);
+console.log(merged.get(1));
+console.log(merged.get(2));
+console.log(merged.get(3));
+
+//Counting Word Frequency in JavaScript
+
+const sentence =
+  "Fear leads to anger anger leads to hatred hatred leads to conflict";
+const words = sentence.split(" ");
+console.log(words);
+
+const wordFrequency = new Map();
+for (let word of words) {
+  if (wordFrequency.has(word)) {
+    wordFrequency.set(word, wordFrequency.get(word) + 1);
+  } else {
+    wordFrequency.set(word, 1);
+  }
+}
+console.log(wordFrequency);
+
+//Grouping Objects by Property Value in JavaScript
+
+const people = [
+  { name: "Raja", age: 30 },
+  { name: "Sara", age: 25 },
+  { name: "Suresh", age: 30 },
+  { name: "Sundar", age: 25 },
+];
+
+const peopleByAge = new Map();
+
+for (let person of people) {
+  const age = person.age;
+  if (peopleByAge.has(age)) {
+    peopleByAge.get(age).push(person);
+  } else {
+    peopleByAge.set(age, [person]);
+  }
+}
+
+console.log(peopleByAge);
+
+//Counting the Frequency of Elements in an Array with JavaScript
+
+function frequencyCounter(arr) {
+  const map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    map.set(element, (map.get(element) || 0) + 1);
+  }
+  return map;
+}
+
+//Here are a couple of examples of using the frequencyCounter function:
+
+const array = [1, 2, 3, 1, 2, 2, 4];
+console.log(frequencyCounter(array));
+// Output: Map(4) { 1 => 2, 2 => 3, 3 => 1, 4 => 1 }
+
+const array2 = [1, 54, 1, 52];
+console.log(frequencyCounter(array2));
+// Output: Map(3) { 1 => 2, 54 => 1, 52 => 1 }

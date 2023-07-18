@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  Here is an example of polymorphism in JavaScript using inheritance:
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+
+        makeSound() {
+          console.log(`${this.name} makes a sound`);
+        }
+      }
+
+      class Dog extends Animal {
+        constructor(name) {
+          super(name);
+        }
+
+        makeSound() {
+          console.log(`${this.name} barks`);
+        }
+      }
+
+      class Cat extends Animal {
+        constructor(name) {
+          super(name);
+        }
+
+        makeSound() {
+          console.log(`${this.name} meows`);
+        }
+      }
+
+      let dog = new Dog("Fido");
+      let cat = new Cat("Whiskers");
+
+      dog.makeSound(); // outputs "Fido barks"
+      cat.makeSound(); // outputs "Whiskers meows"
+    </script>
+  </body>
+</html>

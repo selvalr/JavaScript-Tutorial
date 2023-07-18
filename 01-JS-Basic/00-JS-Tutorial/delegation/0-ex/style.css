@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: aliceblue;
+}
+
+#frm {
+  width: 650px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline: none;
+}

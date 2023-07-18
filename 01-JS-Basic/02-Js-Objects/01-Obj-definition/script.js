@@ -52,3 +52,23 @@ const x = person4;
 x.age = 10; // Will change both x.age and person.age
 console.log(x.age); //10
 console.log(x.firstName);
+
+//Here's an example of an object literal:
+let person5 = {
+  name: "John",
+  age: 30,
+  email: "john@example.com",
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+  },
+  hobbies: ["reading", "traveling", "sports"],
+  sayHello: function () {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};
+
+console.log(person5.name); // Output: John
+console.log(person5["age"]); // Output: 30
+person5.sayHello(); // Output: Hello, my name is John

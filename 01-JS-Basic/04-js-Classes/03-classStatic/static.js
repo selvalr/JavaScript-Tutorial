@@ -76,3 +76,30 @@ class Colors {
 
 console.log(Colors.RED); // Output: #ff0000
 console.log(Colors.GREEN); // Output: #00ff00
+
+//5.To define a static method in JavaScript, you can use the static keyword:
+class MyClass {
+  static myStaticMethod() {
+    console.log("This is a static method");
+  }
+}
+
+const myInstance = new MyClass();
+myInstance.myStaticMethod(); // TypeError: myInstance.myStaticMethod is not a function
+
+//6.
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  static fromArray([x, y]) {
+    return new Point(x, y);
+  }
+}
+
+const arr = [10, 20];
+const point = Point.fromArray(arr);
+
+console.log(point); // Output: Point {x: 10, y: 20}

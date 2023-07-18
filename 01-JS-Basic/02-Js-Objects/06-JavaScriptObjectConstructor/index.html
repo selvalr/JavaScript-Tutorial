@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="./script.js"></script>
-</body>
+    <script>
+      function Person(name, age, email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+
+        this.sayHello = function () {
+          console.log(`Hello, my name is ${this.name}`);
+        };
+      }
+
+      let john = new Person("John", 30, "john@example.com");
+
+      console.log(john.name); // Output: John
+      john.sayHello(); // Output: Hello, my name is John
+    </script>
+  </body>
 </html>

@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script src="./script.js"></script>
-</body>
 
+    <script>
+      //Here's an example of how inheritance can be implemented in JavaScript:
+
+      // Define a parent class
+      function Animal(name) {
+        this.name = name;
+      }
+
+      Animal.prototype.sayName = function () {
+        console.log(`My name is ${this.name}`);
+      };
+
+      // Define a child class that inherits from Animal
+      function Dog(name, breed) {
+        Animal.call(this, name);
+        this.breed = breed;
+      }
+
+      Dog.prototype = Object.create(Animal.prototype);
+      Dog.prototype.constructor = Dog;
+
+      Dog.prototype.bark = function () {
+        console.log("Woof woof!");
+      };
+
+      // Create a new instance of Dog and call its methods
+      const fido = new Dog("Fido", "Golden Retriever");
+      fido.sayName(); // My name is Fido
+      fido.bark(); // Woof woof!
+    </script>
+  </body>
 </html>
