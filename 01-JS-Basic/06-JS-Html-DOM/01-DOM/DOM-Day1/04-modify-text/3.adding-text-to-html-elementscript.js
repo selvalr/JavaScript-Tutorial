@@ -1,19 +1,17 @@
 // change text
 // textContent and innerText
 
-// const mainHeading = document.getElementById("main-heading");
-// console.log(mainHeading.innerText);
-// mainHeading.textContent = "This is something else";
-// console.log(mainHeading.textContent);
+const mainHeading = document.getElementById("main-heading");
+console.log(mainHeading.innerText);
+mainHeading.textContent = "This is something else";
+console.log(mainHeading.textContent);
 
 //3.)Adding Text to HTML element
 
-/*
 let textValue = document.getElementById("first-title");
 console.log((textValue.innerHTML = "<h4>helo</h4>"));
 console.log(textValue.innerText);
 console.log(textValue.textContent);
-*/
 
 //i.Adding Text content using textContent
 const titles = document.querySelectorAll("h1");

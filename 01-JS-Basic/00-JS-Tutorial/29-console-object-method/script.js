@@ -198,4 +198,4 @@ func();
 
 //10.console.clear()
 
-console.clear();
+//console.clear();

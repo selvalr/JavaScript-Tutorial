@@ -6,6 +6,7 @@ console.log(y); // 10
 
 let s = "10";
 console.log(+s); // 10
+console.log(typeof s);
 
 let f = false,
   t = true;

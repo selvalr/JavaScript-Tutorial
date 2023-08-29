@@ -13,6 +13,7 @@ const student = {
     return this.age >= 18;
   },
 };
+console.log(student);
 
 //2.Code 2: Factory Function
 //Another approach to creating objects is using a factory function. This involves creating a function that returns a new object with the desired properties and methods. Here's an example:

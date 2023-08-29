@@ -1,7 +1,7 @@
 let first_name = "selvamanan";
 let second_name = "R";
 
-//1.string Concatenation
+//1.string Concatenation:
 
 let c = first_name + " " + second_name;
 console.log("concatenation:" + c);

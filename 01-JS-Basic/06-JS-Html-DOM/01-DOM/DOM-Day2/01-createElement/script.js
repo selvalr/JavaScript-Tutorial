@@ -27,15 +27,15 @@ const lists = document.createElement("li");
 
 //adding elements
 uLists.appendChild(lists);
-//console.log(uLists);
+console.log(uLists);
 
 //insertBefore element
 let newHead = document.createTextNode("h4");
 uLists.appendChild(newHead);
 console.log(uLists);
-let container = document.querySelector(".hello");
-container.insertBefore(newHead, div);
-console.log(container);
+// let container = document.querySelector(".hello");
+// container.insertBefore(newHead, div);
+// console.log(container);
 
 //3.
 // document.createElement()
@@ -43,15 +43,15 @@ console.log(container);
 // prepend
 // remove
 
-// const newTodoItem = document.createElement("li");
-// // const newTodoItemText = document.createTextNode("Teach students");
-// newTodoItem.textContent = "Teach students";
-// const todoList = document.querySelector(".todo-list");
-// todoList.prepend(newTodoItem);
-// console.log(newTodoItem);
-// const todo1 = document.querySelector('.todo-list li');
-// todo1.remove();
-// console.log(todo1)
+const newTodoItem = document.createElement("li");
+const newTodoItemText = document.createTextNode("Teach students");
+newTodoItem.textContent = "Teach students";
+const todoList = document.querySelector(".todo-list");
+//todoList.prepend(newTodoItem);
+console.log(newTodoItem);
+const todo1 = document.querySelector(".todo-list li");
+//todo1.remove();
+console.log(todo1);
 
 // before
 // after

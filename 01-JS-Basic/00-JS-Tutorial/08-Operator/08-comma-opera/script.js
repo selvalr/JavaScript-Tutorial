@@ -20,3 +20,28 @@ Import lists in import declarations (import { a, b } from "c";)
 Export lists in export declarations (export { a, b };)
 
 */
+
+//1.
+function Func1() {
+  console.log("one");
+  return "one";
+}
+function Func2() {
+  console.log("two");
+  return "two";
+}
+function Func3() {
+  console.log("three");
+  return "three";
+}
+
+// Three expressions are
+// given at one place
+let x1 = (Func1(), Func2(), Func3());
+
+console.log(x1);
+
+//2.
+for (let a = 0, b = 5; a <= 5; a++, b--) {
+  console.log(a, b);
+}

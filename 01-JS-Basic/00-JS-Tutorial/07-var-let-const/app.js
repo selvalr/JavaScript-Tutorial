@@ -65,7 +65,7 @@ console.log(a1); //45
 
 /*
  const a=25;
- a=26;//reasign not allowed
+ a=26;//reassign not allowed
  console.log(a)
   //error to redeclared const to asign one time
  const a=45;//Redeclaration not allowed
