@@ -53,3 +53,7 @@
 ![number method notes!](/01-JS-Basic/00-JS-Tutorial/19.JS-Number-Methods/notes/13.jpg "number method notes")
 
 ---
+
+![number method notes!](/01-JS-Basic/00-JS-Tutorial/19.JS-Number-Methods/notes/14.jpg "number method notes")
+
+---

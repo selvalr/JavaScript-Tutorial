@@ -66,6 +66,30 @@
 
 ---
 
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/15.jpg "math object notes")
+
+---
+
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/16.jpg "math object notes")
+
+---
+
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/17.jpg "math object notes")
+
+---
+
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/18.jpg "math object notes")
+
+---
+
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/19.jpg "math object notes")
+
+---
+
+![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/20.jpg "math object notes")
+
+---
+
 ![math object notes!](/01-JS-Basic/00-JS-Tutorial/24.Math-Object/notes/Snapinsta.app_325782912_1382412565835123_7173532500217188775_n_1024.jpg "math object notes")
 
 ---

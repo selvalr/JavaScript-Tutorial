@@ -53,3 +53,35 @@
 ![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/closure.jpg "closure notes")
 
 ---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/00.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/01.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/02.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/03.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/04.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/05.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/06.jpg "closure notes")
+
+---
+
+![closure notes!](/01-JS-Basic/00-JS-Tutorial/37-closures/notes/07.jpg "closure notes")
+
+---
