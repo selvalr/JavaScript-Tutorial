@@ -2,11 +2,11 @@ let amount = "hello";
 
 // Convert string to number
 amount = parseInt(amount);
-console.log(amount);
+console.log(amount); //Nan
 amount = +amount;
-console.log(amount);
+console.log(amount); //Nan
 amount = Number(amount);
-console.log(amount);
+console.log(amount); //Nan
 
 // Convert number to string
 amount = amount.toString();
@@ -19,9 +19,9 @@ amount = parseFloat(amount);
 amount = Boolean(amount);
 
 // Ways to get NaN
-console.log(Math.sqrt(-1));
-console.log(1 + NaN);
-console.log(undefined + undefined);
-console.log("foo" / 3);
+console.log(Math.sqrt(-1)); //Nan
+console.log(1 + NaN); //Nan
+console.log(undefined + undefined); //Nan
+console.log("foo" / 3); //Nan
 
-console.log(amount, typeof amount);
+console.log(amount, typeof amount); //false 'boolean'

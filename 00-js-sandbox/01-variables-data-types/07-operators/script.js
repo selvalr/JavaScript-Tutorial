@@ -9,7 +9,7 @@ x = 5 / 5;
 x = 7 % 5;
 
 // Concatenation
-x = 'Hello' + ' ' + 'World';
+x = "Hello" + " " + "World";
 
 // Exponent
 x = 2 ** 3;
@@ -37,13 +37,13 @@ x **= 5;
 // 3. Comparison Operators
 
 // Equal to (Just the value, not the type)
-x = 2 == '2';
+x = 2 == "2";
 
 // Equal to (Type and value)
-x = 2 === '2';
+x = 2 === "2";
 
 // Not equal to (Just the value, not the type)
-x = 2 != '2';
+x = 2 != "2";
 
 // Not equal to (Type and value)
 x = 2 !== 2;
@@ -54,4 +54,4 @@ x = 10 < 5;
 x = 10 <= 5;
 x = 10 >= 5;
 
-console.log(x);
+console.log(x); //true

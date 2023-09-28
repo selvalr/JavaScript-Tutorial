@@ -1,11 +1,11 @@
 // Ways to declare a variable
 // `var`, `let`, & `const`
 
-let firstName = 'John';
-const lastName = 'Doe';
+let firstName = "John";
+const lastName = "Doe";
 let age = 30;
 
-console.log(age);
+console.log(age); //30
 
 // Naming Conventions
 // - Only letters, numbers, underscores and dollar signs
@@ -19,18 +19,18 @@ console.log(age);
 
 // We can re-assign `let` variables. If you change `age` to use `const`, you will get an error
 age = 31;
-console.log(age);
+console.log(age); //31
 
 // With let, we can declare a value without assigning a value
 let score;
 score = 1;
-console.log(score);
+console.log(score); //1
 
 if (true) {
   score = score + 1;
 }
 
-console.log(score);
+console.log(score); //2
 
 const x = 100;
 
@@ -43,10 +43,10 @@ arr.push(5);
 console.log(arr);
 
 const person = {
-  name: 'Brad',
+  name: "Brad",
 };
-person.name = 'John';
-person.email = 'brad@gmail.com';
+person.name = "John";
+person.email = "brad@gmail.com";
 console.log(person);
 
 // Declare multiple values at once
@@ -56,5 +56,5 @@ const d = 10,
   e = 20,
   f = 30;
 
-console.log(d);
-console.log(a);
+console.log(d); //10
+console.log(a); //undefined

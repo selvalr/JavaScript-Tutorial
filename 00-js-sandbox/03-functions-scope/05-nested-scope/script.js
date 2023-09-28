@@ -21,5 +21,5 @@ if (true) {
     console.log(x + y);
   }
 
-  console.log(y);
+  console.log(y); //error
 }

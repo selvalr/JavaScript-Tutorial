@@ -5,11 +5,11 @@ console.log(100); //100
 console.log("Hello World"); //Hello World
 
 // Log multiple values
-console.log(20, "Hello", true);
+console.log(20, "Hello", true); //20 'Hello' true
 
 // Log a variable
 const x = 100;
-console.log(x);
+console.log(x); //100
 
 // Console error & warning
 console.error("Alert");
