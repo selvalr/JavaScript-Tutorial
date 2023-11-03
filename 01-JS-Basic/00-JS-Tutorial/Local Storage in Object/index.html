@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-LocalStorage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CRUD with Local Storage</h1>
+      <form id="dataForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" required />
+
+        <label for="ageInput">Age:</label>
+        <input type="number" id="ageInput" required />
+
+        <label for="genderSelect">Gender:</label>
+        <select id="genderSelect" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <button type="submit">Add Data</button>
+      </form>
+
+      <div id="output">
+        <h2>Stored Data:</h2>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="dataList"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Data</h2>
+        <form id="editForm">
+          <input type="hidden" id="editIndex" />
+          <label for="editNameInput">Name:</label>
+          <input type="text" id="editNameInput" required />
+
+          <label for="editAgeInput">Age:</label>
+          <input type="number" id="editAgeInput" required />
+
+          <label for="editGenderSelect">Gender:</label>
+          <select id="editGenderSelect" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

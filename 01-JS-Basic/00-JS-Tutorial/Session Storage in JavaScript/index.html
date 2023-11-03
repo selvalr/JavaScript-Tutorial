@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step-1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-Step Form Session Storage</h1>
+      <h2>Step 1 - Personal Details</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Full Name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Email Address" />
+        <button type="button" id="btnStep1Next">Next Step</button>
+      </form>
+    </div>
+    <script>
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const btnStep1Next = document.getElementById("btnStep1Next");
+
+      function loadSession() {
+        let data = sessionStorage.getItem("formData") || {};
+        if (data.length > 0) {
+          data = JSON.parse(data);
+          name.value = data.name;
+          email.value = data.email;
+        }
+      }
+      loadSession();
+      btnStep1Next.addEventListener("click", function () {
+        if (name.value != "" && email.value != "") {
+          const formData = JSON.parse(sessionStorage.getItem("formData")) || {};
+
+          formData.name = name.value;
+          formData.email = email.value;
+
+          sessionStorage.setItem("formData", JSON.stringify(formData));
+          window.location.href = "http://127.0.0.1:5500/step2.html";
+        } else {
+          alert("Please Fill All Details");
+          name.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-Step Form Session Storage</h1>
+      <h2>Step 2 - Additional Details</h2>
+      <form>
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Full Address" />
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter Contact Number" />
+
+        <button type="button" id="btnStep1Back">Back Step</button>
+        <button type="button" id="btnStep2Next">Next Step</button>
+      </form>
+    </div>
+    <script>
+      const address = document.getElementById("address");
+      const phone = document.getElementById("phone");
+      const btnStep1Back = document.getElementById("btnStep1Back");
+      const btnStep2Next = document.getElementById("btnStep2Next");
+
+      function loadSession() {
+        let data = sessionStorage.getItem("formData") || {};
+        if (data.length > 0) {
+          data = JSON.parse(data);
+          address.value = data.address == undefined ? "" : data.address;
+          phone.value = data.phone == undefined ? "" : data.phone;
+        }
+      }
+      loadSession();
+
+      btnStep1Back.addEventListener("click", function () {
+        window.location.href = "http://127.0.0.1:5500/index.html";
+      });
+
+      btnStep2Next.addEventListener("click", function () {
+        if (address.value != "" && phone.value != "") {
+          const formData = JSON.parse(sessionStorage.getItem("formData")) || {};
+
+          formData.address = address.value;
+          formData.phone = phone.value;
+
+          sessionStorage.setItem("formData", JSON.stringify(formData));
+          window.location.href = "http://127.0.0.1:5500/review.html";
+        } else {
+          alert("Please Fill All Details");
+          address.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-Step Form Session Storage</h1>
+      <h2>Review Details</h2>
+      <table id="dataTable"></table>
+
+      <button type="button" id="btnStep2Back">Back Step</button>
+      <button type="button" class="finish">Confirm Submission</button>
+    </div>
+    <script>
+      const btnStep2Back = document.getElementById("btnStep2Back");
+      const dataTable = document.getElementById("dataTable");
+      btnStep2Back.addEventListener("click", function () {
+        window.location.href = "http://127.0.0.1:5500/step2.html";
+      });
+
+      function loadSession() {
+        let data = sessionStorage.getItem("formData") || {};
+        data = JSON.parse(data);
+        let output = "";
+
+        output = `
+          <tr>
+          <th>Name</th>
+          <td>${data.name}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>${data.email}</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>${data.address}</td>
+        </tr>
+        <tr>
+          <th>Contact No</th>
+          <td>${data.phone}</td>
+        </tr>`;
+
+        dataTable.innerHTML = output;
+      }
+      loadSession();
+    </script>
+  </body>
+</html>

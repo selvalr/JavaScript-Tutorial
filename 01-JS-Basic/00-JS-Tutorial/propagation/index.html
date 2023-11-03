@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Event bubbling | Event Capturing</h3>
+    <div id="grandparent">
+      grandparent
+      <div id="parent">
+        parent
+        <div id="child">child</div>
+      </div>
+    </div>
+
+    <script>
+const grandparent = document.querySelector("#grandparent");
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+
+grandparent.addEventListener("click", function () {
+  console.log("Grandparent Clicked");
+}, true);
+
+parent.addEventListener("click", function () {
+  console.log("Parent Clicked");
+}, false);
+
+child.addEventListener("click", function (e) {
+  console.log("Child Clicked");
+  e.stopImmediatePropagation();
+}, true);
+
+child.addEventListener("click", function (e) {
+  console.log("Child Clicked2");
+}, true);
+    </script>
+</body>
+</html>
