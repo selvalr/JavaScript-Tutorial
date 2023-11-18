@@ -57,12 +57,12 @@ for (const value of userMap.values())
 }
 
 //11.Retrieving Entries from a Map:
-
+/*
 for (const value of userMap.entries ()) 
 { 
    console.log(`${key}  = ${value}`); 
 }
-
+*/
 
 //12.Retrieving Key-value from a Map using forEach():
 

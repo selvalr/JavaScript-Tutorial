@@ -6,18 +6,17 @@ console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
 //2.Given an array of numbers, write a function that returns a new array containing only the even numbers from the original array, squared.
 
-//Example Input:
-const numbers1 = [1, 2, 3, 4, 5, 6];
+
 
 //Solution:
-function getEvenSquaredNumbers(numbers1) {
-  const evenNumbers = numbers1.filter(num => num % 2 === 0);
+function getEvenSquaredNumbers(numbers2) {
+  const evenNumbers = numbers2.filter(num => num % 2 === 0);
   const squaredNumbers = evenNumbers.map(num => num ** 2);
   return squaredNumbers;
 }
 
 const numbers2 = [1, 2, 3, 4, 5, 6];
-const result = getEvenSquaredNumbers(numbers1);
+const result = getEvenSquaredNumbers(numbers2);
 console.log(result); // Output: [4, 16, 36]
 
 //3. Modifying Array Elements

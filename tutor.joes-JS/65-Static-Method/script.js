@@ -14,11 +14,11 @@ class MyClass {
 
   //2.example of a class with a static property:
 
-class MyClass {
+class MyClass1 {
     static myStaticProperty = 'Hello from a static property!';
   }
   
-  console.log(MyClass.myStaticProperty); // Output: Hello from a static property!
+  console.log(MyClass1.myStaticProperty); // Output: Hello from a static property!
 
 
   //3.1: Utility Class

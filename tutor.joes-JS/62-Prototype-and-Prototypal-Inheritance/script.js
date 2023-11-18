@@ -61,6 +61,8 @@ let obj = {
 //console
 obj.toString();
 
+
+
 function myFunction() {}
 
 /*
@@ -101,14 +103,14 @@ let obj2 = {
 //obj2.__proto__ = obj1;
 
 */
-const obj2 = Object.create(obj01);
-obj2.name = "Raja";
+const obj02 = Object.create(obj01);
+obj02.name = "Raja";
 
-//obj2.name;
-//obj2.city;
-//obj2.info();
-obj2.city = "Chennai";
-obj2.info();
+//obj02.name;
+//obj02.city;
+//obj02.info();
+obj02.city = "Chennai";
+obj02.info();
 
 Array.prototype.doubleLength = function () {
   return this.length * 2;

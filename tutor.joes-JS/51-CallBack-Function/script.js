@@ -11,8 +11,7 @@ callback();
   // some code
 }
 
-higherOrderFunction(myCallback);
-    // Output: "I am a callback function"
+higherOrderFunction(myCallback);// Output: "I am a callback function"
 
 
 //2.

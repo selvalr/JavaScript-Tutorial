@@ -46,8 +46,7 @@ let items = [
     { name: "banana", category: "fruit" }
     ];
     let fruits = items.filter(item =>item.category === "fruit");
-    console.log(fruits); 
-// [{ name: "apple", category: "fruit" }, { name: "banana", category: "fruit" }]
+    console.log(fruits); // [{ name: "apple", category: "fruit" }, { name: "banana", category: "fruit" }]
 
 
 //6. Filtering an array of strings to only include those that start with a specific letter:
@@ -65,8 +64,7 @@ let products = [
     { name: 'banana', price: 3.5 }
     ];
     let expensiveProducts = products.filter(product =>product.price> 2);
-    console.log(expensiveProducts); 
-    // [{ name: 'orange', price: 2.5 },{ name: 'banana', price: 3.5 }]
+    console.log(expensiveProducts);     // [{ name: 'orange', price: 2.5 },{ name: 'banana', price: 3.5 }]
     
 
 //8. Filtering an array of objects to only include those that are enabled:
@@ -78,8 +76,7 @@ let buttons = [
     { name: 'Submit', enabled: false }
 ];
 let enabledButtons = buttons.filter(button =>button.enabled === true);
-console.log(enabledButtons);
-// [{ name: 'Save', enabled: true }, { name: 'Cancel', enabled: true }]
+console.log(enabledButtons);// [{ name: 'Save', enabled: true }, { name: 'Cancel', enabled: true }]
 
 
 //9. Filtering an array of numbers to only include those greater than a certain value:

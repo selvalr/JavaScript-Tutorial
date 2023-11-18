@@ -14,6 +14,8 @@ const student = {
       },
     };
 
+console.log(student);
+
 //2: Factory Function
 
 const studentMethod = {
@@ -44,23 +46,23 @@ const studentMethod = {
 //3: Prototype Inheritance
 
 const studentMethod1 = {
-    about: function () {
-      return `${this.fullName} is from ${this.city}`;
-    },
-    eligibility: function () {
-      return this.age>= 18;
-    },
-  };
-  
-  function addStudent(fullName, father, age, address, city) {
-    const user = Object.create(studentMethod1);
-  user.fullName = fullName;
-  user.father = father;
-  user.age = age;
-  user.age = age;
-  user.address = address;
-  user.city = city;
-    return user;
-  }
-  
-  console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem"));
+  about: function () {
+    return `${this.fullName} is from ${this.city}`;
+  },
+  eligibility: function () {
+    return this.age>= 18;
+  },
+};
+
+function addStudent1(fullName, father, age, address, city) {
+  const user = Object.create(studentMethod1);
+user.fullName = fullName;
+user.father = father;
+user.age = age;
+user.age = age;
+user.address = address;
+user.city = city;
+  return user;
+}
+
+console.log(addStudent1("Sam", "Raja", 25, "Gandhi Road", "Salem"));  
