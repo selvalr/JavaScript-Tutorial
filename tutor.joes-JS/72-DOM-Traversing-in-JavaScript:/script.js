@@ -1,4 +1,5 @@
 //1.parentNode
+/*
 const para = document.getElementsByTagName("p");
 console.log(para);
 const parent = para[0].parentNode;
@@ -12,10 +13,10 @@ const parent_h1 = h1[0].parentNode;
 parent_h1.style.backgroundColor = "palevioletred";
 parent_h1.style.padding = "10px";
 
-
+*/
 
 //2.First and Last Child
-
+/*
 //firstChild
 const firstChild = parent.firstChild;
 console.log(firstChild);
@@ -49,7 +50,7 @@ console.log(div.children[0]);
 console.log(div.children[1]);
 console.log(div.childElementCount);
 console.log(div.childNodes);
-
+*/
 //3.Siblings
 /*
 //Siblings
@@ -73,12 +74,14 @@ console.log(section.previousElementSibling);
 
 
 //4.Closest
-/*
+// element.closest(selector);
+
+
 const h1_tag = document.querySelector("h1");
 console.log(h1_tag);
+
 const section = h1_tag.closest("section");
 console.log(section);
 section.style.background = "purple";
 section.style.color = "white";
 section.style.padding = "10px"
-*/

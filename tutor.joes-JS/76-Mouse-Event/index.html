@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3>JavaScri pt DOM Event Handlers</h3>
+    <button onclick="alert('Welcome to Tutor Joes')">Inline event</button>
+
+    <button id="btn">Inline properties</button>
+    <button class="btn">Event</button>
+    <script src="112_event.js"></script>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        alert("Welcome to Tutor Joes");
+      };
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

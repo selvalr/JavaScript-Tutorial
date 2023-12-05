@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 650px;
+  background-color: #333;
+  padding: 10px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 25px;
+  margin: 10px 5px;
+  color: #fff;
+  text-align: center;
+}
+
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product {
+  width: 150px;
+  height: 150px;
+  background-color: palegreen;
+  text-align: center;
+  line-height: 150px;
+  color: brown;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+}
+  </style>
+  <body>
+    <div class="container">
+      <h3>Event Delegation in JavaScript</h3>
+      <div id="categories">
+        <div class="product" id="Laptops">Laptops</div>
+        <div class="product" id="cameras">Cameras</div>
+        <div class="product" id="printer">Printer</div>
+        <div class="product" id="tv">TV</div>
+        <div class="product" id="ac">AC</div>
+        <div class="product" id="mobiles">Mobiles</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+<!-- 
+Example - 2
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: aliceblue;
+}
+
+#frm {
+  width: 650px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline: none;
+}
+    </style>
+  </head>
+  <body>
+    <form action="#" id="frm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" placeholder="Enter First Name" data-uppercase />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" placeholder="Enter Last Name" data-uppercase />
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html> -->

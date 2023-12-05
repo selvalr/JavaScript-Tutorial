@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Tiya",
+      "age": 25,
+      "gender": "Male",
+      "contact": 7859586895,
+      "isMarried": false,
+      "city": "Salem"
+    },
+    {
+      "name": "Ram",
+      "age": 32,
+      "gender": "Male",
+      "contact": 859658585,
+      "isMarried": true,
+      "city": "Chennai"
+    },
+    {
+      "name": "Sara",
+      "age": 18,
+      "gender": "Female",
+      "contact": 8596857585,
+      "isMarried": false,
+      "city": "Salem"
+    },
+    {
+      "name": "Sam",
+      "age": 24,
+      "gender": "Male",
+      "contact": 856968575,
+      "isMarried": true,
+      "city": "Chennai"
+    }
+  ]

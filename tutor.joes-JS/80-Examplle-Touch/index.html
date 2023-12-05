@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="logo.png" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      h3 {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      #game {
+        width: 400px;
+        height: 200px;
+        background-color: #ddd;
+        position: relative;
+      }
+      #ball {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        border-radius: 25px;
+        position: absolute;
+        top: 75px;
+        left: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Simple Ball Game</h3>
+    <div id="game">
+      <div id="ball"></div>
+    </div>
+    <script src="touch.js"></script>
+  </body>
+</html>

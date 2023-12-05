@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage Array Values</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CRUD with Local Storage</h1>
+      <p>1.convert Array to strings using <mark>JSON.stringify()</mark> before storing</p>
+      <p>2.convert them back to their original form using <mark>JSON.parse()</mark> after retrieving.</p>
+      <hr />
+      <form id="dataForm">
+        <label for="dataInput">Enter Data</label>
+        <input type="text" id="dataInput" />
+        <button type="submit">Add Data</button>
+      </form>
+
+      <div id="output">
+        <h2>Stored Data</h2>
+        <ul id="dataList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
