@@ -10,7 +10,9 @@ console.log(amount); //Nan
 
 // Convert number to string
 amount = amount.toString();
+console.log(amount); //Nan
 amount = String(amount);
+console.log(amount); //Nan
 
 // Convert string to decimal
 amount = parseFloat(amount);

@@ -2,35 +2,35 @@ let x;
 
 // Square root
 x = Math.sqrt(9);
-console.log(x);
+console.log(x); //3
 
 // Absolute value
 x = Math.abs(-5);
-console.log(x);
+console.log(x); //5
 
 // Round
 x = Math.round(4.2);
-console.log(x);
+console.log(x); //4
 
 // Round up
 x = Math.ceil(4.2);
-console.log(x);
+console.log(x); //5
 
 // Round down
 x = Math.floor(4.9);
-console.log(x);
+console.log(x); //4
 
 // Exponent
 x = Math.pow(2, 3);
-console.log(x);
+console.log(x); //8
 
 // Minimum number
 x = Math.min(4, 5, 3);
-console.log(x);
+console.log(x); //3
 
 // Maximum number
 x = Math.max(4, 5, 3);
-console.log(x);
+console.log(x); //5
 
 // Get a random number/decimal between 0 and 1
 x = Math.random();

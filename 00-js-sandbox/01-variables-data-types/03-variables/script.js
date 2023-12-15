@@ -47,7 +47,7 @@ const person = {
 };
 person.name = "John";
 person.email = "brad@gmail.com";
-console.log(person);
+console.log(person); //{name: 'John', email: 'brad@gmail.com'}
 
 // Declare multiple values at once
 let a, b, c;

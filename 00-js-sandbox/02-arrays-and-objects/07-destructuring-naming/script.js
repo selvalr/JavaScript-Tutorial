@@ -1,6 +1,6 @@
 // Setting object properties with the same name as a variable
-const firstName = 'John';
-const lastName = 'Doe';
+const firstName = "John";
+const lastName = "Doe";
 const age = 30;
 
 const person = {
@@ -9,15 +9,15 @@ const person = {
   age,
 };
 
-console.log(person.age);
+console.log(person.age); //30
 
 // Destructuring object properties
 
 const todo = {
   id: 1,
-  title: 'Take out trash',
+  title: "Take out trash",
   user: {
-    name: 'John',
+    name: "John",
   },
 };
 
@@ -27,11 +27,11 @@ const {
   user: { name }, // destructuring multiple levels
 } = todo;
 
-console.log(todoId);
+console.log(todoId); //1
 
 // Destructuring arrays & using the rest/spread operator
 const numbers = [23, 67, 33, 49, 52];
 
 const [first, second, ...rest] = numbers;
 
-console.log(first, second, rest);
+console.log(first, second, rest); //23,67,[33,49,52]

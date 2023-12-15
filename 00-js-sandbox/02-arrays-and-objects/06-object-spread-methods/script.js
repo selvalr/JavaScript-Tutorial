@@ -4,10 +4,11 @@ let x;
 const todo = new Object();
 
 todo.id = 1;
-todo.name = 'Buy Milk';
+todo.name = "Buy Milk";
 todo.completed = false;
 
 x = todo;
+console.log(x); //{id: 1, name: 'Buy Milk', completed: false}
 
 // Object Nesting
 const person = {
@@ -20,37 +21,45 @@ const person = {
 };
 
 x = person.address.coords.lat;
+console.log(x); //42.9384
 
 const obj1 = { a: 1, b: 2 };
 const obj2 = { c: 3, d: 4 };
 
 // Spread operator
 const obj3 = { ...obj1, ...obj2 };
+console.log(obj3); //{a: 1, b: 2, c: 3, d: 4}
+
 // Same as using ...
 const obj4 = Object.assign({}, obj1, obj2);
+console.log(obj4); //{a: 1, b: 2, c: 3, d: 4}
 
 // Array of objects
 const todos = [
-  { id: 1, name: 'Buy Milk' },
-  { id: 2, name: 'Pickup kids from school' },
-  { id: 3, name: 'Take out trash' },
+  { id: 1, name: "Buy Milk" },
+  { id: 2, name: "Pickup kids from school" },
+  { id: 3, name: "Take out trash" },
 ];
 
 x = todos[0].name;
+console.log(x); //Buy Milk
 
 // Get array of object keys
 x = Object.keys(todo);
+console.log(x); //(3) ['id', 'name', 'completed']
 
 // Get length of an object
 x = Object.keys(todo).length;
+console.log(x); //3
 
 // Get array of object values
 x = Object.values(todo);
+console.log(x); //(3) [1, 'Buy Milk', false]
 
 // Get array of object key/value pairs
 x = Object.entries(todo);
+console.log(x); //(3) [Array(2), Array(2), Array(2)]
 
 // Check if object has a property
-x = todo.hasOwnProperty('age');
-
-console.log(x);
+x = todo.hasOwnProperty("age");
+console.log(x); //false
