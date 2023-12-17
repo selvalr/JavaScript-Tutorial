@@ -12,7 +12,7 @@ console.log(x); //Hello, my name is John and I am 31 years old
 
 // String Properties and Methods
 
-// Creating a "string object" (JS does this automatically when using a propery or method on a primitive string)
+// Creating a "string object" (JS does this automatically when using a property or method on a primitive string)
 const s = new String("Hello World");
 
 x = typeof s;

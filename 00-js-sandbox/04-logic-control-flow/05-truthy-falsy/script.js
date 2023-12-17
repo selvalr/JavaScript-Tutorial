@@ -17,11 +17,12 @@
 // - function () {} (empty function)
 
 const x = function () {};
+console.log(x);
 
 if (x) {
-  console.log('This is truthy');
+  console.log("This is truthy");
 } else {
-  console.log('This is falsy');
+  console.log("This is falsy");
 }
 
 console.log(Boolean(x));
@@ -33,58 +34,58 @@ const children = 3;
 if (children) {
   console.log(`You have ${children} children`);
 } else {
-  console.log('Please enter number of children');
+  console.log("Please enter number of children");
 }
 
 // Solution
 if (!isNaN(children)) {
   console.log(`You have ${children} children`);
 } else {
-  console.log('Please enter number of children');
+  console.log("Please enter number of children");
 }
 
 // Checking for empty arrays
-const posts = ['Post One'];
+const posts = ["Post One"];
 
 // Always true even when empty
 if (posts) {
-  console.log('List Posts');
+  console.log("List Posts");
 } else {
-  console.log('No Posts To List');
+  console.log("No Posts To List");
 }
 
 // Solution
 if (posts.length > 0) {
-  console.log('List Posts');
+  console.log("List Posts");
 } else {
-  console.log('No Posts To List');
+  console.log("No Posts To List");
 }
 
 // Checking for empty objects
 const user = {
-  name: 'Brad',
+  name: "Brad",
 };
 
 // Always true, even when no properties
 if (user) {
-  console.log('List User');
+  console.log("List User");
 } else {
-  console.log('No User');
+  console.log("No User");
 }
 
 // Solution
 if (Object.keys(user).length > 0) {
-  console.log('List User');
+  console.log("List User");
 } else {
-  console.log('No User');
+  console.log("No User");
 }
 
 // Loose Equality (==)
 console.log(false == 0); // true
-console.log('' == 0); // true
+console.log("" == 0); // true
 console.log(null == undefined); // true
 
 // Strict Equality
 console.log(false === 0); // false
-console.log('' === 0); // false
+console.log("" === 0); // false
 console.log(null === undefined); // false
